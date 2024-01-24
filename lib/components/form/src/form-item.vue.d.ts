@@ -4,7 +4,6 @@ import type { Arrayable } from 'element-plus/es/utils';
 import type { FormItemContext, FormItemRule, FormValidateFailure } from './types';
 import type { FormItemValidateState } from './form-item';
 declare const _default: import("vue").DefineComponent<{
-    readonly floatLabel: BooleanConstructor;
     readonly label: StringConstructor;
     readonly labelWidth: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
     readonly prop: {
@@ -38,7 +37,6 @@ declare const _default: import("vue").DefineComponent<{
     };
 }, {
     props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
-        readonly floatLabel: BooleanConstructor;
         readonly label: StringConstructor;
         readonly labelWidth: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
         readonly prop: {
@@ -105,9 +103,12 @@ declare const _default: import("vue").DefineComponent<{
     formItemRef: import("vue").Ref<HTMLDivElement | undefined>;
     initialValue: any;
     isResettingField: boolean;
+    floatStyle: import("vue").Ref<{}>;
+    isFloat: import("vue").ComputedRef<boolean>;
+    addFloat: import("vue").Ref<boolean>;
     labelStyle: import("vue").ComputedRef<CSSProperties>;
     contentStyle: import("vue").ComputedRef<CSSProperties>;
-    formItemClasses: import("vue").ComputedRef<(string | {
+    formItemClasses: import("vue").ComputedRef<(string | false | {
         [x: string]: boolean | undefined;
     })[]>;
     _inlineMessage: import("vue").ComputedRef<boolean>;
@@ -147,7 +148,6 @@ declare const _default: import("vue").DefineComponent<{
         updateAll: boolean;
     }>;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
-    readonly floatLabel: BooleanConstructor;
     readonly label: StringConstructor;
     readonly labelWidth: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
     readonly prop: {
@@ -184,6 +184,5 @@ declare const _default: import("vue").DefineComponent<{
     readonly labelWidth: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
     readonly showMessage: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly inlineMessage: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, BooleanConstructor], unknown, unknown>;
-    readonly floatLabel: boolean;
 }>;
 export default _default;

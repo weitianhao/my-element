@@ -5,3 +5,9 @@ export declare const getClientXY: (event: MouseEvent | TouchEvent) => {
     clientX: number;
     clientY: number;
 };
+export declare const getChildPositionAndSize: (parentElement: any, childElement: any) => {
+    top: number;
+    right: number;
+    bottom: number;
+    left: number;
+};

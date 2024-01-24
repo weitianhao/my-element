@@ -43,7 +43,7 @@ declare const _default: import("vue").DefineComponent<{
     defaultExpandAll: BooleanConstructor;
     defaultSort: import("vue").PropType<import("./table/defaults").Sort | undefined>;
     tooltipEffect: StringConstructor;
-    tooltipOptions: import("vue").PropType<Partial<Pick<import("../..").ElTooltipProps, "showAfter" | "hideAfter" | "placement" | "offset" | "transition" | "effect" | "popperClass" | "popperOptions" | "enterable" | "appendTo" | "showArrow">> | undefined>;
+    tooltipOptions: import("vue").PropType<Partial<Pick<import("../..").ElTooltipProps, "showAfter" | "hideAfter" | "placement" | "offset" | "effect" | "transition" | "popperClass" | "popperOptions" | "enterable" | "appendTo" | "showArrow">> | undefined>;
     spanMethod: import("vue").PropType<((data: {
         row: any;
         rowIndex: number;
@@ -90,7 +90,7 @@ declare const _default: import("vue").DefineComponent<{
         default: boolean;
     };
     flexible: BooleanConstructor;
-    showOverflowTooltip: import("vue").PropType<boolean | Partial<Pick<import("../..").ElTooltipProps, "showAfter" | "hideAfter" | "placement" | "offset" | "transition" | "effect" | "popperClass" | "popperOptions" | "enterable" | "appendTo" | "showArrow">> | undefined>;
+    showOverflowTooltip: import("vue").PropType<boolean | Partial<Pick<import("../..").ElTooltipProps, "showAfter" | "hideAfter" | "placement" | "offset" | "effect" | "transition" | "popperClass" | "popperOptions" | "enterable" | "appendTo" | "showArrow">> | undefined>;
 }, {
     ns: {
         namespace: import("vue").ComputedRef<string>;
@@ -223,7 +223,7 @@ declare const _default: import("vue").DefineComponent<{
     defaultExpandAll: BooleanConstructor;
     defaultSort: import("vue").PropType<import("./table/defaults").Sort | undefined>;
     tooltipEffect: StringConstructor;
-    tooltipOptions: import("vue").PropType<Partial<Pick<import("../..").ElTooltipProps, "showAfter" | "hideAfter" | "placement" | "offset" | "transition" | "effect" | "popperClass" | "popperOptions" | "enterable" | "appendTo" | "showArrow">> | undefined>;
+    tooltipOptions: import("vue").PropType<Partial<Pick<import("../..").ElTooltipProps, "showAfter" | "hideAfter" | "placement" | "offset" | "effect" | "transition" | "popperClass" | "popperOptions" | "enterable" | "appendTo" | "showArrow">> | undefined>;
     spanMethod: import("vue").PropType<((data: {
         row: any;
         rowIndex: number;
@@ -270,7 +270,7 @@ declare const _default: import("vue").DefineComponent<{
         default: boolean;
     };
     flexible: BooleanConstructor;
-    showOverflowTooltip: import("vue").PropType<boolean | Partial<Pick<import("../..").ElTooltipProps, "showAfter" | "hideAfter" | "placement" | "offset" | "transition" | "effect" | "popperClass" | "popperOptions" | "enterable" | "appendTo" | "showArrow">> | undefined>;
+    showOverflowTooltip: import("vue").PropType<boolean | Partial<Pick<import("../..").ElTooltipProps, "showAfter" | "hideAfter" | "placement" | "offset" | "effect" | "transition" | "popperClass" | "popperOptions" | "enterable" | "appendTo" | "showArrow">> | undefined>;
 }>> & {
     onSelect?: ((...args: any[]) => any) | undefined;
     "onExpand-change"?: ((...args: any[]) => any) | undefined;

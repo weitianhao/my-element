@@ -186,8 +186,8 @@ declare const _TimePicker: SFCWithInstall<import("vue").DefineComponent<{
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
 }, {
     type: string;
-    tabindex: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number) & {}) | (() => string | number) | ((new (...args: any[]) => (string | number) & {}) | (() => string | number))[], unknown, unknown>;
     name: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("./src/common/props").SingleOrRange<string> & {}) | (() => import("./src/common/props").SingleOrRange<string>) | ((new (...args: any[]) => import("./src/common/props").SingleOrRange<string> & {}) | (() => import("./src/common/props").SingleOrRange<string>))[], unknown, unknown>;
+    tabindex: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number) & {}) | (() => string | number) | ((new (...args: any[]) => (string | number) & {}) | (() => string | number))[], unknown, unknown>;
     placeholder: string;
     modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("./src/common/props").ModelValueType & {}) | (() => import("./src/common/props").ModelValueType) | ((new (...args: any[]) => import("./src/common/props").ModelValueType & {}) | (() => import("./src/common/props").ModelValueType))[], unknown, unknown>;
     disabled: boolean;
@@ -389,8 +389,8 @@ export declare const ElTimePicker: SFCWithInstall<import("vue").DefineComponent<
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
 }, {
     type: string;
-    tabindex: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number) & {}) | (() => string | number) | ((new (...args: any[]) => (string | number) & {}) | (() => string | number))[], unknown, unknown>;
     name: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("./src/common/props").SingleOrRange<string> & {}) | (() => import("./src/common/props").SingleOrRange<string>) | ((new (...args: any[]) => import("./src/common/props").SingleOrRange<string> & {}) | (() => import("./src/common/props").SingleOrRange<string>))[], unknown, unknown>;
+    tabindex: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number) & {}) | (() => string | number) | ((new (...args: any[]) => (string | number) & {}) | (() => string | number))[], unknown, unknown>;
     placeholder: string;
     modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("./src/common/props").ModelValueType & {}) | (() => import("./src/common/props").ModelValueType) | ((new (...args: any[]) => import("./src/common/props").ModelValueType & {}) | (() => import("./src/common/props").ModelValueType))[], unknown, unknown>;
     disabled: boolean;

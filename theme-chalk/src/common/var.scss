@@ -15,25 +15,25 @@ $types: primary, success, warning, danger, error, info;
 $colors: () !default;
 $colors: map.deep-merge(
   (
-    'white': #ffffff,
-    'black': #000000,
+    'white': rgba(255, 255, 255, 1),
+    'black': rgba(74, 70, 100, 1),
     'primary': (
-      'base': #409eff,
+      'base': rgba(74, 83, 142, 1),
     ),
     'success': (
-      'base': #67c23a,
+      'base': rgba(37, 197, 95, 1),
     ),
     'warning': (
-      'base': #e6a23c,
+      'base': rgba(249, 116, 23, 1),
     ),
     'danger': (
-      'base': #f56c6c,
+      'base': rgba(239, 69, 68, 1),
     ),
     'error': (
-      'base': #f56c6c,
+      'base': rgba(239, 69, 68, 1),
     ),
     'info': (
-      'base': #909399,
+      'base': rgba(18, 165, 233, 1),
     ),
   ),
   $colors
@@ -452,43 +452,43 @@ $select-dropdown: map.merge(
 
 $select-wrapper-padding: () !default;
 $select-wrapper-padding: map.merge(
-    (
-      'large': 8px 16px,
-      'default': 4px 12px,
-      'small': 2px 8px,
-    ),
-    $select-wrapper-padding
+  (
+    'large': 8px 16px,
+    'default': 4px 12px,
+    'small': 2px 8px,
+  ),
+  $select-wrapper-padding
 );
 
 $select-near-margin-left: () !default;
 $select-near-margin-left: map.merge(
-    (
-      'large': -8px,
-      'default': -8px,
-      'small': -6px,
-    ),
-    $select-near-margin-left
+  (
+    'large': -8px,
+    'default': -8px,
+    'small': -6px,
+  ),
+  $select-near-margin-left
 );
 
 $select-item-gap: () !default;
 $select-item-gap: map.merge(
-    (
-      'large': 6px,
-      'default': 6px,
-      'small': 4px,
-    ),
-    $select-item-gap
+  (
+    'large': 6px,
+    'default': 6px,
+    'small': 4px,
+  ),
+  $select-item-gap
 );
 
 // the same height of el-tag
 $select-item-height: () !default;
 $select-item-height: map.merge(
-    (
-      'large': 24px,
-      'default': 24px,
-      'small': 20px,
-    ),
-    $select-item-height
+  (
+    'large': 24px,
+    'default': 24px,
+    'small': 20px,
+  ),
+  $select-item-height
 );
 
 // Alert

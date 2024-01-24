@@ -232,6 +232,7 @@ declare const _default: import("vue").DefineComponent<{
     onDestroy?: (() => any) | undefined;
 }, {
     readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "error" | "success" | "warning" | "info", unknown>;
+    readonly offset: number;
     readonly message: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
         [key: string]: any;
     }>) & {}) | (() => string | import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
@@ -241,7 +242,6 @@ declare const _default: import("vue").DefineComponent<{
     }>) & {}) | (() => string | import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
         [key: string]: any;
     }>))[], unknown, unknown>;
-    readonly offset: number;
     readonly title: string;
     readonly position: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "top-right" | "top-left" | "bottom-right" | "bottom-left", unknown>;
     readonly id: string;

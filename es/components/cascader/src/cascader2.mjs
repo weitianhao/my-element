@@ -1,4 +1,4 @@
-import { defineComponent, useAttrs, ref, computed, nextTick, watch, onMounted, openBlock, createBlock, unref, withCtx, withDirectives, createElementBlock, normalizeClass, normalizeStyle, createVNode, withModifiers, Fragment, renderList, toDisplayString, createElementVNode, withKeys, vModelText, createCommentVNode, isRef, vShow, renderSlot } from 'vue';
+import { defineComponent, inject, useAttrs, ref, provide, computed, nextTick, watch, onMounted, openBlock, createBlock, unref, withCtx, withDirectives, createElementBlock, normalizeClass, normalizeStyle, createVNode, withModifiers, Fragment, renderList, toDisplayString, createElementVNode, withKeys, vModelText, createCommentVNode, isRef, vShow, renderSlot } from 'vue';
 import { isPromise } from '@vue/shared';
 import { cloneDeep, debounce } from 'lodash-unified';
 import { isClient, useCssVar, useResizeObserver } from '@vueuse/core';
@@ -40,6 +40,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   emits: cascaderEmits,
   setup(__props, { expose, emit }) {
     const props = __props;
+    const setFloat = inject("SET_FLOAT");
     const popperOptions = {
       modifiers: [
         {
@@ -78,11 +79,16 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const allPresentTags = ref([]);
     const suggestions = ref([]);
     const isOnComposition = ref(false);
+    const clearTimeKey = ref(Date.now());
+    provide("PARENT_CLEAR", clearTimeKey);
     const cascaderStyle = computed(() => {
       return attrs.style;
     });
     const isDisabled = computed(() => props.disabled || (form == null ? void 0 : form.disabled));
-    const inputPlaceholder = computed(() => props.placeholder || t("el.cascader.placeholder"));
+    const inputPlaceholder = computed(() => {
+      const _placeholder = props.placeholder || t("el.cascader.placeholder");
+      return _placeholder;
+    });
     const currentPlaceholder = computed(() => searchInputValue.value || presentTags.value.length > 0 || isOnComposition.value ? "" : inputPlaceholder.value);
     const realSize = useFormSize();
     const tagSize = computed(() => ["small"].includes(realSize.value) ? "small" : "default");
@@ -130,9 +136,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         nsCascader.is("reverse", popperVisible.value)
       ];
     });
-    const inputClass = computed(() => {
-      return nsCascader.is("focus", popperVisible.value || filterFocus.value);
+    const isFocus = computed(() => {
+      return popperVisible.value || filterFocus.value;
     });
+    const inputClass = computed(() => {
+      return nsCascader.is("focus", isFocus.value);
+    });
+    provide("PARENT_FOCUS", isFocus);
     const contentRef = computed(() => {
       var _a, _b;
       return (_b = (_a = tooltipRef.value) == null ? void 0 : _a.popperRef) == null ? void 0 : _b.contentRef;
@@ -310,6 +320,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         syncPresentTextValue();
       }
       togglePopperVisible(false);
+      clearTimeKey.value = Date.now();
+      setFloat(false);
     };
     const syncPresentTextValue = () => {
       const { value } = presentText;

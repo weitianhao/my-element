@@ -7,8 +7,9 @@ interface UseFocusControllerOptions {
      */
     beforeBlur?: (event: FocusEvent) => boolean | undefined;
     afterBlur?: () => void;
+    isFull?: any;
 }
-export declare function useFocusController<T extends HTMLElement>(target: ShallowRef<T | undefined>, { afterFocus, beforeBlur, afterBlur }?: UseFocusControllerOptions): {
+export declare function useFocusController<T extends HTMLElement>(target: ShallowRef<T | undefined>, { afterFocus, beforeBlur, afterBlur, isFull }?: UseFocusControllerOptions): {
     wrapperRef: ShallowRef<HTMLElement | undefined>;
     isFocused: import("vue").Ref<boolean>;
     handleFocus: (event: FocusEvent) => void;

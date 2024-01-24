@@ -175,8 +175,8 @@ declare const _DatePicker: SFCWithInstall<import("vue").DefineComponent<{
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
 }, {
     readonly type: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("./src/date-picker.type").IDatePickerType & {}) | (() => import("./src/date-picker.type").IDatePickerType) | ((new (...args: any[]) => import("./src/date-picker.type").IDatePickerType & {}) | (() => import("./src/date-picker.type").IDatePickerType))[], unknown, unknown>;
-    readonly tabindex: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number) & {}) | (() => string | number) | ((new (...args: any[]) => (string | number) & {}) | (() => string | number))[], unknown, unknown>;
     readonly name: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("..").SingleOrRange<string> & {}) | (() => import("..").SingleOrRange<string>) | ((new (...args: any[]) => import("..").SingleOrRange<string> & {}) | (() => import("..").SingleOrRange<string>))[], unknown, unknown>;
+    readonly tabindex: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number) & {}) | (() => string | number) | ((new (...args: any[]) => (string | number) & {}) | (() => string | number))[], unknown, unknown>;
     readonly placeholder: string;
     readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("..").ModelValueType & {}) | (() => import("..").ModelValueType) | ((new (...args: any[]) => import("..").ModelValueType & {}) | (() => import("..").ModelValueType))[], unknown, unknown>;
     readonly disabled: boolean;
@@ -371,8 +371,8 @@ export declare const ElDatePicker: SFCWithInstall<import("vue").DefineComponent<
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
 }, {
     readonly type: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("./src/date-picker.type").IDatePickerType & {}) | (() => import("./src/date-picker.type").IDatePickerType) | ((new (...args: any[]) => import("./src/date-picker.type").IDatePickerType & {}) | (() => import("./src/date-picker.type").IDatePickerType))[], unknown, unknown>;
-    readonly tabindex: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number) & {}) | (() => string | number) | ((new (...args: any[]) => (string | number) & {}) | (() => string | number))[], unknown, unknown>;
     readonly name: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("..").SingleOrRange<string> & {}) | (() => import("..").SingleOrRange<string>) | ((new (...args: any[]) => import("..").SingleOrRange<string> & {}) | (() => import("..").SingleOrRange<string>))[], unknown, unknown>;
+    readonly tabindex: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number) & {}) | (() => string | number) | ((new (...args: any[]) => (string | number) & {}) | (() => string | number))[], unknown, unknown>;
     readonly placeholder: string;
     readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("..").ModelValueType & {}) | (() => import("..").ModelValueType) | ((new (...args: any[]) => import("..").ModelValueType & {}) | (() => import("..").ModelValueType))[], unknown, unknown>;
     readonly disabled: boolean;

@@ -8,7 +8,7 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    readonly labelPosition: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "top" | "right" | "left", unknown, "right", boolean>;
+    readonly labelPosition: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "top" | "right" | "left" | "float", unknown, "right", boolean>;
     readonly requireAsteriskPosition: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "right" | "left", unknown, "left", boolean>;
     readonly labelWidth: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
     readonly labelSuffix: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
@@ -42,7 +42,7 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
         };
-        readonly labelPosition: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "top" | "right" | "left", unknown, "right", boolean>;
+        readonly labelPosition: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "top" | "right" | "left" | "float", unknown, "right", boolean>;
         readonly requireAsteriskPosition: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "right" | "left", unknown, "left", boolean>;
         readonly labelWidth: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
         readonly labelSuffix: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
@@ -91,7 +91,7 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
         cssVarBlockName: (name: string) => string;
     };
     formClasses: import("vue").ComputedRef<(string | {
-        [x: string]: boolean | import("element-plus/es/utils").EpPropMergeType<StringConstructor, "top" | "right" | "left", unknown>;
+        [x: string]: boolean | import("element-plus/es/utils").EpPropMergeType<StringConstructor, "top" | "right" | "left" | "float", unknown>;
     })[]>;
     getField: (prop: string) => import("./src/types").FormItemContext | undefined;
     addField: (field: import("./src/types").FormItemContext) => void;
@@ -114,7 +114,7 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
     };
-    readonly labelPosition: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "top" | "right" | "left", unknown, "right", boolean>;
+    readonly labelPosition: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "top" | "right" | "left" | "float", unknown, "right", boolean>;
     readonly requireAsteriskPosition: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "right" | "left", unknown, "left", boolean>;
     readonly labelWidth: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
     readonly labelSuffix: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
@@ -142,7 +142,7 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
     onValidate?: ((prop: import("./src/form-item").FormItemProp, isValid: boolean, message: string) => any) | undefined;
 }, {
     readonly disabled: boolean;
-    readonly labelPosition: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "top" | "right" | "left", unknown>;
+    readonly labelPosition: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "top" | "right" | "left" | "float", unknown>;
     readonly requireAsteriskPosition: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "right" | "left", unknown>;
     readonly labelWidth: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
     readonly labelSuffix: string;
@@ -155,7 +155,6 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
     readonly scrollToError: boolean;
 }>> & {
     FormItem: import("vue").DefineComponent<{
-        readonly floatLabel: BooleanConstructor;
         readonly label: StringConstructor;
         readonly labelWidth: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
         readonly prop: {
@@ -189,7 +188,6 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
         };
     }, {
         props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
-            readonly floatLabel: BooleanConstructor;
             readonly label: StringConstructor;
             readonly labelWidth: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
             readonly prop: {
@@ -256,9 +254,12 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
         formItemRef: import("vue").Ref<HTMLDivElement | undefined>;
         initialValue: any;
         isResettingField: boolean;
+        floatStyle: import("vue").Ref<{}>;
+        isFloat: import("vue").ComputedRef<boolean>;
+        addFloat: import("vue").Ref<boolean>;
         labelStyle: import("vue").ComputedRef<import("vue").CSSProperties>;
         contentStyle: import("vue").ComputedRef<import("vue").CSSProperties>;
-        formItemClasses: import("vue").ComputedRef<(string | {
+        formItemClasses: import("vue").ComputedRef<(string | false | {
             [x: string]: boolean | undefined;
         })[]>;
         _inlineMessage: import("vue").ComputedRef<boolean>;
@@ -298,7 +299,6 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
             updateAll: boolean;
         }>;
     }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
-        readonly floatLabel: BooleanConstructor;
         readonly label: StringConstructor;
         readonly labelWidth: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
         readonly prop: {
@@ -335,12 +335,10 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
         readonly labelWidth: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly showMessage: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly inlineMessage: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, BooleanConstructor], unknown, unknown>;
-        readonly floatLabel: boolean;
     }>;
 };
 export default ElForm;
 export declare const ElFormItem: import("element-plus/es/utils").SFCWithInstall<import("vue").DefineComponent<{
-    readonly floatLabel: BooleanConstructor;
     readonly label: StringConstructor;
     readonly labelWidth: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
     readonly prop: {
@@ -374,7 +372,6 @@ export declare const ElFormItem: import("element-plus/es/utils").SFCWithInstall<
     };
 }, {
     props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
-        readonly floatLabel: BooleanConstructor;
         readonly label: StringConstructor;
         readonly labelWidth: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
         readonly prop: {
@@ -441,9 +438,12 @@ export declare const ElFormItem: import("element-plus/es/utils").SFCWithInstall<
     formItemRef: import("vue").Ref<HTMLDivElement | undefined>;
     initialValue: any;
     isResettingField: boolean;
+    floatStyle: import("vue").Ref<{}>;
+    isFloat: import("vue").ComputedRef<boolean>;
+    addFloat: import("vue").Ref<boolean>;
     labelStyle: import("vue").ComputedRef<import("vue").CSSProperties>;
     contentStyle: import("vue").ComputedRef<import("vue").CSSProperties>;
-    formItemClasses: import("vue").ComputedRef<(string | {
+    formItemClasses: import("vue").ComputedRef<(string | false | {
         [x: string]: boolean | undefined;
     })[]>;
     _inlineMessage: import("vue").ComputedRef<boolean>;
@@ -483,7 +483,6 @@ export declare const ElFormItem: import("element-plus/es/utils").SFCWithInstall<
         updateAll: boolean;
     }>;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
-    readonly floatLabel: BooleanConstructor;
     readonly label: StringConstructor;
     readonly labelWidth: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
     readonly prop: {
@@ -520,7 +519,6 @@ export declare const ElFormItem: import("element-plus/es/utils").SFCWithInstall<
     readonly labelWidth: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
     readonly showMessage: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly inlineMessage: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, BooleanConstructor], unknown, unknown>;
-    readonly floatLabel: boolean;
 }>>;
 export * from './src/form';
 export * from './src/form-item';

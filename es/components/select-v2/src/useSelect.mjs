@@ -1,4 +1,4 @@
-import { reactive, ref, computed, nextTick, watch, watchEffect, onMounted } from 'vue';
+import { inject, reactive, ref, computed, nextTick, watch, watchEffect, onMounted } from 'vue';
 import { isArray, isFunction, isObject } from '@vue/shared';
 import { debounce, isEqual, get, findLastIndex } from 'lodash-unified';
 import { useResizeObserver } from '@vueuse/core';
@@ -20,9 +20,13 @@ import { useFormSize } from '../../form/src/hooks/use-form-common-props.mjs';
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '../../../constants/event.mjs';
 import { EVENT_CODE } from '../../../constants/aria.mjs';
 import { debugWarn } from '../../../utils/error.mjs';
+import { getChildPositionAndSize } from '../../../utils/dom/position.mjs';
 
 const MINIMUM_INPUT_WIDTH = 11;
 const useSelect = (props, emit) => {
+  const setLabelSize = inject("SET_LABEL_SIZE");
+  const isFloat = inject("IS_FLOAT");
+  const setFloat = inject("SET_FLOAT");
   const { t } = useLocale();
   const nsSelect = useNamespace("select");
   const nsInput = useNamespace("input");
@@ -59,6 +63,9 @@ const useSelect = (props, emit) => {
   const menuRef = ref(null);
   const tagMenuRef = ref(null);
   const collapseItemRef = ref(null);
+  const hasModelValue = computed(() => {
+    return props.multiple ? isArray(props.modelValue) && props.modelValue.length > 0 : props.modelValue !== void 0 && props.modelValue !== null && props.modelValue !== "";
+  });
   const { wrapperRef, isFocused, handleFocus, handleBlur } = useFocusController(inputRef, {
     afterFocus() {
       if (props.automaticDropdown && !expanded.value) {
@@ -73,7 +80,8 @@ const useSelect = (props, emit) => {
     afterBlur() {
       expanded.value = false;
       states.menuVisibleOnFocus = false;
-    }
+    },
+    isFull: hasModelValue
   });
   const allOptions = ref([]);
   const filteredOptions = ref([]);
@@ -82,9 +90,6 @@ const useSelect = (props, emit) => {
   const popupHeight = computed(() => {
     const totalHeight = filteredOptions.value.length * props.itemHeight;
     return totalHeight > props.height ? props.height : totalHeight;
-  });
-  const hasModelValue = computed(() => {
-    return props.multiple ? isArray(props.modelValue) && props.modelValue.length > 0 : props.modelValue !== void 0 && props.modelValue !== null && props.modelValue !== "";
   });
   const showClearBtn = computed(() => {
     const criteria = props.clearable && !selectDisabled.value && states.inputHovering && hasModelValue.value;
@@ -183,7 +188,12 @@ const useSelect = (props, emit) => {
   const currentPlaceholder = computed(() => {
     var _a;
     const _placeholder = (_a = props.placeholder) != null ? _a : t("el.select.placeholder");
-    return props.multiple || !hasModelValue.value ? _placeholder : states.selectedLabel;
+    const empty = props.multiple || !hasModelValue.value;
+    if (isFloat && isFloat.value) {
+      return isFocused.value ? empty ? _placeholder : "" : "";
+    } else {
+      return empty ? _placeholder : "";
+    }
   });
   const popperRef = computed(() => {
     var _a, _b;
@@ -425,7 +435,8 @@ const useSelect = (props, emit) => {
     update(emptyValue);
     emit("clear");
     clearAllNewOption();
-    focus();
+    isFocused.value = false;
+    setFloat(false);
   };
   const onKeyboardNavigate = (direction, hoveringIndex = void 0) => {
     const options = filteredOptions.value;
@@ -609,6 +620,9 @@ const useSelect = (props, emit) => {
   });
   onMounted(() => {
     initStates();
+    if (setLabelSize) {
+      setLabelSize(getChildPositionAndSize(wrapperRef.value, selectionRef.value));
+    }
   });
   useResizeObserver(selectRef, handleResize);
   useResizeObserver(selectionRef, resetSelectionWidth);

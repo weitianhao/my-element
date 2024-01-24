@@ -1,4 +1,4 @@
-import { reactive, computed, ref, watch, watchEffect, nextTick, toRaw, onMounted } from 'vue';
+import { inject, reactive, computed, ref, watch, watchEffect, nextTick, toRaw, onMounted } from 'vue';
 import { isArray, isFunction, toRawType, isString, isObject } from '@vue/shared';
 import { isEqual, get, debounce, findLastIndex } from 'lodash-unified';
 import { isClient, useResizeObserver } from '@vueuse/core';
@@ -20,13 +20,17 @@ import { isUndefined, isNumber } from '../../../utils/types.mjs';
 import { CHANGE_EVENT, UPDATE_MODEL_EVENT } from '../../../constants/event.mjs';
 import { EVENT_CODE } from '../../../constants/aria.mjs';
 import { scrollIntoView } from '../../../utils/dom/scroll.mjs';
+import { getChildPositionAndSize } from '../../../utils/dom/position.mjs';
 
 const MINIMUM_INPUT_WIDTH = 11;
 const useSelect = (props, emit) => {
+  const setFloat = inject("SET_FLOAT");
   const { t } = useLocale();
   const contentId = useId();
   const nsSelect = useNamespace("select");
   const nsInput = useNamespace("input");
+  const setLabelSize = inject("SET_LABEL_SIZE");
+  const isFloat = inject("IS_FLOAT");
   const states = reactive({
     inputValue: "",
     options: /* @__PURE__ */ new Map(),
@@ -63,6 +67,9 @@ const useSelect = (props, emit) => {
   const tagMenuRef = ref(null);
   const collapseItemRef = ref(null);
   const scrollbarRef = ref(null);
+  const hasModelValue = computed(() => {
+    return props.multiple ? isArray(props.modelValue) && props.modelValue.length > 0 : props.modelValue !== void 0 && props.modelValue !== null && props.modelValue !== "";
+  });
   const { wrapperRef, isFocused, handleFocus, handleBlur } = useFocusController(inputRef, {
     afterFocus() {
       if (props.automaticDropdown && !expanded.value) {
@@ -77,7 +84,8 @@ const useSelect = (props, emit) => {
     afterBlur() {
       expanded.value = false;
       states.menuVisibleOnFocus = false;
-    }
+    },
+    isFull: hasModelValue
   });
   const expanded = ref(false);
   const hoverOption = ref();
@@ -86,9 +94,6 @@ const useSelect = (props, emit) => {
     formItemContext: formItem
   });
   const selectDisabled = computed(() => props.disabled || (form == null ? void 0 : form.disabled));
-  const hasModelValue = computed(() => {
-    return props.multiple ? isArray(props.modelValue) && props.modelValue.length > 0 : props.modelValue !== void 0 && props.modelValue !== null && props.modelValue !== "";
-  });
   const showClose = computed(() => {
     const criteria = props.clearable && !selectDisabled.value && states.inputHovering && hasModelValue.value;
     return criteria;
@@ -162,7 +167,12 @@ const useSelect = (props, emit) => {
   const currentPlaceholder = computed(() => {
     var _a;
     const _placeholder = (_a = props.placeholder) != null ? _a : t("el.select.placeholder");
-    return props.multiple || !hasModelValue.value ? _placeholder : states.selectedLabel;
+    const empty = props.multiple || !hasModelValue.value;
+    if (isFloat && isFloat.value) {
+      return isFocused.value ? empty ? _placeholder : "" : "";
+    } else {
+      return empty ? _placeholder : "";
+    }
   });
   watch(() => props.modelValue, (val, oldVal) => {
     if (props.multiple) {
@@ -475,6 +485,8 @@ const useSelect = (props, emit) => {
   };
   const handleClearClick = (event) => {
     deleteSelected(event);
+    isFocused.value = false;
+    setFloat(false);
   };
   const handleClickOutside = (event) => {
     expanded.value = false;
@@ -583,6 +595,9 @@ const useSelect = (props, emit) => {
   useResizeObserver(collapseItemRef, resetCollapseItemWidth);
   onMounted(() => {
     setSelected();
+    if (setLabelSize) {
+      setLabelSize(getChildPositionAndSize(wrapperRef.value, selectionRef.value));
+    }
   });
   return {
     inputId,

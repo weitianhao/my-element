@@ -947,10 +947,10 @@ export declare const ElTreeV2: import("element-plus/es/utils").SFCWithInstall<im
     }, {
         readonly disabled: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly expanded: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-        readonly current: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly indeterminate: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly checked: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly node: import("./src/types").TreeNode;
+        readonly current: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly itemSize: number;
         readonly showCheckbox: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly hiddenExpandIcon: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -1021,9 +1021,9 @@ export declare const ElTreeV2: import("element-plus/es/utils").SFCWithInstall<im
     readonly props: import("./src/types").TreeOptionProps;
     readonly checkStrictly: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly accordion: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly indent: number;
     readonly perfMode: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly itemSize: number;
-    readonly indent: number;
     readonly showCheckbox: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultCheckedKeys: import("./src/types").TreeKey[];
     readonly defaultExpandedKeys: import("./src/types").TreeKey[];

@@ -125,8 +125,8 @@ export declare const ElTag: import("element-plus/es/utils").SFCWithInstall<impor
     onClick?: ((evt: MouseEvent) => any) | undefined;
 }, {
     readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "success" | "warning" | "info" | "danger", unknown>;
-    readonly color: string;
     readonly effect: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "light" | "dark" | "plain", unknown>;
+    readonly color: string;
     readonly size: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "small" | "large", unknown>;
     readonly closable: boolean;
     readonly round: boolean;

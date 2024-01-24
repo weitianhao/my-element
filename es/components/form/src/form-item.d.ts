@@ -5,7 +5,6 @@ export declare const formItemValidateStates: readonly ["", "error", "validating"
 export declare type FormItemValidateState = typeof formItemValidateStates[number];
 export declare type FormItemProp = Arrayable<string>;
 export declare const formItemProps: {
-    readonly floatLabel: BooleanConstructor;
     readonly label: StringConstructor;
     readonly labelWidth: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
     readonly prop: {

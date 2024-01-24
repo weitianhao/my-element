@@ -9,7 +9,7 @@ import _export_sfc from '../../../_virtual/plugin-vue_export-helper.mjs';
 import { usePopperContainerId } from '../../../hooks/use-popper-container/index.mjs';
 import { useNamespace } from '../../../hooks/use-namespace/index.mjs';
 import { composeEventHandlers } from '../../../utils/dom/event.mjs';
-import ElPopperContent from '../../popper/src/content2.mjs';
+import ElPopperContent from '../../popper/src/content.mjs';
 
 const __default__ = defineComponent({
   name: "ElTooltipContent",

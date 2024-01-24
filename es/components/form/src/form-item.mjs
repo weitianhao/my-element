@@ -1,4 +1,4 @@
-import { defineComponent, useSlots, inject, ref, computed, nextTick, watch, reactive, toRefs, provide, onMounted, onBeforeUnmount, openBlock, createElementBlock, normalizeClass, unref, createVNode, withCtx, createBlock, resolveDynamicComponent, normalizeStyle, renderSlot, createTextVNode, toDisplayString, createCommentVNode, createElementVNode, TransitionGroup } from 'vue';
+import { defineComponent, useSlots, inject, ref, computed, provide, nextTick, watch, reactive, toRefs, onMounted, onBeforeUnmount, openBlock, createElementBlock, normalizeClass, unref, createVNode, withCtx, createBlock, resolveDynamicComponent, normalizeStyle, renderSlot, createTextVNode, toDisplayString, createCommentVNode, createElementVNode, TransitionGroup } from 'vue';
 import AsyncValidator from 'async-validator';
 import { castArray, clone } from 'lodash-unified';
 import { refDebounced } from '@vueuse/core';
@@ -39,6 +39,11 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const formItemRef = ref();
     let initialValue = void 0;
     let isResettingField = false;
+    const floatStyle = ref({});
+    const isFloat = computed(() => {
+      return (formContext == null ? void 0 : formContext.labelPosition) === "float";
+    });
+    const addFloat = ref(false);
     const labelStyle = computed(() => {
       if ((formContext == null ? void 0 : formContext.labelPosition) === "top") {
         return {};
@@ -62,9 +67,11 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       return {};
     });
     const formItemClasses = computed(() => [
+      addFloat.value && "is-float",
       ns.b(),
       ns.m(_size.value),
       ns.is("error", validateState.value === "error"),
+      ns.is("error-float", validateState.value === "error" && isFloat.value),
       ns.is("validating", validateState.value === "validating"),
       ns.is("success", validateState.value === "success"),
       ns.is("required", isRequired.value || props.required),
@@ -88,6 +95,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const labelFor = computed(() => {
       return props.for || (inputIds.value.length === 1 ? inputIds.value[0] : void 0);
     });
+    provide("LABEL_FOR", labelFor);
     const isGroup = computed(() => {
       return !labelFor.value && hasLabel.value;
     });
@@ -228,9 +236,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       setValidationState(val ? "error" : "");
     }, { immediate: true });
     watch(() => props.validateStatus, (val) => setValidationState(val || ""));
-    watch(() => fieldValue, (val) => {
-      console.log(val, "val");
-    });
     const context = reactive({
       ...toRefs(props),
       $el: formItemRef,
@@ -248,6 +253,19 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       validate
     });
     provide(formItemContextKey, context);
+    provide("SET_LABEL_SIZE", (data) => {
+      if (isFloat.value) {
+        const { left } = data;
+        const style = {
+          left: `${left}px`
+        };
+        floatStyle.value = style;
+      }
+    });
+    provide("SET_FLOAT", (val) => {
+      addFloat.value = val;
+    });
+    provide("IS_FLOAT", isFloat);
     onMounted(() => {
       if (props.prop) {
         formContext == null ? void 0 : formContext.addField(context);
@@ -284,7 +302,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               id: unref(labelId),
               for: unref(labelFor),
               class: normalizeClass(unref(ns).e("label")),
-              style: normalizeStyle(unref(labelStyle))
+              style: normalizeStyle(unref(isFloat) ? floatStyle.value : unref(labelStyle))
             }, {
               default: withCtx(() => [
                 renderSlot(_ctx.$slots, "label", { label: unref(currentLabel) }, () => [

@@ -1,4 +1,4 @@
-import { defineComponent, computed, reactive, toRefs, provide, resolveComponent, resolveDirective, withDirectives, openBlock, createElementBlock, normalizeClass, withModifiers, createVNode, withCtx, createElementVNode, renderSlot, createCommentVNode, Fragment, renderList, normalizeStyle, toDisplayString, createBlock, withKeys, vModelText, resolveDynamicComponent, vShow, createSlots, normalizeProps, guardReactiveProps } from 'vue';
+import { defineComponent, computed, reactive, toRefs, provide, resolveComponent, resolveDirective, withDirectives, openBlock, createElementBlock, normalizeClass, withModifiers, createVNode, withCtx, createElementVNode, renderSlot, createCommentVNode, Fragment, renderList, normalizeStyle, toDisplayString, createBlock, withKeys, vModelText, createTextVNode, resolveDynamicComponent, vShow, createSlots, normalizeProps, guardReactiveProps } from 'vue';
 import '../../../utils/index.mjs';
 import '../../../directives/index.mjs';
 import { ElTooltip } from '../../tooltip/index.mjs';
@@ -267,6 +267,16 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
               ])
             }, [
               createElementVNode("span", null, toDisplayString(_ctx.currentPlaceholder), 1)
+            ], 2)) : createCommentVNode("v-if", true),
+            _ctx.states.selectedLabel ? (openBlock(), createElementBlock("div", {
+              key: 3,
+              class: normalizeClass([_ctx.nsSelect.e("selected-item")])
+            }, [
+              renderSlot(_ctx.$slots, "selection", {
+                label: _ctx.states.selectedLabel
+              }, () => [
+                createTextVNode(toDisplayString(_ctx.states.selectedLabel), 1)
+              ])
             ], 2)) : createCommentVNode("v-if", true)
           ], 2),
           createElementVNode("div", {

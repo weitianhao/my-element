@@ -570,10 +570,10 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         readonly autofocus: boolean;
         readonly round: boolean;
         readonly tag: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>;
+        readonly plain: boolean;
         readonly nativeType: import("../../../utils").EpPropMergeType<StringConstructor, "reset" | "submit" | "button", unknown>;
         readonly loadingIcon: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>;
         readonly autoInsertSpace: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-        readonly plain: boolean;
     }>> & {
         ButtonGroup: import("vue").DefineComponent<{
             readonly size: {
@@ -703,6 +703,10 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         readonly inputStyle: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue) | ((new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("../../../utils").Mutable<{}>, boolean>;
         readonly autofocus: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }, {
+        setLabelSize: any;
+        isFloat: any;
+        labelFor: any;
+        parentRef: import("vue").Ref<any>;
         props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
             readonly id: import("../../../utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
             readonly size: {
@@ -854,6 +858,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         countStyle: import("vue").Ref<import("vue").StyleValue | undefined>;
         textareaCalcStyle: import("vue").ShallowRef<import("vue").StyleValue>;
         _ref: import("vue").ComputedRef<HTMLInputElement | HTMLTextAreaElement | undefined>;
+        nativeInputValue: import("vue").ComputedRef<string>;
+        isFull: import("vue").ComputedRef<boolean>;
         wrapperRef: import("vue").ShallowRef<HTMLElement | undefined>;
         isFocused: import("vue").Ref<boolean>;
         handleFocus: (event: FocusEvent) => void;
@@ -864,7 +870,6 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         passwordIcon: import("vue").ComputedRef<any>;
         containerStyle: import("vue").ComputedRef<import("vue").StyleValue>;
         textareaStyle: import("vue").ComputedRef<import("vue").StyleValue>;
-        nativeInputValue: import("vue").ComputedRef<string>;
         showClear: import("vue").ComputedRef<boolean>;
         showPwdVisible: import("vue").ComputedRef<boolean>;
         isWordLimitVisible: import("vue").ComputedRef<boolean>;
@@ -890,6 +895,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         handleKeydown: (evt: KeyboardEvent) => void;
         select: () => void;
         clear: () => void;
+        placeholder: import("vue").ComputedRef<string | undefined>;
         ElIcon: import("../../../utils").SFCWithInstall<import("vue").DefineComponent<{
             readonly size: {
                 readonly type: import("vue").PropType<import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | number) & {}) | (() => string | number) | ((new (...args: any[]) => (string | number) & {}) | (() => string | number))[], unknown, unknown>>;
@@ -9242,10 +9248,10 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         readonly autofocus: boolean;
         readonly round: boolean;
         readonly tag: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>;
+        readonly plain: boolean;
         readonly nativeType: import("../../../utils").EpPropMergeType<StringConstructor, "reset" | "submit" | "button", unknown>;
         readonly loadingIcon: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>;
         readonly autoInsertSpace: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-        readonly plain: boolean;
     }>> & {
         ButtonGroup: import("vue").DefineComponent<{
             readonly size: {
@@ -9376,6 +9382,10 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         readonly inputStyle: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue) | ((new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("../../../utils").Mutable<{}>, boolean>;
         readonly autofocus: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }, {
+        setLabelSize: any;
+        isFloat: any;
+        labelFor: any;
+        parentRef: import("vue").Ref<any>;
         props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
             readonly id: import("../../../utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
             readonly size: {
@@ -9527,6 +9537,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         countStyle: import("vue").Ref<import("vue").StyleValue | undefined>;
         textareaCalcStyle: import("vue").ShallowRef<import("vue").StyleValue>;
         _ref: import("vue").ComputedRef<HTMLInputElement | HTMLTextAreaElement | undefined>;
+        nativeInputValue: import("vue").ComputedRef<string>;
+        isFull: import("vue").ComputedRef<boolean>;
         wrapperRef: import("vue").ShallowRef<HTMLElement | undefined>;
         isFocused: import("vue").Ref<boolean>;
         handleFocus: (event: FocusEvent) => void;
@@ -9537,7 +9549,6 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         passwordIcon: import("vue").ComputedRef<any>;
         containerStyle: import("vue").ComputedRef<import("vue").StyleValue>;
         textareaStyle: import("vue").ComputedRef<import("vue").StyleValue>;
-        nativeInputValue: import("vue").ComputedRef<string>;
         showClear: import("vue").ComputedRef<boolean>;
         showPwdVisible: import("vue").ComputedRef<boolean>;
         isWordLimitVisible: import("vue").ComputedRef<boolean>;
@@ -9563,6 +9574,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         handleKeydown: (evt: KeyboardEvent) => void;
         select: () => void;
         clear: () => void;
+        placeholder: import("vue").ComputedRef<string | undefined>;
         ElIcon: import("../../../utils").SFCWithInstall<import("vue").DefineComponent<{
             readonly size: {
                 readonly type: import("vue").PropType<import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | number) & {}) | (() => string | number) | ((new (...args: any[]) => (string | number) & {}) | (() => string | number))[], unknown, unknown>>;

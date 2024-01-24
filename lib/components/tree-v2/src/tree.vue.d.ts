@@ -947,10 +947,10 @@ declare const _default: import("vue").DefineComponent<{
     }, {
         readonly disabled: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly expanded: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-        readonly current: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly indeterminate: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly checked: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly node: import("./types").TreeNode;
+        readonly current: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly itemSize: number;
         readonly showCheckbox: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly hiddenExpandIcon: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -1021,9 +1021,9 @@ declare const _default: import("vue").DefineComponent<{
     readonly props: import("./types").TreeOptionProps;
     readonly checkStrictly: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly accordion: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly indent: number;
     readonly perfMode: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly itemSize: number;
-    readonly indent: number;
     readonly showCheckbox: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultCheckedKeys: import("./types").TreeKey[];
     readonly defaultExpandedKeys: import("./types").TreeKey[];

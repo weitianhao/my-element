@@ -297,6 +297,10 @@ declare const _default: import("vue").DefineComponent<{
             onMouseenter?: ((evt: MouseEvent) => any) | undefined;
             onMouseleave?: ((evt: MouseEvent) => any) | undefined;
         }, {
+            setLabelSize: any;
+            isFloat: any;
+            labelFor: any;
+            parentRef: import("vue").Ref<any>;
             props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
                 readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
                 readonly size: {
@@ -448,6 +452,8 @@ declare const _default: import("vue").DefineComponent<{
             countStyle: import("vue").Ref<import("vue").StyleValue | undefined>;
             textareaCalcStyle: import("vue").ShallowRef<import("vue").StyleValue>;
             _ref: import("vue").ComputedRef<HTMLInputElement | HTMLTextAreaElement | undefined>;
+            nativeInputValue: import("vue").ComputedRef<string>;
+            isFull: import("vue").ComputedRef<boolean>;
             wrapperRef: import("vue").ShallowRef<HTMLElement | undefined>;
             isFocused: import("vue").Ref<boolean>;
             handleFocus: (event: FocusEvent) => void;
@@ -458,7 +464,6 @@ declare const _default: import("vue").DefineComponent<{
             passwordIcon: import("vue").ComputedRef<any>;
             containerStyle: import("vue").ComputedRef<import("vue").StyleValue>;
             textareaStyle: import("vue").ComputedRef<import("vue").StyleValue>;
-            nativeInputValue: import("vue").ComputedRef<string>;
             showClear: import("vue").ComputedRef<boolean>;
             showPwdVisible: import("vue").ComputedRef<boolean>;
             isWordLimitVisible: import("vue").ComputedRef<boolean>;
@@ -484,6 +489,7 @@ declare const _default: import("vue").DefineComponent<{
             handleKeydown: (evt: KeyboardEvent) => void;
             select: () => void;
             clear: () => void;
+            placeholder: import("vue").ComputedRef<string | undefined>;
             ElIcon: import("element-plus/es/utils").SFCWithInstall<import("vue").DefineComponent<{
                 readonly size: {
                     readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number) & {}) | (() => string | number) | ((new (...args: any[]) => (string | number) & {}) | (() => string | number))[], unknown, unknown>>;
@@ -690,6 +696,10 @@ declare const _default: import("vue").DefineComponent<{
         onMouseenter?: ((evt: MouseEvent) => any) | undefined;
         onMouseleave?: ((evt: MouseEvent) => any) | undefined;
     } & import("vue").ShallowUnwrapRef<{
+        setLabelSize: any;
+        isFloat: any;
+        labelFor: any;
+        parentRef: import("vue").Ref<any>;
         props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
             readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
             readonly size: {
@@ -841,6 +851,8 @@ declare const _default: import("vue").DefineComponent<{
         countStyle: import("vue").Ref<import("vue").StyleValue | undefined>;
         textareaCalcStyle: import("vue").ShallowRef<import("vue").StyleValue>;
         _ref: import("vue").ComputedRef<HTMLInputElement | HTMLTextAreaElement | undefined>;
+        nativeInputValue: import("vue").ComputedRef<string>;
+        isFull: import("vue").ComputedRef<boolean>;
         wrapperRef: import("vue").ShallowRef<HTMLElement | undefined>;
         isFocused: import("vue").Ref<boolean>;
         handleFocus: (event: FocusEvent) => void;
@@ -851,7 +863,6 @@ declare const _default: import("vue").DefineComponent<{
         passwordIcon: import("vue").ComputedRef<any>;
         containerStyle: import("vue").ComputedRef<import("vue").StyleValue>;
         textareaStyle: import("vue").ComputedRef<import("vue").StyleValue>;
-        nativeInputValue: import("vue").ComputedRef<string>;
         showClear: import("vue").ComputedRef<boolean>;
         showPwdVisible: import("vue").ComputedRef<boolean>;
         isWordLimitVisible: import("vue").ComputedRef<boolean>;
@@ -877,6 +888,7 @@ declare const _default: import("vue").DefineComponent<{
         handleKeydown: (evt: KeyboardEvent) => void;
         select: () => void;
         clear: () => void;
+        placeholder: import("vue").ComputedRef<string | undefined>;
         ElIcon: import("element-plus/es/utils").SFCWithInstall<import("vue").DefineComponent<{
             readonly size: {
                 readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number) & {}) | (() => string | number) | ((new (...args: any[]) => (string | number) & {}) | (() => string | number))[], unknown, unknown>>;
@@ -1047,6 +1059,10 @@ declare const _default: import("vue").DefineComponent<{
         readonly inputStyle: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue) | ((new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("element-plus/es/utils").Mutable<{}>, boolean>;
         readonly autofocus: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }, {
+        setLabelSize: any;
+        isFloat: any;
+        labelFor: any;
+        parentRef: import("vue").Ref<any>;
         props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
             readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
             readonly size: {
@@ -1198,6 +1214,8 @@ declare const _default: import("vue").DefineComponent<{
         countStyle: import("vue").Ref<import("vue").StyleValue | undefined>;
         textareaCalcStyle: import("vue").ShallowRef<import("vue").StyleValue>;
         _ref: import("vue").ComputedRef<HTMLInputElement | HTMLTextAreaElement | undefined>;
+        nativeInputValue: import("vue").ComputedRef<string>;
+        isFull: import("vue").ComputedRef<boolean>;
         wrapperRef: import("vue").ShallowRef<HTMLElement | undefined>;
         isFocused: import("vue").Ref<boolean>;
         handleFocus: (event: FocusEvent) => void;
@@ -1208,7 +1226,6 @@ declare const _default: import("vue").DefineComponent<{
         passwordIcon: import("vue").ComputedRef<any>;
         containerStyle: import("vue").ComputedRef<import("vue").StyleValue>;
         textareaStyle: import("vue").ComputedRef<import("vue").StyleValue>;
-        nativeInputValue: import("vue").ComputedRef<string>;
         showClear: import("vue").ComputedRef<boolean>;
         showPwdVisible: import("vue").ComputedRef<boolean>;
         isWordLimitVisible: import("vue").ComputedRef<boolean>;
@@ -1234,6 +1251,7 @@ declare const _default: import("vue").DefineComponent<{
         handleKeydown: (evt: KeyboardEvent) => void;
         select: () => void;
         clear: () => void;
+        placeholder: import("vue").ComputedRef<string | undefined>;
         ElIcon: import("element-plus/es/utils").SFCWithInstall<import("vue").DefineComponent<{
             readonly size: {
                 readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number) & {}) | (() => string | number) | ((new (...args: any[]) => (string | number) & {}) | (() => string | number))[], unknown, unknown>>;

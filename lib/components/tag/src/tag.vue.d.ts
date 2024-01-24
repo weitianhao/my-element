@@ -125,8 +125,8 @@ declare const _default: import("vue").DefineComponent<{
     onClick?: ((evt: MouseEvent) => any) | undefined;
 }, {
     readonly type: import("../../../utils").EpPropMergeType<StringConstructor, "" | "success" | "warning" | "info" | "danger", unknown>;
-    readonly color: string;
     readonly effect: import("../../../utils").EpPropMergeType<StringConstructor, "light" | "dark" | "plain", unknown>;
+    readonly color: string;
     readonly size: import("../../../utils").EpPropMergeType<StringConstructor, "" | "default" | "small" | "large", unknown>;
     readonly closable: boolean;
     readonly round: boolean;

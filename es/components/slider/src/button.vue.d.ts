@@ -365,7 +365,7 @@ declare const _default: import("vue").DefineComponent<{
         boundariesPadding: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
         fallbackPlacements: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@popperjs/core").Placement[]) | (() => import("@popperjs/core").Placement[]) | ((new (...args: any[]) => import("@popperjs/core").Placement[]) | (() => import("@popperjs/core").Placement[]))[], unknown, unknown, undefined, boolean>;
         gpuAcceleration: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-        offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 12, boolean>;
+        offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 5, boolean>;
         placement: import("../../../utils").EpPropFinalized<StringConstructor, import("@popperjs/core").Placement, unknown, "bottom", boolean>;
         popperOptions: import("../../../utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
         strategy: import("../../../utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
@@ -688,7 +688,7 @@ declare const _default: import("vue").DefineComponent<{
             boundariesPadding: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
             fallbackPlacements: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@popperjs/core").Placement[]) | (() => import("@popperjs/core").Placement[]) | ((new (...args: any[]) => import("@popperjs/core").Placement[]) | (() => import("@popperjs/core").Placement[]))[], unknown, unknown, undefined, boolean>;
             gpuAcceleration: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-            offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 12, boolean>;
+            offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 5, boolean>;
             placement: import("../../../utils").EpPropFinalized<StringConstructor, import("@popperjs/core").Placement, unknown, "bottom", boolean>;
             popperOptions: import("../../../utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
             strategy: import("../../../utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
@@ -1484,7 +1484,7 @@ declare const _default: import("vue").DefineComponent<{
             readonly boundariesPadding: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
             readonly fallbackPlacements: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@popperjs/core").Placement[]) | (() => import("@popperjs/core").Placement[]) | ((new (...args: any[]) => import("@popperjs/core").Placement[]) | (() => import("@popperjs/core").Placement[]))[], unknown, unknown, undefined, boolean>;
             readonly gpuAcceleration: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-            readonly offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 12, boolean>;
+            readonly offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 5, boolean>;
             readonly placement: import("../../../utils").EpPropFinalized<StringConstructor, import("@popperjs/core").Placement, unknown, "bottom", boolean>;
             readonly popperOptions: import("../../../utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
             readonly strategy: import("../../../utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
@@ -1747,7 +1747,7 @@ declare const _default: import("vue").DefineComponent<{
                 readonly boundariesPadding: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
                 readonly fallbackPlacements: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@popperjs/core").Placement[]) | (() => import("@popperjs/core").Placement[]) | ((new (...args: any[]) => import("@popperjs/core").Placement[]) | (() => import("@popperjs/core").Placement[]))[], unknown, unknown, undefined, boolean>;
                 readonly gpuAcceleration: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-                readonly offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 12, boolean>;
+                readonly offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 5, boolean>;
                 readonly placement: import("../../../utils").EpPropFinalized<StringConstructor, import("@popperjs/core").Placement, unknown, "bottom", boolean>;
                 readonly popperOptions: import("../../../utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                 readonly strategy: import("../../../utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
@@ -2047,7 +2047,7 @@ declare const _default: import("vue").DefineComponent<{
                 readonly boundariesPadding: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
                 readonly fallbackPlacements: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@popperjs/core").Placement[]) | (() => import("@popperjs/core").Placement[]) | ((new (...args: any[]) => import("@popperjs/core").Placement[]) | (() => import("@popperjs/core").Placement[]))[], unknown, unknown, undefined, boolean>;
                 readonly gpuAcceleration: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-                readonly offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 12, boolean>;
+                readonly offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 5, boolean>;
                 readonly placement: import("../../../utils").EpPropFinalized<StringConstructor, import("@popperjs/core").Placement, unknown, "bottom", boolean>;
                 readonly popperOptions: import("../../../utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                 readonly strategy: import("../../../utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
@@ -2296,7 +2296,7 @@ declare const _default: import("vue").DefineComponent<{
                     readonly boundariesPadding: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
                     readonly fallbackPlacements: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@popperjs/core").Placement[]) | (() => import("@popperjs/core").Placement[]) | ((new (...args: any[]) => import("@popperjs/core").Placement[]) | (() => import("@popperjs/core").Placement[]))[], unknown, unknown, undefined, boolean>;
                     readonly gpuAcceleration: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-                    readonly offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 12, boolean>;
+                    readonly offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 5, boolean>;
                     readonly placement: import("../../../utils").EpPropFinalized<StringConstructor, import("@popperjs/core").Placement, unknown, "bottom", boolean>;
                     readonly popperOptions: import("../../../utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("../../../utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
@@ -2643,7 +2643,7 @@ declare const _default: import("vue").DefineComponent<{
                 readonly boundariesPadding: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
                 readonly fallbackPlacements: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@popperjs/core").Placement[]) | (() => import("@popperjs/core").Placement[]) | ((new (...args: any[]) => import("@popperjs/core").Placement[]) | (() => import("@popperjs/core").Placement[]))[], unknown, unknown, undefined, boolean>;
                 readonly gpuAcceleration: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-                readonly offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 12, boolean>;
+                readonly offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 5, boolean>;
                 readonly placement: import("../../../utils").EpPropFinalized<StringConstructor, import("@popperjs/core").Placement, unknown, "bottom", boolean>;
                 readonly popperOptions: import("../../../utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                 readonly strategy: import("../../../utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
@@ -2926,7 +2926,7 @@ declare const _default: import("vue").DefineComponent<{
             readonly boundariesPadding: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
             readonly fallbackPlacements: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@popperjs/core").Placement[]) | (() => import("@popperjs/core").Placement[]) | ((new (...args: any[]) => import("@popperjs/core").Placement[]) | (() => import("@popperjs/core").Placement[]))[], unknown, unknown, undefined, boolean>;
             readonly gpuAcceleration: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-            readonly offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 12, boolean>;
+            readonly offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 5, boolean>;
             readonly placement: import("../../../utils").EpPropFinalized<StringConstructor, import("@popperjs/core").Placement, unknown, "bottom", boolean>;
             readonly popperOptions: import("../../../utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
             readonly strategy: import("../../../utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
@@ -2940,9 +2940,9 @@ declare const _default: import("vue").DefineComponent<{
             readonly placement: import("../../../utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
             readonly strategy: import("../../../utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
             readonly offset: number;
+            readonly effect: string;
             readonly content: string;
             readonly disabled: boolean;
-            readonly effect: string;
             readonly boundariesPadding: number;
             readonly fallbackPlacements: import("@popperjs/core").Placement[];
             readonly gpuAcceleration: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -3266,7 +3266,7 @@ declare const _default: import("vue").DefineComponent<{
         boundariesPadding: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
         fallbackPlacements: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@popperjs/core").Placement[]) | (() => import("@popperjs/core").Placement[]) | ((new (...args: any[]) => import("@popperjs/core").Placement[]) | (() => import("@popperjs/core").Placement[]))[], unknown, unknown, undefined, boolean>;
         gpuAcceleration: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-        offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 12, boolean>;
+        offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 5, boolean>;
         placement: import("../../../utils").EpPropFinalized<StringConstructor, import("@popperjs/core").Placement, unknown, "bottom", boolean>;
         popperOptions: import("../../../utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
         strategy: import("../../../utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
@@ -3290,9 +3290,9 @@ declare const _default: import("vue").DefineComponent<{
         placement: import("../../../utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
         strategy: import("../../../utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
         offset: number;
+        effect: string;
         content: string;
         disabled: boolean;
-        effect: string;
         boundariesPadding: number;
         fallbackPlacements: import("@popperjs/core").Placement[];
         gpuAcceleration: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

@@ -10,7 +10,6 @@ const formItemValidateStates = [
   "success"
 ];
 const formItemProps = buildProps({
-  floatLabel: Boolean,
   label: String,
   labelWidth: {
     type: [String, Number],

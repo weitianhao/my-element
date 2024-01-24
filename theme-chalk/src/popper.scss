@@ -24,22 +24,22 @@
     background: getCssVar('text-color', 'primary');
     border: 1px solid getCssVar('text-color', 'primary');
 
-    #{$arrow-selector}::before {
-      border: 1px solid getCssVar('text-color', 'primary');
-      background: getCssVar('text-color', 'primary');
-      right: 0;
-    }
+    // #{$arrow-selector}::before {
+    //   border: 1px solid getCssVar('text-color', 'primary');
+    //   background: getCssVar('text-color', 'primary');
+    //   right: 0;
+    // }
   }
 
   @include when(light) {
     background: getCssVar('bg-color', 'overlay');
     border: 1px solid getCssVar('border-color', 'light');
 
-    #{$arrow-selector}::before {
-      border: 1px solid getCssVar('border-color', 'light');
-      background: getCssVar('bg-color', 'overlay');
-      right: 0;
-    }
+    // #{$arrow-selector}::before {
+    //   border: 1px solid getCssVar('border-color', 'light');
+    //   background: getCssVar('bg-color', 'overlay');
+    //   right: 0;
+    // }
   }
 
   @include when(pure) {
@@ -52,16 +52,16 @@
     height: 10px;
     z-index: -1;
 
-    &::before {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      z-index: -1;
-      content: ' ';
-      transform: rotate(45deg);
-      background: getCssVar('text-color', 'primary');
-      box-sizing: border-box;
-    }
+    // &::before {
+    //   position: absolute;
+    //   width: 10px;
+    //   height: 10px;
+    //   z-index: -1;
+    //   content: ' ';
+    //   transform: rotate(45deg);
+    //   background: getCssVar('text-color', 'primary');
+    //   box-sizing: border-box;
+    // }
   }
 
   $placements: (

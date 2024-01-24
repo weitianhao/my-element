@@ -305,18 +305,18 @@ export declare const ElTableV2: import("element-plus/es/utils").SFCWithInstall<i
 }>>, {
     readonly fixed: boolean;
     readonly scrollbarAlwaysOn: boolean;
+    readonly rowKey: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("./src/types").KeyType & {}) | (() => import("./src/types").KeyType) | ((new (...args: any[]) => import("./src/types").KeyType & {}) | (() => import("./src/types").KeyType))[], unknown, unknown>;
+    readonly headerHeight: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (number | number[]) & {}) | (() => number | number[]) | ((new (...args: any[]) => (number | number[]) & {}) | (() => number | number[]))[], unknown, unknown>;
+    readonly sortBy: import("./src/types").SortBy;
     readonly estimatedRowHeight: number;
     readonly useIsScrolling: boolean;
     readonly rowHeight: number;
     readonly hScrollbarSize: number;
     readonly vScrollbarSize: number;
-    readonly rowKey: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("./src/types").KeyType & {}) | (() => import("./src/types").KeyType) | ((new (...args: any[]) => import("./src/types").KeyType & {}) | (() => import("./src/types").KeyType))[], unknown, unknown>;
-    readonly headerHeight: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (number | number[]) & {}) | (() => number | number[]) | ((new (...args: any[]) => (number | number[]) & {}) | (() => number | number[]))[], unknown, unknown>;
     readonly cache: number;
     readonly footerHeight: number;
     readonly indentSize: number;
     readonly iconSize: number;
-    readonly sortBy: import("./src/types").SortBy;
     readonly sortState: import("./src/types").SortState;
     readonly expandedRowKeys: import("./src/types").KeyType[];
     readonly defaultExpandedRowKeys: import("./src/types").KeyType[];

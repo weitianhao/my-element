@@ -1,4 +1,4 @@
-import { defineComponent, useAttrs, inject, ref, computed, watch, nextTick, unref, provide, openBlock, createBlock, mergeProps, withCtx, normalizeClass, normalizeStyle, withModifiers, resolveDynamicComponent, createCommentVNode, createElementBlock, createElementVNode, renderSlot, toDisplayString } from 'vue';
+import { defineComponent, inject, ref, provide, useAttrs, computed, watch, nextTick, unref, onMounted, openBlock, createBlock, mergeProps, withCtx, normalizeClass, normalizeStyle, withModifiers, resolveDynamicComponent, createCommentVNode, createElementBlock, createElementVNode, renderSlot, toDisplayString } from 'vue';
 import { isEqual } from 'lodash-unified';
 import { onClickOutside } from '@vueuse/core';
 import '../../../../hooks/index.mjs';
@@ -19,6 +19,7 @@ import { debugWarn } from '../../../../utils/error.mjs';
 import { isArray } from '@vue/shared';
 import { EVENT_CODE } from '../../../../constants/aria.mjs';
 import { useFormSize } from '../../../form/src/hooks/use-form-common-props.mjs';
+import { getChildPositionAndSize } from '../../../../utils/dom/position.mjs';
 
 const _hoisted_1 = ["id", "name", "placeholder", "value", "disabled", "readonly"];
 const _hoisted_2 = ["id", "name", "placeholder", "value", "disabled", "readonly"];
@@ -40,6 +41,12 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   ],
   setup(__props, { expose, emit }) {
     const props = __props;
+    const setFloat = inject("SET_FLOAT");
+    const setLabelSize = inject("SET_LABEL_SIZE");
+    const isFloat = inject("IS_FLOAT");
+    const inputOne = ref();
+    const clearTimeKey = ref(Date.now());
+    provide("PARENT_CLEAR", clearTimeKey);
     const attrs = useAttrs();
     const { lang } = useLocale();
     const nsDate = useNamespace("date");
@@ -177,6 +184,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }
     };
     const handleFocusInput = (e) => {
+      console.log(pickerVisible.value, "pickerVisible");
+      console.log(ignoreFocusEvent, "ignoreFocusEvent");
+      console.log(pickerVisible.value || ignoreFocusEvent, "all");
+      setFloat && setFloat(true);
       if (props.readonly || pickerDisabled.value || pickerVisible.value || ignoreFocusEvent) {
         return;
       }
@@ -196,6 +207,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               pickerVisible.value = false;
               emit("blur", e);
               props.validateEvent && (formItem == null ? void 0 : formItem.validate("blur").catch((err) => debugWarn(err)));
+              setFloat && setFloat(!valueIsEmpty.value);
             }
             hasJustTabExitedInput = false;
           }
@@ -263,12 +275,16 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         return;
       if (showClose.value) {
         event.stopPropagation();
-        focusOnInputBox();
+        nextTick(() => {
+          ignoreFocusEvent = false;
+        });
         emitInput(null);
         emitChange(null, true);
         showClose.value = false;
         pickerVisible.value = false;
         pickerOptions.value.handleClear && pickerOptions.value.handleClear();
+        setFloat(false);
+        clearTimeKey.value = Date.now();
       }
     };
     const valueIsEmpty = computed(() => {
@@ -470,6 +486,38 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     provide("EP_PICKER_BASE", {
       props
     });
+    onMounted(() => {
+      if (setLabelSize && isRangeInput.value) {
+        setLabelSize(getChildPositionAndSize(inputRef.value, inputOne.value));
+      }
+    });
+    const endPlaceholder = computed(() => {
+      if (isFloat && isFloat.value) {
+        if (displayValue.value && displayValue.value[1] || pickerVisible.value)
+          return props.endPlaceholder;
+        return "";
+      } else {
+        return props.endPlaceholder;
+      }
+    });
+    const startPlaceholder = computed(() => {
+      if (isFloat && isFloat.value) {
+        if (displayValue.value && displayValue.value[1] || pickerVisible.value)
+          return props.startPlaceholder;
+        return "";
+      } else {
+        return props.startPlaceholder;
+      }
+    });
+    const rangeSeparator = computed(() => {
+      if (isFloat && isFloat.value) {
+        if (displayValue.value && displayValue.value[1] || pickerVisible.value)
+          return props.rangeSeparator;
+        return "";
+      } else {
+        return props.rangeSeparator;
+      }
+    });
     expose({
       focus,
       handleFocusInput,
@@ -582,9 +630,11 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             }, 8, ["class", "onMousedown"])) : createCommentVNode("v-if", true),
             createElementVNode("input", {
               id: _ctx.id && _ctx.id[0],
+              ref_key: "inputOne",
+              ref: inputOne,
               autocomplete: "off",
               name: _ctx.name && _ctx.name[0],
-              placeholder: _ctx.startPlaceholder,
+              placeholder: unref(startPlaceholder),
               value: unref(displayValue) && unref(displayValue)[0],
               disabled: unref(pickerDisabled),
               readonly: !_ctx.editable || _ctx.readonly,
@@ -598,13 +648,13 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             renderSlot(_ctx.$slots, "range-separator", {}, () => [
               createElementVNode("span", {
                 class: normalizeClass(unref(nsRange).b("separator"))
-              }, toDisplayString(_ctx.rangeSeparator), 3)
+              }, toDisplayString(unref(rangeSeparator)), 3)
             ]),
             createElementVNode("input", {
               id: _ctx.id && _ctx.id[1],
               autocomplete: "off",
               name: _ctx.name && _ctx.name[1],
-              placeholder: _ctx.endPlaceholder,
+              placeholder: unref(endPlaceholder),
               value: unref(displayValue) && unref(displayValue)[1],
               disabled: unref(pickerDisabled),
               readonly: !_ctx.editable || _ctx.readonly,

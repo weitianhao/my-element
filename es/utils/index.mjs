@@ -13,7 +13,7 @@ export { isBoolean, isElement, isEmpty, isNumber, isPropAbsent, isStringNumber, 
 export { mutable } from './typescript.mjs';
 export { attemptFocus, focusNode, getSibling, isFocusable, isLeaf, isVisible, obtainAllFocusableElements, triggerEvent } from './dom/aria.mjs';
 export { composeEventHandlers, whenMouse } from './dom/event.mjs';
-export { getClientXY, getOffsetTop, getOffsetTopDistance, isInContainer } from './dom/position.mjs';
+export { getChildPositionAndSize, getClientXY, getOffsetTop, getOffsetTopDistance, isInContainer } from './dom/position.mjs';
 export { getScrollBarWidth, getScrollContainer, isScroll, scrollIntoView } from './dom/scroll.mjs';
 export { addClass, addUnit, classNameToArray, getStyle, hasClass, removeClass, removeStyle, setStyle } from './dom/style.mjs';
 export { changeGlobalNodesTarget, createGlobalNode, removeGlobalNode } from './vue/global-node.mjs';

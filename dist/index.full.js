@@ -733,6 +733,17 @@
       clientY
     };
   };
+  const getChildPositionAndSize = (parentElement, childElement) => {
+    const parentRect = parentElement.getBoundingClientRect();
+    const childRect = childElement.getBoundingClientRect();
+    const position = {
+      top: Math.ceil(Math.abs(childRect.top - parentRect.top)),
+      right: Math.ceil(Math.abs(parentRect.right - childRect.right)),
+      bottom: Math.ceil(Math.abs(parentRect.bottom - childRect.bottom)),
+      left: Math.ceil(Math.abs(childRect.left - parentRect.left))
+    };
+    return position;
+  };
 
   const NOOP = () => {
   };
@@ -11404,17 +11415,34 @@
     });
   };
 
-  function useFocusController(target, { afterFocus, beforeBlur, afterBlur } = {}) {
+  function useFocusController(target, { afterFocus, beforeBlur, afterBlur, isFull } = {}) {
     const instance = vue.getCurrentInstance();
-    const { emit } = instance;
+    const { emit, provides } = instance;
+    const parentFocus = provides["PARENT_FOCUS"];
+    const setFloat = provides["SET_FLOAT"];
+    const isFloat = provides["IS_FLOAT"];
+    const parentClear = provides["PARENT_CLEAR"];
     const wrapperRef = vue.shallowRef();
     const isFocused = vue.ref(false);
+    if (parentFocus) {
+      vue.watch(parentFocus, (val) => {
+        if (isFloat && isFloat.value && setFloat)
+          setFloat(isFull && isFull.value ? isFull.value : val);
+      });
+    }
+    if (parentClear) {
+      vue.watch(parentClear, () => {
+        isFocused.value = false;
+      });
+    }
     const handleFocus = (event) => {
       if (isFocused.value)
         return;
       isFocused.value = true;
       emit("focus", event);
       afterFocus == null ? void 0 : afterFocus();
+      if (!parentFocus && isFloat && isFloat.value && setFloat)
+        setFloat(true);
     };
     const handleBlur = (event) => {
       var _a;
@@ -11424,6 +11452,8 @@
       isFocused.value = false;
       emit("blur", event);
       afterBlur == null ? void 0 : afterBlur();
+      if (!parentFocus && isFloat && isFloat.value && setFloat)
+        setFloat(isFull && isFull.value);
     };
     const handleClick = () => {
       var _a;
@@ -11979,7 +12009,7 @@
     },
     labelPosition: {
       type: String,
-      values: ["left", "right", "top"],
+      values: ["left", "right", "top", "float"],
       default: "right"
     },
     requireAsteriskPosition: {
@@ -13249,7 +13279,6 @@
     "success"
   ];
   const formItemProps = buildProps({
-    floatLabel: Boolean,
     label: String,
     labelWidth: {
       type: [String, Number],
@@ -13393,6 +13422,11 @@
       const formItemRef = vue.ref();
       let initialValue = void 0;
       let isResettingField = false;
+      const floatStyle = vue.ref({});
+      const isFloat = vue.computed(() => {
+        return (formContext == null ? void 0 : formContext.labelPosition) === "float";
+      });
+      const addFloat = vue.ref(false);
       const labelStyle = vue.computed(() => {
         if ((formContext == null ? void 0 : formContext.labelPosition) === "top") {
           return {};
@@ -13416,9 +13450,11 @@
         return {};
       });
       const formItemClasses = vue.computed(() => [
+        addFloat.value && "is-float",
         ns.b(),
         ns.m(_size.value),
         ns.is("error", validateState.value === "error"),
+        ns.is("error-float", validateState.value === "error" && isFloat.value),
         ns.is("validating", validateState.value === "validating"),
         ns.is("success", validateState.value === "success"),
         ns.is("required", isRequired.value || props.required),
@@ -13442,6 +13478,7 @@
       const labelFor = vue.computed(() => {
         return props.for || (inputIds.value.length === 1 ? inputIds.value[0] : void 0);
       });
+      vue.provide("LABEL_FOR", labelFor);
       const isGroup = vue.computed(() => {
         return !labelFor.value && hasLabel.value;
       });
@@ -13582,9 +13619,6 @@
         setValidationState(val ? "error" : "");
       }, { immediate: true });
       vue.watch(() => props.validateStatus, (val) => setValidationState(val || ""));
-      vue.watch(() => fieldValue, (val) => {
-        console.log(val, "val");
-      });
       const context = vue.reactive({
         ...vue.toRefs(props),
         $el: formItemRef,
@@ -13602,6 +13636,19 @@
         validate
       });
       vue.provide(formItemContextKey, context);
+      vue.provide("SET_LABEL_SIZE", (data) => {
+        if (isFloat.value) {
+          const { left } = data;
+          const style = {
+            left: `${left}px`
+          };
+          floatStyle.value = style;
+        }
+      });
+      vue.provide("SET_FLOAT", (val) => {
+        addFloat.value = val;
+      });
+      vue.provide("IS_FLOAT", isFloat);
       vue.onMounted(() => {
         if (props.prop) {
           formContext == null ? void 0 : formContext.addField(context);
@@ -13638,7 +13685,7 @@
                 id: vue.unref(labelId),
                 for: vue.unref(labelFor),
                 class: vue.normalizeClass(vue.unref(ns).e("label")),
-                style: vue.normalizeStyle(vue.unref(labelStyle))
+                style: vue.normalizeStyle(vue.unref(isFloat) ? floatStyle.value : vue.unref(labelStyle))
               }, {
                 default: vue.withCtx(() => [
                   vue.renderSlot(_ctx.$slots, "label", { label: vue.unref(currentLabel) }, () => [
@@ -13880,6 +13927,10 @@
     emits: inputEmits,
     setup(__props, { expose, emit }) {
       const props = __props;
+      const setLabelSize = vue.inject("SET_LABEL_SIZE");
+      const isFloat = vue.inject("IS_FLOAT");
+      const labelFor = vue.inject("LABEL_FOR");
+      const parentRef = vue.ref();
       const rawAttrs = vue.useAttrs();
       const slots = vue.useSlots();
       const containerAttrs = vue.computed(() => {
@@ -13931,13 +13982,18 @@
       const countStyle = vue.ref();
       const textareaCalcStyle = vue.shallowRef(props.inputStyle);
       const _ref = vue.computed(() => input.value || textarea.value);
+      const nativeInputValue = vue.computed(() => isNil(props.modelValue) ? "" : String(props.modelValue));
+      const isFull = vue.computed(() => {
+        return !!nativeInputValue.value;
+      });
       const { wrapperRef, isFocused, handleFocus, handleBlur } = useFocusController(_ref, {
         afterBlur() {
           var _a;
           if (props.validateEvent) {
             (_a = elFormItem == null ? void 0 : elFormItem.validate) == null ? void 0 : _a.call(elFormItem, "blur").catch((err) => debugWarn());
           }
-        }
+        },
+        isFull
       });
       const needStatusIcon = vue.computed(() => {
         var _a;
@@ -13954,7 +14010,6 @@
         textareaCalcStyle.value,
         { resize: props.resize }
       ]);
-      const nativeInputValue = vue.computed(() => isNil(props.modelValue) ? "" : String(props.modelValue));
       const showClear = vue.computed(() => props.clearable && !inputDisabled.value && !props.readonly && !!nativeInputValue.value && (isFocused.value || hovering.value));
       const showPwdVisible = vue.computed(() => props.showPassword && !inputDisabled.value && !props.readonly && !!nativeInputValue.value && (!!nativeInputValue.value || isFocused.value));
       const isWordLimitVisible = vue.computed(() => props.showWordLimit && !!props.maxlength && (props.type === "text" || props.type === "textarea") && !inputDisabled.value && !props.readonly && !props.showPassword);
@@ -14105,6 +14160,16 @@
         if (!props.formatter && props.parser) ;
         setNativeInputValue();
         vue.nextTick(resizeTextarea);
+        if (setLabelSize && labelFor) {
+          if (inputId.value === labelFor.value) {
+            setLabelSize(getChildPositionAndSize(parentRef.value, _ref.value));
+          }
+        }
+      });
+      const placeholder = vue.computed(() => {
+        if (isFloat && isFloat.value)
+          return isFocused.value ? props.placeholder : "";
+        return props.placeholder;
       });
       expose({
         input,
@@ -14120,6 +14185,8 @@
       });
       return (_ctx, _cache) => {
         return vue.withDirectives((vue.openBlock(), vue.createElementBlock("div", vue.mergeProps(vue.unref(containerAttrs), {
+          ref_key: "parentRef",
+          ref: parentRef,
           class: vue.unref(containerKls),
           style: vue.unref(containerStyle),
           role: _ctx.containerRole,
@@ -14174,7 +14241,7 @@
                 autocomplete: _ctx.autocomplete,
                 tabindex: _ctx.tabindex,
                 "aria-label": _ctx.label,
-                placeholder: _ctx.placeholder,
+                placeholder: vue.unref(placeholder),
                 style: _ctx.inputStyle,
                 form: _ctx.form,
                 autofocus: _ctx.autofocus,
@@ -14275,7 +14342,7 @@
               autocomplete: _ctx.autocomplete,
               style: vue.unref(textareaStyle),
               "aria-label": _ctx.label,
-              placeholder: _ctx.placeholder,
+              placeholder: vue.unref(placeholder),
               form: _ctx.form,
               autofocus: _ctx.autofocus,
               onCompositionstart: handleCompositionStart,
@@ -15440,7 +15507,7 @@
     },
     offset: {
       type: Number,
-      default: 12
+      default: 5
     },
     placement: {
       type: String,
@@ -18818,6 +18885,12 @@
     ],
     setup(__props, { expose, emit }) {
       const props = __props;
+      const setFloat = vue.inject("SET_FLOAT");
+      const setLabelSize = vue.inject("SET_LABEL_SIZE");
+      const isFloat = vue.inject("IS_FLOAT");
+      const inputOne = vue.ref();
+      const clearTimeKey = vue.ref(Date.now());
+      vue.provide("PARENT_CLEAR", clearTimeKey);
       const attrs = vue.useAttrs();
       const { lang } = useLocale();
       const nsDate = useNamespace("date");
@@ -18900,12 +18973,6 @@
           _inputs[1].focus();
         }
       };
-      const focusOnInputBox = () => {
-        focus(true, true);
-        vue.nextTick(() => {
-          ignoreFocusEvent = false;
-        });
-      };
       const onPick = (date = "", visible = false) => {
         if (!visible) {
           ignoreFocusEvent = true;
@@ -18955,6 +19022,10 @@
         }
       };
       const handleFocusInput = (e) => {
+        console.log(pickerVisible.value, "pickerVisible");
+        console.log(ignoreFocusEvent, "ignoreFocusEvent");
+        console.log(pickerVisible.value || ignoreFocusEvent, "all");
+        setFloat && setFloat(true);
         if (props.readonly || pickerDisabled.value || pickerVisible.value || ignoreFocusEvent) {
           return;
         }
@@ -18974,6 +19045,7 @@
                 pickerVisible.value = false;
                 emit("blur", e);
                 props.validateEvent && (formItem == null ? void 0 : formItem.validate("blur").catch((err) => debugWarn()));
+                setFloat && setFloat(!valueIsEmpty.value);
               }
               hasJustTabExitedInput = false;
             }
@@ -19041,12 +19113,16 @@
           return;
         if (showClose.value) {
           event.stopPropagation();
-          focusOnInputBox();
+          vue.nextTick(() => {
+            ignoreFocusEvent = false;
+          });
           emitInput(null);
           emitChange(null, true);
           showClose.value = false;
           pickerVisible.value = false;
           pickerOptions.value.handleClear && pickerOptions.value.handleClear();
+          setFloat(false);
+          clearTimeKey.value = Date.now();
         }
       };
       const valueIsEmpty = vue.computed(() => {
@@ -19248,6 +19324,38 @@
       vue.provide("EP_PICKER_BASE", {
         props
       });
+      vue.onMounted(() => {
+        if (setLabelSize && isRangeInput.value) {
+          setLabelSize(getChildPositionAndSize(inputRef.value, inputOne.value));
+        }
+      });
+      const endPlaceholder = vue.computed(() => {
+        if (isFloat && isFloat.value) {
+          if (displayValue.value && displayValue.value[1] || pickerVisible.value)
+            return props.endPlaceholder;
+          return "";
+        } else {
+          return props.endPlaceholder;
+        }
+      });
+      const startPlaceholder = vue.computed(() => {
+        if (isFloat && isFloat.value) {
+          if (displayValue.value && displayValue.value[1] || pickerVisible.value)
+            return props.startPlaceholder;
+          return "";
+        } else {
+          return props.startPlaceholder;
+        }
+      });
+      const rangeSeparator = vue.computed(() => {
+        if (isFloat && isFloat.value) {
+          if (displayValue.value && displayValue.value[1] || pickerVisible.value)
+            return props.rangeSeparator;
+          return "";
+        } else {
+          return props.rangeSeparator;
+        }
+      });
       expose({
         focus,
         handleFocusInput,
@@ -19360,9 +19468,11 @@
               }, 8, ["class", "onMousedown"])) : vue.createCommentVNode("v-if", true),
               vue.createElementVNode("input", {
                 id: _ctx.id && _ctx.id[0],
+                ref_key: "inputOne",
+                ref: inputOne,
                 autocomplete: "off",
                 name: _ctx.name && _ctx.name[0],
-                placeholder: _ctx.startPlaceholder,
+                placeholder: vue.unref(startPlaceholder),
                 value: vue.unref(displayValue) && vue.unref(displayValue)[0],
                 disabled: vue.unref(pickerDisabled),
                 readonly: !_ctx.editable || _ctx.readonly,
@@ -19376,13 +19486,13 @@
               vue.renderSlot(_ctx.$slots, "range-separator", {}, () => [
                 vue.createElementVNode("span", {
                   class: vue.normalizeClass(vue.unref(nsRange).b("separator"))
-                }, vue.toDisplayString(_ctx.rangeSeparator), 3)
+                }, vue.toDisplayString(vue.unref(rangeSeparator)), 3)
               ]),
               vue.createElementVNode("input", {
                 id: _ctx.id && _ctx.id[1],
                 autocomplete: "off",
                 name: _ctx.name && _ctx.name[1],
-                placeholder: _ctx.endPlaceholder,
+                placeholder: vue.unref(endPlaceholder),
                 value: vue.unref(displayValue) && vue.unref(displayValue)[1],
                 disabled: vue.unref(pickerDisabled),
                 readonly: !_ctx.editable || _ctx.readonly,
@@ -23663,6 +23773,7 @@
     emits: cascaderEmits,
     setup(__props, { expose, emit }) {
       const props = __props;
+      const setFloat = vue.inject("SET_FLOAT");
       const popperOptions = {
         modifiers: [
           {
@@ -23701,11 +23812,16 @@
       const allPresentTags = vue.ref([]);
       const suggestions = vue.ref([]);
       const isOnComposition = vue.ref(false);
+      const clearTimeKey = vue.ref(Date.now());
+      vue.provide("PARENT_CLEAR", clearTimeKey);
       const cascaderStyle = vue.computed(() => {
         return attrs.style;
       });
       const isDisabled = vue.computed(() => props.disabled || (form == null ? void 0 : form.disabled));
-      const inputPlaceholder = vue.computed(() => props.placeholder || t("el.cascader.placeholder"));
+      const inputPlaceholder = vue.computed(() => {
+        const _placeholder = props.placeholder || t("el.cascader.placeholder");
+        return _placeholder;
+      });
       const currentPlaceholder = vue.computed(() => searchInputValue.value || presentTags.value.length > 0 || isOnComposition.value ? "" : inputPlaceholder.value);
       const realSize = useFormSize();
       const tagSize = vue.computed(() => ["small"].includes(realSize.value) ? "small" : "default");
@@ -23753,9 +23869,13 @@
           nsCascader.is("reverse", popperVisible.value)
         ];
       });
-      const inputClass = vue.computed(() => {
-        return nsCascader.is("focus", popperVisible.value || filterFocus.value);
+      const isFocus = vue.computed(() => {
+        return popperVisible.value || filterFocus.value;
       });
+      const inputClass = vue.computed(() => {
+        return nsCascader.is("focus", isFocus.value);
+      });
+      vue.provide("PARENT_FOCUS", isFocus);
       const contentRef = vue.computed(() => {
         var _a, _b;
         return (_b = (_a = tooltipRef.value) == null ? void 0 : _a.popperRef) == null ? void 0 : _b.contentRef;
@@ -23933,6 +24053,8 @@
           syncPresentTextValue();
         }
         togglePopperVisible(false);
+        clearTimeKey.value = Date.now();
+        setFloat(false);
       };
       const syncPresentTextValue = () => {
         const { value } = presentText;
@@ -34010,10 +34132,13 @@
 
   const MINIMUM_INPUT_WIDTH$1 = 11;
   const useSelect$3 = (props, emit) => {
+    const setFloat = vue.inject("SET_FLOAT");
     const { t } = useLocale();
     const contentId = useId();
     const nsSelect = useNamespace("select");
     const nsInput = useNamespace("input");
+    const setLabelSize = vue.inject("SET_LABEL_SIZE");
+    const isFloat = vue.inject("IS_FLOAT");
     const states = vue.reactive({
       inputValue: "",
       options: /* @__PURE__ */ new Map(),
@@ -34050,6 +34175,9 @@
     const tagMenuRef = vue.ref(null);
     const collapseItemRef = vue.ref(null);
     const scrollbarRef = vue.ref(null);
+    const hasModelValue = vue.computed(() => {
+      return props.multiple ? isArray$1(props.modelValue) && props.modelValue.length > 0 : props.modelValue !== void 0 && props.modelValue !== null && props.modelValue !== "";
+    });
     const { wrapperRef, isFocused, handleFocus, handleBlur } = useFocusController(inputRef, {
       afterFocus() {
         if (props.automaticDropdown && !expanded.value) {
@@ -34064,7 +34192,8 @@
       afterBlur() {
         expanded.value = false;
         states.menuVisibleOnFocus = false;
-      }
+      },
+      isFull: hasModelValue
     });
     const expanded = vue.ref(false);
     const hoverOption = vue.ref();
@@ -34073,9 +34202,6 @@
       formItemContext: formItem
     });
     const selectDisabled = vue.computed(() => props.disabled || (form == null ? void 0 : form.disabled));
-    const hasModelValue = vue.computed(() => {
-      return props.multiple ? isArray$1(props.modelValue) && props.modelValue.length > 0 : props.modelValue !== void 0 && props.modelValue !== null && props.modelValue !== "";
-    });
     const showClose = vue.computed(() => {
       const criteria = props.clearable && !selectDisabled.value && states.inputHovering && hasModelValue.value;
       return criteria;
@@ -34149,7 +34275,12 @@
     const currentPlaceholder = vue.computed(() => {
       var _a;
       const _placeholder = (_a = props.placeholder) != null ? _a : t("el.select.placeholder");
-      return props.multiple || !hasModelValue.value ? _placeholder : states.selectedLabel;
+      const empty = props.multiple || !hasModelValue.value;
+      if (isFloat && isFloat.value) {
+        return isFocused.value ? empty ? _placeholder : "" : "";
+      } else {
+        return empty ? _placeholder : "";
+      }
     });
     vue.watch(() => props.modelValue, (val, oldVal) => {
       if (props.multiple) {
@@ -34462,6 +34593,8 @@
     };
     const handleClearClick = (event) => {
       deleteSelected(event);
+      isFocused.value = false;
+      setFloat(false);
     };
     const handleClickOutside = (event) => {
       expanded.value = false;
@@ -34570,6 +34703,9 @@
     useResizeObserver(collapseItemRef, resetCollapseItemWidth);
     vue.onMounted(() => {
       setSelected();
+      if (setLabelSize) {
+        setLabelSize(getChildPositionAndSize(wrapperRef.value, selectionRef.value));
+      }
     });
     return {
       inputId,
@@ -35029,6 +35165,16 @@
                   ])
                 }, [
                   vue.createElementVNode("span", null, vue.toDisplayString(_ctx.currentPlaceholder), 1)
+                ], 2)) : vue.createCommentVNode("v-if", true),
+                _ctx.states.selectedLabel ? (vue.openBlock(), vue.createElementBlock("div", {
+                  key: 3,
+                  class: vue.normalizeClass([_ctx.nsSelect.e("selected-item")])
+                }, [
+                  vue.renderSlot(_ctx.$slots, "selection", {
+                    selected: _ctx.states.selected
+                  }, () => [
+                    vue.createTextVNode(vue.toDisplayString(_ctx.states.selectedLabel), 1)
+                  ])
                 ], 2)) : vue.createCommentVNode("v-if", true)
               ], 2),
               vue.createElementVNode("div", {
@@ -39236,6 +39382,9 @@
 
   const MINIMUM_INPUT_WIDTH = 11;
   const useSelect$1 = (props, emit) => {
+    const setLabelSize = vue.inject("SET_LABEL_SIZE");
+    const isFloat = vue.inject("IS_FLOAT");
+    const setFloat = vue.inject("SET_FLOAT");
     const { t } = useLocale();
     const nsSelect = useNamespace("select");
     const nsInput = useNamespace("input");
@@ -39272,6 +39421,9 @@
     const menuRef = vue.ref(null);
     const tagMenuRef = vue.ref(null);
     const collapseItemRef = vue.ref(null);
+    const hasModelValue = vue.computed(() => {
+      return props.multiple ? isArray$1(props.modelValue) && props.modelValue.length > 0 : props.modelValue !== void 0 && props.modelValue !== null && props.modelValue !== "";
+    });
     const { wrapperRef, isFocused, handleFocus, handleBlur } = useFocusController(inputRef, {
       afterFocus() {
         if (props.automaticDropdown && !expanded.value) {
@@ -39286,7 +39438,8 @@
       afterBlur() {
         expanded.value = false;
         states.menuVisibleOnFocus = false;
-      }
+      },
+      isFull: hasModelValue
     });
     const allOptions = vue.ref([]);
     const filteredOptions = vue.ref([]);
@@ -39295,9 +39448,6 @@
     const popupHeight = vue.computed(() => {
       const totalHeight = filteredOptions.value.length * props.itemHeight;
       return totalHeight > props.height ? props.height : totalHeight;
-    });
-    const hasModelValue = vue.computed(() => {
-      return props.multiple ? isArray$1(props.modelValue) && props.modelValue.length > 0 : props.modelValue !== void 0 && props.modelValue !== null && props.modelValue !== "";
     });
     const showClearBtn = vue.computed(() => {
       const criteria = props.clearable && !selectDisabled.value && states.inputHovering && hasModelValue.value;
@@ -39396,7 +39546,12 @@
     const currentPlaceholder = vue.computed(() => {
       var _a;
       const _placeholder = (_a = props.placeholder) != null ? _a : t("el.select.placeholder");
-      return props.multiple || !hasModelValue.value ? _placeholder : states.selectedLabel;
+      const empty = props.multiple || !hasModelValue.value;
+      if (isFloat && isFloat.value) {
+        return isFocused.value ? empty ? _placeholder : "" : "";
+      } else {
+        return empty ? _placeholder : "";
+      }
     });
     const popperRef = vue.computed(() => {
       var _a, _b;
@@ -39638,7 +39793,8 @@
       update(emptyValue);
       emit("clear");
       clearAllNewOption();
-      focus();
+      isFocused.value = false;
+      setFloat(false);
     };
     const onKeyboardNavigate = (direction, hoveringIndex = void 0) => {
       const options = filteredOptions.value;
@@ -39821,6 +39977,9 @@
     });
     vue.onMounted(() => {
       initStates();
+      if (setLabelSize) {
+        setLabelSize(getChildPositionAndSize(wrapperRef.value, selectionRef.value));
+      }
     });
     useResizeObserver(selectRef, handleResize);
     useResizeObserver(selectionRef, resetSelectionWidth);
@@ -40160,6 +40319,16 @@
                 ])
               }, [
                 vue.createElementVNode("span", null, vue.toDisplayString(_ctx.currentPlaceholder), 1)
+              ], 2)) : vue.createCommentVNode("v-if", true),
+              _ctx.states.selectedLabel ? (vue.openBlock(), vue.createElementBlock("div", {
+                key: 3,
+                class: vue.normalizeClass([_ctx.nsSelect.e("selected-item")])
+              }, [
+                vue.renderSlot(_ctx.$slots, "selection", {
+                  label: _ctx.states.selectedLabel
+                }, () => [
+                  vue.createTextVNode(vue.toDisplayString(_ctx.states.selectedLabel), 1)
+                ])
               ], 2)) : vue.createCommentVNode("v-if", true)
             ], 2),
             vue.createElementVNode("div", {

@@ -191,12 +191,12 @@ declare const TableGrid: import("vue").DefineComponent<{
     };
 }>>, {
     readonly scrollbarAlwaysOn: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly rowKey: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("./types").KeyType & {}) | (() => import("./types").KeyType) | ((new (...args: any[]) => import("./types").KeyType & {}) | (() => import("./types").KeyType))[], unknown, unknown>;
+    readonly headerHeight: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (number | number[]) & {}) | (() => number | number[]) | ((new (...args: any[]) => (number | number[]) & {}) | (() => number | number[]))[], unknown, unknown>;
     readonly estimatedRowHeight: number;
     readonly useIsScrolling: boolean;
     readonly scrollbarStartGap: number;
     readonly scrollbarEndGap: number;
-    readonly rowKey: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("./types").KeyType & {}) | (() => import("./types").KeyType) | ((new (...args: any[]) => import("./types").KeyType & {}) | (() => import("./types").KeyType))[], unknown, unknown>;
-    readonly headerHeight: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (number | number[]) & {}) | (() => number | number[]) | ((new (...args: any[]) => (number | number[]) & {}) | (() => number | number[]))[], unknown, unknown>;
     readonly cache: number;
 }>;
 export default TableGrid;

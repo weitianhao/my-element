@@ -48,6 +48,17 @@ const getClientXY = (event) => {
     clientY
   };
 };
+const getChildPositionAndSize = (parentElement, childElement) => {
+  const parentRect = parentElement.getBoundingClientRect();
+  const childRect = childElement.getBoundingClientRect();
+  const position = {
+    top: Math.ceil(Math.abs(childRect.top - parentRect.top)),
+    right: Math.ceil(Math.abs(parentRect.right - childRect.right)),
+    bottom: Math.ceil(Math.abs(parentRect.bottom - childRect.bottom)),
+    left: Math.ceil(Math.abs(childRect.left - parentRect.left))
+  };
+  return position;
+};
 
-export { getClientXY, getOffsetTop, getOffsetTopDistance, isInContainer };
+export { getChildPositionAndSize, getClientXY, getOffsetTop, getOffsetTopDistance, isInContainer };
 //# sourceMappingURL=position.mjs.map

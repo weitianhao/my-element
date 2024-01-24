@@ -186,8 +186,8 @@ declare const _default: import("vue").DefineComponent<{
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
 }, {
     type: string;
-    tabindex: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | number) & {}) | (() => string | number) | ((new (...args: any[]) => (string | number) & {}) | (() => string | number))[], unknown, unknown>;
     name: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("./common/props").SingleOrRange<string> & {}) | (() => import("./common/props").SingleOrRange<string>) | ((new (...args: any[]) => import("./common/props").SingleOrRange<string> & {}) | (() => import("./common/props").SingleOrRange<string>))[], unknown, unknown>;
+    tabindex: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | number) & {}) | (() => string | number) | ((new (...args: any[]) => (string | number) & {}) | (() => string | number))[], unknown, unknown>;
     placeholder: string;
     modelValue: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("./common/props").ModelValueType & {}) | (() => import("./common/props").ModelValueType) | ((new (...args: any[]) => import("./common/props").ModelValueType & {}) | (() => import("./common/props").ModelValueType))[], unknown, unknown>;
     disabled: boolean;

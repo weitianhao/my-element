@@ -221,8 +221,8 @@ declare const _default: import("vue").DefineComponent<{
         readonly width?: number | undefined;
         readonly height?: number | undefined;
         readonly offset?: number | undefined;
-        readonly reference?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown> | undefined;
         readonly effect?: string | undefined;
+        readonly reference?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown> | undefined;
         readonly to?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined) | ((new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined))[], unknown, unknown>;
         readonly ariaLabel?: string | undefined;
         readonly teleported?: boolean | undefined;
@@ -252,8 +252,8 @@ declare const _default: import("vue").DefineComponent<{
         readonly width?: number | undefined;
         readonly height?: number | undefined;
         readonly offset?: number | undefined;
-        readonly reference?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown> | undefined;
         readonly effect?: string | undefined;
+        readonly reference?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown> | undefined;
         readonly to?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined) | ((new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined))[], unknown, unknown>;
         readonly ariaLabel?: string | undefined;
         readonly teleported?: boolean | undefined;
@@ -283,8 +283,8 @@ declare const _default: import("vue").DefineComponent<{
         readonly width?: number | undefined;
         readonly height?: number | undefined;
         readonly offset?: number | undefined;
-        readonly reference?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown> | undefined;
         readonly effect?: string | undefined;
+        readonly reference?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown> | undefined;
         readonly to?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined) | ((new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined))[], unknown, unknown>;
         readonly ariaLabel?: string | undefined;
         readonly teleported?: boolean | undefined;
@@ -314,8 +314,8 @@ declare const _default: import("vue").DefineComponent<{
         readonly width?: number | undefined;
         readonly height?: number | undefined;
         readonly offset?: number | undefined;
-        readonly reference?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown> | undefined;
         readonly effect?: string | undefined;
+        readonly reference?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown> | undefined;
         readonly to?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined) | ((new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined))[], unknown, unknown>;
         readonly ariaLabel?: string | undefined;
         readonly teleported?: boolean | undefined;
@@ -616,8 +616,8 @@ declare const _default: import("vue").DefineComponent<{
         placement: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("@floating-ui/core").Placement & {}) | (() => import("@floating-ui/core").Placement) | ((new (...args: any[]) => import("@floating-ui/core").Placement & {}) | (() => import("@floating-ui/core").Placement))[], "top" | "right" | "bottom" | "left" | "top-start" | "top-end" | "right-start" | "right-end" | "bottom-start" | "bottom-end" | "left-start" | "left-end", unknown>;
         strategy: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("@floating-ui/core").Strategy & {}) | (() => import("@floating-ui/core").Strategy) | ((new (...args: any[]) => import("@floating-ui/core").Strategy & {}) | (() => import("@floating-ui/core").Strategy))[], "absolute" | "fixed", unknown>;
         offset: number;
-        reference: import("../../../utils").EpPropMergeType<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown>;
         effect: string;
+        reference: import("../../../utils").EpPropMergeType<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown>;
         nowrap: boolean;
         showArrow: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         arrowPadding: number;
@@ -862,8 +862,8 @@ declare const _default: import("vue").DefineComponent<{
     readonly width: number;
     readonly height: number;
     readonly offset: number;
-    readonly reference: import("../../../utils").EpPropMergeType<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown>;
     readonly effect: string;
+    readonly reference: import("../../../utils").EpPropMergeType<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown>;
     readonly to: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined) | ((new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined))[], unknown, unknown>;
     readonly teleported: boolean;
     readonly showArrow: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

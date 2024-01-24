@@ -729,6 +729,17 @@ const getClientXY = (event) => {
     clientY
   };
 };
+const getChildPositionAndSize = (parentElement, childElement) => {
+  const parentRect = parentElement.getBoundingClientRect();
+  const childRect = childElement.getBoundingClientRect();
+  const position = {
+    top: Math.ceil(Math.abs(childRect.top - parentRect.top)),
+    right: Math.ceil(Math.abs(parentRect.right - childRect.right)),
+    bottom: Math.ceil(Math.abs(parentRect.bottom - childRect.bottom)),
+    left: Math.ceil(Math.abs(childRect.left - parentRect.left))
+  };
+  return position;
+};
 
 const NOOP = () => {
 };
@@ -11400,17 +11411,34 @@ const useGlobalSize = () => {
   });
 };
 
-function useFocusController(target, { afterFocus, beforeBlur, afterBlur } = {}) {
+function useFocusController(target, { afterFocus, beforeBlur, afterBlur, isFull } = {}) {
   const instance = getCurrentInstance();
-  const { emit } = instance;
+  const { emit, provides } = instance;
+  const parentFocus = provides["PARENT_FOCUS"];
+  const setFloat = provides["SET_FLOAT"];
+  const isFloat = provides["IS_FLOAT"];
+  const parentClear = provides["PARENT_CLEAR"];
   const wrapperRef = shallowRef();
   const isFocused = ref(false);
+  if (parentFocus) {
+    watch(parentFocus, (val) => {
+      if (isFloat && isFloat.value && setFloat)
+        setFloat(isFull && isFull.value ? isFull.value : val);
+    });
+  }
+  if (parentClear) {
+    watch(parentClear, () => {
+      isFocused.value = false;
+    });
+  }
   const handleFocus = (event) => {
     if (isFocused.value)
       return;
     isFocused.value = true;
     emit("focus", event);
     afterFocus == null ? void 0 : afterFocus();
+    if (!parentFocus && isFloat && isFloat.value && setFloat)
+      setFloat(true);
   };
   const handleBlur = (event) => {
     var _a;
@@ -11420,6 +11448,8 @@ function useFocusController(target, { afterFocus, beforeBlur, afterBlur } = {}) 
     isFocused.value = false;
     emit("blur", event);
     afterBlur == null ? void 0 : afterBlur();
+    if (!parentFocus && isFloat && isFloat.value && setFloat)
+      setFloat(isFull && isFull.value);
   };
   const handleClick = () => {
     var _a;
@@ -11975,7 +12005,7 @@ const formProps = buildProps({
   },
   labelPosition: {
     type: String,
-    values: ["left", "right", "top"],
+    values: ["left", "right", "top", "float"],
     default: "right"
   },
   requireAsteriskPosition: {
@@ -13245,7 +13275,6 @@ const formItemValidateStates = [
   "success"
 ];
 const formItemProps = buildProps({
-  floatLabel: Boolean,
   label: String,
   labelWidth: {
     type: [String, Number],
@@ -13389,6 +13418,11 @@ const _sfc_main$2j = /* @__PURE__ */ defineComponent({
     const formItemRef = ref();
     let initialValue = void 0;
     let isResettingField = false;
+    const floatStyle = ref({});
+    const isFloat = computed$1(() => {
+      return (formContext == null ? void 0 : formContext.labelPosition) === "float";
+    });
+    const addFloat = ref(false);
     const labelStyle = computed$1(() => {
       if ((formContext == null ? void 0 : formContext.labelPosition) === "top") {
         return {};
@@ -13412,9 +13446,11 @@ const _sfc_main$2j = /* @__PURE__ */ defineComponent({
       return {};
     });
     const formItemClasses = computed$1(() => [
+      addFloat.value && "is-float",
       ns.b(),
       ns.m(_size.value),
       ns.is("error", validateState.value === "error"),
+      ns.is("error-float", validateState.value === "error" && isFloat.value),
       ns.is("validating", validateState.value === "validating"),
       ns.is("success", validateState.value === "success"),
       ns.is("required", isRequired.value || props.required),
@@ -13438,6 +13474,7 @@ const _sfc_main$2j = /* @__PURE__ */ defineComponent({
     const labelFor = computed$1(() => {
       return props.for || (inputIds.value.length === 1 ? inputIds.value[0] : void 0);
     });
+    provide("LABEL_FOR", labelFor);
     const isGroup = computed$1(() => {
       return !labelFor.value && hasLabel.value;
     });
@@ -13578,9 +13615,6 @@ const _sfc_main$2j = /* @__PURE__ */ defineComponent({
       setValidationState(val ? "error" : "");
     }, { immediate: true });
     watch(() => props.validateStatus, (val) => setValidationState(val || ""));
-    watch(() => fieldValue, (val) => {
-      console.log(val, "val");
-    });
     const context = reactive({
       ...toRefs(props),
       $el: formItemRef,
@@ -13598,6 +13632,19 @@ const _sfc_main$2j = /* @__PURE__ */ defineComponent({
       validate
     });
     provide(formItemContextKey, context);
+    provide("SET_LABEL_SIZE", (data) => {
+      if (isFloat.value) {
+        const { left } = data;
+        const style = {
+          left: `${left}px`
+        };
+        floatStyle.value = style;
+      }
+    });
+    provide("SET_FLOAT", (val) => {
+      addFloat.value = val;
+    });
+    provide("IS_FLOAT", isFloat);
     onMounted(() => {
       if (props.prop) {
         formContext == null ? void 0 : formContext.addField(context);
@@ -13634,7 +13681,7 @@ const _sfc_main$2j = /* @__PURE__ */ defineComponent({
               id: unref(labelId),
               for: unref(labelFor),
               class: normalizeClass(unref(ns).e("label")),
-              style: normalizeStyle(unref(labelStyle))
+              style: normalizeStyle(unref(isFloat) ? floatStyle.value : unref(labelStyle))
             }, {
               default: withCtx(() => [
                 renderSlot(_ctx.$slots, "label", { label: unref(currentLabel) }, () => [
@@ -13876,6 +13923,10 @@ const _sfc_main$2i = /* @__PURE__ */ defineComponent({
   emits: inputEmits,
   setup(__props, { expose, emit }) {
     const props = __props;
+    const setLabelSize = inject("SET_LABEL_SIZE");
+    const isFloat = inject("IS_FLOAT");
+    const labelFor = inject("LABEL_FOR");
+    const parentRef = ref();
     const rawAttrs = useAttrs$1();
     const slots = useSlots();
     const containerAttrs = computed$1(() => {
@@ -13927,13 +13978,18 @@ const _sfc_main$2i = /* @__PURE__ */ defineComponent({
     const countStyle = ref();
     const textareaCalcStyle = shallowRef(props.inputStyle);
     const _ref = computed$1(() => input.value || textarea.value);
+    const nativeInputValue = computed$1(() => isNil(props.modelValue) ? "" : String(props.modelValue));
+    const isFull = computed$1(() => {
+      return !!nativeInputValue.value;
+    });
     const { wrapperRef, isFocused, handleFocus, handleBlur } = useFocusController(_ref, {
       afterBlur() {
         var _a;
         if (props.validateEvent) {
           (_a = elFormItem == null ? void 0 : elFormItem.validate) == null ? void 0 : _a.call(elFormItem, "blur").catch((err) => debugWarn());
         }
-      }
+      },
+      isFull
     });
     const needStatusIcon = computed$1(() => {
       var _a;
@@ -13950,7 +14006,6 @@ const _sfc_main$2i = /* @__PURE__ */ defineComponent({
       textareaCalcStyle.value,
       { resize: props.resize }
     ]);
-    const nativeInputValue = computed$1(() => isNil(props.modelValue) ? "" : String(props.modelValue));
     const showClear = computed$1(() => props.clearable && !inputDisabled.value && !props.readonly && !!nativeInputValue.value && (isFocused.value || hovering.value));
     const showPwdVisible = computed$1(() => props.showPassword && !inputDisabled.value && !props.readonly && !!nativeInputValue.value && (!!nativeInputValue.value || isFocused.value));
     const isWordLimitVisible = computed$1(() => props.showWordLimit && !!props.maxlength && (props.type === "text" || props.type === "textarea") && !inputDisabled.value && !props.readonly && !props.showPassword);
@@ -14101,6 +14156,16 @@ const _sfc_main$2i = /* @__PURE__ */ defineComponent({
       if (!props.formatter && props.parser) ;
       setNativeInputValue();
       nextTick(resizeTextarea);
+      if (setLabelSize && labelFor) {
+        if (inputId.value === labelFor.value) {
+          setLabelSize(getChildPositionAndSize(parentRef.value, _ref.value));
+        }
+      }
+    });
+    const placeholder = computed$1(() => {
+      if (isFloat && isFloat.value)
+        return isFocused.value ? props.placeholder : "";
+      return props.placeholder;
     });
     expose({
       input,
@@ -14116,6 +14181,8 @@ const _sfc_main$2i = /* @__PURE__ */ defineComponent({
     });
     return (_ctx, _cache) => {
       return withDirectives((openBlock(), createElementBlock("div", mergeProps(unref(containerAttrs), {
+        ref_key: "parentRef",
+        ref: parentRef,
         class: unref(containerKls),
         style: unref(containerStyle),
         role: _ctx.containerRole,
@@ -14170,7 +14237,7 @@ const _sfc_main$2i = /* @__PURE__ */ defineComponent({
               autocomplete: _ctx.autocomplete,
               tabindex: _ctx.tabindex,
               "aria-label": _ctx.label,
-              placeholder: _ctx.placeholder,
+              placeholder: unref(placeholder),
               style: _ctx.inputStyle,
               form: _ctx.form,
               autofocus: _ctx.autofocus,
@@ -14271,7 +14338,7 @@ const _sfc_main$2i = /* @__PURE__ */ defineComponent({
             autocomplete: _ctx.autocomplete,
             style: unref(textareaStyle),
             "aria-label": _ctx.label,
-            placeholder: _ctx.placeholder,
+            placeholder: unref(placeholder),
             form: _ctx.form,
             autofocus: _ctx.autofocus,
             onCompositionstart: handleCompositionStart,
@@ -15436,7 +15503,7 @@ const popperCoreConfigProps = buildProps({
   },
   offset: {
     type: Number,
-    default: 12
+    default: 5
   },
   placement: {
     type: String,
@@ -18814,6 +18881,12 @@ const _sfc_main$1_ = /* @__PURE__ */ defineComponent({
   ],
   setup(__props, { expose, emit }) {
     const props = __props;
+    const setFloat = inject("SET_FLOAT");
+    const setLabelSize = inject("SET_LABEL_SIZE");
+    const isFloat = inject("IS_FLOAT");
+    const inputOne = ref();
+    const clearTimeKey = ref(Date.now());
+    provide("PARENT_CLEAR", clearTimeKey);
     const attrs = useAttrs$1();
     const { lang } = useLocale();
     const nsDate = useNamespace("date");
@@ -18896,12 +18969,6 @@ const _sfc_main$1_ = /* @__PURE__ */ defineComponent({
         _inputs[1].focus();
       }
     };
-    const focusOnInputBox = () => {
-      focus(true, true);
-      nextTick(() => {
-        ignoreFocusEvent = false;
-      });
-    };
     const onPick = (date = "", visible = false) => {
       if (!visible) {
         ignoreFocusEvent = true;
@@ -18951,6 +19018,10 @@ const _sfc_main$1_ = /* @__PURE__ */ defineComponent({
       }
     };
     const handleFocusInput = (e) => {
+      console.log(pickerVisible.value, "pickerVisible");
+      console.log(ignoreFocusEvent, "ignoreFocusEvent");
+      console.log(pickerVisible.value || ignoreFocusEvent, "all");
+      setFloat && setFloat(true);
       if (props.readonly || pickerDisabled.value || pickerVisible.value || ignoreFocusEvent) {
         return;
       }
@@ -18970,6 +19041,7 @@ const _sfc_main$1_ = /* @__PURE__ */ defineComponent({
               pickerVisible.value = false;
               emit("blur", e);
               props.validateEvent && (formItem == null ? void 0 : formItem.validate("blur").catch((err) => debugWarn()));
+              setFloat && setFloat(!valueIsEmpty.value);
             }
             hasJustTabExitedInput = false;
           }
@@ -19037,12 +19109,16 @@ const _sfc_main$1_ = /* @__PURE__ */ defineComponent({
         return;
       if (showClose.value) {
         event.stopPropagation();
-        focusOnInputBox();
+        nextTick(() => {
+          ignoreFocusEvent = false;
+        });
         emitInput(null);
         emitChange(null, true);
         showClose.value = false;
         pickerVisible.value = false;
         pickerOptions.value.handleClear && pickerOptions.value.handleClear();
+        setFloat(false);
+        clearTimeKey.value = Date.now();
       }
     };
     const valueIsEmpty = computed$1(() => {
@@ -19244,6 +19320,38 @@ const _sfc_main$1_ = /* @__PURE__ */ defineComponent({
     provide("EP_PICKER_BASE", {
       props
     });
+    onMounted(() => {
+      if (setLabelSize && isRangeInput.value) {
+        setLabelSize(getChildPositionAndSize(inputRef.value, inputOne.value));
+      }
+    });
+    const endPlaceholder = computed$1(() => {
+      if (isFloat && isFloat.value) {
+        if (displayValue.value && displayValue.value[1] || pickerVisible.value)
+          return props.endPlaceholder;
+        return "";
+      } else {
+        return props.endPlaceholder;
+      }
+    });
+    const startPlaceholder = computed$1(() => {
+      if (isFloat && isFloat.value) {
+        if (displayValue.value && displayValue.value[1] || pickerVisible.value)
+          return props.startPlaceholder;
+        return "";
+      } else {
+        return props.startPlaceholder;
+      }
+    });
+    const rangeSeparator = computed$1(() => {
+      if (isFloat && isFloat.value) {
+        if (displayValue.value && displayValue.value[1] || pickerVisible.value)
+          return props.rangeSeparator;
+        return "";
+      } else {
+        return props.rangeSeparator;
+      }
+    });
     expose({
       focus,
       handleFocusInput,
@@ -19356,9 +19464,11 @@ const _sfc_main$1_ = /* @__PURE__ */ defineComponent({
             }, 8, ["class", "onMousedown"])) : createCommentVNode("v-if", true),
             createElementVNode("input", {
               id: _ctx.id && _ctx.id[0],
+              ref_key: "inputOne",
+              ref: inputOne,
               autocomplete: "off",
               name: _ctx.name && _ctx.name[0],
-              placeholder: _ctx.startPlaceholder,
+              placeholder: unref(startPlaceholder),
               value: unref(displayValue) && unref(displayValue)[0],
               disabled: unref(pickerDisabled),
               readonly: !_ctx.editable || _ctx.readonly,
@@ -19372,13 +19482,13 @@ const _sfc_main$1_ = /* @__PURE__ */ defineComponent({
             renderSlot(_ctx.$slots, "range-separator", {}, () => [
               createElementVNode("span", {
                 class: normalizeClass(unref(nsRange).b("separator"))
-              }, toDisplayString(_ctx.rangeSeparator), 3)
+              }, toDisplayString(unref(rangeSeparator)), 3)
             ]),
             createElementVNode("input", {
               id: _ctx.id && _ctx.id[1],
               autocomplete: "off",
               name: _ctx.name && _ctx.name[1],
-              placeholder: _ctx.endPlaceholder,
+              placeholder: unref(endPlaceholder),
               value: unref(displayValue) && unref(displayValue)[1],
               disabled: unref(pickerDisabled),
               readonly: !_ctx.editable || _ctx.readonly,
@@ -23659,6 +23769,7 @@ const _sfc_main$1H = /* @__PURE__ */ defineComponent({
   emits: cascaderEmits,
   setup(__props, { expose, emit }) {
     const props = __props;
+    const setFloat = inject("SET_FLOAT");
     const popperOptions = {
       modifiers: [
         {
@@ -23697,11 +23808,16 @@ const _sfc_main$1H = /* @__PURE__ */ defineComponent({
     const allPresentTags = ref([]);
     const suggestions = ref([]);
     const isOnComposition = ref(false);
+    const clearTimeKey = ref(Date.now());
+    provide("PARENT_CLEAR", clearTimeKey);
     const cascaderStyle = computed$1(() => {
       return attrs.style;
     });
     const isDisabled = computed$1(() => props.disabled || (form == null ? void 0 : form.disabled));
-    const inputPlaceholder = computed$1(() => props.placeholder || t("el.cascader.placeholder"));
+    const inputPlaceholder = computed$1(() => {
+      const _placeholder = props.placeholder || t("el.cascader.placeholder");
+      return _placeholder;
+    });
     const currentPlaceholder = computed$1(() => searchInputValue.value || presentTags.value.length > 0 || isOnComposition.value ? "" : inputPlaceholder.value);
     const realSize = useFormSize();
     const tagSize = computed$1(() => ["small"].includes(realSize.value) ? "small" : "default");
@@ -23749,9 +23865,13 @@ const _sfc_main$1H = /* @__PURE__ */ defineComponent({
         nsCascader.is("reverse", popperVisible.value)
       ];
     });
-    const inputClass = computed$1(() => {
-      return nsCascader.is("focus", popperVisible.value || filterFocus.value);
+    const isFocus = computed$1(() => {
+      return popperVisible.value || filterFocus.value;
     });
+    const inputClass = computed$1(() => {
+      return nsCascader.is("focus", isFocus.value);
+    });
+    provide("PARENT_FOCUS", isFocus);
     const contentRef = computed$1(() => {
       var _a, _b;
       return (_b = (_a = tooltipRef.value) == null ? void 0 : _a.popperRef) == null ? void 0 : _b.contentRef;
@@ -23929,6 +24049,8 @@ const _sfc_main$1H = /* @__PURE__ */ defineComponent({
         syncPresentTextValue();
       }
       togglePopperVisible(false);
+      clearTimeKey.value = Date.now();
+      setFloat(false);
     };
     const syncPresentTextValue = () => {
       const { value } = presentText;
@@ -34006,10 +34128,13 @@ function useInput(handleInput) {
 
 const MINIMUM_INPUT_WIDTH$1 = 11;
 const useSelect$3 = (props, emit) => {
+  const setFloat = inject("SET_FLOAT");
   const { t } = useLocale();
   const contentId = useId();
   const nsSelect = useNamespace("select");
   const nsInput = useNamespace("input");
+  const setLabelSize = inject("SET_LABEL_SIZE");
+  const isFloat = inject("IS_FLOAT");
   const states = reactive({
     inputValue: "",
     options: /* @__PURE__ */ new Map(),
@@ -34046,6 +34171,9 @@ const useSelect$3 = (props, emit) => {
   const tagMenuRef = ref(null);
   const collapseItemRef = ref(null);
   const scrollbarRef = ref(null);
+  const hasModelValue = computed$1(() => {
+    return props.multiple ? isArray$1(props.modelValue) && props.modelValue.length > 0 : props.modelValue !== void 0 && props.modelValue !== null && props.modelValue !== "";
+  });
   const { wrapperRef, isFocused, handleFocus, handleBlur } = useFocusController(inputRef, {
     afterFocus() {
       if (props.automaticDropdown && !expanded.value) {
@@ -34060,7 +34188,8 @@ const useSelect$3 = (props, emit) => {
     afterBlur() {
       expanded.value = false;
       states.menuVisibleOnFocus = false;
-    }
+    },
+    isFull: hasModelValue
   });
   const expanded = ref(false);
   const hoverOption = ref();
@@ -34069,9 +34198,6 @@ const useSelect$3 = (props, emit) => {
     formItemContext: formItem
   });
   const selectDisabled = computed$1(() => props.disabled || (form == null ? void 0 : form.disabled));
-  const hasModelValue = computed$1(() => {
-    return props.multiple ? isArray$1(props.modelValue) && props.modelValue.length > 0 : props.modelValue !== void 0 && props.modelValue !== null && props.modelValue !== "";
-  });
   const showClose = computed$1(() => {
     const criteria = props.clearable && !selectDisabled.value && states.inputHovering && hasModelValue.value;
     return criteria;
@@ -34145,7 +34271,12 @@ const useSelect$3 = (props, emit) => {
   const currentPlaceholder = computed$1(() => {
     var _a;
     const _placeholder = (_a = props.placeholder) != null ? _a : t("el.select.placeholder");
-    return props.multiple || !hasModelValue.value ? _placeholder : states.selectedLabel;
+    const empty = props.multiple || !hasModelValue.value;
+    if (isFloat && isFloat.value) {
+      return isFocused.value ? empty ? _placeholder : "" : "";
+    } else {
+      return empty ? _placeholder : "";
+    }
   });
   watch(() => props.modelValue, (val, oldVal) => {
     if (props.multiple) {
@@ -34458,6 +34589,8 @@ const useSelect$3 = (props, emit) => {
   };
   const handleClearClick = (event) => {
     deleteSelected(event);
+    isFocused.value = false;
+    setFloat(false);
   };
   const handleClickOutside = (event) => {
     expanded.value = false;
@@ -34566,6 +34699,9 @@ const useSelect$3 = (props, emit) => {
   useResizeObserver(collapseItemRef, resetCollapseItemWidth);
   onMounted(() => {
     setSelected();
+    if (setLabelSize) {
+      setLabelSize(getChildPositionAndSize(wrapperRef.value, selectionRef.value));
+    }
   });
   return {
     inputId,
@@ -35025,6 +35161,16 @@ function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
                 ])
               }, [
                 createElementVNode("span", null, toDisplayString(_ctx.currentPlaceholder), 1)
+              ], 2)) : createCommentVNode("v-if", true),
+              _ctx.states.selectedLabel ? (openBlock(), createElementBlock("div", {
+                key: 3,
+                class: normalizeClass([_ctx.nsSelect.e("selected-item")])
+              }, [
+                renderSlot(_ctx.$slots, "selection", {
+                  selected: _ctx.states.selected
+                }, () => [
+                  createTextVNode(toDisplayString(_ctx.states.selectedLabel), 1)
+                ])
               ], 2)) : createCommentVNode("v-if", true)
             ], 2),
             createElementVNode("div", {
@@ -39232,6 +39378,9 @@ function useAllowCreate(props, states) {
 
 const MINIMUM_INPUT_WIDTH = 11;
 const useSelect$1 = (props, emit) => {
+  const setLabelSize = inject("SET_LABEL_SIZE");
+  const isFloat = inject("IS_FLOAT");
+  const setFloat = inject("SET_FLOAT");
   const { t } = useLocale();
   const nsSelect = useNamespace("select");
   const nsInput = useNamespace("input");
@@ -39268,6 +39417,9 @@ const useSelect$1 = (props, emit) => {
   const menuRef = ref(null);
   const tagMenuRef = ref(null);
   const collapseItemRef = ref(null);
+  const hasModelValue = computed$1(() => {
+    return props.multiple ? isArray$1(props.modelValue) && props.modelValue.length > 0 : props.modelValue !== void 0 && props.modelValue !== null && props.modelValue !== "";
+  });
   const { wrapperRef, isFocused, handleFocus, handleBlur } = useFocusController(inputRef, {
     afterFocus() {
       if (props.automaticDropdown && !expanded.value) {
@@ -39282,7 +39434,8 @@ const useSelect$1 = (props, emit) => {
     afterBlur() {
       expanded.value = false;
       states.menuVisibleOnFocus = false;
-    }
+    },
+    isFull: hasModelValue
   });
   const allOptions = ref([]);
   const filteredOptions = ref([]);
@@ -39291,9 +39444,6 @@ const useSelect$1 = (props, emit) => {
   const popupHeight = computed$1(() => {
     const totalHeight = filteredOptions.value.length * props.itemHeight;
     return totalHeight > props.height ? props.height : totalHeight;
-  });
-  const hasModelValue = computed$1(() => {
-    return props.multiple ? isArray$1(props.modelValue) && props.modelValue.length > 0 : props.modelValue !== void 0 && props.modelValue !== null && props.modelValue !== "";
   });
   const showClearBtn = computed$1(() => {
     const criteria = props.clearable && !selectDisabled.value && states.inputHovering && hasModelValue.value;
@@ -39392,7 +39542,12 @@ const useSelect$1 = (props, emit) => {
   const currentPlaceholder = computed$1(() => {
     var _a;
     const _placeholder = (_a = props.placeholder) != null ? _a : t("el.select.placeholder");
-    return props.multiple || !hasModelValue.value ? _placeholder : states.selectedLabel;
+    const empty = props.multiple || !hasModelValue.value;
+    if (isFloat && isFloat.value) {
+      return isFocused.value ? empty ? _placeholder : "" : "";
+    } else {
+      return empty ? _placeholder : "";
+    }
   });
   const popperRef = computed$1(() => {
     var _a, _b;
@@ -39634,7 +39789,8 @@ const useSelect$1 = (props, emit) => {
     update(emptyValue);
     emit("clear");
     clearAllNewOption();
-    focus();
+    isFocused.value = false;
+    setFloat(false);
   };
   const onKeyboardNavigate = (direction, hoveringIndex = void 0) => {
     const options = filteredOptions.value;
@@ -39817,6 +39973,9 @@ const useSelect$1 = (props, emit) => {
   });
   onMounted(() => {
     initStates();
+    if (setLabelSize) {
+      setLabelSize(getChildPositionAndSize(wrapperRef.value, selectionRef.value));
+    }
   });
   useResizeObserver(selectRef, handleResize);
   useResizeObserver(selectionRef, resetSelectionWidth);
@@ -40156,6 +40315,16 @@ function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
               ])
             }, [
               createElementVNode("span", null, toDisplayString(_ctx.currentPlaceholder), 1)
+            ], 2)) : createCommentVNode("v-if", true),
+            _ctx.states.selectedLabel ? (openBlock(), createElementBlock("div", {
+              key: 3,
+              class: normalizeClass([_ctx.nsSelect.e("selected-item")])
+            }, [
+              renderSlot(_ctx.$slots, "selection", {
+                label: _ctx.states.selectedLabel
+              }, () => [
+                createTextVNode(toDisplayString(_ctx.states.selectedLabel), 1)
+              ])
             ], 2)) : createCommentVNode("v-if", true)
           ], 2),
           createElementVNode("div", {
