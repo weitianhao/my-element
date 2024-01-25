@@ -46,9 +46,9 @@ export declare const ElSpace: import("element-plus/es/utils").SFCWithInstall<imp
         __epPropKey: true;
     };
 }>>, {
-    readonly class: import("element-plus/es/utils").Arrayable<string | Record<string, boolean>>;
-    readonly style: import("vue").StyleValue;
     readonly fill: boolean;
+    readonly style: import("vue").StyleValue;
+    readonly class: import("element-plus/es/utils").Arrayable<string | Record<string, boolean>>;
     readonly direction: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "horizontal" | "vertical", unknown>;
     readonly wrap: boolean;
     readonly alignment: string;

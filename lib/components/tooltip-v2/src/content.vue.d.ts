@@ -5,10 +5,10 @@ declare const _default: import("vue").DefineComponent<{
     arrowPadding: import("../../../utils").EpPropFinalized<(new (...args: any[]) => number & {}) | (() => number) | ((new (...args: any[]) => number & {}) | (() => number))[], unknown, unknown, 5, boolean>;
     effect: import("../../../utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     contentClass: StringConstructor;
-    placement: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@floating-ui/dom").Placement & {}) | (() => import("@floating-ui/dom").Placement) | ((new (...args: any[]) => import("@floating-ui/dom").Placement & {}) | (() => import("@floating-ui/dom").Placement))[], "top" | "right" | "bottom" | "left" | "top-start" | "top-end" | "right-start" | "right-end" | "bottom-start" | "bottom-end" | "left-start" | "left-end", unknown, "bottom", boolean>;
+    placement: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@floating-ui/dom").Placement & {}) | (() => import("@floating-ui/dom").Placement) | ((new (...args: any[]) => import("@floating-ui/dom").Placement & {}) | (() => import("@floating-ui/dom").Placement))[], "top" | "bottom" | "right" | "left" | "top-start" | "top-end" | "bottom-start" | "bottom-end" | "right-start" | "right-end" | "left-start" | "left-end", unknown, "bottom", boolean>;
     reference: import("../../../utils").EpPropFinalized<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown, null, boolean>;
     offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 8, boolean>;
-    strategy: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@floating-ui/dom").Strategy & {}) | (() => import("@floating-ui/dom").Strategy) | ((new (...args: any[]) => import("@floating-ui/dom").Strategy & {}) | (() => import("@floating-ui/dom").Strategy))[], "absolute" | "fixed", unknown, "absolute", boolean>;
+    strategy: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@floating-ui/dom").Strategy & {}) | (() => import("@floating-ui/dom").Strategy) | ((new (...args: any[]) => import("@floating-ui/dom").Strategy & {}) | (() => import("@floating-ui/dom").Strategy))[], "fixed" | "absolute", unknown, "absolute", boolean>;
     showArrow: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
 }, {
     props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
@@ -17,18 +17,18 @@ declare const _default: import("vue").DefineComponent<{
         arrowPadding: import("../../../utils").EpPropFinalized<(new (...args: any[]) => number & {}) | (() => number) | ((new (...args: any[]) => number & {}) | (() => number))[], unknown, unknown, 5, boolean>;
         effect: import("../../../utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
         contentClass: StringConstructor;
-        placement: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@floating-ui/dom").Placement & {}) | (() => import("@floating-ui/dom").Placement) | ((new (...args: any[]) => import("@floating-ui/dom").Placement & {}) | (() => import("@floating-ui/dom").Placement))[], "top" | "right" | "bottom" | "left" | "top-start" | "top-end" | "right-start" | "right-end" | "bottom-start" | "bottom-end" | "left-start" | "left-end", unknown, "bottom", boolean>;
+        placement: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@floating-ui/dom").Placement & {}) | (() => import("@floating-ui/dom").Placement) | ((new (...args: any[]) => import("@floating-ui/dom").Placement & {}) | (() => import("@floating-ui/dom").Placement))[], "top" | "bottom" | "right" | "left" | "top-start" | "top-end" | "bottom-start" | "bottom-end" | "right-start" | "right-end" | "left-start" | "left-end", unknown, "bottom", boolean>;
         reference: import("../../../utils").EpPropFinalized<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown, null, boolean>;
         offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 8, boolean>;
-        strategy: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@floating-ui/dom").Strategy & {}) | (() => import("@floating-ui/dom").Strategy) | ((new (...args: any[]) => import("@floating-ui/dom").Strategy & {}) | (() => import("@floating-ui/dom").Strategy))[], "absolute" | "fixed", unknown, "absolute", boolean>;
+        strategy: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@floating-ui/dom").Strategy & {}) | (() => import("@floating-ui/dom").Strategy) | ((new (...args: any[]) => import("@floating-ui/dom").Strategy & {}) | (() => import("@floating-ui/dom").Strategy))[], "fixed" | "absolute", unknown, "absolute", boolean>;
         showArrow: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }>> & {
         [x: string & `on${string}`]: ((...args: any[]) => any) | ((...args: unknown[]) => any) | undefined;
     }>>;
     triggerRef: import("vue").Ref<HTMLElement | null>;
     contentId: import("vue").Ref<string>;
-    placement: import("vue").Ref<import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("@floating-ui/dom").Placement & {}) | (() => import("@floating-ui/dom").Placement) | ((new (...args: any[]) => import("@floating-ui/dom").Placement & {}) | (() => import("@floating-ui/dom").Placement))[], "top" | "right" | "bottom" | "left" | "top-start" | "top-end" | "right-start" | "right-end" | "bottom-start" | "bottom-end" | "left-start" | "left-end", unknown>>;
-    strategy: import("vue").Ref<import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("@floating-ui/dom").Strategy & {}) | (() => import("@floating-ui/dom").Strategy) | ((new (...args: any[]) => import("@floating-ui/dom").Strategy & {}) | (() => import("@floating-ui/dom").Strategy))[], "absolute" | "fixed", unknown>>;
+    placement: import("vue").Ref<import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("@floating-ui/dom").Placement & {}) | (() => import("@floating-ui/dom").Placement) | ((new (...args: any[]) => import("@floating-ui/dom").Placement & {}) | (() => import("@floating-ui/dom").Placement))[], "top" | "bottom" | "right" | "left" | "top-start" | "top-end" | "bottom-start" | "bottom-end" | "right-start" | "right-end" | "left-start" | "left-end", unknown>>;
+    strategy: import("vue").Ref<import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("@floating-ui/dom").Strategy & {}) | (() => import("@floating-ui/dom").Strategy) | ((new (...args: any[]) => import("@floating-ui/dom").Strategy & {}) | (() => import("@floating-ui/dom").Strategy))[], "fixed" | "absolute", unknown>>;
     arrowRef: import("vue").Ref<HTMLElement | null>;
     referenceRef: import("vue").Ref<HTMLElement | import("@floating-ui/dom").VirtualElement | undefined>;
     contentRef: import("vue").Ref<HTMLElement | undefined>;
@@ -58,14 +58,14 @@ declare const _default: import("vue").DefineComponent<{
             escaped?: boolean | undefined;
             referenceHiddenOffsets?: {
                 top: number;
-                right: number;
                 bottom: number;
+                right: number;
                 left: number;
             } | undefined;
             escapedOffsets?: {
                 top: number;
-                right: number;
                 bottom: number;
+                right: number;
                 left: number;
             } | undefined;
         } | undefined;
@@ -124,19 +124,19 @@ declare const _default: import("vue").DefineComponent<{
     arrowPadding: import("../../../utils").EpPropFinalized<(new (...args: any[]) => number & {}) | (() => number) | ((new (...args: any[]) => number & {}) | (() => number))[], unknown, unknown, 5, boolean>;
     effect: import("../../../utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     contentClass: StringConstructor;
-    placement: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@floating-ui/dom").Placement & {}) | (() => import("@floating-ui/dom").Placement) | ((new (...args: any[]) => import("@floating-ui/dom").Placement & {}) | (() => import("@floating-ui/dom").Placement))[], "top" | "right" | "bottom" | "left" | "top-start" | "top-end" | "right-start" | "right-end" | "bottom-start" | "bottom-end" | "left-start" | "left-end", unknown, "bottom", boolean>;
+    placement: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@floating-ui/dom").Placement & {}) | (() => import("@floating-ui/dom").Placement) | ((new (...args: any[]) => import("@floating-ui/dom").Placement & {}) | (() => import("@floating-ui/dom").Placement))[], "top" | "bottom" | "right" | "left" | "top-start" | "top-end" | "bottom-start" | "bottom-end" | "right-start" | "right-end" | "left-start" | "left-end", unknown, "bottom", boolean>;
     reference: import("../../../utils").EpPropFinalized<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown, null, boolean>;
     offset: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 8, boolean>;
-    strategy: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@floating-ui/dom").Strategy & {}) | (() => import("@floating-ui/dom").Strategy) | ((new (...args: any[]) => import("@floating-ui/dom").Strategy & {}) | (() => import("@floating-ui/dom").Strategy))[], "absolute" | "fixed", unknown, "absolute", boolean>;
+    strategy: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("@floating-ui/dom").Strategy & {}) | (() => import("@floating-ui/dom").Strategy) | ((new (...args: any[]) => import("@floating-ui/dom").Strategy & {}) | (() => import("@floating-ui/dom").Strategy))[], "fixed" | "absolute", unknown, "absolute", boolean>;
     showArrow: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
 }>>, {
-    placement: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("@floating-ui/dom").Placement & {}) | (() => import("@floating-ui/dom").Placement) | ((new (...args: any[]) => import("@floating-ui/dom").Placement & {}) | (() => import("@floating-ui/dom").Placement))[], "top" | "right" | "bottom" | "left" | "top-start" | "top-end" | "right-start" | "right-end" | "bottom-start" | "bottom-end" | "left-start" | "left-end", unknown>;
-    strategy: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("@floating-ui/dom").Strategy & {}) | (() => import("@floating-ui/dom").Strategy) | ((new (...args: any[]) => import("@floating-ui/dom").Strategy & {}) | (() => import("@floating-ui/dom").Strategy))[], "absolute" | "fixed", unknown>;
-    offset: number;
     effect: string;
-    reference: import("../../../utils").EpPropMergeType<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown>;
+    offset: number;
+    placement: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("@floating-ui/dom").Placement & {}) | (() => import("@floating-ui/dom").Placement) | ((new (...args: any[]) => import("@floating-ui/dom").Placement & {}) | (() => import("@floating-ui/dom").Placement))[], "top" | "bottom" | "right" | "left" | "top-start" | "top-end" | "bottom-start" | "bottom-end" | "right-start" | "right-end" | "left-start" | "left-end", unknown>;
+    strategy: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("@floating-ui/dom").Strategy & {}) | (() => import("@floating-ui/dom").Strategy) | ((new (...args: any[]) => import("@floating-ui/dom").Strategy & {}) | (() => import("@floating-ui/dom").Strategy))[], "fixed" | "absolute", unknown>;
     nowrap: boolean;
     showArrow: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     arrowPadding: number;
+    reference: import("../../../utils").EpPropMergeType<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown>;
 }>;
 export default _default;

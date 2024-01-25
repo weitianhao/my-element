@@ -91,7 +91,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
         endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
         format: (template?: string | undefined) => string;
-        diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+        diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "D" | "M" | "y" | "weeks" | "months" | "m" | "s" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
         valueOf: () => number;
         unix: () => number;
         daysInMonth: () => number;
@@ -162,7 +162,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
         endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
         format: (template?: string | undefined) => string;
-        diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+        diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "D" | "M" | "y" | "weeks" | "months" | "m" | "s" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
         valueOf: () => number;
         unix: () => number;
         daysInMonth: () => number;
@@ -236,7 +236,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             format: (template?: string | undefined) => string;
-            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "D" | "M" | "y" | "weeks" | "months" | "m" | "s" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
             valueOf: () => number;
             unix: () => number;
             daysInMonth: () => number;
@@ -371,7 +371,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             __epPropKey: true;
         };
         readonly disabled: BooleanConstructor;
-        readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown, "", boolean>;
+        readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "success" | "warning" | "info" | "text" | "primary" | "danger", unknown, "", boolean>;
         readonly icon: {
             readonly type: import("vue").PropType<import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>>;
             readonly required: false;
@@ -401,7 +401,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 __epPropKey: true;
             };
             readonly disabled: BooleanConstructor;
-            readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown, "", boolean>;
+            readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "success" | "warning" | "info" | "text" | "primary" | "danger", unknown, "", boolean>;
             readonly icon: {
                 readonly type: import("vue").PropType<import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>>;
                 readonly required: false;
@@ -447,7 +447,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         };
         _ref: import("vue").Ref<HTMLButtonElement | undefined>;
         _size: import("vue").ComputedRef<"" | "default" | "small" | "large">;
-        _type: import("vue").ComputedRef<"" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger">;
+        _type: import("vue").ComputedRef<"" | "default" | "success" | "warning" | "info" | "text" | "primary" | "danger">;
         _disabled: import("vue").ComputedRef<boolean>;
         _props: import("vue").ComputedRef<{
             ariaDisabled: boolean;
@@ -535,7 +535,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             __epPropKey: true;
         };
         readonly disabled: BooleanConstructor;
-        readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown, "", boolean>;
+        readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "success" | "warning" | "info" | "text" | "primary" | "danger", unknown, "", boolean>;
         readonly icon: {
             readonly type: import("vue").PropType<import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>>;
             readonly required: false;
@@ -560,19 +560,19 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         onClick?: ((evt: MouseEvent) => any) | undefined;
     }, {
         readonly bg: boolean;
-        readonly type: import("../../../utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown>;
-        readonly link: boolean;
-        readonly loading: boolean;
-        readonly disabled: boolean;
-        readonly circle: boolean;
-        readonly text: boolean;
+        readonly type: import("../../../utils").EpPropMergeType<StringConstructor, "" | "default" | "success" | "warning" | "info" | "text" | "primary" | "danger", unknown>;
         readonly dark: boolean;
+        readonly link: boolean;
+        readonly disabled: boolean;
+        readonly text: boolean;
         readonly autofocus: boolean;
         readonly round: boolean;
+        readonly circle: boolean;
         readonly tag: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>;
         readonly nativeType: import("../../../utils").EpPropMergeType<StringConstructor, "reset" | "submit" | "button", unknown>;
         readonly loadingIcon: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>;
         readonly autoInsertSpace: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly loading: boolean;
         readonly plain: boolean;
     }>> & {
         ButtonGroup: import("vue").DefineComponent<{
@@ -582,7 +582,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 __epPropKey: true;
             };
-            readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown, "", boolean>;
+            readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "success" | "warning" | "info" | "text" | "primary" | "danger", unknown, "", boolean>;
         }, {
             props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
                 readonly size: {
@@ -591,7 +591,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                     readonly validator: ((val: unknown) => boolean) | undefined;
                     __epPropKey: true;
                 };
-                readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown, "", boolean>;
+                readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "success" | "warning" | "info" | "text" | "primary" | "danger", unknown, "", boolean>;
             }>> & {
                 [x: string & `on${string}`]: ((...args: any[]) => any) | ((...args: unknown[]) => any) | undefined;
             }>>;
@@ -620,9 +620,9 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 __epPropKey: true;
             };
-            readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown, "", boolean>;
+            readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "success" | "warning" | "info" | "text" | "primary" | "danger", unknown, "", boolean>;
         }>>, {
-            readonly type: import("../../../utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown>;
+            readonly type: import("../../../utils").EpPropMergeType<StringConstructor, "" | "default" | "success" | "warning" | "info" | "text" | "primary" | "danger", unknown>;
         }>;
     };
     ElInput: import("../../../utils").SFCWithInstall<import("vue").DefineComponent<{
@@ -786,9 +786,9 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             readonly inputStyle: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue) | ((new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("../../../utils").Mutable<{}>, boolean>;
             readonly autofocus: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         }>> & {
-            "onUpdate:modelValue"?: ((value: string) => any) | undefined;
             onChange?: ((value: string) => any) | undefined;
             onClear?: (() => any) | undefined;
+            "onUpdate:modelValue"?: ((value: string) => any) | undefined;
             onInput?: ((value: string) => any) | undefined;
             onBlur?: ((evt: FocusEvent) => any) | undefined;
             onFocus?: ((evt: FocusEvent) => any) | undefined;
@@ -1053,9 +1053,9 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         readonly inputStyle: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue) | ((new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("../../../utils").Mutable<{}>, boolean>;
         readonly autofocus: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }>> & {
-        "onUpdate:modelValue"?: ((value: string) => any) | undefined;
         onChange?: ((value: string) => any) | undefined;
         onClear?: (() => any) | undefined;
+        "onUpdate:modelValue"?: ((value: string) => any) | undefined;
         onInput?: ((value: string) => any) | undefined;
         onBlur?: ((evt: FocusEvent) => any) | undefined;
         onFocus?: ((evt: FocusEvent) => any) | undefined;
@@ -1068,10 +1068,9 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
     }, {
         readonly id: string;
         readonly type: string;
-        readonly tabindex: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly modelValue: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
-        readonly disabled: boolean;
         readonly label: string;
+        readonly disabled: boolean;
         readonly clearable: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly autosize: import("../..").InputAutoSize;
         readonly autocomplete: string;
@@ -1079,6 +1078,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         readonly showPassword: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly showWordLimit: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly containerRole: string;
+        readonly tabindex: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly validateEvent: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly inputStyle: import("vue").StyleValue;
         readonly autofocus: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -1184,7 +1184,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             format: (template?: string | undefined) => string;
-            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "D" | "M" | "y" | "weeks" | "months" | "m" | "s" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
             valueOf: () => number;
             unix: () => number;
             daysInMonth: () => number;
@@ -1254,7 +1254,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             format: (template?: string | undefined) => string;
-            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "D" | "M" | "y" | "weeks" | "months" | "m" | "s" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
             valueOf: () => number;
             unix: () => number;
             daysInMonth: () => number;
@@ -1285,7 +1285,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         }[] | undefined>;
         transitionName: import("vue").ComputedRef<string>;
         showSeconds: import("vue").ComputedRef<boolean>;
-        amPmMode: import("vue").ComputedRef<"" | "a" | "A">;
+        amPmMode: import("vue").ComputedRef<"" | "A" | "a">;
         isValidValue: (_date: import("dayjs").Dayjs) => boolean;
         handleCancel: () => void;
         handleConfirm: (visible?: boolean, first?: boolean) => void;
@@ -1333,7 +1333,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             };
             readonly showSeconds: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
             readonly arrowControl: BooleanConstructor;
-            readonly amPmMode: import("../../../utils").EpPropFinalized<(new (...args: any[]) => ("" | "a" | "A") & {}) | (() => "" | "a" | "A") | ((new (...args: any[]) => ("" | "a" | "A") & {}) | (() => "" | "a" | "A"))[], unknown, unknown, "", boolean>;
+            readonly amPmMode: import("../../../utils").EpPropFinalized<(new (...args: any[]) => ("" | "A" | "a") & {}) | (() => "" | "A" | "a") | ((new (...args: any[]) => ("" | "A" | "a") & {}) | (() => "" | "A" | "a"))[], unknown, unknown, "", boolean>;
         }, {
             props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
                 readonly disabledHours: {
@@ -1368,7 +1368,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 };
                 readonly showSeconds: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
                 readonly arrowControl: BooleanConstructor;
-                readonly amPmMode: import("../../../utils").EpPropFinalized<(new (...args: any[]) => ("" | "a" | "A") & {}) | (() => "" | "a" | "A") | ((new (...args: any[]) => ("" | "a" | "A") & {}) | (() => "" | "a" | "A"))[], unknown, unknown, "", boolean>;
+                readonly amPmMode: import("../../../utils").EpPropFinalized<(new (...args: any[]) => ("" | "A" | "a") & {}) | (() => "" | "A" | "a") | ((new (...args: any[]) => ("" | "A" | "a") & {}) | (() => "" | "A" | "a"))[], unknown, unknown, "", boolean>;
             }>> & {
                 onChange?: ((...args: any[]) => any) | undefined;
                 "onSelect-range"?: ((...args: any[]) => any) | undefined;
@@ -1403,8 +1403,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 $data: {};
                 $props: Partial<{
                     readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly always: boolean;
+                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                     readonly wrapStyle: import("vue").StyleValue;
                     readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -1439,7 +1439,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                         scrollTop: number;
                         scrollLeft: number;
                     }) => any) | undefined;
-                } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "height" | "maxHeight" | "always" | "native" | "wrapStyle" | "wrapClass" | "viewClass" | "viewStyle" | "tag" | "minSize" | "noresize">;
+                } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "height" | "always" | "maxHeight" | "native" | "wrapStyle" | "wrapClass" | "viewClass" | "viewStyle" | "tag" | "minSize" | "noresize">;
                 $attrs: {
                     [x: string]: unknown;
                 };
@@ -1979,8 +1979,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                     }) => boolean;
                 }, string, {
                     readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly always: boolean;
+                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                     readonly wrapStyle: import("vue").StyleValue;
                     readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -2531,8 +2531,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 $data: {};
                 $props: Partial<{
                     readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly always: boolean;
+                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                     readonly wrapStyle: import("vue").StyleValue;
                     readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -2567,7 +2567,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                         scrollTop: number;
                         scrollLeft: number;
                     }) => any) | undefined;
-                } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "height" | "maxHeight" | "always" | "native" | "wrapStyle" | "wrapClass" | "viewClass" | "viewStyle" | "tag" | "minSize" | "noresize">;
+                } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "height" | "always" | "maxHeight" | "native" | "wrapStyle" | "wrapClass" | "viewClass" | "viewStyle" | "tag" | "minSize" | "noresize">;
                 $attrs: {
                     [x: string]: unknown;
                 };
@@ -3107,8 +3107,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                     }) => boolean;
                 }, string, {
                     readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly always: boolean;
+                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                     readonly wrapStyle: import("vue").StyleValue;
                     readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -3659,8 +3659,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 $data: {};
                 $props: Partial<{
                     readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly always: boolean;
+                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                     readonly wrapStyle: import("vue").StyleValue;
                     readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -3695,7 +3695,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                         scrollTop: number;
                         scrollLeft: number;
                     }) => any) | undefined;
-                } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "height" | "maxHeight" | "always" | "native" | "wrapStyle" | "wrapClass" | "viewClass" | "viewStyle" | "tag" | "minSize" | "noresize">;
+                } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "height" | "always" | "maxHeight" | "native" | "wrapStyle" | "wrapClass" | "viewClass" | "viewStyle" | "tag" | "minSize" | "noresize">;
                 $attrs: {
                     [x: string]: unknown;
                 };
@@ -4235,8 +4235,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                     }) => boolean;
                 }, string, {
                     readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly always: boolean;
+                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                     readonly wrapStyle: import("vue").StyleValue;
                     readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -4787,8 +4787,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 $data: {};
                 $props: Partial<{
                     readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly always: boolean;
+                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                     readonly wrapStyle: import("vue").StyleValue;
                     readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -4823,7 +4823,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                         scrollTop: number;
                         scrollLeft: number;
                     }) => any) | undefined;
-                } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "height" | "maxHeight" | "always" | "native" | "wrapStyle" | "wrapClass" | "viewClass" | "viewStyle" | "tag" | "minSize" | "noresize">;
+                } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "height" | "always" | "maxHeight" | "native" | "wrapStyle" | "wrapClass" | "viewClass" | "viewStyle" | "tag" | "minSize" | "noresize">;
                 $attrs: {
                     [x: string]: unknown;
                 };
@@ -5363,8 +5363,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                     }) => boolean;
                 }, string, {
                     readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly always: boolean;
+                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                     readonly wrapStyle: import("vue").StyleValue;
                     readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -5943,8 +5943,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 $data: {};
                 $props: Partial<{
                     readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly always: boolean;
+                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                     readonly wrapStyle: import("vue").StyleValue;
                     readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -5979,7 +5979,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                         scrollTop: number;
                         scrollLeft: number;
                     }) => any) | undefined;
-                } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "height" | "maxHeight" | "always" | "native" | "wrapStyle" | "wrapClass" | "viewClass" | "viewStyle" | "tag" | "minSize" | "noresize">;
+                } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "height" | "always" | "maxHeight" | "native" | "wrapStyle" | "wrapClass" | "viewClass" | "viewStyle" | "tag" | "minSize" | "noresize">;
                 $attrs: {
                     [x: string]: unknown;
                 };
@@ -6519,8 +6519,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                     }) => boolean;
                 }, string, {
                     readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly always: boolean;
+                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                     readonly wrapStyle: import("vue").StyleValue;
                     readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -7611,8 +7611,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 }) => any) | undefined;
             }, {
                 readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                 readonly always: boolean;
+                readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                 readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                 readonly wrapStyle: import("vue").StyleValue;
                 readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -7720,7 +7720,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             };
             readonly showSeconds: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
             readonly arrowControl: BooleanConstructor;
-            readonly amPmMode: import("../../../utils").EpPropFinalized<(new (...args: any[]) => ("" | "a" | "A") & {}) | (() => "" | "a" | "A") | ((new (...args: any[]) => ("" | "a" | "A") & {}) | (() => "" | "a" | "A"))[], unknown, unknown, "", boolean>;
+            readonly amPmMode: import("../../../utils").EpPropFinalized<(new (...args: any[]) => ("" | "A" | "a") & {}) | (() => "" | "A" | "a") | ((new (...args: any[]) => ("" | "A" | "a") & {}) | (() => "" | "A" | "a"))[], unknown, unknown, "", boolean>;
         }>> & {
             onChange?: ((...args: any[]) => any) | undefined;
             "onSelect-range"?: ((...args: any[]) => any) | undefined;
@@ -7728,7 +7728,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         }, {
             readonly arrowControl: boolean;
             readonly showSeconds: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly amPmMode: import("../../../utils").EpPropMergeType<(new (...args: any[]) => ("" | "a" | "A") & {}) | (() => "" | "a" | "A") | ((new (...args: any[]) => ("" | "a" | "A") & {}) | (() => "" | "a" | "A"))[], unknown, unknown>;
+            readonly amPmMode: import("../../../utils").EpPropMergeType<(new (...args: any[]) => ("" | "A" | "a") & {}) | (() => "" | "A" | "a") | ((new (...args: any[]) => ("" | "A" | "a") & {}) | (() => "" | "A" | "a"))[], unknown, unknown>;
         }>;
     }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("pick" | "select-range" | "set-picker-option")[], "pick" | "select-range" | "set-picker-option", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
         readonly datetimeRole: StringConstructor;
@@ -7958,7 +7958,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
                 endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
                 format: (template?: string | undefined) => string;
-                diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+                diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "D" | "M" | "y" | "weeks" | "months" | "m" | "s" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
                 valueOf: () => number;
                 unix: () => number;
                 daysInMonth: () => number;
@@ -8094,7 +8094,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
                 endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
                 format: (template?: string | undefined) => string;
-                diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+                diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "D" | "M" | "y" | "weeks" | "months" | "m" | "s" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
                 valueOf: () => number;
                 unix: () => number;
                 daysInMonth: () => number;
@@ -8123,7 +8123,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 isSameOrAfter: (date: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: import("dayjs").OpUnitType | undefined) => boolean;
                 isSameOrBefore: (date: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: import("dayjs").OpUnitType | undefined) => boolean;
             } | undefined;
-            type?: ("week" | "today" | "normal" | "prev-month" | "next-month") | undefined;
+            type?: ("week" | "normal" | "prev-month" | "next-month" | "today") | undefined;
         }[][]>;
         tbodyRef: import("vue").Ref<HTMLElement | undefined>;
         currentCellRef: import("vue").Ref<HTMLElement | undefined>;
@@ -8306,7 +8306,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
         endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
         format: (template?: string | undefined) => string;
-        diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+        diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "D" | "M" | "y" | "weeks" | "months" | "m" | "s" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
         valueOf: () => number;
         unix: () => number;
         daysInMonth: () => number;
@@ -8377,7 +8377,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
         endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
         format: (template?: string | undefined) => string;
-        diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+        diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "D" | "M" | "y" | "weeks" | "months" | "m" | "s" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
         valueOf: () => number;
         unix: () => number;
         daysInMonth: () => number;
@@ -8451,7 +8451,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             format: (template?: string | undefined) => string;
-            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "D" | "M" | "y" | "weeks" | "months" | "m" | "s" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
             valueOf: () => number;
             unix: () => number;
             daysInMonth: () => number;
@@ -8713,7 +8713,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             start: boolean;
             end: boolean;
             text: number;
-            type: "today" | "normal";
+            type: "normal" | "today";
             inRange: boolean;
         }[][]>;
         lastRow: import("vue").Ref<number | undefined>;
@@ -8725,7 +8725,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             start: boolean;
             end: boolean;
             text: number;
-            type: "today" | "normal";
+            type: "normal" | "today";
             inRange: boolean;
         }[][]>;
         focus: () => void;
@@ -8736,7 +8736,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             start: boolean;
             end: boolean;
             text: number;
-            type: "today" | "normal";
+            type: "normal" | "today";
             inRange: boolean;
         }) => any;
         isSelectedCell: (cell: {
@@ -8746,7 +8746,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             start: boolean;
             end: boolean;
             text: number;
-            type: "today" | "normal";
+            type: "normal" | "today";
             inRange: boolean;
         }) => boolean;
         handleMouseMove: (event: MouseEvent) => void;
@@ -8955,7 +8955,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
         endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
         format: (template?: string | undefined) => string;
-        diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+        diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "D" | "M" | "y" | "weeks" | "months" | "m" | "s" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
         valueOf: () => number;
         unix: () => number;
         daysInMonth: () => number;
@@ -9050,7 +9050,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             __epPropKey: true;
         };
         readonly disabled: BooleanConstructor;
-        readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown, "", boolean>;
+        readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "success" | "warning" | "info" | "text" | "primary" | "danger", unknown, "", boolean>;
         readonly icon: {
             readonly type: import("vue").PropType<import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>>;
             readonly required: false;
@@ -9080,7 +9080,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 __epPropKey: true;
             };
             readonly disabled: BooleanConstructor;
-            readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown, "", boolean>;
+            readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "success" | "warning" | "info" | "text" | "primary" | "danger", unknown, "", boolean>;
             readonly icon: {
                 readonly type: import("vue").PropType<import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>>;
                 readonly required: false;
@@ -9126,7 +9126,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         };
         _ref: import("vue").Ref<HTMLButtonElement | undefined>;
         _size: import("vue").ComputedRef<"" | "default" | "small" | "large">;
-        _type: import("vue").ComputedRef<"" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger">;
+        _type: import("vue").ComputedRef<"" | "default" | "success" | "warning" | "info" | "text" | "primary" | "danger">;
         _disabled: import("vue").ComputedRef<boolean>;
         _props: import("vue").ComputedRef<{
             ariaDisabled: boolean;
@@ -9214,7 +9214,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             __epPropKey: true;
         };
         readonly disabled: BooleanConstructor;
-        readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown, "", boolean>;
+        readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "success" | "warning" | "info" | "text" | "primary" | "danger", unknown, "", boolean>;
         readonly icon: {
             readonly type: import("vue").PropType<import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>>;
             readonly required: false;
@@ -9239,19 +9239,19 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         onClick?: ((evt: MouseEvent) => any) | undefined;
     }, {
         readonly bg: boolean;
-        readonly type: import("../../../utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown>;
-        readonly link: boolean;
-        readonly loading: boolean;
-        readonly disabled: boolean;
-        readonly circle: boolean;
-        readonly text: boolean;
+        readonly type: import("../../../utils").EpPropMergeType<StringConstructor, "" | "default" | "success" | "warning" | "info" | "text" | "primary" | "danger", unknown>;
         readonly dark: boolean;
+        readonly link: boolean;
+        readonly disabled: boolean;
+        readonly text: boolean;
         readonly autofocus: boolean;
         readonly round: boolean;
+        readonly circle: boolean;
         readonly tag: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>;
         readonly nativeType: import("../../../utils").EpPropMergeType<StringConstructor, "reset" | "submit" | "button", unknown>;
         readonly loadingIcon: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>;
         readonly autoInsertSpace: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly loading: boolean;
         readonly plain: boolean;
     }>> & {
         ButtonGroup: import("vue").DefineComponent<{
@@ -9261,7 +9261,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 __epPropKey: true;
             };
-            readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown, "", boolean>;
+            readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "success" | "warning" | "info" | "text" | "primary" | "danger", unknown, "", boolean>;
         }, {
             props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
                 readonly size: {
@@ -9270,7 +9270,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                     readonly validator: ((val: unknown) => boolean) | undefined;
                     __epPropKey: true;
                 };
-                readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown, "", boolean>;
+                readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "success" | "warning" | "info" | "text" | "primary" | "danger", unknown, "", boolean>;
             }>> & {
                 [x: string & `on${string}`]: ((...args: any[]) => any) | ((...args: unknown[]) => any) | undefined;
             }>>;
@@ -9299,9 +9299,9 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 __epPropKey: true;
             };
-            readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown, "", boolean>;
+            readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "success" | "warning" | "info" | "text" | "primary" | "danger", unknown, "", boolean>;
         }>>, {
-            readonly type: import("../../../utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown>;
+            readonly type: import("../../../utils").EpPropMergeType<StringConstructor, "" | "default" | "success" | "warning" | "info" | "text" | "primary" | "danger", unknown>;
         }>;
     };
     vClickOutside: import("vue").ObjectDirective<any, any>;
@@ -9466,9 +9466,9 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             readonly inputStyle: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue) | ((new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("../../../utils").Mutable<{}>, boolean>;
             readonly autofocus: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         }>> & {
-            "onUpdate:modelValue"?: ((value: string) => any) | undefined;
             onChange?: ((value: string) => any) | undefined;
             onClear?: (() => any) | undefined;
+            "onUpdate:modelValue"?: ((value: string) => any) | undefined;
             onInput?: ((value: string) => any) | undefined;
             onBlur?: ((evt: FocusEvent) => any) | undefined;
             onFocus?: ((evt: FocusEvent) => any) | undefined;
@@ -9733,9 +9733,9 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         readonly inputStyle: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue) | ((new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("../../../utils").Mutable<{}>, boolean>;
         readonly autofocus: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }>> & {
-        "onUpdate:modelValue"?: ((value: string) => any) | undefined;
         onChange?: ((value: string) => any) | undefined;
         onClear?: (() => any) | undefined;
+        "onUpdate:modelValue"?: ((value: string) => any) | undefined;
         onInput?: ((value: string) => any) | undefined;
         onBlur?: ((evt: FocusEvent) => any) | undefined;
         onFocus?: ((evt: FocusEvent) => any) | undefined;
@@ -9748,10 +9748,9 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
     }, {
         readonly id: string;
         readonly type: string;
-        readonly tabindex: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly modelValue: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
-        readonly disabled: boolean;
         readonly label: string;
+        readonly disabled: boolean;
         readonly clearable: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly autosize: import("../..").InputAutoSize;
         readonly autocomplete: string;
@@ -9759,6 +9758,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         readonly showPassword: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly showWordLimit: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly containerRole: string;
+        readonly tabindex: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly validateEvent: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly inputStyle: import("vue").StyleValue;
         readonly autofocus: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -9864,7 +9864,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             format: (template?: string | undefined) => string;
-            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "D" | "M" | "y" | "weeks" | "months" | "m" | "s" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
             valueOf: () => number;
             unix: () => number;
             daysInMonth: () => number;
@@ -9934,7 +9934,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             format: (template?: string | undefined) => string;
-            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "D" | "M" | "y" | "weeks" | "months" | "m" | "s" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
             valueOf: () => number;
             unix: () => number;
             daysInMonth: () => number;
@@ -9965,7 +9965,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         }[] | undefined>;
         transitionName: import("vue").ComputedRef<string>;
         showSeconds: import("vue").ComputedRef<boolean>;
-        amPmMode: import("vue").ComputedRef<"" | "a" | "A">;
+        amPmMode: import("vue").ComputedRef<"" | "A" | "a">;
         isValidValue: (_date: import("dayjs").Dayjs) => boolean;
         handleCancel: () => void;
         handleConfirm: (visible?: boolean, first?: boolean) => void;
@@ -10013,7 +10013,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             };
             readonly showSeconds: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
             readonly arrowControl: BooleanConstructor;
-            readonly amPmMode: import("../../../utils").EpPropFinalized<(new (...args: any[]) => ("" | "a" | "A") & {}) | (() => "" | "a" | "A") | ((new (...args: any[]) => ("" | "a" | "A") & {}) | (() => "" | "a" | "A"))[], unknown, unknown, "", boolean>;
+            readonly amPmMode: import("../../../utils").EpPropFinalized<(new (...args: any[]) => ("" | "A" | "a") & {}) | (() => "" | "A" | "a") | ((new (...args: any[]) => ("" | "A" | "a") & {}) | (() => "" | "A" | "a"))[], unknown, unknown, "", boolean>;
         }, {
             props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
                 readonly disabledHours: {
@@ -10048,7 +10048,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 };
                 readonly showSeconds: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
                 readonly arrowControl: BooleanConstructor;
-                readonly amPmMode: import("../../../utils").EpPropFinalized<(new (...args: any[]) => ("" | "a" | "A") & {}) | (() => "" | "a" | "A") | ((new (...args: any[]) => ("" | "a" | "A") & {}) | (() => "" | "a" | "A"))[], unknown, unknown, "", boolean>;
+                readonly amPmMode: import("../../../utils").EpPropFinalized<(new (...args: any[]) => ("" | "A" | "a") & {}) | (() => "" | "A" | "a") | ((new (...args: any[]) => ("" | "A" | "a") & {}) | (() => "" | "A" | "a"))[], unknown, unknown, "", boolean>;
             }>> & {
                 onChange?: ((...args: any[]) => any) | undefined;
                 "onSelect-range"?: ((...args: any[]) => any) | undefined;
@@ -10083,8 +10083,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 $data: {};
                 $props: Partial<{
                     readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly always: boolean;
+                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                     readonly wrapStyle: import("vue").StyleValue;
                     readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -10119,7 +10119,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                         scrollTop: number;
                         scrollLeft: number;
                     }) => any) | undefined;
-                } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "height" | "maxHeight" | "always" | "native" | "wrapStyle" | "wrapClass" | "viewClass" | "viewStyle" | "tag" | "minSize" | "noresize">;
+                } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "height" | "always" | "maxHeight" | "native" | "wrapStyle" | "wrapClass" | "viewClass" | "viewStyle" | "tag" | "minSize" | "noresize">;
                 $attrs: {
                     [x: string]: unknown;
                 };
@@ -10659,8 +10659,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                     }) => boolean;
                 }, string, {
                     readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly always: boolean;
+                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                     readonly wrapStyle: import("vue").StyleValue;
                     readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -11211,8 +11211,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 $data: {};
                 $props: Partial<{
                     readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly always: boolean;
+                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                     readonly wrapStyle: import("vue").StyleValue;
                     readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -11247,7 +11247,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                         scrollTop: number;
                         scrollLeft: number;
                     }) => any) | undefined;
-                } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "height" | "maxHeight" | "always" | "native" | "wrapStyle" | "wrapClass" | "viewClass" | "viewStyle" | "tag" | "minSize" | "noresize">;
+                } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "height" | "always" | "maxHeight" | "native" | "wrapStyle" | "wrapClass" | "viewClass" | "viewStyle" | "tag" | "minSize" | "noresize">;
                 $attrs: {
                     [x: string]: unknown;
                 };
@@ -11787,8 +11787,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                     }) => boolean;
                 }, string, {
                     readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly always: boolean;
+                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                     readonly wrapStyle: import("vue").StyleValue;
                     readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -12339,8 +12339,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 $data: {};
                 $props: Partial<{
                     readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly always: boolean;
+                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                     readonly wrapStyle: import("vue").StyleValue;
                     readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -12375,7 +12375,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                         scrollTop: number;
                         scrollLeft: number;
                     }) => any) | undefined;
-                } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "height" | "maxHeight" | "always" | "native" | "wrapStyle" | "wrapClass" | "viewClass" | "viewStyle" | "tag" | "minSize" | "noresize">;
+                } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "height" | "always" | "maxHeight" | "native" | "wrapStyle" | "wrapClass" | "viewClass" | "viewStyle" | "tag" | "minSize" | "noresize">;
                 $attrs: {
                     [x: string]: unknown;
                 };
@@ -12915,8 +12915,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                     }) => boolean;
                 }, string, {
                     readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly always: boolean;
+                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                     readonly wrapStyle: import("vue").StyleValue;
                     readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -13467,8 +13467,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 $data: {};
                 $props: Partial<{
                     readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly always: boolean;
+                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                     readonly wrapStyle: import("vue").StyleValue;
                     readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -13503,7 +13503,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                         scrollTop: number;
                         scrollLeft: number;
                     }) => any) | undefined;
-                } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "height" | "maxHeight" | "always" | "native" | "wrapStyle" | "wrapClass" | "viewClass" | "viewStyle" | "tag" | "minSize" | "noresize">;
+                } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "height" | "always" | "maxHeight" | "native" | "wrapStyle" | "wrapClass" | "viewClass" | "viewStyle" | "tag" | "minSize" | "noresize">;
                 $attrs: {
                     [x: string]: unknown;
                 };
@@ -14043,8 +14043,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                     }) => boolean;
                 }, string, {
                     readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly always: boolean;
+                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                     readonly wrapStyle: import("vue").StyleValue;
                     readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -14623,8 +14623,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 $data: {};
                 $props: Partial<{
                     readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly always: boolean;
+                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                     readonly wrapStyle: import("vue").StyleValue;
                     readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -14659,7 +14659,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                         scrollTop: number;
                         scrollLeft: number;
                     }) => any) | undefined;
-                } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "height" | "maxHeight" | "always" | "native" | "wrapStyle" | "wrapClass" | "viewClass" | "viewStyle" | "tag" | "minSize" | "noresize">;
+                } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "height" | "always" | "maxHeight" | "native" | "wrapStyle" | "wrapClass" | "viewClass" | "viewStyle" | "tag" | "minSize" | "noresize">;
                 $attrs: {
                     [x: string]: unknown;
                 };
@@ -15199,8 +15199,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                     }) => boolean;
                 }, string, {
                     readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly always: boolean;
+                    readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                     readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                     readonly wrapStyle: import("vue").StyleValue;
                     readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -16291,8 +16291,8 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 }) => any) | undefined;
             }, {
                 readonly height: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-                readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                 readonly always: boolean;
+                readonly maxHeight: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                 readonly native: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                 readonly wrapStyle: import("vue").StyleValue;
                 readonly wrapClass: import("../../../utils").EpPropMergeType<readonly [StringConstructor, ArrayConstructor], unknown, unknown>;
@@ -16400,7 +16400,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             };
             readonly showSeconds: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
             readonly arrowControl: BooleanConstructor;
-            readonly amPmMode: import("../../../utils").EpPropFinalized<(new (...args: any[]) => ("" | "a" | "A") & {}) | (() => "" | "a" | "A") | ((new (...args: any[]) => ("" | "a" | "A") & {}) | (() => "" | "a" | "A"))[], unknown, unknown, "", boolean>;
+            readonly amPmMode: import("../../../utils").EpPropFinalized<(new (...args: any[]) => ("" | "A" | "a") & {}) | (() => "" | "A" | "a") | ((new (...args: any[]) => ("" | "A" | "a") & {}) | (() => "" | "A" | "a"))[], unknown, unknown, "", boolean>;
         }>> & {
             onChange?: ((...args: any[]) => any) | undefined;
             "onSelect-range"?: ((...args: any[]) => any) | undefined;
@@ -16408,7 +16408,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         }, {
             readonly arrowControl: boolean;
             readonly showSeconds: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-            readonly amPmMode: import("../../../utils").EpPropMergeType<(new (...args: any[]) => ("" | "a" | "A") & {}) | (() => "" | "a" | "A") | ((new (...args: any[]) => ("" | "a" | "A") & {}) | (() => "" | "a" | "A"))[], unknown, unknown>;
+            readonly amPmMode: import("../../../utils").EpPropMergeType<(new (...args: any[]) => ("" | "A" | "a") & {}) | (() => "" | "A" | "a") | ((new (...args: any[]) => ("" | "A" | "a") & {}) | (() => "" | "A" | "a"))[], unknown, unknown>;
         }>;
     }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("pick" | "select-range" | "set-picker-option")[], "pick" | "select-range" | "set-picker-option", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
         readonly datetimeRole: StringConstructor;
@@ -16638,7 +16638,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
                 endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
                 format: (template?: string | undefined) => string;
-                diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+                diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "D" | "M" | "y" | "weeks" | "months" | "m" | "s" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
                 valueOf: () => number;
                 unix: () => number;
                 daysInMonth: () => number;
@@ -16774,7 +16774,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
                 endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
                 format: (template?: string | undefined) => string;
-                diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+                diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "D" | "M" | "y" | "weeks" | "months" | "m" | "s" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
                 valueOf: () => number;
                 unix: () => number;
                 daysInMonth: () => number;
@@ -16803,7 +16803,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 isSameOrAfter: (date: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: import("dayjs").OpUnitType | undefined) => boolean;
                 isSameOrBefore: (date: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: import("dayjs").OpUnitType | undefined) => boolean;
             } | undefined;
-            type?: ("week" | "today" | "normal" | "prev-month" | "next-month") | undefined;
+            type?: ("week" | "normal" | "prev-month" | "next-month" | "today") | undefined;
         }[][]>;
         tbodyRef: import("vue").Ref<HTMLElement | undefined>;
         currentCellRef: import("vue").Ref<HTMLElement | undefined>;
@@ -17003,7 +17003,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             start: boolean;
             end: boolean;
             text: number;
-            type: "today" | "normal";
+            type: "normal" | "today";
             inRange: boolean;
         }[][]>;
         lastRow: import("vue").Ref<number | undefined>;
@@ -17015,7 +17015,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             start: boolean;
             end: boolean;
             text: number;
-            type: "today" | "normal";
+            type: "normal" | "today";
             inRange: boolean;
         }[][]>;
         focus: () => void;
@@ -17026,7 +17026,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             start: boolean;
             end: boolean;
             text: number;
-            type: "today" | "normal";
+            type: "normal" | "today";
             inRange: boolean;
         }) => any;
         isSelectedCell: (cell: {
@@ -17036,7 +17036,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             start: boolean;
             end: boolean;
             text: number;
-            type: "today" | "normal";
+            type: "normal" | "today";
             inRange: boolean;
         }) => boolean;
         handleMouseMove: (event: MouseEvent) => void;

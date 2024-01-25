@@ -298,10 +298,10 @@ export declare const ElTreeV2: import("element-plus/es/utils").SFCWithInstall<im
         onScroll?: ((...args: any[]) => any) | undefined;
         onItemRendered?: ((...args: any[]) => any) | undefined;
     }, {
-        readonly data: any[];
-        readonly direction: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "ltr" | "rtl", never>;
         readonly className: string;
         readonly layout: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "horizontal" | "vertical", never>;
+        readonly direction: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "ltr" | "rtl", never>;
+        readonly data: any[];
         readonly scrollbarAlwaysOn: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly containerElement: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | Element) & {}) | (() => string | Element) | ((new (...args: any[]) => (string | Element) & {}) | (() => string | Element))[], unknown, unknown>;
         readonly innerElement: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, ObjectConstructor], unknown, unknown>;
@@ -523,8 +523,8 @@ export declare const ElTreeV2: import("element-plus/es/utils").SFCWithInstall<im
                     default: boolean;
                 };
             }>> & {
-                "onUpdate:modelValue"?: ((val: import("..").CheckboxValueType) => any) | undefined;
                 onChange?: ((val: import("..").CheckboxValueType) => any) | undefined;
+                "onUpdate:modelValue"?: ((val: import("..").CheckboxValueType) => any) | undefined;
             }>>;
             slots: Readonly<{
                 [name: string]: import("vue").Slot | undefined;
@@ -607,16 +607,16 @@ export declare const ElTreeV2: import("element-plus/es/utils").SFCWithInstall<im
                 default: boolean;
             };
         }>> & {
-            "onUpdate:modelValue"?: ((val: import("..").CheckboxValueType) => any) | undefined;
             onChange?: ((val: import("..").CheckboxValueType) => any) | undefined;
+            "onUpdate:modelValue"?: ((val: import("..").CheckboxValueType) => any) | undefined;
         }, {
             id: string;
-            name: string;
-            border: boolean;
             modelValue: string | number | boolean;
-            disabled: boolean;
             label: string | number | boolean | Record<string, any>;
+            disabled: boolean;
+            name: string;
             validateEvent: boolean;
+            border: boolean;
             indeterminate: boolean;
             checked: boolean;
             trueLabel: string | number;
@@ -713,8 +713,8 @@ export declare const ElTreeV2: import("element-plus/es/utils").SFCWithInstall<im
                         default: boolean;
                     };
                 }>> & {
-                    "onUpdate:modelValue"?: ((val: import("..").CheckboxValueType) => any) | undefined;
                     onChange?: ((val: import("..").CheckboxValueType) => any) | undefined;
+                    "onUpdate:modelValue"?: ((val: import("..").CheckboxValueType) => any) | undefined;
                 }>>;
                 slots: Readonly<{
                     [name: string]: import("vue").Slot | undefined;
@@ -728,7 +728,7 @@ export declare const ElTreeV2: import("element-plus/es/utils").SFCWithInstall<im
                 checkboxGroup: ({
                     modelValue?: import("vue").WritableComputedRef<any> | undefined;
                     changeEvent?: ((...args: any) => any) | undefined;
-                } & import("vue").ToRefs<Pick<import("..").CheckboxGroupProps, "fill" | "disabled" | "size" | "validateEvent" | "max" | "min" | "textColor">>) | undefined;
+                } & import("vue").ToRefs<Pick<import("..").CheckboxGroupProps, "fill" | "size" | "disabled" | "validateEvent" | "max" | "min" | "textColor">>) | undefined;
                 ns: {
                     namespace: import("vue").ComputedRef<string>;
                     b: (blockSuffix?: string) => string;
@@ -797,16 +797,16 @@ export declare const ElTreeV2: import("element-plus/es/utils").SFCWithInstall<im
                     default: boolean;
                 };
             }>> & {
-                "onUpdate:modelValue"?: ((val: import("..").CheckboxValueType) => any) | undefined;
                 onChange?: ((val: import("..").CheckboxValueType) => any) | undefined;
+                "onUpdate:modelValue"?: ((val: import("..").CheckboxValueType) => any) | undefined;
             }, {
                 id: string;
-                name: string;
-                border: boolean;
                 modelValue: string | number | boolean;
-                disabled: boolean;
                 label: string | number | boolean | Record<string, any>;
+                disabled: boolean;
+                name: string;
                 validateEvent: boolean;
+                border: boolean;
                 indeterminate: boolean;
                 checked: boolean;
                 trueLabel: string | number;
@@ -847,8 +847,8 @@ export declare const ElTreeV2: import("element-plus/es/utils").SFCWithInstall<im
                     readonly tag: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "div", boolean>;
                     readonly validateEvent: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
                 }>> & {
-                    "onUpdate:modelValue"?: ((val: import("..").CheckboxGroupValueType) => any) | undefined;
                     onChange?: ((val: import("..").CheckboxValueType[]) => any) | undefined;
+                    "onUpdate:modelValue"?: ((val: import("..").CheckboxGroupValueType) => any) | undefined;
                 }>>;
                 emit: ((event: "update:modelValue", val: import("..").CheckboxGroupValueType) => void) & ((event: "change", val: import("..").CheckboxValueType[]) => void);
                 ns: {
@@ -894,8 +894,8 @@ export declare const ElTreeV2: import("element-plus/es/utils").SFCWithInstall<im
                 readonly tag: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "div", boolean>;
                 readonly validateEvent: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
             }>> & {
-                "onUpdate:modelValue"?: ((val: import("..").CheckboxGroupValueType) => any) | undefined;
                 onChange?: ((val: import("..").CheckboxValueType[]) => any) | undefined;
+                "onUpdate:modelValue"?: ((val: import("..").CheckboxGroupValueType) => any) | undefined;
             }, {
                 readonly modelValue: import("..").CheckboxGroupValueType;
                 readonly disabled: boolean;
@@ -1016,14 +1016,14 @@ export declare const ElTreeV2: import("element-plus/es/utils").SFCWithInstall<im
     "onNode-contextmenu"?: ((event: Event, data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode) => any) | undefined;
     "onNode-collapse"?: ((data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode) => any) | undefined;
 }, {
+    readonly props: import("./src/types").TreeOptionProps;
     readonly height: number;
     readonly data: import("./src/types").TreeData;
-    readonly props: import("./src/types").TreeOptionProps;
     readonly checkStrictly: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly accordion: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly indent: number;
     readonly perfMode: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly itemSize: number;
-    readonly indent: number;
     readonly showCheckbox: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultCheckedKeys: import("./src/types").TreeKey[];
     readonly defaultExpandedKeys: import("./src/types").TreeKey[];

@@ -46,21 +46,21 @@ export declare const usePopperContent: (props: PopperContentProps) => {
                 popperEscapeOffsets: import("@popperjs/core").SideObject;
             } | undefined;
             offset?: {
+                auto?: import("@popperjs/core").Offsets | undefined;
                 top?: import("@popperjs/core").Offsets | undefined;
-                right?: import("@popperjs/core").Offsets | undefined;
                 bottom?: import("@popperjs/core").Offsets | undefined;
+                "auto-start"?: import("@popperjs/core").Offsets | undefined;
+                "auto-end"?: import("@popperjs/core").Offsets | undefined;
+                right?: import("@popperjs/core").Offsets | undefined;
                 left?: import("@popperjs/core").Offsets | undefined;
                 "top-start"?: import("@popperjs/core").Offsets | undefined;
                 "top-end"?: import("@popperjs/core").Offsets | undefined;
-                "right-start"?: import("@popperjs/core").Offsets | undefined;
-                "right-end"?: import("@popperjs/core").Offsets | undefined;
                 "bottom-start"?: import("@popperjs/core").Offsets | undefined;
                 "bottom-end"?: import("@popperjs/core").Offsets | undefined;
+                "right-start"?: import("@popperjs/core").Offsets | undefined;
+                "right-end"?: import("@popperjs/core").Offsets | undefined;
                 "left-start"?: import("@popperjs/core").Offsets | undefined;
                 "left-end"?: import("@popperjs/core").Offsets | undefined;
-                auto?: import("@popperjs/core").Offsets | undefined;
-                "auto-start"?: import("@popperjs/core").Offsets | undefined;
-                "auto-end"?: import("@popperjs/core").Offsets | undefined;
             } | undefined;
             preventOverflow?: import("@popperjs/core").Offsets | undefined;
             popperOffsets?: import("@popperjs/core").Offsets | undefined;

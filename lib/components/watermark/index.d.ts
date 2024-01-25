@@ -48,7 +48,7 @@ export declare const ElWatermark: import("element-plus/es/utils").SFCWithInstall
     fontWeight: import("vue").ComputedRef<number | "light" | "normal" | "weight">;
     fontStyle: import("vue").ComputedRef<"none" | "normal" | "italic" | "oblique">;
     fontFamily: import("vue").ComputedRef<string>;
-    textAlign: import("vue").ComputedRef<"right" | "left" | "start" | "end" | "center">;
+    textAlign: import("vue").ComputedRef<"center" | "right" | "left" | "end" | "start">;
     textBaseline: import("vue").ComputedRef<"top" | "bottom" | "middle" | "alphabetic" | "hanging" | "ideographic">;
     gapX: import("vue").ComputedRef<number>;
     gapY: import("vue").ComputedRef<number>;
@@ -87,9 +87,9 @@ export declare const ElWatermark: import("element-plus/es/utils").SFCWithInstall
         __epPropKey: true;
     };
 }>>, {
+    readonly zIndex: number;
     readonly content: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | string[]) & {}) | (() => string | string[]) | ((new (...args: any[]) => (string | string[]) & {}) | (() => string | string[]))[], unknown, unknown>;
     readonly rotate: number;
-    readonly zIndex: number;
     readonly gap: [number, number];
 }>> & Record<string, any>;
 export default ElWatermark;

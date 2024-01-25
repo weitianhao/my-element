@@ -49,9 +49,9 @@ export declare const ElMenu: import("element-plus/es/utils").SFCWithInstall<impo
     onSelect?: ((index: string, indexPath: string[], item: import("./src/types").MenuItemClicked, routerResult?: Promise<void | import("vue-router").NavigationFailure> | undefined) => any) | undefined;
     onOpen?: ((index: string, indexPath: string[]) => any) | undefined;
 }, {
-    readonly mode: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "horizontal" | "vertical", unknown>;
     readonly ellipsis: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly collapse: boolean;
+    readonly mode: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "horizontal" | "vertical", unknown>;
     readonly showTimeout: number;
     readonly hideTimeout: number;
     readonly defaultActive: string;
@@ -129,8 +129,8 @@ export declare const ElMenu: import("element-plus/es/utils").SFCWithInstall<impo
     }>> & {
         onClick?: ((item: import("./src/types").MenuItemRegistered) => any) | undefined;
     }, {
-        readonly index: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => string & {}) | (() => string | null) | ((new (...args: any[]) => string & {}) | (() => string | null))[], unknown, unknown>;
         readonly disabled: boolean;
+        readonly index: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => string & {}) | (() => string | null) | ((new (...args: any[]) => string & {}) | (() => string | null))[], unknown, unknown>;
     }>;
     MenuItemGroup: import("vue").DefineComponent<{
         readonly title: StringConstructor;
@@ -235,8 +235,8 @@ export declare const ElMenu: import("element-plus/es/utils").SFCWithInstall<impo
             __epPropKey: true;
         };
     }>>, {
-        readonly disabled: boolean;
         readonly teleported: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly disabled: boolean;
         readonly popperAppendToBody: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     }>;
 };
@@ -305,8 +305,8 @@ export declare const ElMenuItem: import("element-plus/es/utils").SFCWithInstall<
 }>> & {
     onClick?: ((item: import("./src/types").MenuItemRegistered) => any) | undefined;
 }, {
-    readonly index: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => string & {}) | (() => string | null) | ((new (...args: any[]) => string & {}) | (() => string | null))[], unknown, unknown>;
     readonly disabled: boolean;
+    readonly index: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => string & {}) | (() => string | null) | ((new (...args: any[]) => string & {}) | (() => string | null))[], unknown, unknown>;
 }>>;
 export declare const ElMenuItemGroup: import("element-plus/es/utils").SFCWithInstall<import("vue").DefineComponent<{
     readonly title: StringConstructor;
@@ -411,8 +411,8 @@ export declare const ElSubMenu: import("element-plus/es/utils").SFCWithInstall<i
         __epPropKey: true;
     };
 }>>, {
-    readonly disabled: boolean;
     readonly teleported: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly disabled: boolean;
     readonly popperAppendToBody: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
 }>>;
 export * from './src/menu';

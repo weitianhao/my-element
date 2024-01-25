@@ -41,14 +41,14 @@ export declare const useFloating: ({ middleware, placement, strategy, }: UseFloa
             escaped?: boolean | undefined;
             referenceHiddenOffsets?: {
                 top: number;
-                right: number;
                 bottom: number;
+                right: number;
                 left: number;
             } | undefined;
             escapedOffsets?: {
                 top: number;
-                right: number;
                 bottom: number;
+                right: number;
                 left: number;
             } | undefined;
         } | undefined;

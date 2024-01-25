@@ -417,8 +417,8 @@ declare const _Tree: SFCWithInstall<import("vue").DefineComponent<{
     "onNode-drag-enter"?: ((...args: any[]) => any) | undefined;
     "onNode-drag-over"?: ((...args: any[]) => any) | undefined;
 }, {
-    data: unknown[];
     props: import("./src/tree.type").TreeOptionProps;
+    data: unknown[];
     checkStrictly: boolean;
     lazy: boolean;
     accordion: boolean;
@@ -852,8 +852,8 @@ export declare const ElTree: SFCWithInstall<import("vue").DefineComponent<{
     "onNode-drag-enter"?: ((...args: any[]) => any) | undefined;
     "onNode-drag-over"?: ((...args: any[]) => any) | undefined;
 }, {
-    data: unknown[];
     props: import("./src/tree.type").TreeOptionProps;
+    data: unknown[];
     checkStrictly: boolean;
     lazy: boolean;
     accordion: boolean;

@@ -163,9 +163,9 @@ declare const _default: import("vue").DefineComponent<{
     readonly interval: number;
     readonly type: import("../../../utils").EpPropMergeType<StringConstructor, "" | "card", unknown>;
     readonly height: string;
-    readonly arrow: import("../../../utils").EpPropMergeType<StringConstructor, "always" | "never" | "hover", unknown>;
     readonly direction: import("../../../utils").EpPropMergeType<StringConstructor, "horizontal" | "vertical", unknown>;
     readonly trigger: import("../../../utils").EpPropMergeType<StringConstructor, "click" | "hover", unknown>;
+    readonly arrow: import("../../../utils").EpPropMergeType<StringConstructor, "always" | "never" | "hover", unknown>;
     readonly loop: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly initialIndex: number;
     readonly autoplay: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

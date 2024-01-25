@@ -194,9 +194,9 @@ declare const _default: import("vue").DefineComponent<{
             readonly inputStyle: import("../../../../utils").EpPropFinalized<(new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue) | ((new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("../../../../utils").Mutable<{}>, boolean>;
             readonly autofocus: import("../../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         }>> & {
-            "onUpdate:modelValue"?: ((value: string) => any) | undefined;
             onChange?: ((value: string) => any) | undefined;
             onClear?: (() => any) | undefined;
+            "onUpdate:modelValue"?: ((value: string) => any) | undefined;
             onInput?: ((value: string) => any) | undefined;
             onBlur?: ((evt: FocusEvent) => any) | undefined;
             onFocus?: ((evt: FocusEvent) => any) | undefined;
@@ -461,9 +461,9 @@ declare const _default: import("vue").DefineComponent<{
         readonly inputStyle: import("../../../../utils").EpPropFinalized<(new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue) | ((new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("../../../../utils").Mutable<{}>, boolean>;
         readonly autofocus: import("../../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }>> & {
-        "onUpdate:modelValue"?: ((value: string) => any) | undefined;
         onChange?: ((value: string) => any) | undefined;
         onClear?: (() => any) | undefined;
+        "onUpdate:modelValue"?: ((value: string) => any) | undefined;
         onInput?: ((value: string) => any) | undefined;
         onBlur?: ((evt: FocusEvent) => any) | undefined;
         onFocus?: ((evt: FocusEvent) => any) | undefined;
@@ -476,10 +476,9 @@ declare const _default: import("vue").DefineComponent<{
     }, {
         readonly id: string;
         readonly type: string;
-        readonly tabindex: import("../../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly modelValue: import("../../../../utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
-        readonly disabled: boolean;
         readonly label: string;
+        readonly disabled: boolean;
         readonly clearable: import("../../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly autosize: import("element-plus/es/components/input").InputAutoSize;
         readonly autocomplete: string;
@@ -487,6 +486,7 @@ declare const _default: import("vue").DefineComponent<{
         readonly showPassword: import("../../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly showWordLimit: import("../../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly containerRole: string;
+        readonly tabindex: import("../../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly validateEvent: import("../../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly inputStyle: import("vue").StyleValue;
         readonly autofocus: import("../../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

@@ -103,9 +103,9 @@ declare const _default: import("vue").DefineComponent<{
     readonly extra: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
 }>>, {
     readonly title: string;
+    readonly column: number;
     readonly direction: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "horizontal" | "vertical", unknown>;
     readonly border: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly column: number;
     readonly extra: string;
 }>;
 export default _default;

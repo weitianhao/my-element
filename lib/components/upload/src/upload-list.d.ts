@@ -13,7 +13,7 @@ export declare const uploadListProps: {
         new (): any;
         readonly prototype: any;
     })[], unknown, unknown, () => void, boolean>;
-    readonly listType: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "picture" | "text" | "picture-card", unknown, "text", boolean>;
+    readonly listType: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "text" | "picture" | "picture-card", unknown, "text", boolean>;
 };
 export declare type UploadListProps = ExtractPropTypes<typeof uploadListProps>;
 export declare const uploadListEmits: {

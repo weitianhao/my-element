@@ -1,12 +1,12 @@
 import type { CSSProperties } from 'vue';
 declare const _default: import("vue").DefineComponent<{
     readonly direction: import("../../../utils").EpPropFinalized<StringConstructor, "horizontal" | "vertical", unknown, "horizontal", boolean>;
-    readonly contentPosition: import("../../../utils").EpPropFinalized<StringConstructor, "right" | "left" | "center", unknown, "center", boolean>;
+    readonly contentPosition: import("../../../utils").EpPropFinalized<StringConstructor, "center" | "right" | "left", unknown, "center", boolean>;
     readonly borderStyle: import("../../../utils").EpPropFinalized<(new (...args: any[]) => string & {}) | (() => string) | ((new (...args: any[]) => string & {}) | (() => string))[], unknown, unknown, "solid", boolean>;
 }, {
     props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
         readonly direction: import("../../../utils").EpPropFinalized<StringConstructor, "horizontal" | "vertical", unknown, "horizontal", boolean>;
-        readonly contentPosition: import("../../../utils").EpPropFinalized<StringConstructor, "right" | "left" | "center", unknown, "center", boolean>;
+        readonly contentPosition: import("../../../utils").EpPropFinalized<StringConstructor, "center" | "right" | "left", unknown, "center", boolean>;
         readonly borderStyle: import("../../../utils").EpPropFinalized<(new (...args: any[]) => string & {}) | (() => string) | ((new (...args: any[]) => string & {}) | (() => string))[], unknown, unknown, "solid", boolean>;
     }>> & {
         [x: string & `on${string}`]: ((...args: any[]) => any) | ((...args: unknown[]) => any) | undefined;
@@ -32,11 +32,11 @@ declare const _default: import("vue").DefineComponent<{
     dividerStyle: import("vue").ComputedRef<CSSProperties>;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly direction: import("../../../utils").EpPropFinalized<StringConstructor, "horizontal" | "vertical", unknown, "horizontal", boolean>;
-    readonly contentPosition: import("../../../utils").EpPropFinalized<StringConstructor, "right" | "left" | "center", unknown, "center", boolean>;
+    readonly contentPosition: import("../../../utils").EpPropFinalized<StringConstructor, "center" | "right" | "left", unknown, "center", boolean>;
     readonly borderStyle: import("../../../utils").EpPropFinalized<(new (...args: any[]) => string & {}) | (() => string) | ((new (...args: any[]) => string & {}) | (() => string))[], unknown, unknown, "solid", boolean>;
 }>>, {
     readonly direction: import("../../../utils").EpPropMergeType<StringConstructor, "horizontal" | "vertical", unknown>;
     readonly borderStyle: string;
-    readonly contentPosition: import("../../../utils").EpPropMergeType<StringConstructor, "right" | "left" | "center", unknown>;
+    readonly contentPosition: import("../../../utils").EpPropMergeType<StringConstructor, "center" | "right" | "left", unknown>;
 }>;
 export default _default;

@@ -118,7 +118,7 @@ $form-item-label-top-margin-bottom: map.merge(
           height: 1px;
           width: 100%;
           z-index: -1;
-          transform: translateY(50%);
+          transform: translateY(-50%);
         }
       }
       .#{$namespace}-form-item__content {

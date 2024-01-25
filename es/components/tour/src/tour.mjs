@@ -1,152 +1,75 @@
-import { defineComponent, ref, computed, toRef, watch, useSlots, provide, openBlock, createElementBlock, Fragment, createBlock, Teleport, createElementVNode, mergeProps, unref, createVNode, normalizeStyle, withCtx, renderSlot, createCommentVNode } from 'vue';
-import { useVModel } from '@vueuse/core';
-import '../../../hooks/index.mjs';
 import '../../../utils/index.mjs';
-import ElTourMask from './mask.mjs';
-import ElTourContent from './content.mjs';
-import ElTourSteps from './steps.mjs';
-import { tourProps, tourEmits } from './tour2.mjs';
-import { useTarget, tourKey } from './helper.mjs';
-import _export_sfc from '../../../_virtual/plugin-vue_export-helper.mjs';
-import { useNamespace } from '../../../hooks/use-namespace/index.mjs';
-import { isBoolean } from '../../../utils/types.mjs';
-import { useZIndex } from '../../../hooks/use-z-index/index.mjs';
+import '../../../constants/index.mjs';
+import { tourContentProps } from './content.mjs';
+import { buildProps, definePropType } from '../../../utils/vue/props/runtime.mjs';
+import { iconPropType } from '../../../utils/vue/icon.mjs';
+import { UPDATE_MODEL_EVENT } from '../../../constants/event.mjs';
+import { isBoolean, isNumber } from '../../../utils/types.mjs';
 
-const __default__ = defineComponent({
-  name: "ElTour"
-});
-const _sfc_main = /* @__PURE__ */ defineComponent({
-  ...__default__,
-  props: tourProps,
-  emits: tourEmits,
-  setup(__props, { emit }) {
-    const props = __props;
-    const ns = useNamespace("tour");
-    const steps = ref([]);
-    const current = useVModel(props, "current", emit, {
-      passive: true
-    });
-    const total = computed(() => steps.value.length);
-    const currentStep = computed(() => steps.value[current.value] || {});
-    const currentTarget = computed(() => currentStep.value.target);
-    const kls = computed(() => [
-      ns.b(),
-      mergedType.value === "primary" ? ns.m("primary") : ""
-    ]);
-    const mergedPlacement = computed(() => currentStep.value.placement || props.placement);
-    const mergedContentStyle = computed(() => {
-      var _a;
-      return (_a = currentStep.value.contentStyle) != null ? _a : props.contentStyle;
-    });
-    const mergedMask = computed(() => {
-      var _a;
-      return (_a = currentStep.value.mask) != null ? _a : props.mask;
-    });
-    const mergedShowMask = computed(() => !!mergedMask.value && props.modelValue);
-    const mergedMaskStyle = computed(() => isBoolean(mergedMask.value) ? void 0 : mergedMask.value);
-    const mergedShowArrow = computed(() => {
-      var _a;
-      return !!currentTarget.value && ((_a = currentStep.value.showArrow) != null ? _a : props.showArrow);
-    });
-    const mergedScrollIntoViewOptions = computed(() => {
-      var _a;
-      return (_a = currentStep.value.scrollIntoViewOptions) != null ? _a : props.scrollIntoViewOptions;
-    });
-    const mergedType = computed(() => {
-      var _a;
-      return (_a = currentStep.value.type) != null ? _a : props.type;
-    });
-    const { nextZIndex } = useZIndex();
-    const nowZIndex = nextZIndex();
-    const mergedZIndex = computed(() => {
-      var _a;
-      return (_a = props.zIndex) != null ? _a : nowZIndex;
-    });
-    const { mergedPosInfo: pos, triggerTarget } = useTarget(currentTarget, toRef(props, "modelValue"), toRef(props, "gap"), mergedMask, mergedScrollIntoViewOptions);
-    watch(() => props.modelValue, (val) => {
-      if (!val) {
-        current.value = 0;
-      }
-    });
-    const onUpdateSteps = (v) => {
-      steps.value = v;
-    };
-    const onEscClose = () => {
-      if (props.closeOnPressEscape) {
-        emit("update:modelValue", false);
-        emit("close", current.value);
-      }
-    };
-    const slots = useSlots();
-    provide(tourKey, {
-      current,
-      total,
-      showClose: toRef(props, "showClose"),
-      closeIcon: toRef(props, "closeIcon"),
-      mergedType,
-      ns,
-      slots,
-      updateModelValue(modelValue) {
-        emit("update:modelValue", modelValue);
-      },
-      onClose() {
-        emit("close", current.value);
-      },
-      onFinish() {
-        emit("finish");
-      },
-      onChange() {
-        emit("change", current.value);
-      }
-    });
-    return (_ctx, _cache) => {
-      var _a, _b;
-      return openBlock(), createElementBlock(Fragment, null, [
-        (openBlock(), createBlock(Teleport, { to: _ctx.appendTo }, [
-          createElementVNode("div", mergeProps({ class: unref(kls) }, _ctx.$attrs), [
-            createVNode(ElTourMask, {
-              visible: unref(mergedShowMask),
-              fill: (_a = unref(mergedMaskStyle)) == null ? void 0 : _a.color,
-              style: normalizeStyle((_b = unref(mergedMaskStyle)) == null ? void 0 : _b.style),
-              pos: unref(pos),
-              "z-index": unref(mergedZIndex),
-              "target-area-clickable": _ctx.targetAreaClickable
-            }, null, 8, ["visible", "fill", "style", "pos", "z-index", "target-area-clickable"]),
-            _ctx.modelValue ? (openBlock(), createBlock(ElTourContent, {
-              key: unref(current),
-              reference: unref(triggerTarget),
-              placement: unref(mergedPlacement),
-              "show-arrow": unref(mergedShowArrow),
-              "z-index": unref(mergedZIndex),
-              style: normalizeStyle(unref(mergedContentStyle)),
-              onClose: onEscClose
-            }, {
-              default: withCtx(() => [
-                createVNode(unref(ElTourSteps), {
-                  current: unref(current),
-                  onUpdateSteps
-                }, {
-                  default: withCtx(() => [
-                    renderSlot(_ctx.$slots, "default")
-                  ]),
-                  _: 3
-                }, 8, ["current"])
-              ]),
-              _: 3
-            }, 8, ["reference", "placement", "show-arrow", "z-index", "style"])) : createCommentVNode("v-if", true)
-          ], 16)
-        ], 8, ["to"])),
-        createCommentVNode(" just for IDE "),
-        false ? renderSlot(_ctx.$slots, "indicators", {
-          key: 0,
-          current: unref(current) + 1,
-          total: unref(total)
-        }) : createCommentVNode("v-if", true)
-      ], 64);
-    };
+const tourProps = buildProps({
+  modelValue: Boolean,
+  current: {
+    type: Number,
+    default: 0
+  },
+  showArrow: {
+    type: Boolean,
+    default: true
+  },
+  showClose: {
+    type: Boolean,
+    default: true
+  },
+  closeIcon: {
+    type: iconPropType
+  },
+  placement: tourContentProps.placement,
+  contentStyle: {
+    type: definePropType([Object])
+  },
+  mask: {
+    type: definePropType([Boolean, Object]),
+    default: true
+  },
+  gap: {
+    type: definePropType(Object),
+    default: () => ({
+      offset: 6,
+      radius: 2
+    })
+  },
+  zIndex: {
+    type: Number
+  },
+  scrollIntoViewOptions: {
+    type: definePropType([Boolean, Object]),
+    default: () => ({
+      block: "center"
+    })
+  },
+  type: {
+    type: definePropType(String)
+  },
+  appendTo: {
+    type: definePropType([String, Object]),
+    default: "body"
+  },
+  closeOnPressEscape: {
+    type: Boolean,
+    default: true
+  },
+  targetAreaClickable: {
+    type: Boolean,
+    default: true
   }
 });
-var Tour = /* @__PURE__ */ _export_sfc(_sfc_main, [["__file", "tour.vue"]]);
+const tourEmits = {
+  [UPDATE_MODEL_EVENT]: (value) => isBoolean(value),
+  ["update:current"]: (current) => isNumber(current),
+  close: (current) => isNumber(current),
+  finish: () => true,
+  change: (current) => isNumber(current)
+};
 
-export { Tour as default };
+export { tourEmits, tourProps };
 //# sourceMappingURL=tour.mjs.map

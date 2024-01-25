@@ -58,10 +58,10 @@ declare const _default: import("vue").DefineComponent<{
     readonly lg: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("./col").ColSize & {}) | (() => import("./col").ColSize) | ((new (...args: any[]) => import("./col").ColSize & {}) | (() => import("./col").ColSize))[], unknown, unknown, () => import("element-plus/es/utils").Mutable<{}>, boolean>;
     readonly xl: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("./col").ColSize & {}) | (() => import("./col").ColSize) | ((new (...args: any[]) => import("./col").ColSize & {}) | (() => import("./col").ColSize))[], unknown, unknown, () => import("element-plus/es/utils").Mutable<{}>, boolean>;
 }>>, {
-    readonly offset: number;
     readonly push: number;
-    readonly span: number;
+    readonly offset: number;
     readonly tag: string;
+    readonly span: number;
     readonly pull: number;
     readonly xs: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("./col").ColSize & {}) | (() => import("./col").ColSize) | ((new (...args: any[]) => import("./col").ColSize & {}) | (() => import("./col").ColSize))[], unknown, unknown>;
     readonly sm: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("./col").ColSize & {}) | (() => import("./col").ColSize) | ((new (...args: any[]) => import("./col").ColSize & {}) | (() => import("./col").ColSize))[], unknown, unknown>;

@@ -200,8 +200,8 @@ declare const _default: import("vue").DefineComponent<{
                 default: boolean;
             };
         }>> & {
-            "onUpdate:modelValue"?: ((val: import("element-plus/es/components/checkbox").CheckboxValueType) => any) | undefined;
             onChange?: ((val: import("element-plus/es/components/checkbox").CheckboxValueType) => any) | undefined;
+            "onUpdate:modelValue"?: ((val: import("element-plus/es/components/checkbox").CheckboxValueType) => any) | undefined;
         }>>;
         slots: Readonly<{
             [name: string]: import("vue").Slot | undefined;
@@ -284,16 +284,16 @@ declare const _default: import("vue").DefineComponent<{
             default: boolean;
         };
     }>> & {
-        "onUpdate:modelValue"?: ((val: import("element-plus/es/components/checkbox").CheckboxValueType) => any) | undefined;
         onChange?: ((val: import("element-plus/es/components/checkbox").CheckboxValueType) => any) | undefined;
+        "onUpdate:modelValue"?: ((val: import("element-plus/es/components/checkbox").CheckboxValueType) => any) | undefined;
     }, {
         id: string;
-        name: string;
-        border: boolean;
         modelValue: string | number | boolean;
-        disabled: boolean;
         label: string | number | boolean | Record<string, any>;
+        disabled: boolean;
+        name: string;
         validateEvent: boolean;
+        border: boolean;
         indeterminate: boolean;
         checked: boolean;
         trueLabel: string | number;
@@ -390,8 +390,8 @@ declare const _default: import("vue").DefineComponent<{
                     default: boolean;
                 };
             }>> & {
-                "onUpdate:modelValue"?: ((val: import("element-plus/es/components/checkbox").CheckboxValueType) => any) | undefined;
                 onChange?: ((val: import("element-plus/es/components/checkbox").CheckboxValueType) => any) | undefined;
+                "onUpdate:modelValue"?: ((val: import("element-plus/es/components/checkbox").CheckboxValueType) => any) | undefined;
             }>>;
             slots: Readonly<{
                 [name: string]: import("vue").Slot | undefined;
@@ -405,7 +405,7 @@ declare const _default: import("vue").DefineComponent<{
             checkboxGroup: ({
                 modelValue?: import("vue").WritableComputedRef<any> | undefined;
                 changeEvent?: ((...args: any) => any) | undefined;
-            } & import("vue").ToRefs<Pick<import("element-plus/es/components/checkbox").CheckboxGroupProps, "fill" | "disabled" | "size" | "validateEvent" | "max" | "min" | "textColor">>) | undefined;
+            } & import("vue").ToRefs<Pick<import("element-plus/es/components/checkbox").CheckboxGroupProps, "fill" | "size" | "disabled" | "validateEvent" | "max" | "min" | "textColor">>) | undefined;
             ns: {
                 namespace: import("vue").ComputedRef<string>;
                 b: (blockSuffix?: string) => string;
@@ -474,16 +474,16 @@ declare const _default: import("vue").DefineComponent<{
                 default: boolean;
             };
         }>> & {
-            "onUpdate:modelValue"?: ((val: import("element-plus/es/components/checkbox").CheckboxValueType) => any) | undefined;
             onChange?: ((val: import("element-plus/es/components/checkbox").CheckboxValueType) => any) | undefined;
+            "onUpdate:modelValue"?: ((val: import("element-plus/es/components/checkbox").CheckboxValueType) => any) | undefined;
         }, {
             id: string;
-            name: string;
-            border: boolean;
             modelValue: string | number | boolean;
-            disabled: boolean;
             label: string | number | boolean | Record<string, any>;
+            disabled: boolean;
+            name: string;
             validateEvent: boolean;
+            border: boolean;
             indeterminate: boolean;
             checked: boolean;
             trueLabel: string | number;
@@ -524,8 +524,8 @@ declare const _default: import("vue").DefineComponent<{
                 readonly tag: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "div", boolean>;
                 readonly validateEvent: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
             }>> & {
-                "onUpdate:modelValue"?: ((val: import("element-plus/es/components/checkbox").CheckboxGroupValueType) => any) | undefined;
                 onChange?: ((val: import("element-plus/es/components/checkbox").CheckboxValueType[]) => any) | undefined;
+                "onUpdate:modelValue"?: ((val: import("element-plus/es/components/checkbox").CheckboxGroupValueType) => any) | undefined;
             }>>;
             emit: ((event: "update:modelValue", val: import("element-plus/es/components/checkbox").CheckboxGroupValueType) => void) & ((event: "change", val: import("element-plus/es/components/checkbox").CheckboxValueType[]) => void);
             ns: {
@@ -571,8 +571,8 @@ declare const _default: import("vue").DefineComponent<{
             readonly tag: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "div", boolean>;
             readonly validateEvent: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
         }>> & {
-            "onUpdate:modelValue"?: ((val: import("element-plus/es/components/checkbox").CheckboxGroupValueType) => any) | undefined;
             onChange?: ((val: import("element-plus/es/components/checkbox").CheckboxValueType[]) => any) | undefined;
+            "onUpdate:modelValue"?: ((val: import("element-plus/es/components/checkbox").CheckboxGroupValueType) => any) | undefined;
         }, {
             readonly modelValue: import("element-plus/es/components/checkbox").CheckboxGroupValueType;
             readonly disabled: boolean;
@@ -614,8 +614,8 @@ declare const _default: import("vue").DefineComponent<{
             readonly tag: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "div", boolean>;
             readonly validateEvent: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
         }>> & {
-            "onUpdate:modelValue"?: ((val: import("element-plus/es/components/checkbox").CheckboxGroupValueType) => any) | undefined;
             onChange?: ((val: import("element-plus/es/components/checkbox").CheckboxValueType[]) => any) | undefined;
+            "onUpdate:modelValue"?: ((val: import("element-plus/es/components/checkbox").CheckboxGroupValueType) => any) | undefined;
         }>>;
         emit: ((event: "update:modelValue", val: import("element-plus/es/components/checkbox").CheckboxGroupValueType) => void) & ((event: "change", val: import("element-plus/es/components/checkbox").CheckboxValueType[]) => void);
         ns: {
@@ -661,8 +661,8 @@ declare const _default: import("vue").DefineComponent<{
         readonly tag: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "div", boolean>;
         readonly validateEvent: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     }>> & {
-        "onUpdate:modelValue"?: ((val: import("element-plus/es/components/checkbox").CheckboxGroupValueType) => any) | undefined;
         onChange?: ((val: import("element-plus/es/components/checkbox").CheckboxValueType[]) => any) | undefined;
+        "onUpdate:modelValue"?: ((val: import("element-plus/es/components/checkbox").CheckboxGroupValueType) => any) | undefined;
     }, {
         readonly modelValue: import("element-plus/es/components/checkbox").CheckboxGroupValueType;
         readonly disabled: boolean;
@@ -830,9 +830,9 @@ declare const _default: import("vue").DefineComponent<{
             readonly inputStyle: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue) | ((new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("element-plus/es/utils").Mutable<{}>, boolean>;
             readonly autofocus: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         }>> & {
-            "onUpdate:modelValue"?: ((value: string) => any) | undefined;
             onChange?: ((value: string) => any) | undefined;
             onClear?: (() => any) | undefined;
+            "onUpdate:modelValue"?: ((value: string) => any) | undefined;
             onInput?: ((value: string) => any) | undefined;
             onBlur?: ((evt: FocusEvent) => any) | undefined;
             onFocus?: ((evt: FocusEvent) => any) | undefined;
@@ -1097,9 +1097,9 @@ declare const _default: import("vue").DefineComponent<{
         readonly inputStyle: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue) | ((new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("element-plus/es/utils").Mutable<{}>, boolean>;
         readonly autofocus: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }>> & {
-        "onUpdate:modelValue"?: ((value: string) => any) | undefined;
         onChange?: ((value: string) => any) | undefined;
         onClear?: (() => any) | undefined;
+        "onUpdate:modelValue"?: ((value: string) => any) | undefined;
         onInput?: ((value: string) => any) | undefined;
         onBlur?: ((evt: FocusEvent) => any) | undefined;
         onFocus?: ((evt: FocusEvent) => any) | undefined;
@@ -1112,10 +1112,9 @@ declare const _default: import("vue").DefineComponent<{
     }, {
         readonly id: string;
         readonly type: string;
-        readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
-        readonly disabled: boolean;
         readonly label: string;
+        readonly disabled: boolean;
         readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly autosize: import("element-plus/es/components/input").InputAutoSize;
         readonly autocomplete: string;
@@ -1123,6 +1122,7 @@ declare const _default: import("vue").DefineComponent<{
         readonly showPassword: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly showWordLimit: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly containerRole: string;
+        readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly validateEvent: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly inputStyle: import("vue").StyleValue;
         readonly autofocus: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -1161,8 +1161,8 @@ declare const _default: import("vue").DefineComponent<{
 }>> & {
     "onChecked-change"?: ((value: import("./transfer").TransferKey[], movedKeys?: import("./transfer").TransferKey[] | undefined) => any) | undefined;
 }, {
-    readonly data: import("./transfer").TransferDataItem[];
     readonly props: import("./transfer").TransferPropsAlias;
+    readonly data: import("./transfer").TransferDataItem[];
     readonly filterable: boolean;
     readonly format: import("./transfer").TransferFormat;
     readonly defaultChecked: import("./transfer").TransferKey[];

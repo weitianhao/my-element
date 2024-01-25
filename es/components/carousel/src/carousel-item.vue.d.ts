@@ -47,7 +47,7 @@ declare const _default: import("vue").DefineComponent<{
     readonly name: import("../../../utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly label: import("../../../utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
 }>>, {
-    readonly name: string;
     readonly label: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+    readonly name: string;
 }>;
 export default _default;

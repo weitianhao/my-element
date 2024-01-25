@@ -15,8 +15,8 @@ declare const _default: import("vue").DefineComponent<{
     handlePointerLeave: (event: PointerEvent) => void;
     textContent: import("vue").ComputedRef<string>;
     propsAndAttrs: import("vue").ComputedRef<{
-        disabled: boolean;
         icon: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown> | undefined;
+        disabled: boolean;
         onClick: ((...args: any[]) => any) | undefined;
         onPointermove: ((...args: any[]) => any) | undefined;
         onPointerleave: ((...args: any[]) => any) | undefined;

@@ -119,7 +119,7 @@ declare const _default: import("vue").DefineComponent<{
         start: boolean;
         end: boolean;
         text: number;
-        type: "today" | "normal";
+        type: "normal" | "today";
         inRange: boolean;
     }[][]>;
     lastRow: import("vue").Ref<number | undefined>;

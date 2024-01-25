@@ -302,18 +302,18 @@ declare const TableV2: import("vue").DefineComponent<{
 }>>, {
     readonly fixed: boolean;
     readonly scrollbarAlwaysOn: boolean;
+    readonly rowKey: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("./types").KeyType & {}) | (() => import("./types").KeyType) | ((new (...args: any[]) => import("./types").KeyType & {}) | (() => import("./types").KeyType))[], unknown, unknown>;
+    readonly headerHeight: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (number | number[]) & {}) | (() => number | number[]) | ((new (...args: any[]) => (number | number[]) & {}) | (() => number | number[]))[], unknown, unknown>;
+    readonly sortBy: import("./types").SortBy;
     readonly estimatedRowHeight: number;
     readonly useIsScrolling: boolean;
     readonly rowHeight: number;
     readonly hScrollbarSize: number;
     readonly vScrollbarSize: number;
-    readonly rowKey: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("./types").KeyType & {}) | (() => import("./types").KeyType) | ((new (...args: any[]) => import("./types").KeyType & {}) | (() => import("./types").KeyType))[], unknown, unknown>;
-    readonly headerHeight: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (number | number[]) & {}) | (() => number | number[]) | ((new (...args: any[]) => (number | number[]) & {}) | (() => number | number[]))[], unknown, unknown>;
     readonly cache: number;
     readonly footerHeight: number;
     readonly indentSize: number;
     readonly iconSize: number;
-    readonly sortBy: import("./types").SortBy;
     readonly sortState: import("./types").SortState;
     readonly expandedRowKeys: import("./types").KeyType[];
     readonly defaultExpandedRowKeys: import("./types").KeyType[];

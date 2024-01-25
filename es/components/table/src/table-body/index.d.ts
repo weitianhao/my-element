@@ -7,7 +7,7 @@ declare const _default: import("vue").DefineComponent<{
     stripe: BooleanConstructor;
     tooltipEffect: StringConstructor;
     tooltipOptions: {
-        type: import("vue").PropType<Partial<Pick<import("../../..").ElTooltipProps, "showAfter" | "hideAfter" | "placement" | "offset" | "effect" | "transition" | "popperClass" | "popperOptions" | "enterable" | "appendTo" | "showArrow">> | undefined>;
+        type: import("vue").PropType<Partial<Pick<import("../../..").ElTooltipProps, "effect" | "offset" | "placement" | "popperClass" | "showAfter" | "hideAfter" | "popperOptions" | "enterable" | "appendTo" | "transition" | "showArrow">> | undefined>;
     };
     context: {
         default: () => {};
@@ -60,7 +60,7 @@ declare const _default: import("vue").DefineComponent<{
     stripe: BooleanConstructor;
     tooltipEffect: StringConstructor;
     tooltipOptions: {
-        type: import("vue").PropType<Partial<Pick<import("../../..").ElTooltipProps, "showAfter" | "hideAfter" | "placement" | "offset" | "effect" | "transition" | "popperClass" | "popperOptions" | "enterable" | "appendTo" | "showArrow">> | undefined>;
+        type: import("vue").PropType<Partial<Pick<import("../../..").ElTooltipProps, "effect" | "offset" | "placement" | "popperClass" | "showAfter" | "hideAfter" | "popperOptions" | "enterable" | "appendTo" | "transition" | "showArrow">> | undefined>;
     };
     context: {
         default: () => {};
