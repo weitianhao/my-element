@@ -947,10 +947,10 @@ declare const _default: import("vue").DefineComponent<{
     }, {
         readonly disabled: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly expanded: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly current: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly indeterminate: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly checked: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly node: import("./types").TreeNode;
-        readonly current: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly itemSize: number;
         readonly showCheckbox: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly hiddenExpandIcon: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

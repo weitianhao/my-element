@@ -115,10 +115,10 @@ $form-item-label-top-margin-bottom: map.merge(
           position: absolute;
           top: 50%;
           left: 0px;
-          height: 3px;
+          height: 1px;
           width: 100%;
           z-index: -1;
-          transform: translateY(-1px);
+          transform: translateY(50%);
         }
       }
       .#{$namespace}-form-item__content {
@@ -262,6 +262,14 @@ $form-item-label-top-margin-bottom: map.merge(
       transform: translateY(-50%);
       &::after {
         background: white;
+      }
+    }
+  }
+  @include when(float-disabled) {
+    .#{$namespace}-form-item__label {
+      color: rgba(74, 70, 100, 0.6);
+      &::after {
+        background: rgba(245, 245, 249, 1);
       }
     }
   }

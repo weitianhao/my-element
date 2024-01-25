@@ -31,7 +31,7 @@ $radio-font-size: map.merge(
   font-size: getCssVar('font-size', 'base');
   user-select: none;
   margin-right: 32px;
-  height: map.get($radio-height, 'default');
+  // height: map.get($radio-height, 'default');
 
   @each $size in (large, small) {
     &.#{$namespace}-radio--#{$size} {

@@ -54,6 +54,7 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
     props: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("..").CascaderProps) | (() => import("..").CascaderProps) | ((new (...args: any[]) => import("..").CascaderProps) | (() => import("..").CascaderProps))[], unknown, unknown, () => import("..").CascaderProps, boolean>;
 }, {
     setFloat: any;
+    isFloat: any;
     popperOptions: Partial<import("@popperjs/core").Options>;
     COMPONENT_NAME: string;
     props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
@@ -6609,6 +6610,7 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
             setLabelSize: any;
             isFloat: any;
             labelFor: any;
+            setFloat: any;
             parentRef: import("vue").Ref<any>;
             props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
                 readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -7008,6 +7010,7 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
         setLabelSize: any;
         isFloat: any;
         labelFor: any;
+        setFloat: any;
         parentRef: import("vue").Ref<any>;
         props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
             readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -9096,6 +9099,7 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
         setLabelSize: any;
         isFloat: any;
         labelFor: any;
+        setFloat: any;
         parentRef: import("vue").Ref<any>;
         props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
             readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -13629,6 +13633,7 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
     props: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("..").CascaderProps) | (() => import("..").CascaderProps) | ((new (...args: any[]) => import("..").CascaderProps) | (() => import("..").CascaderProps))[], unknown, unknown, () => import("..").CascaderProps, boolean>;
 }, {
     setFloat: any;
+    isFloat: any;
     popperOptions: Partial<import("@popperjs/core").Options>;
     COMPONENT_NAME: string;
     props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
@@ -20184,6 +20189,7 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
             setLabelSize: any;
             isFloat: any;
             labelFor: any;
+            setFloat: any;
             parentRef: import("vue").Ref<any>;
             props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
                 readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -20583,6 +20589,7 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
         setLabelSize: any;
         isFloat: any;
         labelFor: any;
+        setFloat: any;
         parentRef: import("vue").Ref<any>;
         props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
             readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -22671,6 +22678,7 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
         setLabelSize: any;
         isFloat: any;
         labelFor: any;
+        setFloat: any;
         parentRef: import("vue").Ref<any>;
         props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
             readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;

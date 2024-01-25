@@ -129,12 +129,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         _inputs[1].focus();
       }
     };
-    const focusOnInputBox = () => {
-      focus(true, true);
-      nextTick(() => {
-        ignoreFocusEvent = false;
-      });
-    };
     const onPick = (date = "", visible = false) => {
       if (!visible) {
         ignoreFocusEvent = true;
@@ -184,9 +178,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }
     };
     const handleFocusInput = (e) => {
-      console.log(pickerVisible.value, "pickerVisible");
-      console.log(ignoreFocusEvent, "ignoreFocusEvent");
-      console.log(pickerVisible.value || ignoreFocusEvent, "all");
       setFloat && setFloat(true);
       if (props.readonly || pickerDisabled.value || pickerVisible.value || ignoreFocusEvent) {
         return;
@@ -489,6 +480,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     onMounted(() => {
       if (setLabelSize && isRangeInput.value) {
         setLabelSize(getChildPositionAndSize(inputRef.value, inputOne.value));
+      }
+      const notEmpty = isArray(props.modelValue) ? props.modelValue.every((item) => item) : props.modelValue;
+      if (isFloat && isFloat.value && notEmpty) {
+        setFloat(true);
       }
     });
     const endPlaceholder = computed(() => {

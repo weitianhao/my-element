@@ -57,6 +57,7 @@ declare const _default: import("vue").DefineComponent<{
     props: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("element-plus/es/components/cascader-panel").CascaderProps) | (() => import("element-plus/es/components/cascader-panel").CascaderProps) | ((new (...args: any[]) => import("element-plus/es/components/cascader-panel").CascaderProps) | (() => import("element-plus/es/components/cascader-panel").CascaderProps))[], unknown, unknown, () => import("element-plus/es/components/cascader-panel").CascaderProps, boolean>;
 }, {
     setFloat: any;
+    isFloat: any;
     popperOptions: Partial<Options>;
     COMPONENT_NAME: string;
     props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
@@ -6612,6 +6613,7 @@ declare const _default: import("vue").DefineComponent<{
             setLabelSize: any;
             isFloat: any;
             labelFor: any;
+            setFloat: any;
             parentRef: Ref<any>;
             props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
                 readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -7011,6 +7013,7 @@ declare const _default: import("vue").DefineComponent<{
         setLabelSize: any;
         isFloat: any;
         labelFor: any;
+        setFloat: any;
         parentRef: Ref<any>;
         props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
             readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -9099,6 +9102,7 @@ declare const _default: import("vue").DefineComponent<{
         setLabelSize: any;
         isFloat: any;
         labelFor: any;
+        setFloat: any;
         parentRef: Ref<any>;
         props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
             readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;

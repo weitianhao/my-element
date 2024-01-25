@@ -27,6 +27,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   setup(__props, { expose }) {
     const props = __props;
     const slots = useSlots();
+    const defaultComponent = slots == null ? void 0 : slots.default()[0];
     const formContext = inject(formContextKey, void 0);
     const parentFormItemContext = inject(formItemContextKey, void 0);
     const _size = useFormSize(void 0, { formItem: false });
@@ -68,6 +69,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     });
     const formItemClasses = computed(() => [
       addFloat.value && "is-float",
+      Object.prototype.hasOwnProperty.call(defaultComponent.props, "disabled") && "is-float-disabled",
       ns.b(),
       ns.m(_size.value),
       ns.is("error", validateState.value === "error"),

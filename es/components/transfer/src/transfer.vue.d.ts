@@ -913,6 +913,7 @@ declare const _default: import("vue").DefineComponent<{
                 setLabelSize: any;
                 isFloat: any;
                 labelFor: any;
+                setFloat: any;
                 parentRef: import("vue").Ref<any>;
                 props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
                     readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -2075,6 +2076,7 @@ declare const _default: import("vue").DefineComponent<{
             setLabelSize: any;
             isFloat: any;
             labelFor: any;
+            setFloat: any;
             parentRef: import("vue").Ref<any>;
             props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
                 readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -3263,6 +3265,7 @@ declare const _default: import("vue").DefineComponent<{
                 setLabelSize: any;
                 isFloat: any;
                 labelFor: any;
+                setFloat: any;
                 parentRef: import("vue").Ref<any>;
                 props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
                     readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -4425,6 +4428,7 @@ declare const _default: import("vue").DefineComponent<{
             setLabelSize: any;
             isFloat: any;
             labelFor: any;
+            setFloat: any;
             parentRef: import("vue").Ref<any>;
             props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
                 readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -5022,10 +5026,10 @@ declare const _default: import("vue").DefineComponent<{
         readonly autofocus: boolean;
         readonly round: boolean;
         readonly tag: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>;
-        readonly plain: boolean;
         readonly nativeType: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "reset" | "submit" | "button", unknown>;
         readonly loadingIcon: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>;
         readonly autoInsertSpace: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly plain: boolean;
     }>> & {
         ButtonGroup: import("vue").DefineComponent<{
             readonly size: {
@@ -5897,6 +5901,7 @@ declare const _default: import("vue").DefineComponent<{
             setLabelSize: any;
             isFloat: any;
             labelFor: any;
+            setFloat: any;
             parentRef: import("vue").Ref<any>;
             props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
                 readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;

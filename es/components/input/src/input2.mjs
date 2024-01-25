@@ -39,6 +39,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const setLabelSize = inject("SET_LABEL_SIZE");
     const isFloat = inject("IS_FLOAT");
     const labelFor = inject("LABEL_FOR");
+    const setFloat = inject("SET_FLOAT");
     const parentRef = ref();
     const rawAttrs = useAttrs();
     const slots = useSlots();
@@ -275,6 +276,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         if (inputId.value === labelFor.value) {
           setLabelSize(getChildPositionAndSize(parentRef.value, _ref.value));
         }
+      }
+      if (isFull.value && isFloat && isFloat.value && setFloat) {
+        setFloat(true);
       }
     });
     const placeholder = computed(() => {

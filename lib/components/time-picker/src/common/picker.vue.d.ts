@@ -6671,7 +6671,6 @@ declare const _default: import("vue").DefineComponent<{
     emitKeydown: (e: KeyboardEvent) => void;
     refInput: import("vue").ComputedRef<HTMLInputElement[]>;
     setSelectionRange: (start: number, end: number, pos?: "max" | "min" | undefined) => void;
-    focusOnInputBox: () => void;
     onPick: (date?: any, visible?: boolean) => void;
     onBeforeShow: () => void;
     onShow: () => void;
@@ -6810,6 +6809,7 @@ declare const _default: import("vue").DefineComponent<{
         setLabelSize: any;
         isFloat: any;
         labelFor: any;
+        setFloat: any;
         parentRef: import("vue").Ref<any>;
         props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
             readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;

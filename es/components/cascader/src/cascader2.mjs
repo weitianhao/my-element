@@ -41,6 +41,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   setup(__props, { expose, emit }) {
     const props = __props;
     const setFloat = inject("SET_FLOAT");
+    const isFloat = inject("IS_FLOAT");
     const popperOptions = {
       modifiers: [
         {
@@ -415,6 +416,12 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       const inputInnerHeight = getInputInnerHeight(inputInner);
       inputInitialHeight = inputInner.offsetHeight || inputInnerHeight;
       useResizeObserver(inputInner, updateStyle);
+      const presentTagsNotEmpty = presentTags.value.every((item) => item.text);
+      const searchKeywordNotEmpty = !!presentTags.value;
+      const notEmpty = multiple.value ? presentTagsNotEmpty : searchKeywordNotEmpty;
+      if (isFloat && isFloat.value && notEmpty) {
+        setFloat(true);
+      }
     });
     expose({
       getCheckedNodes,

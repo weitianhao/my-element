@@ -300,6 +300,7 @@ declare const _default: import("vue").DefineComponent<{
             setLabelSize: any;
             isFloat: any;
             labelFor: any;
+            setFloat: any;
             parentRef: import("vue").Ref<any>;
             props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
                 readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -699,6 +700,7 @@ declare const _default: import("vue").DefineComponent<{
         setLabelSize: any;
         isFloat: any;
         labelFor: any;
+        setFloat: any;
         parentRef: import("vue").Ref<any>;
         props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
             readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -1062,6 +1064,7 @@ declare const _default: import("vue").DefineComponent<{
         setLabelSize: any;
         isFloat: any;
         labelFor: any;
+        setFloat: any;
         parentRef: import("vue").Ref<any>;
         props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
             readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;

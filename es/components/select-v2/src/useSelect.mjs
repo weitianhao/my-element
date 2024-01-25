@@ -623,6 +623,10 @@ const useSelect = (props, emit) => {
     if (setLabelSize) {
       setLabelSize(getChildPositionAndSize(wrapperRef.value, selectionRef.value));
     }
+    const notEmpty = props.multiple && props.modelValue.length > 0 || !props.multiple && props.modelValue;
+    if (isFloat && isFloat.value && setFloat && notEmpty) {
+      setFloat(true);
+    }
   });
   useResizeObserver(selectRef, handleResize);
   useResizeObserver(selectionRef, resetSelectionWidth);

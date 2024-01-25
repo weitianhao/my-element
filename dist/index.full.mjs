@@ -13406,6 +13406,7 @@ const _sfc_main$2j = /* @__PURE__ */ defineComponent({
   setup(__props, { expose }) {
     const props = __props;
     const slots = useSlots();
+    const defaultComponent = slots == null ? void 0 : slots.default()[0];
     const formContext = inject(formContextKey, void 0);
     const parentFormItemContext = inject(formItemContextKey, void 0);
     const _size = useFormSize(void 0, { formItem: false });
@@ -13447,6 +13448,7 @@ const _sfc_main$2j = /* @__PURE__ */ defineComponent({
     });
     const formItemClasses = computed$1(() => [
       addFloat.value && "is-float",
+      Object.prototype.hasOwnProperty.call(defaultComponent.props, "disabled") && "is-float-disabled",
       ns.b(),
       ns.m(_size.value),
       ns.is("error", validateState.value === "error"),
@@ -13926,6 +13928,7 @@ const _sfc_main$2i = /* @__PURE__ */ defineComponent({
     const setLabelSize = inject("SET_LABEL_SIZE");
     const isFloat = inject("IS_FLOAT");
     const labelFor = inject("LABEL_FOR");
+    const setFloat = inject("SET_FLOAT");
     const parentRef = ref();
     const rawAttrs = useAttrs$1();
     const slots = useSlots();
@@ -14160,6 +14163,9 @@ const _sfc_main$2i = /* @__PURE__ */ defineComponent({
         if (inputId.value === labelFor.value) {
           setLabelSize(getChildPositionAndSize(parentRef.value, _ref.value));
         }
+      }
+      if (isFull.value && isFloat && isFloat.value && setFloat) {
+        setFloat(true);
       }
     });
     const placeholder = computed$1(() => {
@@ -19018,9 +19024,6 @@ const _sfc_main$1_ = /* @__PURE__ */ defineComponent({
       }
     };
     const handleFocusInput = (e) => {
-      console.log(pickerVisible.value, "pickerVisible");
-      console.log(ignoreFocusEvent, "ignoreFocusEvent");
-      console.log(pickerVisible.value || ignoreFocusEvent, "all");
       setFloat && setFloat(true);
       if (props.readonly || pickerDisabled.value || pickerVisible.value || ignoreFocusEvent) {
         return;
@@ -19323,6 +19326,10 @@ const _sfc_main$1_ = /* @__PURE__ */ defineComponent({
     onMounted(() => {
       if (setLabelSize && isRangeInput.value) {
         setLabelSize(getChildPositionAndSize(inputRef.value, inputOne.value));
+      }
+      const notEmpty = isArray$1(props.modelValue) ? props.modelValue.every((item) => item) : props.modelValue;
+      if (isFloat && isFloat.value && notEmpty) {
+        setFloat(true);
       }
     });
     const endPlaceholder = computed$1(() => {
@@ -23770,6 +23777,7 @@ const _sfc_main$1H = /* @__PURE__ */ defineComponent({
   setup(__props, { expose, emit }) {
     const props = __props;
     const setFloat = inject("SET_FLOAT");
+    const isFloat = inject("IS_FLOAT");
     const popperOptions = {
       modifiers: [
         {
@@ -24144,6 +24152,12 @@ const _sfc_main$1H = /* @__PURE__ */ defineComponent({
       const inputInnerHeight = getInputInnerHeight(inputInner);
       inputInitialHeight = inputInner.offsetHeight || inputInnerHeight;
       useResizeObserver(inputInner, updateStyle);
+      const presentTagsNotEmpty = presentTags.value.every((item) => item.text);
+      const searchKeywordNotEmpty = !!presentTags.value;
+      const notEmpty = multiple.value ? presentTagsNotEmpty : searchKeywordNotEmpty;
+      if (isFloat && isFloat.value && notEmpty) {
+        setFloat(true);
+      }
     });
     expose({
       getCheckedNodes,
@@ -34702,6 +34716,10 @@ const useSelect$3 = (props, emit) => {
     if (setLabelSize) {
       setLabelSize(getChildPositionAndSize(wrapperRef.value, selectionRef.value));
     }
+    const notEmpty = props.multiple && props.modelValue.length > 0 || !props.multiple && props.modelValue;
+    if (isFloat && isFloat.value && setFloat && notEmpty) {
+      setFloat(true);
+    }
   });
   return {
     inputId,
@@ -39975,6 +39993,10 @@ const useSelect$1 = (props, emit) => {
     initStates();
     if (setLabelSize) {
       setLabelSize(getChildPositionAndSize(wrapperRef.value, selectionRef.value));
+    }
+    const notEmpty = props.multiple && props.modelValue.length > 0 || !props.multiple && props.modelValue;
+    if (isFloat && isFloat.value && setFloat && notEmpty) {
+      setFloat(true);
     }
   });
   useResizeObserver(selectRef, handleResize);

@@ -71,9 +71,8 @@ declare const _default: import("vue").DefineComponent<{
     }>> & {
         [x: string & `on${string}`]: ((...args: any[]) => any) | ((...args: unknown[]) => any) | undefined;
     }>>;
-    slots: Readonly<{
-        [name: string]: import("vue").Slot | undefined;
-    }>;
+    slots: any;
+    defaultComponent: any;
     formContext: import("./types").FormContext | undefined;
     parentFormItemContext: FormItemContext | undefined;
     _size: import("vue").ComputedRef<"" | "default" | "small" | "large">;

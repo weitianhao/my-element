@@ -27,7 +27,7 @@ $button-icon-span-gap: map.merge(
 
   line-height: 1;
   // min-height will expand when in flex
-  height: map.get($input-height, 'default');
+  height: map.get($button-height, 'default');
   white-space: nowrap;
   cursor: pointer;
   color: getCssVar('button', 'text-color');
@@ -157,38 +157,15 @@ $button-icon-span-gap: map.merge(
     color: getCssVar('button', 'text-color');
     border: 0 solid transparent;
     background-color: transparent;
-
+    padding: 0px;
+    height: auto;
     @include when(disabled) {
       color: getCssVar('button', 'disabled', 'text-color');
       background-color: transparent !important;
     }
-
     &:not(.is-disabled) {
-      &:hover,
-      &:focus {
-        background-color: getCssVar('fill-color', 'light');
-      }
-
-      &:focus-visible {
-        outline: 2px solid getCssVar('button', 'outline-color');
-        outline-offset: 1px;
-      }
-
-      &:active {
-        background-color: getCssVar('fill-color');
-      }
-
-      @include when(has-bg) {
-        background-color: getCssVar('fill-color', 'light');
-
-        &:hover,
-        &:focus {
-          background-color: getCssVar('fill-color');
-        }
-
-        &:active {
-          background-color: getCssVar('fill-color', 'dark');
-        }
+      &:hover {
+        opacity: 0.8;
       }
     }
   }
@@ -278,7 +255,7 @@ $button-icon-span-gap: map.merge(
     @include m($size) {
       @include set-css-var-value(
         ('button', 'size'),
-        map.get($input-height, $size)
+        map.get($button-height, $size)
       );
 
       height: getCssVar('button', 'size');

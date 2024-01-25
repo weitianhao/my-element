@@ -13888,6 +13888,7 @@ export declare const ElSlider: import("element-plus/es/utils").SFCWithInstall<im
                 setLabelSize: any;
                 isFloat: any;
                 labelFor: any;
+                setFloat: any;
                 parentRef: import("vue").Ref<any>;
                 props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
                     readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -14287,6 +14288,7 @@ export declare const ElSlider: import("element-plus/es/utils").SFCWithInstall<im
             setLabelSize: any;
             isFloat: any;
             labelFor: any;
+            setFloat: any;
             parentRef: import("vue").Ref<any>;
             props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
                 readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
@@ -14650,6 +14652,7 @@ export declare const ElSlider: import("element-plus/es/utils").SFCWithInstall<im
             setLabelSize: any;
             isFloat: any;
             labelFor: any;
+            setFloat: any;
             parentRef: import("vue").Ref<any>;
             props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
                 readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
