@@ -214,6 +214,7 @@ declare const _default: import("vue").DefineComponent<{
     }>>>;
     arrowProps: {
         [x: string & `on${string}`]: ((...args: any[]) => any) | ((...args: unknown[]) => any) | undefined;
+        readonly to?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined) | ((new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined))[], unknown, unknown>;
         readonly style?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("vue").CSSProperties) | (() => import("vue").CSSProperties | null) | ((new (...args: any[]) => import("vue").CSSProperties) | (() => import("vue").CSSProperties | null))[], unknown, unknown> | undefined;
         readonly open?: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown> | undefined;
         readonly placement?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("@floating-ui/core").Placement & {}) | (() => import("@floating-ui/core").Placement) | ((new (...args: any[]) => import("@floating-ui/core").Placement & {}) | (() => import("@floating-ui/core").Placement))[], "top" | "right" | "bottom" | "left" | "top-start" | "top-end" | "right-start" | "right-end" | "bottom-start" | "bottom-end" | "left-start" | "left-end", unknown> | undefined;
@@ -223,7 +224,6 @@ declare const _default: import("vue").DefineComponent<{
         readonly offset?: number | undefined;
         readonly effect?: string | undefined;
         readonly reference?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown> | undefined;
-        readonly to?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined) | ((new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined))[], unknown, unknown>;
         readonly ariaLabel?: string | undefined;
         readonly teleported?: boolean | undefined;
         readonly onBlur?: ((e: Event) => boolean | void) | undefined;
@@ -245,6 +245,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     contentProps: {
         [x: string & `on${string}`]: ((...args: any[]) => any) | ((...args: unknown[]) => any) | undefined;
+        readonly to?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined) | ((new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined))[], unknown, unknown>;
         readonly style?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("vue").CSSProperties) | (() => import("vue").CSSProperties | null) | ((new (...args: any[]) => import("vue").CSSProperties) | (() => import("vue").CSSProperties | null))[], unknown, unknown> | undefined;
         readonly open?: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown> | undefined;
         readonly placement?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("@floating-ui/core").Placement & {}) | (() => import("@floating-ui/core").Placement) | ((new (...args: any[]) => import("@floating-ui/core").Placement & {}) | (() => import("@floating-ui/core").Placement))[], "top" | "right" | "bottom" | "left" | "top-start" | "top-end" | "right-start" | "right-end" | "bottom-start" | "bottom-end" | "left-start" | "left-end", unknown> | undefined;
@@ -254,7 +255,6 @@ declare const _default: import("vue").DefineComponent<{
         readonly offset?: number | undefined;
         readonly effect?: string | undefined;
         readonly reference?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown> | undefined;
-        readonly to?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined) | ((new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined))[], unknown, unknown>;
         readonly ariaLabel?: string | undefined;
         readonly teleported?: boolean | undefined;
         readonly onBlur?: ((e: Event) => boolean | void) | undefined;
@@ -276,6 +276,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     rootProps: {
         [x: string & `on${string}`]: ((...args: any[]) => any) | ((...args: unknown[]) => any) | undefined;
+        readonly to?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined) | ((new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined))[], unknown, unknown>;
         readonly style?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("vue").CSSProperties) | (() => import("vue").CSSProperties | null) | ((new (...args: any[]) => import("vue").CSSProperties) | (() => import("vue").CSSProperties | null))[], unknown, unknown> | undefined;
         readonly open?: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown> | undefined;
         readonly placement?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("@floating-ui/core").Placement & {}) | (() => import("@floating-ui/core").Placement) | ((new (...args: any[]) => import("@floating-ui/core").Placement & {}) | (() => import("@floating-ui/core").Placement))[], "top" | "right" | "bottom" | "left" | "top-start" | "top-end" | "right-start" | "right-end" | "bottom-start" | "bottom-end" | "left-start" | "left-end", unknown> | undefined;
@@ -285,7 +286,6 @@ declare const _default: import("vue").DefineComponent<{
         readonly offset?: number | undefined;
         readonly effect?: string | undefined;
         readonly reference?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown> | undefined;
-        readonly to?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined) | ((new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined))[], unknown, unknown>;
         readonly ariaLabel?: string | undefined;
         readonly teleported?: boolean | undefined;
         readonly onBlur?: ((e: Event) => boolean | void) | undefined;
@@ -307,6 +307,7 @@ declare const _default: import("vue").DefineComponent<{
     };
     triggerProps: {
         [x: string & `on${string}`]: ((...args: any[]) => any) | ((...args: unknown[]) => any) | undefined;
+        readonly to?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined) | ((new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined))[], unknown, unknown>;
         readonly style?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("vue").CSSProperties) | (() => import("vue").CSSProperties | null) | ((new (...args: any[]) => import("vue").CSSProperties) | (() => import("vue").CSSProperties | null))[], unknown, unknown> | undefined;
         readonly open?: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown> | undefined;
         readonly placement?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("@floating-ui/core").Placement & {}) | (() => import("@floating-ui/core").Placement) | ((new (...args: any[]) => import("@floating-ui/core").Placement & {}) | (() => import("@floating-ui/core").Placement))[], "top" | "right" | "bottom" | "left" | "top-start" | "top-end" | "right-start" | "right-end" | "bottom-start" | "bottom-end" | "left-start" | "left-end", unknown> | undefined;
@@ -316,7 +317,6 @@ declare const _default: import("vue").DefineComponent<{
         readonly offset?: number | undefined;
         readonly effect?: string | undefined;
         readonly reference?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown> | undefined;
-        readonly to?: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined) | ((new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined))[], unknown, unknown>;
         readonly ariaLabel?: string | undefined;
         readonly teleported?: boolean | undefined;
         readonly onBlur?: ((e: Event) => boolean | void) | undefined;
@@ -855,6 +855,7 @@ declare const _default: import("vue").DefineComponent<{
         __epPropKey: true;
     };
 }>>, {
+    readonly to: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined) | ((new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined))[], unknown, unknown>;
     readonly style: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("vue").CSSProperties) | (() => import("vue").CSSProperties | null) | ((new (...args: any[]) => import("vue").CSSProperties) | (() => import("vue").CSSProperties | null))[], unknown, unknown>;
     readonly open: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly placement: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("@floating-ui/core").Placement & {}) | (() => import("@floating-ui/core").Placement) | ((new (...args: any[]) => import("@floating-ui/core").Placement & {}) | (() => import("@floating-ui/core").Placement))[], "top" | "right" | "bottom" | "left" | "top-start" | "top-end" | "right-start" | "right-end" | "bottom-start" | "bottom-end" | "left-start" | "left-end", unknown>;
@@ -864,7 +865,6 @@ declare const _default: import("vue").DefineComponent<{
     readonly offset: number;
     readonly effect: string;
     readonly reference: import("../../../utils").EpPropMergeType<(new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null) | ((new (...args: any[]) => HTMLElement | import("@floating-ui/dom").VirtualElement) | (() => HTMLElement | import("@floating-ui/dom").VirtualElement | null))[], unknown, unknown>;
-    readonly to: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined) | ((new (...args: any[]) => (string | import("vue").RendererElement | null | undefined) & {}) | (() => string | import("vue").RendererElement | null | undefined))[], unknown, unknown>;
     readonly teleported: boolean;
     readonly showArrow: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly alwaysOn: boolean;

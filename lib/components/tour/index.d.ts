@@ -6887,13 +6887,13 @@ export declare const ElTour: import("element-plus/es/utils").SFCWithInstall<impo
         }>> & {
             onClick?: ((evt: MouseEvent) => any) | undefined;
         }, {
+            readonly bg: boolean;
             readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown>;
             readonly link: boolean;
             readonly loading: boolean;
             readonly disabled: boolean;
             readonly circle: boolean;
             readonly text: boolean;
-            readonly bg: boolean;
             readonly dark: boolean;
             readonly autofocus: boolean;
             readonly round: boolean;
@@ -7432,13 +7432,13 @@ export declare const ElTourStep: import("element-plus/es/utils").SFCWithInstall<
     }>> & {
         onClick?: ((evt: MouseEvent) => any) | undefined;
     }, {
+        readonly bg: boolean;
         readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown>;
         readonly link: boolean;
         readonly loading: boolean;
         readonly disabled: boolean;
         readonly circle: boolean;
         readonly text: boolean;
-        readonly bg: boolean;
         readonly dark: boolean;
         readonly autofocus: boolean;
         readonly round: boolean;

@@ -610,12 +610,12 @@ declare const _default: import("vue").DefineComponent<{
             "onUpdate:modelValue"?: ((val: import("../..").CheckboxValueType) => any) | undefined;
             onChange?: ((val: import("../..").CheckboxValueType) => any) | undefined;
         }, {
+            id: string;
             name: string;
             border: boolean;
             modelValue: string | number | boolean;
             disabled: boolean;
             label: string | number | boolean | Record<string, any>;
-            id: string;
             validateEvent: boolean;
             indeterminate: boolean;
             checked: boolean;
@@ -800,12 +800,12 @@ declare const _default: import("vue").DefineComponent<{
                 "onUpdate:modelValue"?: ((val: import("../..").CheckboxValueType) => any) | undefined;
                 onChange?: ((val: import("../..").CheckboxValueType) => any) | undefined;
             }, {
+                id: string;
                 name: string;
                 border: boolean;
                 modelValue: string | number | boolean;
                 disabled: boolean;
                 label: string | number | boolean | Record<string, any>;
-                id: string;
                 validateEvent: boolean;
                 indeterminate: boolean;
                 checked: boolean;
@@ -1021,9 +1021,9 @@ declare const _default: import("vue").DefineComponent<{
     readonly props: import("./types").TreeOptionProps;
     readonly checkStrictly: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly accordion: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly indent: number;
     readonly perfMode: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly itemSize: number;
+    readonly indent: number;
     readonly showCheckbox: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultCheckedKeys: import("./types").TreeKey[];
     readonly defaultExpandedKeys: import("./types").TreeKey[];

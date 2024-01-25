@@ -5,7 +5,7 @@ import '../../tooltip/index.mjs';
 import { buildProps } from '../../../utils/vue/props/runtime.mjs';
 import { buttonTypes } from '../../button/src/button2.mjs';
 import { iconPropType } from '../../../utils/vue/icon.mjs';
-import { useTooltipContentProps } from '../../tooltip/src/content.mjs';
+import { useTooltipContentProps } from '../../tooltip/src/content2.mjs';
 
 const popconfirmProps = buildProps({
   title: String,

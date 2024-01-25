@@ -610,12 +610,12 @@ export declare const ElTreeV2: import("element-plus/es/utils").SFCWithInstall<im
             "onUpdate:modelValue"?: ((val: import("..").CheckboxValueType) => any) | undefined;
             onChange?: ((val: import("..").CheckboxValueType) => any) | undefined;
         }, {
+            id: string;
             name: string;
             border: boolean;
             modelValue: string | number | boolean;
             disabled: boolean;
             label: string | number | boolean | Record<string, any>;
-            id: string;
             validateEvent: boolean;
             indeterminate: boolean;
             checked: boolean;
@@ -800,12 +800,12 @@ export declare const ElTreeV2: import("element-plus/es/utils").SFCWithInstall<im
                 "onUpdate:modelValue"?: ((val: import("..").CheckboxValueType) => any) | undefined;
                 onChange?: ((val: import("..").CheckboxValueType) => any) | undefined;
             }, {
+                id: string;
                 name: string;
                 border: boolean;
                 modelValue: string | number | boolean;
                 disabled: boolean;
                 label: string | number | boolean | Record<string, any>;
-                id: string;
                 validateEvent: boolean;
                 indeterminate: boolean;
                 checked: boolean;
@@ -1021,9 +1021,9 @@ export declare const ElTreeV2: import("element-plus/es/utils").SFCWithInstall<im
     readonly props: import("./src/types").TreeOptionProps;
     readonly checkStrictly: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly accordion: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly indent: number;
     readonly perfMode: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly itemSize: number;
+    readonly indent: number;
     readonly showCheckbox: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultCheckedKeys: import("./src/types").TreeKey[];
     readonly defaultExpandedKeys: import("./src/types").TreeKey[];

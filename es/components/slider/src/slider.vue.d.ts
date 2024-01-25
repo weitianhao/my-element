@@ -13674,12 +13674,12 @@ declare const _default: import("vue").DefineComponent<{
             $: import("vue").ComponentInternalInstance;
             $data: {};
             $props: Partial<{
+                readonly id: string;
                 readonly type: string;
                 readonly tabindex: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                 readonly modelValue: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
                 readonly disabled: boolean;
                 readonly label: string;
-                readonly id: string;
                 readonly clearable: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                 readonly autosize: import("../..").InputAutoSize;
                 readonly autocomplete: string;
@@ -13780,7 +13780,7 @@ declare const _default: import("vue").DefineComponent<{
                 onKeydown?: ((evt: Event | KeyboardEvent) => any) | undefined;
                 onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                 onMouseleave?: ((evt: MouseEvent) => any) | undefined;
-            } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "type" | "tabindex" | "modelValue" | "disabled" | "label" | "id" | "clearable" | "autosize" | "autocomplete" | "readonly" | "showPassword" | "showWordLimit" | "containerRole" | "validateEvent" | "inputStyle" | "autofocus">;
+            } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "id" | "type" | "tabindex" | "modelValue" | "disabled" | "label" | "clearable" | "autosize" | "autocomplete" | "readonly" | "showPassword" | "showWordLimit" | "containerRole" | "validateEvent" | "inputStyle" | "autofocus">;
             $attrs: {
                 [x: string]: unknown;
             };
@@ -14158,12 +14158,12 @@ declare const _default: import("vue").DefineComponent<{
                 compositionupdate: (evt: CompositionEvent) => boolean;
                 compositionend: (evt: CompositionEvent) => boolean;
             }, string, {
+                readonly id: string;
                 readonly type: string;
                 readonly tabindex: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                 readonly modelValue: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
                 readonly disabled: boolean;
                 readonly label: string;
-                readonly id: string;
                 readonly clearable: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                 readonly autosize: import("../..").InputAutoSize;
                 readonly autocomplete: string;
@@ -15012,12 +15012,12 @@ declare const _default: import("vue").DefineComponent<{
             onMouseenter?: ((evt: MouseEvent) => any) | undefined;
             onMouseleave?: ((evt: MouseEvent) => any) | undefined;
         }, {
+            readonly id: string;
             readonly type: string;
             readonly tabindex: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
             readonly modelValue: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
             readonly disabled: boolean;
             readonly label: string;
-            readonly id: string;
             readonly clearable: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly autosize: import("../..").InputAutoSize;
             readonly autocomplete: string;
@@ -15138,8 +15138,8 @@ declare const _default: import("vue").DefineComponent<{
         onBlur?: ((e: FocusEvent) => any) | undefined;
         onFocus?: ((e: FocusEvent) => any) | undefined;
     }, {
-        readonly disabled: boolean;
         readonly id: string;
+        readonly disabled: boolean;
         readonly readonly: boolean;
         readonly validateEvent: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly max: number;
@@ -18604,11 +18604,11 @@ declare const _default: import("vue").DefineComponent<{
     onChange?: ((value: import("../../../utils").Arrayable<number>) => any) | undefined;
     onInput?: ((value: import("../../../utils").Arrayable<number>) => any) | undefined;
 }, {
+    readonly id: string;
     readonly placement: import("../../../utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
     readonly modelValue: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("../../../utils").Arrayable<number> & {}) | (() => import("../../../utils").Arrayable<number>) | ((new (...args: any[]) => import("../../../utils").Arrayable<number> & {}) | (() => import("../../../utils").Arrayable<number>))[], unknown, unknown>;
     readonly disabled: boolean;
     readonly label: string;
-    readonly id: string;
     readonly debounce: number;
     readonly vertical: boolean;
     readonly validateEvent: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

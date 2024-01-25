@@ -175,12 +175,12 @@ export declare const ElCheckbox: import("element-plus/es/utils").SFCWithInstall<
     "onUpdate:modelValue"?: ((val: import("./src/checkbox").CheckboxValueType) => any) | undefined;
     onChange?: ((val: import("./src/checkbox").CheckboxValueType) => any) | undefined;
 }, {
+    id: string;
     name: string;
     border: boolean;
     modelValue: string | number | boolean;
     disabled: boolean;
     label: string | number | boolean | Record<string, any>;
-    id: string;
     validateEvent: boolean;
     indeterminate: boolean;
     checked: boolean;
@@ -365,12 +365,12 @@ export declare const ElCheckbox: import("element-plus/es/utils").SFCWithInstall<
         "onUpdate:modelValue"?: ((val: import("./src/checkbox").CheckboxValueType) => any) | undefined;
         onChange?: ((val: import("./src/checkbox").CheckboxValueType) => any) | undefined;
     }, {
+        id: string;
         name: string;
         border: boolean;
         modelValue: string | number | boolean;
         disabled: boolean;
         label: string | number | boolean | Record<string, any>;
-        id: string;
         validateEvent: boolean;
         indeterminate: boolean;
         checked: boolean;
@@ -646,12 +646,12 @@ export declare const ElCheckboxButton: import("element-plus/es/utils").SFCWithIn
     "onUpdate:modelValue"?: ((val: import("./src/checkbox").CheckboxValueType) => any) | undefined;
     onChange?: ((val: import("./src/checkbox").CheckboxValueType) => any) | undefined;
 }, {
+    id: string;
     name: string;
     border: boolean;
     modelValue: string | number | boolean;
     disabled: boolean;
     label: string | number | boolean | Record<string, any>;
-    id: string;
     validateEvent: boolean;
     indeterminate: boolean;
     checked: boolean;

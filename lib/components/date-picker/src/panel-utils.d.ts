@@ -91,7 +91,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
         endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
         format: (template?: string | undefined) => string;
-        diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "D" | "M" | "s" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+        diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
         valueOf: () => number;
         unix: () => number;
         daysInMonth: () => number;
@@ -162,7 +162,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
         endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
         format: (template?: string | undefined) => string;
-        diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "D" | "M" | "s" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+        diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
         valueOf: () => number;
         unix: () => number;
         daysInMonth: () => number;
@@ -236,7 +236,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             format: (template?: string | undefined) => string;
-            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "D" | "M" | "s" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
             valueOf: () => number;
             unix: () => number;
             daysInMonth: () => number;
@@ -559,13 +559,13 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
     }>> & {
         onClick?: ((evt: MouseEvent) => any) | undefined;
     }, {
+        readonly bg: boolean;
         readonly type: import("../../../utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown>;
         readonly link: boolean;
         readonly loading: boolean;
         readonly disabled: boolean;
         readonly circle: boolean;
         readonly text: boolean;
-        readonly bg: boolean;
         readonly dark: boolean;
         readonly autofocus: boolean;
         readonly round: boolean;
@@ -1066,12 +1066,12 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         onMouseenter?: ((evt: MouseEvent) => any) | undefined;
         onMouseleave?: ((evt: MouseEvent) => any) | undefined;
     }, {
+        readonly id: string;
         readonly type: string;
         readonly tabindex: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly modelValue: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
         readonly disabled: boolean;
         readonly label: string;
-        readonly id: string;
         readonly clearable: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly autosize: import("../..").InputAutoSize;
         readonly autocomplete: string;
@@ -1184,7 +1184,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             format: (template?: string | undefined) => string;
-            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "D" | "M" | "s" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
             valueOf: () => number;
             unix: () => number;
             daysInMonth: () => number;
@@ -1254,7 +1254,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             format: (template?: string | undefined) => string;
-            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "D" | "M" | "s" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
             valueOf: () => number;
             unix: () => number;
             daysInMonth: () => number;
@@ -7958,7 +7958,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
                 endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
                 format: (template?: string | undefined) => string;
-                diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "D" | "M" | "s" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+                diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
                 valueOf: () => number;
                 unix: () => number;
                 daysInMonth: () => number;
@@ -8094,7 +8094,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
                 endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
                 format: (template?: string | undefined) => string;
-                diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "D" | "M" | "s" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+                diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
                 valueOf: () => number;
                 unix: () => number;
                 daysInMonth: () => number;
@@ -8306,7 +8306,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
         endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
         format: (template?: string | undefined) => string;
-        diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "D" | "M" | "s" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+        diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
         valueOf: () => number;
         unix: () => number;
         daysInMonth: () => number;
@@ -8377,7 +8377,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
         endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
         format: (template?: string | undefined) => string;
-        diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "D" | "M" | "s" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+        diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
         valueOf: () => number;
         unix: () => number;
         daysInMonth: () => number;
@@ -8451,7 +8451,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             format: (template?: string | undefined) => string;
-            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "D" | "M" | "s" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
             valueOf: () => number;
             unix: () => number;
             daysInMonth: () => number;
@@ -8955,7 +8955,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
         endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
         format: (template?: string | undefined) => string;
-        diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "D" | "M" | "s" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+        diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
         valueOf: () => number;
         unix: () => number;
         daysInMonth: () => number;
@@ -9238,13 +9238,13 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
     }>> & {
         onClick?: ((evt: MouseEvent) => any) | undefined;
     }, {
+        readonly bg: boolean;
         readonly type: import("../../../utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown>;
         readonly link: boolean;
         readonly loading: boolean;
         readonly disabled: boolean;
         readonly circle: boolean;
         readonly text: boolean;
-        readonly bg: boolean;
         readonly dark: boolean;
         readonly autofocus: boolean;
         readonly round: boolean;
@@ -9746,12 +9746,12 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
         onMouseenter?: ((evt: MouseEvent) => any) | undefined;
         onMouseleave?: ((evt: MouseEvent) => any) | undefined;
     }, {
+        readonly id: string;
         readonly type: string;
         readonly tabindex: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly modelValue: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
         readonly disabled: boolean;
         readonly label: string;
-        readonly id: string;
         readonly clearable: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly autosize: import("../..").InputAutoSize;
         readonly autocomplete: string;
@@ -9864,7 +9864,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             format: (template?: string | undefined) => string;
-            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "D" | "M" | "s" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
             valueOf: () => number;
             unix: () => number;
             daysInMonth: () => number;
@@ -9934,7 +9934,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
             startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
             format: (template?: string | undefined) => string;
-            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "D" | "M" | "s" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+            diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
             valueOf: () => number;
             unix: () => number;
             daysInMonth: () => number;
@@ -16638,7 +16638,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
                 endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
                 format: (template?: string | undefined) => string;
-                diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "D" | "M" | "s" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+                diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
                 valueOf: () => number;
                 unix: () => number;
                 daysInMonth: () => number;
@@ -16774,7 +16774,7 @@ export declare const getPanel: (type: IDatePickerType) => import("vue").DefineCo
                 startOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
                 endOf: (unit: import("dayjs").OpUnitType) => import("dayjs").Dayjs;
                 format: (template?: string | undefined) => string;
-                diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "D" | "M" | "s" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+                diff: (date?: string | number | Date | import("dayjs").Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
                 valueOf: () => number;
                 unix: () => number;
                 daysInMonth: () => number;

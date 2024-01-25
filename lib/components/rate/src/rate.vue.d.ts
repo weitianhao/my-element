@@ -243,10 +243,10 @@ declare const _default: import("vue").DefineComponent<{
     "onUpdate:modelValue"?: ((value: number) => any) | undefined;
     onChange?: ((value: number) => any) | undefined;
 }, {
+    readonly id: string;
     readonly modelValue: number;
     readonly disabled: boolean;
     readonly label: string;
-    readonly id: string;
     readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly max: number;
     readonly textColor: string;

@@ -450,12 +450,12 @@ declare const _default: import("vue").DefineComponent<{
                 "onUpdate:modelValue"?: ((val: import("../..").CheckboxValueType) => any) | undefined;
                 onChange?: ((val: import("../..").CheckboxValueType) => any) | undefined;
             }, {
+                id: string;
                 name: string;
                 border: boolean;
                 modelValue: string | number | boolean;
                 disabled: boolean;
                 label: string | number | boolean | Record<string, any>;
-                id: string;
                 validateEvent: boolean;
                 indeterminate: boolean;
                 checked: boolean;
@@ -640,12 +640,12 @@ declare const _default: import("vue").DefineComponent<{
                     "onUpdate:modelValue"?: ((val: import("../..").CheckboxValueType) => any) | undefined;
                     onChange?: ((val: import("../..").CheckboxValueType) => any) | undefined;
                 }, {
+                    id: string;
                     name: string;
                     border: boolean;
                     modelValue: string | number | boolean;
                     disabled: boolean;
                     label: string | number | boolean | Record<string, any>;
-                    id: string;
                     validateEvent: boolean;
                     indeterminate: boolean;
                     checked: boolean;
@@ -1273,12 +1273,12 @@ declare const _default: import("vue").DefineComponent<{
                 onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                 onMouseleave?: ((evt: MouseEvent) => any) | undefined;
             }, {
+                readonly id: string;
                 readonly type: string;
                 readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                 readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
                 readonly disabled: boolean;
                 readonly label: string;
-                readonly id: string;
                 readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                 readonly autosize: import("../..").InputAutoSize;
                 readonly autocomplete: string;
@@ -1613,12 +1613,12 @@ declare const _default: import("vue").DefineComponent<{
             "onUpdate:modelValue"?: ((val: import("../..").CheckboxValueType) => any) | undefined;
             onChange?: ((val: import("../..").CheckboxValueType) => any) | undefined;
         }, {
+            id: string;
             name: string;
             border: boolean;
             modelValue: string | number | boolean;
             disabled: boolean;
             label: string | number | boolean | Record<string, any>;
-            id: string;
             validateEvent: boolean;
             indeterminate: boolean;
             checked: boolean;
@@ -1803,12 +1803,12 @@ declare const _default: import("vue").DefineComponent<{
                 "onUpdate:modelValue"?: ((val: import("../..").CheckboxValueType) => any) | undefined;
                 onChange?: ((val: import("../..").CheckboxValueType) => any) | undefined;
             }, {
+                id: string;
                 name: string;
                 border: boolean;
                 modelValue: string | number | boolean;
                 disabled: boolean;
                 label: string | number | boolean | Record<string, any>;
-                id: string;
                 validateEvent: boolean;
                 indeterminate: boolean;
                 checked: boolean;
@@ -2436,12 +2436,12 @@ declare const _default: import("vue").DefineComponent<{
             onMouseenter?: ((evt: MouseEvent) => any) | undefined;
             onMouseleave?: ((evt: MouseEvent) => any) | undefined;
         }, {
+            readonly id: string;
             readonly type: string;
             readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
             readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
             readonly disabled: boolean;
             readonly label: string;
-            readonly id: string;
             readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly autosize: import("../..").InputAutoSize;
             readonly autocomplete: string;
@@ -2802,12 +2802,12 @@ declare const _default: import("vue").DefineComponent<{
                 "onUpdate:modelValue"?: ((val: import("../..").CheckboxValueType) => any) | undefined;
                 onChange?: ((val: import("../..").CheckboxValueType) => any) | undefined;
             }, {
+                id: string;
                 name: string;
                 border: boolean;
                 modelValue: string | number | boolean;
                 disabled: boolean;
                 label: string | number | boolean | Record<string, any>;
-                id: string;
                 validateEvent: boolean;
                 indeterminate: boolean;
                 checked: boolean;
@@ -2992,12 +2992,12 @@ declare const _default: import("vue").DefineComponent<{
                     "onUpdate:modelValue"?: ((val: import("../..").CheckboxValueType) => any) | undefined;
                     onChange?: ((val: import("../..").CheckboxValueType) => any) | undefined;
                 }, {
+                    id: string;
                     name: string;
                     border: boolean;
                     modelValue: string | number | boolean;
                     disabled: boolean;
                     label: string | number | boolean | Record<string, any>;
-                    id: string;
                     validateEvent: boolean;
                     indeterminate: boolean;
                     checked: boolean;
@@ -3625,12 +3625,12 @@ declare const _default: import("vue").DefineComponent<{
                 onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                 onMouseleave?: ((evt: MouseEvent) => any) | undefined;
             }, {
+                readonly id: string;
                 readonly type: string;
                 readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
                 readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
                 readonly disabled: boolean;
                 readonly label: string;
-                readonly id: string;
                 readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
                 readonly autosize: import("../..").InputAutoSize;
                 readonly autocomplete: string;
@@ -3965,12 +3965,12 @@ declare const _default: import("vue").DefineComponent<{
             "onUpdate:modelValue"?: ((val: import("../..").CheckboxValueType) => any) | undefined;
             onChange?: ((val: import("../..").CheckboxValueType) => any) | undefined;
         }, {
+            id: string;
             name: string;
             border: boolean;
             modelValue: string | number | boolean;
             disabled: boolean;
             label: string | number | boolean | Record<string, any>;
-            id: string;
             validateEvent: boolean;
             indeterminate: boolean;
             checked: boolean;
@@ -4155,12 +4155,12 @@ declare const _default: import("vue").DefineComponent<{
                 "onUpdate:modelValue"?: ((val: import("../..").CheckboxValueType) => any) | undefined;
                 onChange?: ((val: import("../..").CheckboxValueType) => any) | undefined;
             }, {
+                id: string;
                 name: string;
                 border: boolean;
                 modelValue: string | number | boolean;
                 disabled: boolean;
                 label: string | number | boolean | Record<string, any>;
-                id: string;
                 validateEvent: boolean;
                 indeterminate: boolean;
                 checked: boolean;
@@ -4788,12 +4788,12 @@ declare const _default: import("vue").DefineComponent<{
             onMouseenter?: ((evt: MouseEvent) => any) | undefined;
             onMouseleave?: ((evt: MouseEvent) => any) | undefined;
         }, {
+            readonly id: string;
             readonly type: string;
             readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
             readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
             readonly disabled: boolean;
             readonly label: string;
-            readonly id: string;
             readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly autosize: import("../..").InputAutoSize;
             readonly autocomplete: string;
@@ -5015,13 +5015,13 @@ declare const _default: import("vue").DefineComponent<{
     }>> & {
         onClick?: ((evt: MouseEvent) => any) | undefined;
     }, {
+        readonly bg: boolean;
         readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown>;
         readonly link: boolean;
         readonly loading: boolean;
         readonly disabled: boolean;
         readonly circle: boolean;
         readonly text: boolean;
-        readonly bg: boolean;
         readonly dark: boolean;
         readonly autofocus: boolean;
         readonly round: boolean;
@@ -5438,12 +5438,12 @@ declare const _default: import("vue").DefineComponent<{
             "onUpdate:modelValue"?: ((val: import("../..").CheckboxValueType) => any) | undefined;
             onChange?: ((val: import("../..").CheckboxValueType) => any) | undefined;
         }, {
+            id: string;
             name: string;
             border: boolean;
             modelValue: string | number | boolean;
             disabled: boolean;
             label: string | number | boolean | Record<string, any>;
-            id: string;
             validateEvent: boolean;
             indeterminate: boolean;
             checked: boolean;
@@ -5628,12 +5628,12 @@ declare const _default: import("vue").DefineComponent<{
                 "onUpdate:modelValue"?: ((val: import("../..").CheckboxValueType) => any) | undefined;
                 onChange?: ((val: import("../..").CheckboxValueType) => any) | undefined;
             }, {
+                id: string;
                 name: string;
                 border: boolean;
                 modelValue: string | number | boolean;
                 disabled: boolean;
                 label: string | number | boolean | Record<string, any>;
-                id: string;
                 validateEvent: boolean;
                 indeterminate: boolean;
                 checked: boolean;
@@ -6261,12 +6261,12 @@ declare const _default: import("vue").DefineComponent<{
             onMouseenter?: ((evt: MouseEvent) => any) | undefined;
             onMouseleave?: ((evt: MouseEvent) => any) | undefined;
         }, {
+            readonly id: string;
             readonly type: string;
             readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
             readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
             readonly disabled: boolean;
             readonly label: string;
-            readonly id: string;
             readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly autosize: import("../..").InputAutoSize;
             readonly autocomplete: string;

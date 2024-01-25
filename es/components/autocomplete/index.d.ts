@@ -81,12 +81,12 @@ export declare const ElAutocomplete: import("element-plus/es/utils").SFCWithInst
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
+            readonly id: string;
             readonly type: string;
             readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
             readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
             readonly disabled: boolean;
             readonly label: string;
-            readonly id: string;
             readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly autosize: import("..").InputAutoSize;
             readonly autocomplete: string;
@@ -187,7 +187,7 @@ export declare const ElAutocomplete: import("element-plus/es/utils").SFCWithInst
             onKeydown?: ((evt: Event | KeyboardEvent) => any) | undefined;
             onMouseenter?: ((evt: MouseEvent) => any) | undefined;
             onMouseleave?: ((evt: MouseEvent) => any) | undefined;
-        } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "type" | "tabindex" | "modelValue" | "disabled" | "label" | "id" | "clearable" | "autosize" | "autocomplete" | "readonly" | "showPassword" | "showWordLimit" | "containerRole" | "validateEvent" | "inputStyle" | "autofocus">;
+        } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "id" | "type" | "tabindex" | "modelValue" | "disabled" | "label" | "clearable" | "autosize" | "autocomplete" | "readonly" | "showPassword" | "showWordLimit" | "containerRole" | "validateEvent" | "inputStyle" | "autofocus">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -565,12 +565,12 @@ export declare const ElAutocomplete: import("element-plus/es/utils").SFCWithInst
             compositionupdate: (evt: CompositionEvent) => boolean;
             compositionend: (evt: CompositionEvent) => boolean;
         }, string, {
+            readonly id: string;
             readonly type: string;
             readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
             readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
             readonly disabled: boolean;
             readonly label: string;
-            readonly id: string;
             readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly autosize: import("..").InputAutoSize;
             readonly autocomplete: string;
@@ -7654,12 +7654,12 @@ export declare const ElAutocomplete: import("element-plus/es/utils").SFCWithInst
         onMouseenter?: ((evt: MouseEvent) => any) | undefined;
         onMouseleave?: ((evt: MouseEvent) => any) | undefined;
     }, {
+        readonly id: string;
         readonly type: string;
         readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
         readonly disabled: boolean;
         readonly label: string;
-        readonly id: string;
         readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly autosize: import("..").InputAutoSize;
         readonly autocomplete: string;

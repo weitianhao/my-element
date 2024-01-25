@@ -299,12 +299,12 @@ declare const _default: import("vue").DefineComponent<{
         "onUpdate:modelValue"?: ((val: CheckboxValueType) => any) | undefined;
         onChange?: ((val: CheckboxValueType) => any) | undefined;
     }, {
+        id: string;
         name: string;
         border: boolean;
         modelValue: string | number | boolean;
         disabled: boolean;
         label: string | number | boolean | Record<string, any>;
-        id: string;
         validateEvent: boolean;
         indeterminate: boolean;
         checked: boolean;
@@ -489,12 +489,12 @@ declare const _default: import("vue").DefineComponent<{
             "onUpdate:modelValue"?: ((val: CheckboxValueType) => any) | undefined;
             onChange?: ((val: CheckboxValueType) => any) | undefined;
         }, {
+            id: string;
             name: string;
             border: boolean;
             modelValue: string | number | boolean;
             disabled: boolean;
             label: string | number | boolean | Record<string, any>;
-            id: string;
             validateEvent: boolean;
             indeterminate: boolean;
             checked: boolean;
