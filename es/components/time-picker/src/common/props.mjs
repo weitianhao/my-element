@@ -1,6 +1,6 @@
 import '../../../../utils/index.mjs';
 import '../../../../hooks/index.mjs';
-import { CircleClose } from '@element-plus/icons-vue';
+import { CloseBold } from '@element-plus/icons-vue';
 import { disabledTimeListsProps } from '../props/shared.mjs';
 import { buildProps, definePropType } from '../../../../utils/vue/props/runtime.mjs';
 import { useSizeProp } from '../../../../hooks/use-size/index.mjs';
@@ -31,7 +31,7 @@ const timePickerDefaultProps = buildProps({
   },
   clearIcon: {
     type: definePropType([String, Object]),
-    default: CircleClose
+    default: CloseBold
   },
   editable: {
     type: Boolean,

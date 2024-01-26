@@ -3,7 +3,12 @@ import { useEventListener } from '@vueuse/core';
 import '../../utils/index.mjs';
 import { isFunction } from '@vue/shared';
 
-function useFocusController(target, { afterFocus, beforeBlur, afterBlur, isFull } = {}) {
+function useFocusController(target, {
+  afterFocus,
+  beforeBlur,
+  afterBlur,
+  propsValue
+} = {}) {
   const instance = getCurrentInstance();
   const { emit, provides } = instance;
   const parentFocus = provides["PARENT_FOCUS"];
@@ -12,12 +17,6 @@ function useFocusController(target, { afterFocus, beforeBlur, afterBlur, isFull 
   const parentClear = provides["PARENT_CLEAR"];
   const wrapperRef = shallowRef();
   const isFocused = ref(false);
-  if (parentFocus) {
-    watch(parentFocus, (val) => {
-      if (isFloat && isFloat.value && setFloat)
-        setFloat(isFull && isFull.value ? isFull.value : val);
-    });
-  }
   if (parentClear) {
     watch(parentClear, () => {
       isFocused.value = false;
@@ -29,8 +28,7 @@ function useFocusController(target, { afterFocus, beforeBlur, afterBlur, isFull 
     isFocused.value = true;
     emit("focus", event);
     afterFocus == null ? void 0 : afterFocus();
-    if (!parentFocus && isFloat && isFloat.value && setFloat)
-      setFloat(true);
+    setFloat(true, true);
   };
   const handleBlur = (event) => {
     var _a;
@@ -40,8 +38,8 @@ function useFocusController(target, { afterFocus, beforeBlur, afterBlur, isFull 
     isFocused.value = false;
     emit("blur", event);
     afterBlur == null ? void 0 : afterBlur();
-    if (!parentFocus && isFloat && isFloat.value && setFloat)
-      setFloat(isFull && isFull.value);
+    if (!parentFocus && isFloat && isFloat.value)
+      setFloat(propsValue.value, false);
   };
   const handleClick = () => {
     var _a;

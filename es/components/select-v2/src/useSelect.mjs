@@ -81,7 +81,7 @@ const useSelect = (props, emit) => {
       expanded.value = false;
       states.menuVisibleOnFocus = false;
     },
-    isFull: hasModelValue
+    propsValue: hasModelValue
   });
   const allOptions = ref([]);
   const filteredOptions = ref([]);
@@ -436,7 +436,6 @@ const useSelect = (props, emit) => {
     emit("clear");
     clearAllNewOption();
     isFocused.value = false;
-    setFloat(false);
   };
   const onKeyboardNavigate = (direction, hoveringIndex = void 0) => {
     const options = filteredOptions.value;
@@ -582,6 +581,9 @@ const useSelect = (props, emit) => {
     if (!isEqual(val, oldVal) && props.validateEvent) {
       (_a = elFormItem == null ? void 0 : elFormItem.validate) == null ? void 0 : _a.call(elFormItem, "change").catch((err) => debugWarn(err));
     }
+    if (isFloat && isFloat.value) {
+      setFloat(val, isFocused.value);
+    }
   }, {
     deep: true
   });
@@ -623,9 +625,8 @@ const useSelect = (props, emit) => {
     if (setLabelSize) {
       setLabelSize(getChildPositionAndSize(wrapperRef.value, selectionRef.value));
     }
-    const notEmpty = props.multiple && props.modelValue.length > 0 || !props.multiple && props.modelValue;
-    if (isFloat && isFloat.value && setFloat && notEmpty) {
-      setFloat(true);
+    if (isFloat && isFloat.value) {
+      setFloat(props.modelValue, isFocused.value);
     }
   });
   useResizeObserver(selectRef, handleResize);

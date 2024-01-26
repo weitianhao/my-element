@@ -163,9 +163,9 @@ export declare const ElCarousel: import("element-plus/es/utils").SFCWithInstall<
     readonly interval: number;
     readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "card", unknown>;
     readonly height: string;
+    readonly arrow: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "always" | "never" | "hover", unknown>;
     readonly direction: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "horizontal" | "vertical", unknown>;
     readonly trigger: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "click" | "hover", unknown>;
-    readonly arrow: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "always" | "never" | "hover", unknown>;
     readonly loop: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly initialIndex: number;
     readonly autoplay: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -220,8 +220,8 @@ export declare const ElCarousel: import("element-plus/es/utils").SFCWithInstall<
         readonly name: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
         readonly label: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
     }>>, {
-        readonly label: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly name: string;
+        readonly label: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
     }>;
 };
 export default ElCarousel;
@@ -273,8 +273,8 @@ export declare const ElCarouselItem: import("element-plus/es/utils").SFCWithInst
     readonly name: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly label: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
 }>>, {
-    readonly label: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
     readonly name: string;
+    readonly label: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
 }>>;
 export * from './src/carousel';
 export * from './src/carousel-item';

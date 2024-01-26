@@ -238,6 +238,10 @@
 
       @include e(suffix) {
         gap: map.get($select-item-gap, $size);
+        @include e(caret) {
+          width: 14px;
+          height: 14px;
+        }
       }
 
       @include e(input) {

@@ -49,7 +49,7 @@ declare const _default: import("vue").DefineComponent<{
     fontWeight: import("vue").ComputedRef<number | "light" | "normal" | "weight">;
     fontStyle: import("vue").ComputedRef<"none" | "normal" | "italic" | "oblique">;
     fontFamily: import("vue").ComputedRef<string>;
-    textAlign: import("vue").ComputedRef<"center" | "right" | "left" | "end" | "start">;
+    textAlign: import("vue").ComputedRef<"right" | "left" | "start" | "end" | "center">;
     textBaseline: import("vue").ComputedRef<"top" | "bottom" | "middle" | "alphabetic" | "hanging" | "ideographic">;
     gapX: import("vue").ComputedRef<number>;
     gapY: import("vue").ComputedRef<number>;
@@ -88,9 +88,9 @@ declare const _default: import("vue").DefineComponent<{
         __epPropKey: true;
     };
 }>>, {
-    readonly zIndex: number;
     readonly content: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | string[]) & {}) | (() => string | string[]) | ((new (...args: any[]) => (string | string[]) & {}) | (() => string | string[]))[], unknown, unknown>;
     readonly rotate: number;
+    readonly zIndex: number;
     readonly gap: [number, number];
 }>;
 export default _default;

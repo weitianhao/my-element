@@ -63,7 +63,7 @@ declare const _default: import("vue").DefineComponent<{
 }>> & {
     onClick?: ((item: MenuItemRegistered) => any) | undefined;
 }, {
-    readonly disabled: boolean;
     readonly index: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => string & {}) | (() => string | null) | ((new (...args: any[]) => string & {}) | (() => string | null))[], unknown, unknown>;
+    readonly disabled: boolean;
 }>;
 export default _default;

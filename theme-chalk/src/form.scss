@@ -110,16 +110,16 @@ $form-item-label-top-margin-bottom: map.merge(
         margin: 0px;
         top: 50%;
         transform: translateY(-50%);
-        &::after {
-          content: ' ';
-          position: absolute;
-          top: 50%;
-          left: 0px;
-          height: 1px;
-          width: 100%;
-          z-index: -1;
-          transform: translateY(-50%);
-        }
+        // &::after {
+        //   content: ' ';
+        //   position: absolute;
+        //   top: 50%;
+        //   left: 0px;
+        //   height: 2px;
+        //   width: 100%;
+        //   z-index: -1;
+        //   transform: translateY(-50%);
+        // }
       }
       .#{$namespace}-form-item__content {
         .#{$namespace}-form-item__error {
@@ -259,18 +259,31 @@ $form-item-label-top-margin-bottom: map.merge(
       top: 0px !important;
       left: 11px !important;
       font-size: 12px;
-      transform: translateY(-50%);
-      &::after {
-        background: white;
-      }
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 50%,
+        white 50%,
+        white 100%
+      );
+      // &::after {
+      //   background: white;
+      // }
     }
   }
   @include when(float-disabled) {
     .#{$namespace}-form-item__label {
       color: rgba(74, 70, 100, 0.6);
-      &::after {
-        background: rgba(245, 245, 249, 1);
-      }
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 50%,
+        rgba(245, 245, 249, 1) 50%,
+        rgba(245, 245, 249, 1) 100%
+      );
+      // &::after {
+      //   background: rgba(245, 245, 249, 1);
+      // }
     }
   }
   @include when(error) {

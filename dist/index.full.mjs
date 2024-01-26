@@ -8005,6 +8005,22 @@ var clock_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineCo
   }
 });
 var clock_default = clock_vue_vue_type_script_setup_true_lang_default;
+var close_bold_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineComponent({
+  name: "CloseBold",
+  __name: "close-bold",
+  setup(__props) {
+    return (_ctx, _cache) => (openBlock(), createElementBlock("svg", {
+      xmlns: "http://www.w3.org/2000/svg",
+      viewBox: "0 0 1024 1024"
+    }, [
+      createElementVNode("path", {
+        fill: "currentColor",
+        d: "M195.2 195.2a64 64 0 0 1 90.496 0L512 421.504 738.304 195.2a64 64 0 0 1 90.496 90.496L602.496 512 828.8 738.304a64 64 0 0 1-90.496 90.496L512 602.496 285.696 828.8a64 64 0 0 1-90.496-90.496L421.504 512 195.2 285.696a64 64 0 0 1 0-90.496z"
+      })
+    ]));
+  }
+});
+var close_bold_default = close_bold_vue_vue_type_script_setup_true_lang_default;
 var close_vue_vue_type_script_setup_true_lang_default = /* @__PURE__ */ defineComponent({
   name: "Close",
   __name: "close",
@@ -11411,7 +11427,12 @@ const useGlobalSize = () => {
   });
 };
 
-function useFocusController(target, { afterFocus, beforeBlur, afterBlur, isFull } = {}) {
+function useFocusController(target, {
+  afterFocus,
+  beforeBlur,
+  afterBlur,
+  propsValue
+} = {}) {
   const instance = getCurrentInstance();
   const { emit, provides } = instance;
   const parentFocus = provides["PARENT_FOCUS"];
@@ -11420,12 +11441,6 @@ function useFocusController(target, { afterFocus, beforeBlur, afterBlur, isFull 
   const parentClear = provides["PARENT_CLEAR"];
   const wrapperRef = shallowRef();
   const isFocused = ref(false);
-  if (parentFocus) {
-    watch(parentFocus, (val) => {
-      if (isFloat && isFloat.value && setFloat)
-        setFloat(isFull && isFull.value ? isFull.value : val);
-    });
-  }
   if (parentClear) {
     watch(parentClear, () => {
       isFocused.value = false;
@@ -11437,8 +11452,7 @@ function useFocusController(target, { afterFocus, beforeBlur, afterBlur, isFull 
     isFocused.value = true;
     emit("focus", event);
     afterFocus == null ? void 0 : afterFocus();
-    if (!parentFocus && isFloat && isFloat.value && setFloat)
-      setFloat(true);
+    setFloat(true, true);
   };
   const handleBlur = (event) => {
     var _a;
@@ -11448,8 +11462,8 @@ function useFocusController(target, { afterFocus, beforeBlur, afterBlur, isFull 
     isFocused.value = false;
     emit("blur", event);
     afterBlur == null ? void 0 : afterBlur();
-    if (!parentFocus && isFloat && isFloat.value && setFloat)
-      setFloat(isFull && isFull.value);
+    if (!parentFocus && isFloat && isFloat.value)
+      setFloat(propsValue.value, false);
   };
   const handleClick = () => {
     var _a;
@@ -13643,8 +13657,12 @@ const _sfc_main$2j = /* @__PURE__ */ defineComponent({
         floatStyle.value = style;
       }
     });
-    provide("SET_FLOAT", (val) => {
-      addFloat.value = val;
+    provide("SET_FLOAT", (val, isFocus) => {
+      if (isFocus) {
+        addFloat.value = true;
+      } else {
+        addFloat.value = !isEmpty(val);
+      }
     });
     provide("IS_FLOAT", isFloat);
     onMounted(() => {
@@ -13982,9 +14000,6 @@ const _sfc_main$2i = /* @__PURE__ */ defineComponent({
     const textareaCalcStyle = shallowRef(props.inputStyle);
     const _ref = computed$1(() => input.value || textarea.value);
     const nativeInputValue = computed$1(() => isNil(props.modelValue) ? "" : String(props.modelValue));
-    const isFull = computed$1(() => {
-      return !!nativeInputValue.value;
-    });
     const { wrapperRef, isFocused, handleFocus, handleBlur } = useFocusController(_ref, {
       afterBlur() {
         var _a;
@@ -13992,7 +14007,7 @@ const _sfc_main$2i = /* @__PURE__ */ defineComponent({
           (_a = elFormItem == null ? void 0 : elFormItem.validate) == null ? void 0 : _a.call(elFormItem, "blur").catch((err) => debugWarn());
         }
       },
-      isFull
+      propsValue: nativeInputValue
     });
     const needStatusIcon = computed$1(() => {
       var _a;
@@ -14142,12 +14157,17 @@ const _sfc_main$2i = /* @__PURE__ */ defineComponent({
       emit("clear");
       emit("input", "");
     };
-    watch(() => props.modelValue, () => {
+    watch(() => props.modelValue, (val) => {
       var _a;
       nextTick(() => resizeTextarea());
       if (props.validateEvent) {
         (_a = elFormItem == null ? void 0 : elFormItem.validate) == null ? void 0 : _a.call(elFormItem, "change").catch((err) => debugWarn());
       }
+      if (isFloat && isFloat.value) {
+        setFloat(val, isFocused.value);
+      }
+    }, {
+      immediate: true
     });
     watch(nativeInputValue, () => setNativeInputValue());
     watch(() => props.type, async () => {
@@ -14163,9 +14183,6 @@ const _sfc_main$2i = /* @__PURE__ */ defineComponent({
         if (inputId.value === labelFor.value) {
           setLabelSize(getChildPositionAndSize(parentRef.value, _ref.value));
         }
-      }
-      if (isFull.value && isFloat && isFloat.value && setFloat) {
-        setFloat(true);
       }
     });
     const placeholder = computed$1(() => {
@@ -14278,12 +14295,12 @@ const _sfc_main$2i = /* @__PURE__ */ defineComponent({
                 ], 64)) : createCommentVNode("v-if", true),
                 unref(showClear) ? (openBlock(), createBlock(unref(ElIcon), {
                   key: 1,
-                  class: normalizeClass([unref(nsInput).e("icon"), unref(nsInput).e("clear")]),
+                  class: normalizeClass([unref(nsInput).e("icon"), unref(nsInput).e("clear"), "clear-icon"]),
                   onMousedown: withModifiers(unref(NOOP), ["prevent"]),
                   onClick: clear
                 }, {
                   default: withCtx(() => [
-                    createVNode(unref(circle_close_default))
+                    createVNode(unref(close_bold_default))
                   ]),
                   _: 1
                 }, 8, ["class", "onMousedown"])) : createCommentVNode("v-if", true),
@@ -18802,7 +18819,7 @@ const timePickerDefaultProps = buildProps({
   },
   clearIcon: {
     type: definePropType([String, Object]),
-    default: circle_close_default
+    default: close_bold_default
   },
   editable: {
     type: Boolean,
@@ -19024,7 +19041,9 @@ const _sfc_main$1_ = /* @__PURE__ */ defineComponent({
       }
     };
     const handleFocusInput = (e) => {
-      setFloat && setFloat(true);
+      if (isFloat && isFloat.value) {
+        setFloat && setFloat(true, true);
+      }
       if (props.readonly || pickerDisabled.value || pickerVisible.value || ignoreFocusEvent) {
         return;
       }
@@ -19032,7 +19051,7 @@ const _sfc_main$1_ = /* @__PURE__ */ defineComponent({
       emit("focus", e);
     };
     let currentHandleBlurDeferCallback = void 0;
-    const handleBlurInput = (e) => {
+    const handleBlurInput = (e, isOrigin) => {
       const handleBlurDefer = async () => {
         setTimeout(() => {
           var _a;
@@ -19044,7 +19063,9 @@ const _sfc_main$1_ = /* @__PURE__ */ defineComponent({
               pickerVisible.value = false;
               emit("blur", e);
               props.validateEvent && (formItem == null ? void 0 : formItem.validate("blur").catch((err) => debugWarn()));
-              setFloat && setFloat(!valueIsEmpty.value);
+              if (isFloat && isFloat.value && isOrigin) {
+                setFloat(props.modelValue, pickerVisible.value);
+              }
             }
             hasJustTabExitedInput = false;
           }
@@ -19120,7 +19141,7 @@ const _sfc_main$1_ = /* @__PURE__ */ defineComponent({
         showClose.value = false;
         pickerVisible.value = false;
         pickerOptions.value.handleClear && pickerOptions.value.handleClear();
-        setFloat(false);
+        setFloat(props.modelValue, false);
         clearTimeKey.value = Date.now();
       }
     };
@@ -19323,13 +19344,17 @@ const _sfc_main$1_ = /* @__PURE__ */ defineComponent({
     provide("EP_PICKER_BASE", {
       props
     });
+    watch(() => props.modelValue, (val) => {
+      if (isFloat && isFloat.value) {
+        setFloat(val, pickerVisible.value);
+      }
+    });
     onMounted(() => {
       if (setLabelSize && isRangeInput.value) {
         setLabelSize(getChildPositionAndSize(inputRef.value, inputOne.value));
       }
-      const notEmpty = isArray$1(props.modelValue) ? props.modelValue.every((item) => item) : props.modelValue;
-      if (isFloat && isFloat.value && notEmpty) {
-        setFloat(true);
+      if (isFloat && isFloat.value) {
+        setFloat(props.modelValue, pickerVisible.value);
       }
     });
     const endPlaceholder = computed$1(() => {
@@ -19410,14 +19435,14 @@ const _sfc_main$1_ = /* @__PURE__ */ defineComponent({
             "validate-event": false,
             onInput: onUserInput,
             onFocus: handleFocusInput,
-            onBlur: handleBlurInput,
+            onBlur: _cache[0] || (_cache[0] = (e) => handleBlurInput(e, false)),
             onKeydown: handleKeydownInput,
             onChange: handleChange,
             onMousedown: onMouseDownInput,
             onMouseenter: onMouseEnter,
             onMouseleave: onMouseLeave,
             onTouchstart: onTouchStartInput,
-            onClick: _cache[0] || (_cache[0] = withModifiers(() => {
+            onClick: _cache[1] || (_cache[1] = withModifiers(() => {
             }, ["stop"]))
           }, {
             prefix: withCtx(() => [
@@ -19484,7 +19509,7 @@ const _sfc_main$1_ = /* @__PURE__ */ defineComponent({
               onInput: handleStartInput,
               onChange: handleStartChange,
               onFocus: handleFocusInput,
-              onBlur: handleBlurInput
+              onBlur: _cache[2] || (_cache[2] = (e) => handleBlurInput(e, true))
             }, null, 42, _hoisted_1$$),
             renderSlot(_ctx.$slots, "range-separator", {}, () => [
               createElementVNode("span", {
@@ -19502,20 +19527,20 @@ const _sfc_main$1_ = /* @__PURE__ */ defineComponent({
               class: normalizeClass(unref(nsRange).b("input")),
               onMousedown: onMouseDownInput,
               onFocus: handleFocusInput,
-              onBlur: handleBlurInput,
+              onBlur: _cache[3] || (_cache[3] = (e) => handleBlurInput(e, true)),
               onInput: handleEndInput,
               onChange: handleEndChange
             }, null, 42, _hoisted_2$F),
-            _ctx.clearIcon ? (openBlock(), createBlock(unref(ElIcon), {
-              key: 1,
-              class: normalizeClass(unref(clearIconKls)),
+            createCommentVNode(' v-if="clearIcon" '),
+            createVNode(unref(ElIcon), {
+              class: normalizeClass([unref(clearIconKls), "clear-icon"]),
               onClick: onClearIconClick
             }, {
               default: withCtx(() => [
                 (openBlock(), createBlock(resolveDynamicComponent(_ctx.clearIcon)))
               ]),
               _: 1
-            }, 8, ["class"])) : createCommentVNode("v-if", true)
+            }, 8, ["class"])
           ], 38))
         ]),
         content: withCtx(() => [
@@ -19535,7 +19560,7 @@ const _sfc_main$1_ = /* @__PURE__ */ defineComponent({
             onCalendarChange,
             onPanelChange,
             onKeydown: onKeydownPopperContent,
-            onMousedown: _cache[1] || (_cache[1] = withModifiers(() => {
+            onMousedown: _cache[4] || (_cache[4] = withModifiers(() => {
             }, ["stop"]))
           })
         ]),
@@ -24058,7 +24083,7 @@ const _sfc_main$1H = /* @__PURE__ */ defineComponent({
       }
       togglePopperVisible(false);
       clearTimeKey.value = Date.now();
-      setFloat(false);
+      setFloat(false, false);
     };
     const syncPresentTextValue = () => {
       const { value } = presentText;
@@ -24152,11 +24177,8 @@ const _sfc_main$1H = /* @__PURE__ */ defineComponent({
       const inputInnerHeight = getInputInnerHeight(inputInner);
       inputInitialHeight = inputInner.offsetHeight || inputInnerHeight;
       useResizeObserver(inputInner, updateStyle);
-      const presentTagsNotEmpty = presentTags.value.every((item) => item.text);
-      const searchKeywordNotEmpty = !!presentTags.value;
-      const notEmpty = multiple.value ? presentTagsNotEmpty : searchKeywordNotEmpty;
-      if (isFloat && isFloat.value && notEmpty) {
-        setFloat(true);
+      if (isFloat && isFloat.value) {
+        setFloat(props.modelValue, popperVisible.value);
       }
     });
     expose({
@@ -24221,11 +24243,11 @@ const _sfc_main$1H = /* @__PURE__ */ defineComponent({
               suffix: withCtx(() => [
                 unref(clearBtnVisible) ? (openBlock(), createBlock(unref(ElIcon), {
                   key: "clear",
-                  class: normalizeClass([unref(nsInput).e("icon"), "icon-circle-close"]),
+                  class: normalizeClass([unref(nsInput).e("icon"), "clear-icon"]),
                   onClick: withModifiers(handleClear, ["stop"])
                 }, {
                   default: withCtx(() => [
-                    createVNode(unref(circle_close_default))
+                    createVNode(unref(close_bold_default))
                   ]),
                   _: 1
                 }, 8, ["class", "onClick"])) : (openBlock(), createBlock(unref(ElIcon), {
@@ -34203,7 +34225,7 @@ const useSelect$3 = (props, emit) => {
       expanded.value = false;
       states.menuVisibleOnFocus = false;
     },
-    isFull: hasModelValue
+    propsValue: hasModelValue
   });
   const expanded = ref(false);
   const hoverOption = ref();
@@ -34302,6 +34324,9 @@ const useSelect$3 = (props, emit) => {
     setSelected();
     if (!isEqual$1(val, oldVal) && props.validateEvent) {
       formItem == null ? void 0 : formItem.validate("change").catch((err) => debugWarn());
+    }
+    if (isFloat && isFloat.value) {
+      setFloat(val, isFocused.value);
     }
   }, {
     flush: "post",
@@ -34604,7 +34629,6 @@ const useSelect$3 = (props, emit) => {
   const handleClearClick = (event) => {
     deleteSelected(event);
     isFocused.value = false;
-    setFloat(false);
   };
   const handleClickOutside = (event) => {
     expanded.value = false;
@@ -34716,9 +34740,8 @@ const useSelect$3 = (props, emit) => {
     if (setLabelSize) {
       setLabelSize(getChildPositionAndSize(wrapperRef.value, selectionRef.value));
     }
-    const notEmpty = props.multiple && props.modelValue.length > 0 || !props.multiple && props.modelValue;
-    if (isFloat && isFloat.value && setFloat && notEmpty) {
-      setFloat(true);
+    if (isFloat && isFloat.value) {
+      setFloat(props.modelValue, isFocused.value);
     }
   });
   return {
@@ -34901,7 +34924,7 @@ const SelectProps$1 = buildProps({
   },
   clearIcon: {
     type: iconPropType,
-    default: circle_close_default
+    default: close_bold_default
   },
   fitInputWidth: Boolean,
   suffixIcon: {
@@ -35206,7 +35229,7 @@ function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
               }, 8, ["class"])) : createCommentVNode("v-if", true),
               _ctx.showClose && _ctx.clearIcon ? (openBlock(), createBlock(_component_el_icon, {
                 key: 1,
-                class: normalizeClass([_ctx.nsSelect.e("caret"), _ctx.nsSelect.e("icon")]),
+                class: normalizeClass([_ctx.nsSelect.e("caret"), _ctx.nsSelect.e("icon"), "clear-icon"]),
                 onClick: _ctx.handleClearClick
               }, {
                 default: withCtx(() => [
@@ -38937,7 +38960,7 @@ const SelectProps = buildProps({
   clearable: Boolean,
   clearIcon: {
     type: iconPropType,
-    default: circle_close_default
+    default: close_bold_default
   },
   effect: {
     type: definePropType(String),
@@ -39453,7 +39476,7 @@ const useSelect$1 = (props, emit) => {
       expanded.value = false;
       states.menuVisibleOnFocus = false;
     },
-    isFull: hasModelValue
+    propsValue: hasModelValue
   });
   const allOptions = ref([]);
   const filteredOptions = ref([]);
@@ -39808,7 +39831,6 @@ const useSelect$1 = (props, emit) => {
     emit("clear");
     clearAllNewOption();
     isFocused.value = false;
-    setFloat(false);
   };
   const onKeyboardNavigate = (direction, hoveringIndex = void 0) => {
     const options = filteredOptions.value;
@@ -39954,6 +39976,9 @@ const useSelect$1 = (props, emit) => {
     if (!isEqual$1(val, oldVal) && props.validateEvent) {
       (_a = elFormItem == null ? void 0 : elFormItem.validate) == null ? void 0 : _a.call(elFormItem, "change").catch((err) => debugWarn());
     }
+    if (isFloat && isFloat.value) {
+      setFloat(val, isFocused.value);
+    }
   }, {
     deep: true
   });
@@ -39994,9 +40019,8 @@ const useSelect$1 = (props, emit) => {
     if (setLabelSize) {
       setLabelSize(getChildPositionAndSize(wrapperRef.value, selectionRef.value));
     }
-    const notEmpty = props.multiple && props.modelValue.length > 0 || !props.multiple && props.modelValue;
-    if (isFloat && isFloat.value && setFloat && notEmpty) {
-      setFloat(true);
+    if (isFloat && isFloat.value) {
+      setFloat(props.modelValue, isFocused.value);
     }
   });
   useResizeObserver(selectRef, handleResize);
@@ -40366,7 +40390,7 @@ function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
             ]) : createCommentVNode("v-if", true),
             _ctx.showClearBtn && _ctx.clearIcon ? (openBlock(), createBlock(_component_el_icon, {
               key: 1,
-              class: normalizeClass([_ctx.nsSelect.e("caret"), _ctx.nsInput.e("icon")]),
+              class: normalizeClass([_ctx.nsSelect.e("caret"), _ctx.nsInput.e("icon"), "clear-icon"]),
               onClick: withModifiers(_ctx.handleClear, ["prevent", "stop"])
             }, {
               default: withCtx(() => [

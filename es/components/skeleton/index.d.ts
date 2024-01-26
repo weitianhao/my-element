@@ -44,7 +44,7 @@ export declare const ElSkeleton: import("element-plus/es/utils").SFCWithInstall<
     };
     uiLoading: import("vue").Ref<boolean>;
     ElSkeletonItem: import("vue").DefineComponent<{
-        readonly variant: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "text" | "button" | "circle" | "caption" | "image" | "rect" | "h1" | "h3" | "p", unknown, "text", boolean>;
+        readonly variant: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "image" | "button" | "caption" | "h1" | "h3" | "p" | "circle" | "rect" | "text", unknown, "text", boolean>;
     }, {
         ns: {
             namespace: import("vue").ComputedRef<string>;
@@ -66,9 +66,9 @@ export declare const ElSkeleton: import("element-plus/es/utils").SFCWithInstall<
         };
         PictureFilled: any;
     }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
-        readonly variant: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "text" | "button" | "circle" | "caption" | "image" | "rect" | "h1" | "h3" | "p", unknown, "text", boolean>;
+        readonly variant: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "image" | "button" | "caption" | "h1" | "h3" | "p" | "circle" | "rect" | "text", unknown, "text", boolean>;
     }>>, {
-        readonly variant: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "text" | "button" | "circle" | "caption" | "image" | "rect" | "h1" | "h3" | "p", unknown>;
+        readonly variant: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "image" | "button" | "caption" | "h1" | "h3" | "p" | "circle" | "rect" | "text", unknown>;
     }>;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly animated: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
@@ -88,7 +88,7 @@ export declare const ElSkeleton: import("element-plus/es/utils").SFCWithInstall<
     readonly count: number;
 }>> & {
     SkeletonItem: import("vue").DefineComponent<{
-        readonly variant: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "text" | "button" | "circle" | "caption" | "image" | "rect" | "h1" | "h3" | "p", unknown, "text", boolean>;
+        readonly variant: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "image" | "button" | "caption" | "h1" | "h3" | "p" | "circle" | "rect" | "text", unknown, "text", boolean>;
     }, {
         ns: {
             namespace: import("vue").ComputedRef<string>;
@@ -110,13 +110,13 @@ export declare const ElSkeleton: import("element-plus/es/utils").SFCWithInstall<
         };
         PictureFilled: any;
     }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
-        readonly variant: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "text" | "button" | "circle" | "caption" | "image" | "rect" | "h1" | "h3" | "p", unknown, "text", boolean>;
+        readonly variant: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "image" | "button" | "caption" | "h1" | "h3" | "p" | "circle" | "rect" | "text", unknown, "text", boolean>;
     }>>, {
-        readonly variant: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "text" | "button" | "circle" | "caption" | "image" | "rect" | "h1" | "h3" | "p", unknown>;
+        readonly variant: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "image" | "button" | "caption" | "h1" | "h3" | "p" | "circle" | "rect" | "text", unknown>;
     }>;
 };
 export declare const ElSkeletonItem: import("element-plus/es/utils").SFCWithInstall<import("vue").DefineComponent<{
-    readonly variant: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "text" | "button" | "circle" | "caption" | "image" | "rect" | "h1" | "h3" | "p", unknown, "text", boolean>;
+    readonly variant: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "image" | "button" | "caption" | "h1" | "h3" | "p" | "circle" | "rect" | "text", unknown, "text", boolean>;
 }, {
     ns: {
         namespace: import("vue").ComputedRef<string>;
@@ -138,9 +138,9 @@ export declare const ElSkeletonItem: import("element-plus/es/utils").SFCWithInst
     };
     PictureFilled: any;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
-    readonly variant: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "text" | "button" | "circle" | "caption" | "image" | "rect" | "h1" | "h3" | "p", unknown, "text", boolean>;
+    readonly variant: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "image" | "button" | "caption" | "h1" | "h3" | "p" | "circle" | "rect" | "text", unknown, "text", boolean>;
 }>>, {
-    readonly variant: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "text" | "button" | "circle" | "caption" | "image" | "rect" | "h1" | "h3" | "p", unknown>;
+    readonly variant: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "image" | "button" | "caption" | "h1" | "h3" | "p" | "circle" | "rect" | "text", unknown>;
 }>>;
 export default ElSkeleton;
 export * from './src/skeleton';

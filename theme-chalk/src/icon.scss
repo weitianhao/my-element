@@ -43,3 +43,11 @@
     width: 1em;
   }
 }
+.clear-icon {
+  height: auto !important;
+  cursor: pointer;
+  svg {
+    height: 14px;
+    width: 14px;
+  }
+}

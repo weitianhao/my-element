@@ -30,8 +30,8 @@ declare const _default: import("vue").DefineComponent<{
     readonly bodyClass: StringConstructor;
     readonly shadow: import("../../../utils").EpPropFinalized<StringConstructor, "always" | "never" | "hover", unknown, "always", boolean>;
 }>>, {
-    readonly header: string;
     readonly footer: string;
+    readonly header: string;
     readonly bodyStyle: import("vue").StyleValue;
     readonly shadow: import("../../../utils").EpPropMergeType<StringConstructor, "always" | "never" | "hover", unknown>;
 }>;

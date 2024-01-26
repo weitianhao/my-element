@@ -15,7 +15,7 @@ export declare const ElTabs: import("element-plus/es/utils").SFCWithInstall<impo
         __epPropKey: true;
     };
     readonly editable: BooleanConstructor;
-    readonly tabPosition: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "top" | "bottom" | "right" | "left", unknown, "top", boolean>;
+    readonly tabPosition: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "top" | "right" | "bottom" | "left", unknown, "top", boolean>;
     readonly beforeLeave: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => (newName: import("./src/tabs").TabPaneName, oldName: import("./src/tabs").TabPaneName) => import("element-plus/es/utils").Awaitable<boolean | void>) | (() => (newName: import("./src/tabs").TabPaneName, oldName: import("./src/tabs").TabPaneName) => import("element-plus/es/utils").Awaitable<boolean | void>) | {
         (): (newName: import("./src/tabs").TabPaneName, oldName: import("./src/tabs").TabPaneName) => import("element-plus/es/utils").Awaitable<boolean | void>;
         new (): any;
@@ -34,9 +34,9 @@ export declare const ElTabs: import("element-plus/es/utils").SFCWithInstall<impo
             [name: string]: import("vue").Slot | undefined;
         }>;
         props: {
-            readonly closable: boolean;
-            readonly label: string;
             readonly disabled: boolean;
+            readonly label: string;
+            readonly closable: boolean;
             readonly lazy: boolean;
             readonly name?: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown> | undefined;
         };
@@ -66,7 +66,7 @@ export declare const ElTabs: import("element-plus/es/utils").SFCWithInstall<impo
         __epPropKey: true;
     };
     readonly editable: BooleanConstructor;
-    readonly tabPosition: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "top" | "bottom" | "right" | "left", unknown, "top", boolean>;
+    readonly tabPosition: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "top" | "right" | "bottom" | "left", unknown, "top", boolean>;
     readonly beforeLeave: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => (newName: import("./src/tabs").TabPaneName, oldName: import("./src/tabs").TabPaneName) => import("element-plus/es/utils").Awaitable<boolean | void>) | (() => (newName: import("./src/tabs").TabPaneName, oldName: import("./src/tabs").TabPaneName) => import("element-plus/es/utils").Awaitable<boolean | void>) | {
         (): (newName: import("./src/tabs").TabPaneName, oldName: import("./src/tabs").TabPaneName) => import("element-plus/es/utils").Awaitable<boolean | void>;
         new (): any;
@@ -85,9 +85,9 @@ export declare const ElTabs: import("element-plus/es/utils").SFCWithInstall<impo
             [name: string]: import("vue").Slot | undefined;
         }>;
         props: {
-            readonly closable: boolean;
-            readonly label: string;
             readonly disabled: boolean;
+            readonly label: string;
+            readonly closable: boolean;
             readonly lazy: boolean;
             readonly name?: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown> | undefined;
         };
@@ -106,7 +106,7 @@ export declare const ElTabs: import("element-plus/es/utils").SFCWithInstall<impo
     readonly stretch: boolean;
     readonly editable: boolean;
     readonly beforeLeave: (newName: import("./src/tabs").TabPaneName, oldName: import("./src/tabs").TabPaneName) => import("element-plus/es/utils").Awaitable<boolean | void>;
-    readonly tabPosition: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "top" | "bottom" | "right" | "left", unknown>;
+    readonly tabPosition: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "top" | "right" | "bottom" | "left", unknown>;
     readonly addable: boolean;
 }>> & {
     TabPane: import("vue").DefineComponent<{
@@ -172,10 +172,10 @@ export declare const ElTabs: import("element-plus/es/utils").SFCWithInstall<impo
             }>;
             props: {
                 [x: string & `on${string}`]: ((...args: any[]) => any) | ((...args: unknown[]) => any) | undefined;
-                readonly closable: boolean;
-                readonly label: string;
-                readonly disabled: boolean;
                 readonly name: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown> | undefined;
+                readonly disabled: boolean;
+                readonly label: string;
+                readonly closable: boolean;
                 readonly lazy: boolean;
             };
             paneName: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown> | undefined;
@@ -195,9 +195,9 @@ export declare const ElTabs: import("element-plus/es/utils").SFCWithInstall<impo
         readonly disabled: BooleanConstructor;
         readonly lazy: BooleanConstructor;
     }>>, {
-        readonly closable: boolean;
-        readonly label: string;
         readonly disabled: boolean;
+        readonly label: string;
+        readonly closable: boolean;
         readonly lazy: boolean;
     }>;
 };
@@ -264,10 +264,10 @@ export declare const ElTabPane: import("element-plus/es/utils").SFCWithInstall<i
         }>;
         props: {
             [x: string & `on${string}`]: ((...args: any[]) => any) | ((...args: unknown[]) => any) | undefined;
-            readonly closable: boolean;
-            readonly label: string;
-            readonly disabled: boolean;
             readonly name: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown> | undefined;
+            readonly disabled: boolean;
+            readonly label: string;
+            readonly closable: boolean;
             readonly lazy: boolean;
         };
         paneName: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown> | undefined;
@@ -287,9 +287,9 @@ export declare const ElTabPane: import("element-plus/es/utils").SFCWithInstall<i
     readonly disabled: BooleanConstructor;
     readonly lazy: BooleanConstructor;
 }>>, {
-    readonly closable: boolean;
-    readonly label: string;
     readonly disabled: boolean;
+    readonly label: string;
+    readonly closable: boolean;
     readonly lazy: boolean;
 }>>;
 export default ElTabs;

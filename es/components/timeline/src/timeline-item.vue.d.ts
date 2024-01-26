@@ -131,10 +131,10 @@ declare const _default: import("vue").DefineComponent<{
     readonly hollow: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
 }>>, {
     readonly type: import("../../../utils").EpPropMergeType<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown>;
-    readonly center: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly size: import("../../../utils").EpPropMergeType<StringConstructor, "large" | "normal", unknown>;
-    readonly color: string;
     readonly placement: import("../../../utils").EpPropMergeType<StringConstructor, "top" | "bottom", unknown>;
+    readonly color: string;
+    readonly size: import("../../../utils").EpPropMergeType<StringConstructor, "large" | "normal", unknown>;
+    readonly center: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly timestamp: string;
     readonly hideTimestamp: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly hollow: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

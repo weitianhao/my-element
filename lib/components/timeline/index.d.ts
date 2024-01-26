@@ -134,10 +134,10 @@ export declare const ElTimeline: import("element-plus/es/utils").SFCWithInstall<
         readonly hollow: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }>>, {
         readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown>;
-        readonly center: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-        readonly size: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "large" | "normal", unknown>;
-        readonly color: string;
         readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "top" | "bottom", unknown>;
+        readonly color: string;
+        readonly size: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "large" | "normal", unknown>;
+        readonly center: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly timestamp: string;
         readonly hideTimestamp: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly hollow: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -277,10 +277,10 @@ export declare const ElTimelineItem: import("element-plus/es/utils").SFCWithInst
     readonly hollow: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
 }>>, {
     readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown>;
-    readonly center: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly size: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "large" | "normal", unknown>;
-    readonly color: string;
     readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "top" | "bottom", unknown>;
+    readonly color: string;
+    readonly size: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "large" | "normal", unknown>;
+    readonly center: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly timestamp: string;
     readonly hideTimestamp: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly hollow: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

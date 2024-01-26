@@ -148,9 +148,9 @@ export declare const ElBacktop: import("element-plus/es/utils").SFCWithInstall<i
 }>> & {
     onClick?: ((evt: MouseEvent) => any) | undefined;
 }, {
-    readonly target: string;
-    readonly bottom: number;
     readonly right: number;
+    readonly bottom: number;
+    readonly target: string;
     readonly visibilityHeight: number;
 }>> & Record<string, any>;
 export default ElBacktop;

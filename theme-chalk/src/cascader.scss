@@ -80,12 +80,12 @@
       }
     }
 
-    .icon-circle-close:hover {
-      color: var(
-        #{getCssVarName('input', 'clear-hover-color')},
-        map.get($input, 'clear-hover-color')
-      );
-    }
+    // .icon-circle-close:hover {
+    //   color: var(
+    //     #{getCssVarName('input', 'clear-hover-color')},
+    //     map.get($input, 'clear-hover-color')
+    //   );
+    // }
 
     @include when(focus) {
       .#{$namespace}-input__wrapper {

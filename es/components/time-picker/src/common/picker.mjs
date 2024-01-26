@@ -1,4 +1,4 @@
-import { defineComponent, inject, ref, provide, useAttrs, computed, watch, nextTick, unref, onMounted, openBlock, createBlock, mergeProps, withCtx, normalizeClass, normalizeStyle, withModifiers, resolveDynamicComponent, createCommentVNode, createElementBlock, createElementVNode, renderSlot, toDisplayString } from 'vue';
+import { defineComponent, inject, ref, provide, useAttrs, computed, watch, nextTick, unref, onMounted, openBlock, createBlock, mergeProps, withCtx, normalizeClass, normalizeStyle, withModifiers, resolveDynamicComponent, createCommentVNode, createElementBlock, createElementVNode, renderSlot, toDisplayString, createVNode } from 'vue';
 import { isEqual } from 'lodash-unified';
 import { onClickOutside } from '@vueuse/core';
 import '../../../../hooks/index.mjs';
@@ -178,7 +178,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       }
     };
     const handleFocusInput = (e) => {
-      setFloat && setFloat(true);
+      if (isFloat && isFloat.value) {
+        setFloat && setFloat(true, true);
+      }
       if (props.readonly || pickerDisabled.value || pickerVisible.value || ignoreFocusEvent) {
         return;
       }
@@ -186,7 +188,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       emit("focus", e);
     };
     let currentHandleBlurDeferCallback = void 0;
-    const handleBlurInput = (e) => {
+    const handleBlurInput = (e, isOrigin) => {
       const handleBlurDefer = async () => {
         setTimeout(() => {
           var _a;
@@ -198,7 +200,9 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               pickerVisible.value = false;
               emit("blur", e);
               props.validateEvent && (formItem == null ? void 0 : formItem.validate("blur").catch((err) => debugWarn(err)));
-              setFloat && setFloat(!valueIsEmpty.value);
+              if (isFloat && isFloat.value && isOrigin) {
+                setFloat(props.modelValue, pickerVisible.value);
+              }
             }
             hasJustTabExitedInput = false;
           }
@@ -274,7 +278,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         showClose.value = false;
         pickerVisible.value = false;
         pickerOptions.value.handleClear && pickerOptions.value.handleClear();
-        setFloat(false);
+        setFloat(props.modelValue, false);
         clearTimeKey.value = Date.now();
       }
     };
@@ -477,13 +481,17 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     provide("EP_PICKER_BASE", {
       props
     });
+    watch(() => props.modelValue, (val) => {
+      if (isFloat && isFloat.value) {
+        setFloat(val, pickerVisible.value);
+      }
+    });
     onMounted(() => {
       if (setLabelSize && isRangeInput.value) {
         setLabelSize(getChildPositionAndSize(inputRef.value, inputOne.value));
       }
-      const notEmpty = isArray(props.modelValue) ? props.modelValue.every((item) => item) : props.modelValue;
-      if (isFloat && isFloat.value && notEmpty) {
-        setFloat(true);
+      if (isFloat && isFloat.value) {
+        setFloat(props.modelValue, pickerVisible.value);
       }
     });
     const endPlaceholder = computed(() => {
@@ -564,14 +572,14 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             "validate-event": false,
             onInput: onUserInput,
             onFocus: handleFocusInput,
-            onBlur: handleBlurInput,
+            onBlur: _cache[0] || (_cache[0] = (e) => handleBlurInput(e, false)),
             onKeydown: handleKeydownInput,
             onChange: handleChange,
             onMousedown: onMouseDownInput,
             onMouseenter: onMouseEnter,
             onMouseleave: onMouseLeave,
             onTouchstart: onTouchStartInput,
-            onClick: _cache[0] || (_cache[0] = withModifiers(() => {
+            onClick: _cache[1] || (_cache[1] = withModifiers(() => {
             }, ["stop"]))
           }, {
             prefix: withCtx(() => [
@@ -638,7 +646,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               onInput: handleStartInput,
               onChange: handleStartChange,
               onFocus: handleFocusInput,
-              onBlur: handleBlurInput
+              onBlur: _cache[2] || (_cache[2] = (e) => handleBlurInput(e, true))
             }, null, 42, _hoisted_1),
             renderSlot(_ctx.$slots, "range-separator", {}, () => [
               createElementVNode("span", {
@@ -656,20 +664,20 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               class: normalizeClass(unref(nsRange).b("input")),
               onMousedown: onMouseDownInput,
               onFocus: handleFocusInput,
-              onBlur: handleBlurInput,
+              onBlur: _cache[3] || (_cache[3] = (e) => handleBlurInput(e, true)),
               onInput: handleEndInput,
               onChange: handleEndChange
             }, null, 42, _hoisted_2),
-            _ctx.clearIcon ? (openBlock(), createBlock(unref(ElIcon), {
-              key: 1,
-              class: normalizeClass(unref(clearIconKls)),
+            createCommentVNode(' v-if="clearIcon" '),
+            createVNode(unref(ElIcon), {
+              class: normalizeClass([unref(clearIconKls), "clear-icon"]),
               onClick: onClearIconClick
             }, {
               default: withCtx(() => [
                 (openBlock(), createBlock(resolveDynamicComponent(_ctx.clearIcon)))
               ]),
               _: 1
-            }, 8, ["class"])) : createCommentVNode("v-if", true)
+            }, 8, ["class"])
           ], 38))
         ]),
         content: withCtx(() => [
@@ -689,7 +697,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             onCalendarChange,
             onPanelChange,
             onKeydown: onKeydownPopperContent,
-            onMousedown: _cache[1] || (_cache[1] = withModifiers(() => {
+            onMousedown: _cache[4] || (_cache[4] = withModifiers(() => {
             }, ["stop"]))
           })
         ]),

@@ -186,17 +186,17 @@ declare const _default: import("vue").DefineComponent<{
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
 }, {
     type: string;
-    modelValue: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("./common/props").ModelValueType & {}) | (() => import("./common/props").ModelValueType) | ((new (...args: any[]) => import("./common/props").ModelValueType & {}) | (() => import("./common/props").ModelValueType))[], unknown, unknown>;
-    popperClass: string;
-    label: string;
-    popperOptions: Partial<import("@popperjs/core").Options>;
-    disabled: boolean;
-    clearable: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     name: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("./common/props").SingleOrRange<string> & {}) | (() => import("./common/props").SingleOrRange<string>) | ((new (...args: any[]) => import("./common/props").SingleOrRange<string> & {}) | (() => import("./common/props").SingleOrRange<string>))[], unknown, unknown>;
+    tabindex: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | number) & {}) | (() => string | number) | ((new (...args: any[]) => (string | number) & {}) | (() => string | number))[], unknown, unknown>;
     placeholder: string;
+    modelValue: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("./common/props").ModelValueType & {}) | (() => import("./common/props").ModelValueType) | ((new (...args: any[]) => import("./common/props").ModelValueType & {}) | (() => import("./common/props").ModelValueType))[], unknown, unknown>;
+    disabled: boolean;
+    label: string;
+    popperClass: string;
+    popperOptions: Partial<import("@popperjs/core").Options>;
+    clearable: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly: boolean;
     prefixIcon: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>;
-    tabindex: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | number) & {}) | (() => string | number) | ((new (...args: any[]) => (string | number) & {}) | (() => string | number))[], unknown, unknown>;
     validateEvent: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     editable: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     rangeSeparator: string;

@@ -4,7 +4,7 @@ import type { App } from 'vue';
 export declare const ElLoading: {
     install(app: App): void;
     directive: import("vue").Directive<import("./src/directive").ElementLoading, import("./src/directive").LoadingBinding>;
-    service: (options?: Partial<Omit<import("./src/types").LoadingOptionsResolved, "target" | "parent"> & {
+    service: (options?: Partial<Omit<import("./src/types").LoadingOptionsResolved, "parent" | "target"> & {
         target: string | HTMLElement;
         body: boolean;
     }>) => {

@@ -56,8 +56,8 @@ declare const _default: import("vue").DefineComponent<{
         };
         readonly validateEvent: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     }>> & {
-        onChange?: ((cur: number | undefined, prev: number | undefined) => any) | undefined;
         "onUpdate:modelValue"?: ((val: number | undefined) => any) | undefined;
+        onChange?: ((cur: number | undefined, prev: number | undefined) => any) | undefined;
         onInput?: ((val: number | null | undefined) => any) | undefined;
         onBlur?: ((e: FocusEvent) => any) | undefined;
         onFocus?: ((e: FocusEvent) => any) | undefined;
@@ -86,11 +86,12 @@ declare const _default: import("vue").DefineComponent<{
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
-            readonly id: string;
             readonly type: string;
+            readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
             readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
-            readonly label: string;
             readonly disabled: boolean;
+            readonly label: string;
+            readonly id: string;
             readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly autosize: import("element-plus/es/components/input").InputAutoSize;
             readonly autocomplete: string;
@@ -98,7 +99,6 @@ declare const _default: import("vue").DefineComponent<{
             readonly showPassword: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly showWordLimit: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly containerRole: string;
-            readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
             readonly validateEvent: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly inputStyle: import("vue").StyleValue;
             readonly autofocus: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -180,9 +180,9 @@ declare const _default: import("vue").DefineComponent<{
             readonly inputStyle: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue) | ((new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("element-plus/es/utils").Mutable<{}>, boolean>;
             readonly autofocus: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         }>> & {
+            "onUpdate:modelValue"?: ((value: string) => any) | undefined;
             onChange?: ((value: string) => any) | undefined;
             onClear?: (() => any) | undefined;
-            "onUpdate:modelValue"?: ((value: string) => any) | undefined;
             onInput?: ((value: string) => any) | undefined;
             onBlur?: ((evt: FocusEvent) => any) | undefined;
             onFocus?: ((evt: FocusEvent) => any) | undefined;
@@ -192,7 +192,7 @@ declare const _default: import("vue").DefineComponent<{
             onKeydown?: ((evt: Event | KeyboardEvent) => any) | undefined;
             onMouseenter?: ((evt: MouseEvent) => any) | undefined;
             onMouseleave?: ((evt: MouseEvent) => any) | undefined;
-        } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "id" | "type" | "modelValue" | "label" | "disabled" | "clearable" | "autosize" | "autocomplete" | "readonly" | "showPassword" | "showWordLimit" | "containerRole" | "tabindex" | "validateEvent" | "inputStyle" | "autofocus">;
+        } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "type" | "tabindex" | "modelValue" | "disabled" | "label" | "id" | "clearable" | "autosize" | "autocomplete" | "readonly" | "showPassword" | "showWordLimit" | "containerRole" | "validateEvent" | "inputStyle" | "autofocus">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -284,9 +284,9 @@ declare const _default: import("vue").DefineComponent<{
             readonly inputStyle: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue) | ((new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("element-plus/es/utils").Mutable<{}>, boolean>;
             readonly autofocus: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         }>> & {
+            "onUpdate:modelValue"?: ((value: string) => any) | undefined;
             onChange?: ((value: string) => any) | undefined;
             onClear?: (() => any) | undefined;
-            "onUpdate:modelValue"?: ((value: string) => any) | undefined;
             onInput?: ((value: string) => any) | undefined;
             onBlur?: ((evt: FocusEvent) => any) | undefined;
             onFocus?: ((evt: FocusEvent) => any) | undefined;
@@ -302,97 +302,7 @@ declare const _default: import("vue").DefineComponent<{
             labelFor: any;
             setFloat: any;
             parentRef: import("vue").Ref<any>;
-            props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
-                readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
-                readonly size: {
-                    readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "small" | "large", never>>;
-                    readonly required: false;
-                    readonly validator: ((val: unknown) => boolean) | undefined;
-                    __epPropKey: true;
-                };
-                readonly disabled: BooleanConstructor;
-                readonly modelValue: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown, "", boolean>;
-                readonly maxlength: {
-                    readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>>;
-                    readonly required: false;
-                    readonly validator: ((val: unknown) => boolean) | undefined;
-                    __epPropKey: true;
-                };
-                readonly minlength: {
-                    readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>>;
-                    readonly required: false;
-                    readonly validator: ((val: unknown) => boolean) | undefined;
-                    __epPropKey: true;
-                };
-                readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "text", boolean>;
-                readonly resize: {
-                    readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "none" | "both" | "horizontal" | "vertical", unknown>>;
-                    readonly required: false;
-                    readonly validator: ((val: unknown) => boolean) | undefined;
-                    __epPropKey: true;
-                };
-                readonly autosize: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("element-plus/es/components/input").InputAutoSize & {}) | (() => import("element-plus/es/components/input").InputAutoSize) | ((new (...args: any[]) => import("element-plus/es/components/input").InputAutoSize & {}) | (() => import("element-plus/es/components/input").InputAutoSize))[], unknown, unknown, false, boolean>;
-                readonly autocomplete: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "off", boolean>;
-                readonly formatter: {
-                    readonly type: import("vue").PropType<Function>;
-                    readonly required: false;
-                    readonly validator: ((val: unknown) => boolean) | undefined;
-                    __epPropKey: true;
-                };
-                readonly parser: {
-                    readonly type: import("vue").PropType<Function>;
-                    readonly required: false;
-                    readonly validator: ((val: unknown) => boolean) | undefined;
-                    __epPropKey: true;
-                };
-                readonly placeholder: {
-                    readonly type: import("vue").PropType<string>;
-                    readonly required: false;
-                    readonly validator: ((val: unknown) => boolean) | undefined;
-                    __epPropKey: true;
-                };
-                readonly form: {
-                    readonly type: import("vue").PropType<string>;
-                    readonly required: false;
-                    readonly validator: ((val: unknown) => boolean) | undefined;
-                    __epPropKey: true;
-                };
-                readonly readonly: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-                readonly clearable: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-                readonly showPassword: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-                readonly showWordLimit: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-                readonly suffixIcon: {
-                    readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>>;
-                    readonly required: false;
-                    readonly validator: ((val: unknown) => boolean) | undefined;
-                    __epPropKey: true;
-                };
-                readonly prefixIcon: {
-                    readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>>;
-                    readonly required: false;
-                    readonly validator: ((val: unknown) => boolean) | undefined;
-                    __epPropKey: true;
-                };
-                readonly containerRole: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
-                readonly label: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
-                readonly tabindex: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, 0, boolean>;
-                readonly validateEvent: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-                readonly inputStyle: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue) | ((new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("element-plus/es/utils").Mutable<{}>, boolean>;
-                readonly autofocus: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-            }>> & {
-                onChange?: ((value: string) => any) | undefined;
-                onClear?: (() => any) | undefined;
-                "onUpdate:modelValue"?: ((value: string) => any) | undefined;
-                onInput?: ((value: string) => any) | undefined;
-                onBlur?: ((evt: FocusEvent) => any) | undefined;
-                onFocus?: ((evt: FocusEvent) => any) | undefined;
-                onCompositionend?: ((evt: CompositionEvent) => any) | undefined;
-                onCompositionstart?: ((evt: CompositionEvent) => any) | undefined;
-                onCompositionupdate?: ((evt: CompositionEvent) => any) | undefined;
-                onKeydown?: ((evt: Event | KeyboardEvent) => any) | undefined;
-                onMouseenter?: ((evt: MouseEvent) => any) | undefined;
-                onMouseleave?: ((evt: MouseEvent) => any) | undefined;
-            }>>;
+            props: any;
             emit: ((event: "update:modelValue", value: string) => void) & ((event: "change", value: string) => void) & ((event: "input", value: string) => void) & ((event: "blur", evt: FocusEvent) => void) & ((event: "compositionend", evt: CompositionEvent) => void) & ((event: "compositionstart", evt: CompositionEvent) => void) & ((event: "compositionupdate", evt: CompositionEvent) => void) & ((event: "focus", evt: FocusEvent) => void) & ((event: "keydown", evt: Event | KeyboardEvent) => void) & ((event: "mouseenter", evt: MouseEvent) => void) & ((event: "mouseleave", evt: MouseEvent) => void) & ((event: "clear") => void);
             rawAttrs: {
                 [x: string]: unknown;
@@ -451,10 +361,9 @@ declare const _default: import("vue").DefineComponent<{
             isComposing: import("vue").Ref<boolean>;
             passwordVisible: import("vue").Ref<boolean>;
             countStyle: import("vue").Ref<import("vue").StyleValue | undefined>;
-            textareaCalcStyle: import("vue").ShallowRef<import("vue").StyleValue>;
+            textareaCalcStyle: any;
             _ref: import("vue").ComputedRef<HTMLInputElement | HTMLTextAreaElement | undefined>;
             nativeInputValue: import("vue").ComputedRef<string>;
-            isFull: import("vue").ComputedRef<boolean>;
             wrapperRef: import("vue").ShallowRef<HTMLElement | undefined>;
             isFocused: import("vue").Ref<boolean>;
             handleFocus: (event: FocusEvent) => void;
@@ -465,12 +374,12 @@ declare const _default: import("vue").DefineComponent<{
             passwordIcon: import("vue").ComputedRef<any>;
             containerStyle: import("vue").ComputedRef<import("vue").StyleValue>;
             textareaStyle: import("vue").ComputedRef<import("vue").StyleValue>;
-            showClear: import("vue").ComputedRef<boolean>;
-            showPwdVisible: import("vue").ComputedRef<boolean>;
-            isWordLimitVisible: import("vue").ComputedRef<boolean>;
+            showClear: import("vue").ComputedRef<any>;
+            showPwdVisible: import("vue").ComputedRef<any>;
+            isWordLimitVisible: import("vue").ComputedRef<any>;
             textLength: import("vue").ComputedRef<number>;
             inputExceed: import("vue").ComputedRef<boolean>;
-            suffixVisible: import("vue").ComputedRef<boolean>;
+            suffixVisible: import("vue").ComputedRef<any>;
             recordCursor: () => void;
             setCursor: () => void;
             resizeTextarea: () => void;
@@ -490,7 +399,7 @@ declare const _default: import("vue").DefineComponent<{
             handleKeydown: (evt: KeyboardEvent) => void;
             select: () => void;
             clear: () => void;
-            placeholder: import("vue").ComputedRef<string | undefined>;
+            placeholder: import("vue").ComputedRef<any>;
             ElIcon: import("element-plus/es/utils").SFCWithInstall<import("vue").DefineComponent<{
                 readonly size: {
                     readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number) & {}) | (() => string | number) | ((new (...args: any[]) => (string | number) & {}) | (() => string | number))[], unknown, unknown>>;
@@ -554,7 +463,7 @@ declare const _default: import("vue").DefineComponent<{
                     __epPropKey: true;
                 };
             }>>, {}>> & Record<string, any>;
-            CircleClose: any;
+            CloseBold: any;
             NOOP: () => void;
         }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
             "update:modelValue": (value: string) => boolean;
@@ -570,11 +479,12 @@ declare const _default: import("vue").DefineComponent<{
             compositionupdate: (evt: CompositionEvent) => boolean;
             compositionend: (evt: CompositionEvent) => boolean;
         }, string, {
-            readonly id: string;
             readonly type: string;
+            readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
             readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
-            readonly label: string;
             readonly disabled: boolean;
+            readonly label: string;
+            readonly id: string;
             readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly autosize: import("element-plus/es/components/input").InputAutoSize;
             readonly autocomplete: string;
@@ -582,7 +492,6 @@ declare const _default: import("vue").DefineComponent<{
             readonly showPassword: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly showWordLimit: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly containerRole: string;
-            readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
             readonly validateEvent: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly inputStyle: import("vue").StyleValue;
             readonly autofocus: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -684,9 +593,9 @@ declare const _default: import("vue").DefineComponent<{
         readonly inputStyle: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue) | ((new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("element-plus/es/utils").Mutable<{}>, boolean>;
         readonly autofocus: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }>> & {
+        "onUpdate:modelValue"?: ((value: string) => any) | undefined;
         onChange?: ((value: string) => any) | undefined;
         onClear?: (() => any) | undefined;
-        "onUpdate:modelValue"?: ((value: string) => any) | undefined;
         onInput?: ((value: string) => any) | undefined;
         onBlur?: ((evt: FocusEvent) => any) | undefined;
         onFocus?: ((evt: FocusEvent) => any) | undefined;
@@ -702,97 +611,7 @@ declare const _default: import("vue").DefineComponent<{
         labelFor: any;
         setFloat: any;
         parentRef: import("vue").Ref<any>;
-        props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
-            readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
-            readonly size: {
-                readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "small" | "large", never>>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly disabled: BooleanConstructor;
-            readonly modelValue: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown, "", boolean>;
-            readonly maxlength: {
-                readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly minlength: {
-                readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "text", boolean>;
-            readonly resize: {
-                readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "none" | "both" | "horizontal" | "vertical", unknown>>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly autosize: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("element-plus/es/components/input").InputAutoSize & {}) | (() => import("element-plus/es/components/input").InputAutoSize) | ((new (...args: any[]) => import("element-plus/es/components/input").InputAutoSize & {}) | (() => import("element-plus/es/components/input").InputAutoSize))[], unknown, unknown, false, boolean>;
-            readonly autocomplete: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "off", boolean>;
-            readonly formatter: {
-                readonly type: import("vue").PropType<Function>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly parser: {
-                readonly type: import("vue").PropType<Function>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly placeholder: {
-                readonly type: import("vue").PropType<string>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly form: {
-                readonly type: import("vue").PropType<string>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly readonly: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-            readonly clearable: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-            readonly showPassword: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-            readonly showWordLimit: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-            readonly suffixIcon: {
-                readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly prefixIcon: {
-                readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly containerRole: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
-            readonly label: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
-            readonly tabindex: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, 0, boolean>;
-            readonly validateEvent: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-            readonly inputStyle: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue) | ((new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("element-plus/es/utils").Mutable<{}>, boolean>;
-            readonly autofocus: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-        }>> & {
-            onChange?: ((value: string) => any) | undefined;
-            onClear?: (() => any) | undefined;
-            "onUpdate:modelValue"?: ((value: string) => any) | undefined;
-            onInput?: ((value: string) => any) | undefined;
-            onBlur?: ((evt: FocusEvent) => any) | undefined;
-            onFocus?: ((evt: FocusEvent) => any) | undefined;
-            onCompositionend?: ((evt: CompositionEvent) => any) | undefined;
-            onCompositionstart?: ((evt: CompositionEvent) => any) | undefined;
-            onCompositionupdate?: ((evt: CompositionEvent) => any) | undefined;
-            onKeydown?: ((evt: Event | KeyboardEvent) => any) | undefined;
-            onMouseenter?: ((evt: MouseEvent) => any) | undefined;
-            onMouseleave?: ((evt: MouseEvent) => any) | undefined;
-        }>>;
+        props: any;
         emit: ((event: "update:modelValue", value: string) => void) & ((event: "change", value: string) => void) & ((event: "input", value: string) => void) & ((event: "blur", evt: FocusEvent) => void) & ((event: "compositionend", evt: CompositionEvent) => void) & ((event: "compositionstart", evt: CompositionEvent) => void) & ((event: "compositionupdate", evt: CompositionEvent) => void) & ((event: "focus", evt: FocusEvent) => void) & ((event: "keydown", evt: Event | KeyboardEvent) => void) & ((event: "mouseenter", evt: MouseEvent) => void) & ((event: "mouseleave", evt: MouseEvent) => void) & ((event: "clear") => void);
         rawAttrs: {
             [x: string]: unknown;
@@ -851,10 +670,9 @@ declare const _default: import("vue").DefineComponent<{
         isComposing: import("vue").Ref<boolean>;
         passwordVisible: import("vue").Ref<boolean>;
         countStyle: import("vue").Ref<import("vue").StyleValue | undefined>;
-        textareaCalcStyle: import("vue").ShallowRef<import("vue").StyleValue>;
+        textareaCalcStyle: any;
         _ref: import("vue").ComputedRef<HTMLInputElement | HTMLTextAreaElement | undefined>;
         nativeInputValue: import("vue").ComputedRef<string>;
-        isFull: import("vue").ComputedRef<boolean>;
         wrapperRef: import("vue").ShallowRef<HTMLElement | undefined>;
         isFocused: import("vue").Ref<boolean>;
         handleFocus: (event: FocusEvent) => void;
@@ -865,12 +683,12 @@ declare const _default: import("vue").DefineComponent<{
         passwordIcon: import("vue").ComputedRef<any>;
         containerStyle: import("vue").ComputedRef<import("vue").StyleValue>;
         textareaStyle: import("vue").ComputedRef<import("vue").StyleValue>;
-        showClear: import("vue").ComputedRef<boolean>;
-        showPwdVisible: import("vue").ComputedRef<boolean>;
-        isWordLimitVisible: import("vue").ComputedRef<boolean>;
+        showClear: import("vue").ComputedRef<any>;
+        showPwdVisible: import("vue").ComputedRef<any>;
+        isWordLimitVisible: import("vue").ComputedRef<any>;
         textLength: import("vue").ComputedRef<number>;
         inputExceed: import("vue").ComputedRef<boolean>;
-        suffixVisible: import("vue").ComputedRef<boolean>;
+        suffixVisible: import("vue").ComputedRef<any>;
         recordCursor: () => void;
         setCursor: () => void;
         resizeTextarea: () => void;
@@ -890,7 +708,7 @@ declare const _default: import("vue").DefineComponent<{
         handleKeydown: (evt: KeyboardEvent) => void;
         select: () => void;
         clear: () => void;
-        placeholder: import("vue").ComputedRef<string | undefined>;
+        placeholder: import("vue").ComputedRef<any>;
         ElIcon: import("element-plus/es/utils").SFCWithInstall<import("vue").DefineComponent<{
             readonly size: {
                 readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number) & {}) | (() => string | number) | ((new (...args: any[]) => (string | number) & {}) | (() => string | number))[], unknown, unknown>>;
@@ -954,7 +772,7 @@ declare const _default: import("vue").DefineComponent<{
                 __epPropKey: true;
             };
         }>>, {}>> & Record<string, any>;
-        CircleClose: any;
+        CloseBold: any;
         NOOP: () => void;
     }> & {} & import("vue").ComponentCustomProperties) | undefined>;
     data: {
@@ -1066,97 +884,7 @@ declare const _default: import("vue").DefineComponent<{
         labelFor: any;
         setFloat: any;
         parentRef: import("vue").Ref<any>;
-        props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
-            readonly id: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
-            readonly size: {
-                readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "small" | "large", never>>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly disabled: BooleanConstructor;
-            readonly modelValue: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown, "", boolean>;
-            readonly maxlength: {
-                readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly minlength: {
-                readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "text", boolean>;
-            readonly resize: {
-                readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "none" | "both" | "horizontal" | "vertical", unknown>>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly autosize: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("element-plus/es/components/input").InputAutoSize & {}) | (() => import("element-plus/es/components/input").InputAutoSize) | ((new (...args: any[]) => import("element-plus/es/components/input").InputAutoSize & {}) | (() => import("element-plus/es/components/input").InputAutoSize))[], unknown, unknown, false, boolean>;
-            readonly autocomplete: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "off", boolean>;
-            readonly formatter: {
-                readonly type: import("vue").PropType<Function>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly parser: {
-                readonly type: import("vue").PropType<Function>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly placeholder: {
-                readonly type: import("vue").PropType<string>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly form: {
-                readonly type: import("vue").PropType<string>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly readonly: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-            readonly clearable: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-            readonly showPassword: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-            readonly showWordLimit: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-            readonly suffixIcon: {
-                readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly prefixIcon: {
-                readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>>;
-                readonly required: false;
-                readonly validator: ((val: unknown) => boolean) | undefined;
-                __epPropKey: true;
-            };
-            readonly containerRole: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
-            readonly label: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
-            readonly tabindex: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, 0, boolean>;
-            readonly validateEvent: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
-            readonly inputStyle: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue) | ((new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("element-plus/es/utils").Mutable<{}>, boolean>;
-            readonly autofocus: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
-        }>> & {
-            onChange?: ((value: string) => any) | undefined;
-            onClear?: (() => any) | undefined;
-            "onUpdate:modelValue"?: ((value: string) => any) | undefined;
-            onInput?: ((value: string) => any) | undefined;
-            onBlur?: ((evt: FocusEvent) => any) | undefined;
-            onFocus?: ((evt: FocusEvent) => any) | undefined;
-            onCompositionend?: ((evt: CompositionEvent) => any) | undefined;
-            onCompositionstart?: ((evt: CompositionEvent) => any) | undefined;
-            onCompositionupdate?: ((evt: CompositionEvent) => any) | undefined;
-            onKeydown?: ((evt: Event | KeyboardEvent) => any) | undefined;
-            onMouseenter?: ((evt: MouseEvent) => any) | undefined;
-            onMouseleave?: ((evt: MouseEvent) => any) | undefined;
-        }>>;
+        props: any;
         emit: ((event: "update:modelValue", value: string) => void) & ((event: "change", value: string) => void) & ((event: "input", value: string) => void) & ((event: "blur", evt: FocusEvent) => void) & ((event: "compositionend", evt: CompositionEvent) => void) & ((event: "compositionstart", evt: CompositionEvent) => void) & ((event: "compositionupdate", evt: CompositionEvent) => void) & ((event: "focus", evt: FocusEvent) => void) & ((event: "keydown", evt: Event | KeyboardEvent) => void) & ((event: "mouseenter", evt: MouseEvent) => void) & ((event: "mouseleave", evt: MouseEvent) => void) & ((event: "clear") => void);
         rawAttrs: {
             [x: string]: unknown;
@@ -1215,10 +943,9 @@ declare const _default: import("vue").DefineComponent<{
         isComposing: import("vue").Ref<boolean>;
         passwordVisible: import("vue").Ref<boolean>;
         countStyle: import("vue").Ref<import("vue").StyleValue | undefined>;
-        textareaCalcStyle: import("vue").ShallowRef<import("vue").StyleValue>;
+        textareaCalcStyle: any;
         _ref: import("vue").ComputedRef<HTMLInputElement | HTMLTextAreaElement | undefined>;
         nativeInputValue: import("vue").ComputedRef<string>;
-        isFull: import("vue").ComputedRef<boolean>;
         wrapperRef: import("vue").ShallowRef<HTMLElement | undefined>;
         isFocused: import("vue").Ref<boolean>;
         handleFocus: (event: FocusEvent) => void;
@@ -1229,12 +956,12 @@ declare const _default: import("vue").DefineComponent<{
         passwordIcon: import("vue").ComputedRef<any>;
         containerStyle: import("vue").ComputedRef<import("vue").StyleValue>;
         textareaStyle: import("vue").ComputedRef<import("vue").StyleValue>;
-        showClear: import("vue").ComputedRef<boolean>;
-        showPwdVisible: import("vue").ComputedRef<boolean>;
-        isWordLimitVisible: import("vue").ComputedRef<boolean>;
+        showClear: import("vue").ComputedRef<any>;
+        showPwdVisible: import("vue").ComputedRef<any>;
+        isWordLimitVisible: import("vue").ComputedRef<any>;
         textLength: import("vue").ComputedRef<number>;
         inputExceed: import("vue").ComputedRef<boolean>;
-        suffixVisible: import("vue").ComputedRef<boolean>;
+        suffixVisible: import("vue").ComputedRef<any>;
         recordCursor: () => void;
         setCursor: () => void;
         resizeTextarea: () => void;
@@ -1254,7 +981,7 @@ declare const _default: import("vue").DefineComponent<{
         handleKeydown: (evt: KeyboardEvent) => void;
         select: () => void;
         clear: () => void;
-        placeholder: import("vue").ComputedRef<string | undefined>;
+        placeholder: import("vue").ComputedRef<any>;
         ElIcon: import("element-plus/es/utils").SFCWithInstall<import("vue").DefineComponent<{
             readonly size: {
                 readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number) & {}) | (() => string | number) | ((new (...args: any[]) => (string | number) & {}) | (() => string | number))[], unknown, unknown>>;
@@ -1318,7 +1045,7 @@ declare const _default: import("vue").DefineComponent<{
                 __epPropKey: true;
             };
         }>>, {}>> & Record<string, any>;
-        CircleClose: any;
+        CloseBold: any;
         NOOP: () => void;
     }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
         "update:modelValue": (value: string) => boolean;
@@ -1411,9 +1138,9 @@ declare const _default: import("vue").DefineComponent<{
         readonly inputStyle: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue) | ((new (...args: any[]) => import("vue").StyleValue & {}) | (() => import("vue").StyleValue))[], unknown, unknown, () => import("element-plus/es/utils").Mutable<{}>, boolean>;
         readonly autofocus: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }>> & {
+        "onUpdate:modelValue"?: ((value: string) => any) | undefined;
         onChange?: ((value: string) => any) | undefined;
         onClear?: (() => any) | undefined;
-        "onUpdate:modelValue"?: ((value: string) => any) | undefined;
         onInput?: ((value: string) => any) | undefined;
         onBlur?: ((evt: FocusEvent) => any) | undefined;
         onFocus?: ((evt: FocusEvent) => any) | undefined;
@@ -1424,11 +1151,12 @@ declare const _default: import("vue").DefineComponent<{
         onMouseenter?: ((evt: MouseEvent) => any) | undefined;
         onMouseleave?: ((evt: MouseEvent) => any) | undefined;
     }, {
-        readonly id: string;
         readonly type: string;
+        readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
-        readonly label: string;
         readonly disabled: boolean;
+        readonly label: string;
+        readonly id: string;
         readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly autosize: import("element-plus/es/components/input").InputAutoSize;
         readonly autocomplete: string;
@@ -1436,7 +1164,6 @@ declare const _default: import("vue").DefineComponent<{
         readonly showPassword: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly showWordLimit: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly containerRole: string;
-        readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly validateEvent: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly inputStyle: import("vue").StyleValue;
         readonly autofocus: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
@@ -1544,14 +1271,14 @@ declare const _default: import("vue").DefineComponent<{
     };
     readonly validateEvent: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
 }>> & {
-    onChange?: ((cur: number | undefined, prev: number | undefined) => any) | undefined;
     "onUpdate:modelValue"?: ((val: number | undefined) => any) | undefined;
+    onChange?: ((cur: number | undefined, prev: number | undefined) => any) | undefined;
     onInput?: ((val: number | null | undefined) => any) | undefined;
     onBlur?: ((e: FocusEvent) => any) | undefined;
     onFocus?: ((e: FocusEvent) => any) | undefined;
 }, {
-    readonly id: string;
     readonly disabled: boolean;
+    readonly id: string;
     readonly readonly: boolean;
     readonly validateEvent: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly max: number;

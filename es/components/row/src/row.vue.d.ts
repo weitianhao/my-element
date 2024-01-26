@@ -2,7 +2,7 @@ import type { CSSProperties } from 'vue';
 declare const _default: import("vue").DefineComponent<{
     readonly tag: import("../../../utils").EpPropFinalized<StringConstructor, unknown, unknown, "div", boolean>;
     readonly gutter: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
-    readonly justify: import("../../../utils").EpPropFinalized<StringConstructor, "center" | "space-around" | "space-between" | "space-evenly" | "end" | "start", unknown, "start", boolean>;
+    readonly justify: import("../../../utils").EpPropFinalized<StringConstructor, "start" | "end" | "center" | "space-around" | "space-between" | "space-evenly", unknown, "start", boolean>;
     readonly align: {
         readonly type: import("vue").PropType<import("../../../utils").EpPropMergeType<StringConstructor, "top" | "bottom" | "middle", unknown>>;
         readonly required: false;
@@ -13,7 +13,7 @@ declare const _default: import("vue").DefineComponent<{
     props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
         readonly tag: import("../../../utils").EpPropFinalized<StringConstructor, unknown, unknown, "div", boolean>;
         readonly gutter: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
-        readonly justify: import("../../../utils").EpPropFinalized<StringConstructor, "center" | "space-around" | "space-between" | "space-evenly" | "end" | "start", unknown, "start", boolean>;
+        readonly justify: import("../../../utils").EpPropFinalized<StringConstructor, "start" | "end" | "center" | "space-around" | "space-between" | "space-evenly", unknown, "start", boolean>;
         readonly align: {
             readonly type: import("vue").PropType<import("../../../utils").EpPropMergeType<StringConstructor, "top" | "bottom" | "middle", unknown>>;
             readonly required: false;
@@ -47,7 +47,7 @@ declare const _default: import("vue").DefineComponent<{
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly tag: import("../../../utils").EpPropFinalized<StringConstructor, unknown, unknown, "div", boolean>;
     readonly gutter: import("../../../utils").EpPropFinalized<NumberConstructor, unknown, unknown, 0, boolean>;
-    readonly justify: import("../../../utils").EpPropFinalized<StringConstructor, "center" | "space-around" | "space-between" | "space-evenly" | "end" | "start", unknown, "start", boolean>;
+    readonly justify: import("../../../utils").EpPropFinalized<StringConstructor, "start" | "end" | "center" | "space-around" | "space-between" | "space-evenly", unknown, "start", boolean>;
     readonly align: {
         readonly type: import("vue").PropType<import("../../../utils").EpPropMergeType<StringConstructor, "top" | "bottom" | "middle", unknown>>;
         readonly required: false;
@@ -55,7 +55,7 @@ declare const _default: import("vue").DefineComponent<{
         __epPropKey: true;
     };
 }>>, {
-    readonly justify: import("../../../utils").EpPropMergeType<StringConstructor, "center" | "space-around" | "space-between" | "space-evenly" | "end" | "start", unknown>;
+    readonly justify: import("../../../utils").EpPropMergeType<StringConstructor, "start" | "end" | "center" | "space-around" | "space-between" | "space-evenly", unknown>;
     readonly tag: string;
     readonly gutter: number;
 }>;

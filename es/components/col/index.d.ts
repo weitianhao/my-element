@@ -57,10 +57,10 @@ export declare const ElCol: import("element-plus/es/utils").SFCWithInstall<impor
     readonly lg: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("./src/col").ColSize & {}) | (() => import("./src/col").ColSize) | ((new (...args: any[]) => import("./src/col").ColSize & {}) | (() => import("./src/col").ColSize))[], unknown, unknown, () => import("element-plus/es/utils").Mutable<{}>, boolean>;
     readonly xl: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("./src/col").ColSize & {}) | (() => import("./src/col").ColSize) | ((new (...args: any[]) => import("./src/col").ColSize & {}) | (() => import("./src/col").ColSize))[], unknown, unknown, () => import("element-plus/es/utils").Mutable<{}>, boolean>;
 }>>, {
-    readonly push: number;
     readonly offset: number;
-    readonly tag: string;
+    readonly push: number;
     readonly span: number;
+    readonly tag: string;
     readonly pull: number;
     readonly xs: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("./src/col").ColSize & {}) | (() => import("./src/col").ColSize) | ((new (...args: any[]) => import("./src/col").ColSize & {}) | (() => import("./src/col").ColSize))[], unknown, unknown>;
     readonly sm: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("./src/col").ColSize & {}) | (() => import("./src/col").ColSize) | ((new (...args: any[]) => import("./src/col").ColSize & {}) | (() => import("./src/col").ColSize))[], unknown, unknown>;

@@ -169,7 +169,7 @@ declare const _default: import("vue").DefineComponent<{
     readonly id: StringConstructor;
     readonly open: BooleanConstructor;
 }>>, {
-    readonly virtualTriggering: boolean;
     readonly open: boolean;
+    readonly virtualTriggering: boolean;
 }>;
 export default _default;

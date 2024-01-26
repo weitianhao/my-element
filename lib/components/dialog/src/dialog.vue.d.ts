@@ -104,8 +104,8 @@ declare const _default: import("vue").DefineComponent<{
         readonly title: import("../../../utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
         readonly ariaLevel: import("../../../utils").EpPropFinalized<StringConstructor, unknown, unknown, "2", boolean>;
     }>> & {
-        onClose?: (() => any) | undefined;
         "onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
+        onClose?: (() => any) | undefined;
         onOpen?: (() => any) | undefined;
         onOpened?: (() => any) | undefined;
         onClosed?: (() => any) | undefined;
@@ -445,8 +445,8 @@ declare const _default: import("vue").DefineComponent<{
     readonly title: import("../../../utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly ariaLevel: import("../../../utils").EpPropFinalized<StringConstructor, unknown, unknown, "2", boolean>;
 }>> & {
-    onClose?: (() => any) | undefined;
     "onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
+    onClose?: (() => any) | undefined;
     onOpen?: (() => any) | undefined;
     onOpened?: (() => any) | undefined;
     onClosed?: (() => any) | undefined;
@@ -454,8 +454,8 @@ declare const _default: import("vue").DefineComponent<{
     onCloseAutoFocus?: (() => any) | undefined;
 }, {
     readonly title: string;
-    readonly center: boolean;
     readonly modelValue: boolean;
+    readonly center: boolean;
     readonly appendTo: string;
     readonly customClass: string;
     readonly showClose: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

@@ -61,8 +61,8 @@ export declare const ElRate: import("element-plus/es/utils").SFCWithInstall<impo
         readonly label: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
         readonly clearable: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }>> & {
-        onChange?: ((value: number) => any) | undefined;
         "onUpdate:modelValue"?: ((value: number) => any) | undefined;
+        onChange?: ((value: number) => any) | undefined;
     }>>;
     emit: ((event: "update:modelValue", value: number) => void) & ((event: "change", value: number) => void);
     formContext: import("..").FormContext | undefined;
@@ -239,18 +239,17 @@ export declare const ElRate: import("element-plus/es/utils").SFCWithInstall<impo
     readonly label: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
     readonly clearable: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
 }>> & {
-    onChange?: ((value: number) => any) | undefined;
     "onUpdate:modelValue"?: ((value: number) => any) | undefined;
+    onChange?: ((value: number) => any) | undefined;
 }, {
-    readonly id: string;
     readonly modelValue: number;
-    readonly label: string;
     readonly disabled: boolean;
+    readonly label: string;
+    readonly id: string;
     readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly max: number;
     readonly textColor: string;
     readonly colors: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => string[] | Record<number, string>) | (() => string[] | Record<number, string>) | ((new (...args: any[]) => string[] | Record<number, string>) | (() => string[] | Record<number, string>))[], unknown, unknown>;
-    readonly showText: boolean;
     readonly lowThreshold: number;
     readonly highThreshold: number;
     readonly voidColor: string;
@@ -261,6 +260,7 @@ export declare const ElRate: import("element-plus/es/utils").SFCWithInstall<impo
     readonly texts: string[];
     readonly scoreTemplate: string;
     readonly allowHalf: boolean;
+    readonly showText: boolean;
     readonly showScore: boolean;
 }>> & Record<string, any>;
 export default ElRate;

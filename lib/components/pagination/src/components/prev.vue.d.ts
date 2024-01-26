@@ -117,7 +117,7 @@ declare const _default: import("vue").DefineComponent<{
 }>> & {
     onClick?: ((evt: MouseEvent) => any) | undefined;
 }, {
-    readonly disabled: boolean;
     readonly currentPage: number;
+    readonly disabled: boolean;
 }>;
 export default _default;

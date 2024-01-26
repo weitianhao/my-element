@@ -130,11 +130,11 @@ export declare const ElAlert: import("element-plus/es/utils").SFCWithInstall<imp
     onClose?: ((evt: MouseEvent) => any) | undefined;
 }, {
     readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "error" | "success" | "warning" | "info", unknown>;
-    readonly title: string;
     readonly description: string;
+    readonly title: string;
+    readonly effect: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "light" | "dark", unknown>;
     readonly closable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly closeText: string;
-    readonly effect: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "light" | "dark", unknown>;
     readonly showIcon: boolean;
     readonly center: boolean;
 }>> & Record<string, any>;

@@ -148,9 +148,9 @@ declare const _default: import("vue").DefineComponent<{
 }>> & {
     onClick?: ((evt: MouseEvent) => any) | undefined;
 }, {
-    readonly target: string;
-    readonly bottom: number;
     readonly right: number;
+    readonly bottom: number;
+    readonly target: string;
     readonly visibilityHeight: number;
 }>;
 export default _default;

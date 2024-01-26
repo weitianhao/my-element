@@ -148,8 +148,8 @@ export declare const ElBreadcrumb: import("element-plus/es/utils").SFCWithInstal
         readonly to: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("vue-router").RouteLocationRaw & {}) | (() => import("vue-router").RouteLocationRaw) | ((new (...args: any[]) => import("vue-router").RouteLocationRaw & {}) | (() => import("vue-router").RouteLocationRaw))[], unknown, unknown, "", boolean>;
         readonly replace: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }>>, {
-        readonly to: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("vue-router").RouteLocationRaw & {}) | (() => import("vue-router").RouteLocationRaw) | ((new (...args: any[]) => import("vue-router").RouteLocationRaw & {}) | (() => import("vue-router").RouteLocationRaw))[], unknown, unknown>;
         readonly replace: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly to: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("vue-router").RouteLocationRaw & {}) | (() => import("vue-router").RouteLocationRaw) | ((new (...args: any[]) => import("vue-router").RouteLocationRaw & {}) | (() => import("vue-router").RouteLocationRaw))[], unknown, unknown>;
     }>;
 };
 export declare const ElBreadcrumbItem: import("element-plus/es/utils").SFCWithInstall<import("vue").DefineComponent<{
@@ -252,8 +252,8 @@ export declare const ElBreadcrumbItem: import("element-plus/es/utils").SFCWithIn
     readonly to: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("vue-router").RouteLocationRaw & {}) | (() => import("vue-router").RouteLocationRaw) | ((new (...args: any[]) => import("vue-router").RouteLocationRaw & {}) | (() => import("vue-router").RouteLocationRaw))[], unknown, unknown, "", boolean>;
     readonly replace: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
 }>>, {
-    readonly to: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("vue-router").RouteLocationRaw & {}) | (() => import("vue-router").RouteLocationRaw) | ((new (...args: any[]) => import("vue-router").RouteLocationRaw & {}) | (() => import("vue-router").RouteLocationRaw))[], unknown, unknown>;
     readonly replace: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly to: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("vue-router").RouteLocationRaw & {}) | (() => import("vue-router").RouteLocationRaw) | ((new (...args: any[]) => import("vue-router").RouteLocationRaw & {}) | (() => import("vue-router").RouteLocationRaw))[], unknown, unknown>;
 }>>;
 export default ElBreadcrumb;
 export * from './src/breadcrumb';

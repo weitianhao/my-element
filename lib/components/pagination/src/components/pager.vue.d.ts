@@ -90,8 +90,8 @@ declare const _default: import("vue").DefineComponent<{
 }>> & {
     onChange?: ((...args: any[]) => any) | undefined;
 }, {
-    readonly disabled: boolean;
     readonly currentPage: number;
+    readonly disabled: boolean;
     readonly pagerCount: number;
 }>;
 export default _default;

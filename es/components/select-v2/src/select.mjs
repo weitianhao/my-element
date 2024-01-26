@@ -296,7 +296,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
             ]) : createCommentVNode("v-if", true),
             _ctx.showClearBtn && _ctx.clearIcon ? (openBlock(), createBlock(_component_el_icon, {
               key: 1,
-              class: normalizeClass([_ctx.nsSelect.e("caret"), _ctx.nsInput.e("icon")]),
+              class: normalizeClass([_ctx.nsSelect.e("caret"), _ctx.nsInput.e("icon"), "clear-icon"]),
               onClick: withModifiers(_ctx.handleClear, ["prevent", "stop"])
             }, {
               default: withCtx(() => [

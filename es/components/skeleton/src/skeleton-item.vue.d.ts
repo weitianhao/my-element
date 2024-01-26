@@ -1,5 +1,5 @@
 declare const _default: import("vue").DefineComponent<{
-    readonly variant: import("../../../utils").EpPropFinalized<StringConstructor, "text" | "button" | "circle" | "caption" | "image" | "rect" | "h1" | "h3" | "p", unknown, "text", boolean>;
+    readonly variant: import("../../../utils").EpPropFinalized<StringConstructor, "image" | "button" | "caption" | "h1" | "h3" | "p" | "circle" | "rect" | "text", unknown, "text", boolean>;
 }, {
     ns: {
         namespace: import("vue").ComputedRef<string>;
@@ -21,8 +21,8 @@ declare const _default: import("vue").DefineComponent<{
     };
     PictureFilled: any;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
-    readonly variant: import("../../../utils").EpPropFinalized<StringConstructor, "text" | "button" | "circle" | "caption" | "image" | "rect" | "h1" | "h3" | "p", unknown, "text", boolean>;
+    readonly variant: import("../../../utils").EpPropFinalized<StringConstructor, "image" | "button" | "caption" | "h1" | "h3" | "p" | "circle" | "rect" | "text", unknown, "text", boolean>;
 }>>, {
-    readonly variant: import("../../../utils").EpPropMergeType<StringConstructor, "text" | "button" | "circle" | "caption" | "image" | "rect" | "h1" | "h3" | "p", unknown>;
+    readonly variant: import("../../../utils").EpPropMergeType<StringConstructor, "image" | "button" | "caption" | "h1" | "h3" | "p" | "circle" | "rect" | "text", unknown>;
 }>;
 export default _default;

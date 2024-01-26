@@ -11,7 +11,7 @@ import { usePopperContainer } from '../../../hooks/use-popper-container/index.mj
 import { useId } from '../../../hooks/use-id/index.mjs';
 import { useDelayedToggle } from '../../../hooks/use-delayed-toggle/index.mjs';
 import { isBoolean } from '../../../utils/types.mjs';
-import ElPopperArrow from '../../popper/src/arrow2.mjs';
+import ElPopperArrow from '../../popper/src/arrow.mjs';
 
 const _hoisted_1 = ["innerHTML"];
 const _hoisted_2 = { key: 1 };

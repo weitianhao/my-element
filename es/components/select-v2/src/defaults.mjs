@@ -2,7 +2,7 @@ import { placements } from '@popperjs/core';
 import '../../../hooks/index.mjs';
 import '../../../utils/index.mjs';
 import '../../tooltip/index.mjs';
-import { CircleClose } from '@element-plus/icons-vue';
+import { CloseBold } from '@element-plus/icons-vue';
 import '../../tag/index.mjs';
 import { defaultProps } from './useProps.mjs';
 import { buildProps, definePropType } from '../../../utils/vue/props/runtime.mjs';
@@ -21,7 +21,7 @@ const SelectProps = buildProps({
   clearable: Boolean,
   clearIcon: {
     type: iconPropType,
-    default: CircleClose
+    default: CloseBold
   },
   effect: {
     type: definePropType(String),

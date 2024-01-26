@@ -11,7 +11,7 @@ declare const _default: import("vue").DefineComponent<{
         new (): any;
         readonly prototype: any;
     })[], unknown, unknown, () => void, boolean>;
-    readonly listType: import("../../../utils").EpPropFinalized<StringConstructor, "text" | "picture" | "picture-card", unknown, "text", boolean>;
+    readonly listType: import("../../../utils").EpPropFinalized<StringConstructor, "picture" | "text" | "picture-card", unknown, "text", boolean>;
 }, {
     props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
         readonly files: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("./upload").UploadFiles) | (() => import("./upload").UploadFiles) | ((new (...args: any[]) => import("./upload").UploadFiles) | (() => import("./upload").UploadFiles))[], unknown, unknown, () => never[], boolean>;
@@ -25,7 +25,7 @@ declare const _default: import("vue").DefineComponent<{
             new (): any;
             readonly prototype: any;
         })[], unknown, unknown, () => void, boolean>;
-        readonly listType: import("../../../utils").EpPropFinalized<StringConstructor, "text" | "picture" | "picture-card", unknown, "text", boolean>;
+        readonly listType: import("../../../utils").EpPropFinalized<StringConstructor, "picture" | "text" | "picture-card", unknown, "text", boolean>;
     }>> & {
         onRemove?: ((file: UploadFile) => any) | undefined;
     }>>;
@@ -330,17 +330,17 @@ declare const _default: import("vue").DefineComponent<{
         })[], unknown, unknown, (percentage: number) => string, boolean>;
     }>>, {
         readonly type: import("../../../utils").EpPropMergeType<StringConstructor, "circle" | "line" | "dashboard", unknown>;
-        readonly color: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("element-plus/es/components/progress").ProgressFn | import("element-plus/es/components/progress").ProgressColor[]) & {}) | (() => string | import("element-plus/es/components/progress").ProgressFn | import("element-plus/es/components/progress").ProgressColor[]) | ((new (...args: any[]) => (string | import("element-plus/es/components/progress").ProgressFn | import("element-plus/es/components/progress").ProgressColor[]) & {}) | (() => string | import("element-plus/es/components/progress").ProgressFn | import("element-plus/es/components/progress").ProgressColor[]))[], unknown, unknown>;
         readonly width: number;
+        readonly color: import("../../../utils").EpPropMergeType<(new (...args: any[]) => (string | import("element-plus/es/components/progress").ProgressFn | import("element-plus/es/components/progress").ProgressColor[]) & {}) | (() => string | import("element-plus/es/components/progress").ProgressFn | import("element-plus/es/components/progress").ProgressColor[]) | ((new (...args: any[]) => (string | import("element-plus/es/components/progress").ProgressFn | import("element-plus/es/components/progress").ProgressColor[]) & {}) | (() => string | import("element-plus/es/components/progress").ProgressFn | import("element-plus/es/components/progress").ProgressColor[]))[], unknown, unknown>;
         readonly strokeLinecap: import("../../../utils").EpPropMergeType<(new (...args: any[]) => ("inherit" | "round" | "butt" | "square") & {}) | (() => "inherit" | "round" | "butt" | "square") | ((new (...args: any[]) => ("inherit" | "round" | "butt" | "square") & {}) | (() => "inherit" | "round" | "butt" | "square"))[], unknown, unknown>;
         readonly strokeWidth: number;
         readonly indeterminate: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly format: import("element-plus/es/components/progress").ProgressFn;
+        readonly showText: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly percentage: number;
         readonly status: import("../../../utils").EpPropMergeType<StringConstructor, "" | "success" | "warning" | "exception", unknown>;
         readonly duration: number;
         readonly textInside: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-        readonly showText: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly striped: boolean;
         readonly stripedFlow: boolean;
     }>> & Record<string, any>;
@@ -358,12 +358,12 @@ declare const _default: import("vue").DefineComponent<{
         new (): any;
         readonly prototype: any;
     })[], unknown, unknown, () => void, boolean>;
-    readonly listType: import("../../../utils").EpPropFinalized<StringConstructor, "text" | "picture" | "picture-card", unknown, "text", boolean>;
+    readonly listType: import("../../../utils").EpPropFinalized<StringConstructor, "picture" | "text" | "picture-card", unknown, "text", boolean>;
 }>> & {
     onRemove?: ((file: UploadFile) => any) | undefined;
 }, {
     readonly disabled: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly listType: import("../../../utils").EpPropMergeType<StringConstructor, "text" | "picture" | "picture-card", unknown>;
+    readonly listType: import("../../../utils").EpPropMergeType<StringConstructor, "picture" | "text" | "picture-card", unknown>;
     readonly files: import("./upload").UploadFiles;
     readonly handlePreview: (uploadFile: UploadFile) => void;
 }>;

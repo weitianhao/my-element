@@ -40,8 +40,8 @@ declare const _default: import("vue").DefineComponent<{
     readonly hidden: BooleanConstructor;
     readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown, "danger", boolean>;
 }>>, {
-    readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown>;
     readonly value: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
+    readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown>;
     readonly hidden: boolean;
     readonly max: number;
     readonly isDot: boolean;

@@ -13,7 +13,7 @@ import { useFormSize } from './hooks/use-form-common-props.mjs';
 import { useNamespace } from '../../../hooks/use-namespace/index.mjs';
 import { useId } from '../../../hooks/use-id/index.mjs';
 import { addUnit } from '../../../utils/dom/style.mjs';
-import { isBoolean } from '../../../utils/types.mjs';
+import { isBoolean, isEmpty } from '../../../utils/types.mjs';
 import { isString, isFunction } from '@vue/shared';
 import { getProp } from '../../../utils/objects.mjs';
 
@@ -264,8 +264,12 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         floatStyle.value = style;
       }
     });
-    provide("SET_FLOAT", (val) => {
-      addFloat.value = val;
+    provide("SET_FLOAT", (val, isFocus) => {
+      if (isFocus) {
+        addFloat.value = true;
+      } else {
+        addFloat.value = !isEmpty(val);
+      }
     });
     provide("IS_FLOAT", isFloat);
     onMounted(() => {

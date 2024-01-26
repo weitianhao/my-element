@@ -85,7 +85,7 @@ const useSelect = (props, emit) => {
       expanded.value = false;
       states.menuVisibleOnFocus = false;
     },
-    isFull: hasModelValue
+    propsValue: hasModelValue
   });
   const expanded = ref(false);
   const hoverOption = ref();
@@ -184,6 +184,9 @@ const useSelect = (props, emit) => {
     setSelected();
     if (!isEqual(val, oldVal) && props.validateEvent) {
       formItem == null ? void 0 : formItem.validate("change").catch((err) => debugWarn(err));
+    }
+    if (isFloat && isFloat.value) {
+      setFloat(val, isFocused.value);
     }
   }, {
     flush: "post",
@@ -486,7 +489,6 @@ const useSelect = (props, emit) => {
   const handleClearClick = (event) => {
     deleteSelected(event);
     isFocused.value = false;
-    setFloat(false);
   };
   const handleClickOutside = (event) => {
     expanded.value = false;
@@ -598,9 +600,8 @@ const useSelect = (props, emit) => {
     if (setLabelSize) {
       setLabelSize(getChildPositionAndSize(wrapperRef.value, selectionRef.value));
     }
-    const notEmpty = props.multiple && props.modelValue.length > 0 || !props.multiple && props.modelValue;
-    if (isFloat && isFloat.value && setFloat && notEmpty) {
-      setFloat(true);
+    if (isFloat && isFloat.value) {
+      setFloat(props.modelValue, isFocused.value);
     }
   });
   return {

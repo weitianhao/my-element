@@ -30,8 +30,8 @@ export declare const ElCard: import("element-plus/es/utils").SFCWithInstall<impo
     readonly bodyClass: StringConstructor;
     readonly shadow: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "always" | "never" | "hover", unknown, "always", boolean>;
 }>>, {
-    readonly header: string;
     readonly footer: string;
+    readonly header: string;
     readonly bodyStyle: import("vue").StyleValue;
     readonly shadow: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "always" | "never" | "hover", unknown>;
 }>> & Record<string, any>;

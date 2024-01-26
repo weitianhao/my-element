@@ -33,8 +33,8 @@ declare const _default: import("vue").DefineComponent<{
         readonly tag: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "div", boolean>;
         readonly validateEvent: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     }>> & {
-        onChange?: ((val: import("./checkbox").CheckboxValueType[]) => any) | undefined;
         "onUpdate:modelValue"?: ((val: CheckboxGroupValueType) => any) | undefined;
+        onChange?: ((val: import("./checkbox").CheckboxValueType[]) => any) | undefined;
     }>>;
     emit: ((event: "update:modelValue", val: CheckboxGroupValueType) => void) & ((event: "change", val: import("./checkbox").CheckboxValueType[]) => void);
     ns: {
@@ -80,8 +80,8 @@ declare const _default: import("vue").DefineComponent<{
     readonly tag: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "div", boolean>;
     readonly validateEvent: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
 }>> & {
-    onChange?: ((val: import("./checkbox").CheckboxValueType[]) => any) | undefined;
     "onUpdate:modelValue"?: ((val: CheckboxGroupValueType) => any) | undefined;
+    onChange?: ((val: import("./checkbox").CheckboxValueType[]) => any) | undefined;
 }, {
     readonly modelValue: CheckboxGroupValueType;
     readonly disabled: boolean;

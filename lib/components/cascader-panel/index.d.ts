@@ -171,14 +171,14 @@ declare const _CascaderPanel: SFCWithInstall<import("vue").DefineComponent<{
     options: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("./src/node").CascaderOption[]) | (() => import("./src/node").CascaderOption[]) | ((new (...args: any[]) => import("./src/node").CascaderOption[]) | (() => import("./src/node").CascaderOption[]))[], unknown, unknown, () => import("./src/node").CascaderOption[], boolean>;
     props: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("./src/node").CascaderProps) | (() => import("./src/node").CascaderProps) | ((new (...args: any[]) => import("./src/node").CascaderProps) | (() => import("./src/node").CascaderProps))[], unknown, unknown, () => import("./src/node").CascaderProps, boolean>;
 }>> & {
-    onClose?: ((...args: any[]) => any) | undefined;
-    onChange?: ((...args: any[]) => any) | undefined;
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
+    onChange?: ((...args: any[]) => any) | undefined;
+    onClose?: ((...args: any[]) => any) | undefined;
     "onExpand-change"?: ((...args: any[]) => any) | undefined;
 }, {
-    props: import("./src/node").CascaderProps;
-    border: boolean;
     options: import("./src/node").CascaderOption[];
+    border: boolean;
+    props: import("./src/node").CascaderProps;
 }>>;
 export default _CascaderPanel;
 export declare const ElCascaderPanel: SFCWithInstall<import("vue").DefineComponent<{
@@ -353,14 +353,14 @@ export declare const ElCascaderPanel: SFCWithInstall<import("vue").DefineCompone
     options: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("./src/node").CascaderOption[]) | (() => import("./src/node").CascaderOption[]) | ((new (...args: any[]) => import("./src/node").CascaderOption[]) | (() => import("./src/node").CascaderOption[]))[], unknown, unknown, () => import("./src/node").CascaderOption[], boolean>;
     props: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("./src/node").CascaderProps) | (() => import("./src/node").CascaderProps) | ((new (...args: any[]) => import("./src/node").CascaderProps) | (() => import("./src/node").CascaderProps))[], unknown, unknown, () => import("./src/node").CascaderProps, boolean>;
 }>> & {
-    onClose?: ((...args: any[]) => any) | undefined;
-    onChange?: ((...args: any[]) => any) | undefined;
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
+    onChange?: ((...args: any[]) => any) | undefined;
+    onClose?: ((...args: any[]) => any) | undefined;
     "onExpand-change"?: ((...args: any[]) => any) | undefined;
 }, {
-    props: import("./src/node").CascaderProps;
-    border: boolean;
     options: import("./src/node").CascaderOption[];
+    border: boolean;
+    props: import("./src/node").CascaderProps;
 }>>;
 export * from './src/types';
 export * from './src/config';

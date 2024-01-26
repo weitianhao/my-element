@@ -95,12 +95,12 @@ export declare const ElPageHeader: import("element-plus/es/utils").SFCWithInstal
     }>>, {}>> & Record<string, any>;
     ElDivider: import("element-plus/es/utils").SFCWithInstall<import("vue").DefineComponent<{
         readonly direction: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "horizontal" | "vertical", unknown, "horizontal", boolean>;
-        readonly contentPosition: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "center" | "right" | "left", unknown, "center", boolean>;
+        readonly contentPosition: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "right" | "left" | "center", unknown, "center", boolean>;
         readonly borderStyle: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => string & {}) | (() => string) | ((new (...args: any[]) => string & {}) | (() => string))[], unknown, unknown, "solid", boolean>;
     }, {
         props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
             readonly direction: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "horizontal" | "vertical", unknown, "horizontal", boolean>;
-            readonly contentPosition: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "center" | "right" | "left", unknown, "center", boolean>;
+            readonly contentPosition: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "right" | "left" | "center", unknown, "center", boolean>;
             readonly borderStyle: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => string & {}) | (() => string) | ((new (...args: any[]) => string & {}) | (() => string))[], unknown, unknown, "solid", boolean>;
         }>> & {
             [x: string & `on${string}`]: ((...args: any[]) => any) | ((...args: unknown[]) => any) | undefined;
@@ -126,12 +126,12 @@ export declare const ElPageHeader: import("element-plus/es/utils").SFCWithInstal
         dividerStyle: import("vue").ComputedRef<import("vue").CSSProperties>;
     }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
         readonly direction: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "horizontal" | "vertical", unknown, "horizontal", boolean>;
-        readonly contentPosition: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "center" | "right" | "left", unknown, "center", boolean>;
+        readonly contentPosition: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "right" | "left" | "center", unknown, "center", boolean>;
         readonly borderStyle: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => string & {}) | (() => string) | ((new (...args: any[]) => string & {}) | (() => string))[], unknown, unknown, "solid", boolean>;
     }>>, {
         readonly direction: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "horizontal" | "vertical", unknown>;
         readonly borderStyle: string;
-        readonly contentPosition: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "center" | "right" | "left", unknown>;
+        readonly contentPosition: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "right" | "left" | "center", unknown>;
     }>> & Record<string, any>;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     back: () => boolean;
@@ -142,8 +142,8 @@ export declare const ElPageHeader: import("element-plus/es/utils").SFCWithInstal
 }>> & {
     onBack?: (() => any) | undefined;
 }, {
-    readonly icon: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>;
     readonly content: string;
+    readonly icon: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>;
 }>> & Record<string, any>;
 export default ElPageHeader;
 export * from './src/page-header';

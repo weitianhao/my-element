@@ -125,8 +125,8 @@ declare const _default: import("vue").DefineComponent<{
     readonly name: import("../../../utils").EpPropFinalized<(new (...args: any[]) => import("./collapse").CollapseActiveName & {}) | (() => import("./collapse").CollapseActiveName) | ((new (...args: any[]) => import("./collapse").CollapseActiveName & {}) | (() => import("./collapse").CollapseActiveName))[], unknown, unknown, undefined, boolean>;
     readonly disabled: BooleanConstructor;
 }>>, {
+    readonly name: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("./collapse").CollapseActiveName & {}) | (() => import("./collapse").CollapseActiveName) | ((new (...args: any[]) => import("./collapse").CollapseActiveName & {}) | (() => import("./collapse").CollapseActiveName))[], unknown, unknown>;
     readonly title: string;
     readonly disabled: boolean;
-    readonly name: import("../../../utils").EpPropMergeType<(new (...args: any[]) => import("./collapse").CollapseActiveName & {}) | (() => import("./collapse").CollapseActiveName) | ((new (...args: any[]) => import("./collapse").CollapseActiveName & {}) | (() => import("./collapse").CollapseActiveName))[], unknown, unknown>;
 }>;
 export default _default;

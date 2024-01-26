@@ -6,8 +6,8 @@ export declare const ElCollapse: import("element-plus/es/utils").SFCWithInstall<
         readonly accordion: BooleanConstructor;
         readonly modelValue: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("./src/collapse").CollapseModelValue & {}) | (() => import("./src/collapse").CollapseModelValue) | ((new (...args: any[]) => import("./src/collapse").CollapseModelValue & {}) | (() => import("./src/collapse").CollapseModelValue))[], unknown, unknown, () => [], boolean>;
     }>> & {
-        onChange?: ((value: import("./src/collapse").CollapseModelValue) => any) | undefined;
         "onUpdate:modelValue"?: ((value: import("./src/collapse").CollapseModelValue) => any) | undefined;
+        onChange?: ((value: import("./src/collapse").CollapseModelValue) => any) | undefined;
     }>>;
     emit: ((event: "update:modelValue", value: import("./src/collapse").CollapseModelValue) => void) & ((event: "change", value: import("./src/collapse").CollapseModelValue) => void);
     activeNames: import("vue").Ref<(string | number)[]>;
@@ -20,8 +20,8 @@ export declare const ElCollapse: import("element-plus/es/utils").SFCWithInstall<
     readonly accordion: BooleanConstructor;
     readonly modelValue: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("./src/collapse").CollapseModelValue & {}) | (() => import("./src/collapse").CollapseModelValue) | ((new (...args: any[]) => import("./src/collapse").CollapseModelValue & {}) | (() => import("./src/collapse").CollapseModelValue))[], unknown, unknown, () => [], boolean>;
 }>> & {
-    onChange?: ((value: import("./src/collapse").CollapseModelValue) => any) | undefined;
     "onUpdate:modelValue"?: ((value: import("./src/collapse").CollapseModelValue) => any) | undefined;
+    onChange?: ((value: import("./src/collapse").CollapseModelValue) => any) | undefined;
 }, {
     readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("./src/collapse").CollapseModelValue & {}) | (() => import("./src/collapse").CollapseModelValue) | ((new (...args: any[]) => import("./src/collapse").CollapseModelValue & {}) | (() => import("./src/collapse").CollapseModelValue))[], unknown, unknown>;
     readonly accordion: boolean;
@@ -153,9 +153,9 @@ export declare const ElCollapse: import("element-plus/es/utils").SFCWithInstall<
         readonly name: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("./src/collapse").CollapseActiveName & {}) | (() => import("./src/collapse").CollapseActiveName) | ((new (...args: any[]) => import("./src/collapse").CollapseActiveName & {}) | (() => import("./src/collapse").CollapseActiveName))[], unknown, unknown, undefined, boolean>;
         readonly disabled: BooleanConstructor;
     }>>, {
+        readonly name: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("./src/collapse").CollapseActiveName & {}) | (() => import("./src/collapse").CollapseActiveName) | ((new (...args: any[]) => import("./src/collapse").CollapseActiveName & {}) | (() => import("./src/collapse").CollapseActiveName))[], unknown, unknown>;
         readonly title: string;
         readonly disabled: boolean;
-        readonly name: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("./src/collapse").CollapseActiveName & {}) | (() => import("./src/collapse").CollapseActiveName) | ((new (...args: any[]) => import("./src/collapse").CollapseActiveName & {}) | (() => import("./src/collapse").CollapseActiveName))[], unknown, unknown>;
     }>;
 };
 export default ElCollapse;
@@ -286,9 +286,9 @@ export declare const ElCollapseItem: import("element-plus/es/utils").SFCWithInst
     readonly name: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => import("./src/collapse").CollapseActiveName & {}) | (() => import("./src/collapse").CollapseActiveName) | ((new (...args: any[]) => import("./src/collapse").CollapseActiveName & {}) | (() => import("./src/collapse").CollapseActiveName))[], unknown, unknown, undefined, boolean>;
     readonly disabled: BooleanConstructor;
 }>>, {
+    readonly name: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("./src/collapse").CollapseActiveName & {}) | (() => import("./src/collapse").CollapseActiveName) | ((new (...args: any[]) => import("./src/collapse").CollapseActiveName & {}) | (() => import("./src/collapse").CollapseActiveName))[], unknown, unknown>;
     readonly title: string;
     readonly disabled: boolean;
-    readonly name: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("./src/collapse").CollapseActiveName & {}) | (() => import("./src/collapse").CollapseActiveName) | ((new (...args: any[]) => import("./src/collapse").CollapseActiveName & {}) | (() => import("./src/collapse").CollapseActiveName))[], unknown, unknown>;
 }>>;
 export * from './src/collapse';
 export * from './src/collapse-item';

@@ -104,8 +104,8 @@ export declare const ElDialog: import("element-plus/es/utils").SFCWithInstall<im
         readonly title: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
         readonly ariaLevel: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "2", boolean>;
     }>> & {
-        onClose?: (() => any) | undefined;
         "onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
+        onClose?: (() => any) | undefined;
         onOpen?: (() => any) | undefined;
         onOpened?: (() => any) | undefined;
         onClosed?: (() => any) | undefined;
@@ -445,8 +445,8 @@ export declare const ElDialog: import("element-plus/es/utils").SFCWithInstall<im
     readonly title: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly ariaLevel: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "2", boolean>;
 }>> & {
-    onClose?: (() => any) | undefined;
     "onUpdate:modelValue"?: ((value: boolean) => any) | undefined;
+    onClose?: (() => any) | undefined;
     onOpen?: (() => any) | undefined;
     onOpened?: (() => any) | undefined;
     onClosed?: (() => any) | undefined;
@@ -454,8 +454,8 @@ export declare const ElDialog: import("element-plus/es/utils").SFCWithInstall<im
     onCloseAutoFocus?: (() => any) | undefined;
 }, {
     readonly title: string;
-    readonly center: boolean;
     readonly modelValue: boolean;
+    readonly center: boolean;
     readonly appendTo: string;
     readonly customClass: string;
     readonly showClose: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;

@@ -91,11 +91,11 @@ declare const _default: import("vue").DefineComponent<{
     "onNext-click"?: ((val: number) => any) | undefined;
 }, {
     readonly small: boolean;
+    readonly background: boolean;
+    readonly disabled: boolean;
     readonly popperClass: string;
     readonly teleported: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly disabled: boolean;
     readonly layout: string;
-    readonly background: boolean;
     readonly pagerCount: number;
     readonly pageSizes: number[];
     readonly prevText: string;

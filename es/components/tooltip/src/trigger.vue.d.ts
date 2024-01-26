@@ -319,8 +319,8 @@ declare const _default: import("vue").DefineComponent<{
         readonly id: StringConstructor;
         readonly open: BooleanConstructor;
     }>>, {
-        readonly virtualTriggering: boolean;
         readonly open: boolean;
+        readonly virtualTriggering: boolean;
     }>;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly disabled: BooleanConstructor;
@@ -378,9 +378,9 @@ declare const _default: import("vue").DefineComponent<{
     readonly id: StringConstructor;
     readonly open: BooleanConstructor;
 }>>, {
-    readonly virtualTriggering: boolean;
-    readonly disabled: boolean;
     readonly open: boolean;
+    readonly disabled: boolean;
+    readonly virtualTriggering: boolean;
     readonly trigger: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("element-plus/es/utils").Arrayable<import("./trigger").TooltipTriggerType> & {}) | (() => import("element-plus/es/utils").Arrayable<import("./trigger").TooltipTriggerType>) | ((new (...args: any[]) => import("element-plus/es/utils").Arrayable<import("./trigger").TooltipTriggerType> & {}) | (() => import("element-plus/es/utils").Arrayable<import("./trigger").TooltipTriggerType>))[], unknown, unknown>;
     readonly triggerKeys: string[];
 }>;

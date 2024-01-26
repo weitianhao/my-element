@@ -242,30 +242,31 @@
 
   @each $slot in (prefix, suffix) {
     @include e($slot) {
-      @include set-css-var-value(
-        'input-slot-height',
-        calc(
-          var(
-            #{getCssVarName('input-height')},
-            #{map.get($input-height, 'default')}
-          )
-        )
-      );
-      @include set-css-var-value(
-        'input-slot-line-height',
-        calc(
-          var(
-              #{getCssVarName('input-height')},
-              #{map.get($input-height, 'default')}
-            ) - $border-width
-        )
-      );
+      // @include set-css-var-value(
+      //   'input-slot-height',
+      //   calc(
+      //     var(
+      //         #{getCssVarName('input-height')},
+      //         #{map.get($input-height, 'default')}
+      //       ) - $border-width * 2
+      //   )
+      // );
+      // // - $border-width
+      // @include set-css-var-value(
+      //   'input-slot-line-height',
+      //   calc(
+      //     var(
+      //       #{getCssVarName('input-height')},
+      //       #{map.get($input-height, 'default')}
+      //     )
+      //   )
+      // );
       display: inline-flex;
       white-space: nowrap;
       flex-shrink: 0;
       flex-wrap: nowrap;
-      height: getCssVar('input-slot-height');
-      line-height: getCssVar('input-slot-line-height');
+      height: 100%;
+      // line-height: getCssVar('input-slot-line-height');
       text-align: center;
       color: var(
         #{getCssVarName('input-icon-color')},
@@ -381,6 +382,34 @@
               ) - $border-width * 2
           )
         );
+      }
+    }
+  }
+  @include m(large) {
+    @include e(wrapper) {
+      @each $slot in (prefix, suffix) {
+        @include e($slot) {
+          @include set-css-var-value(
+            'input-slot-height',
+            calc(
+              var(
+                #{getCssVarName('input-height')},
+                #{map.get($input-height, 'default')}
+              )
+            )
+          );
+          @include set-css-var-value(
+            'input-slot-line-height',
+            calc(
+              var(
+                  #{getCssVarName('input-height')},
+                  #{map.get($input-height, 'default')}
+                ) - $border-width
+            )
+          );
+          height: getCssVar('input-slot-height');
+          line-height: getCssVar('input-slot-line-height');
+        }
       }
     }
   }

@@ -120,9 +120,9 @@
       border-radius: calc(#{getCssVar('transfer-filter-height')} / 2);
     }
 
-    .#{$namespace}-icon-circle-close {
-      cursor: pointer;
-    }
+    // .#{$namespace}-icon-circle-close {
+    //   cursor: pointer;
+    // }
   }
 
   .#{$namespace}-transfer-panel__header {

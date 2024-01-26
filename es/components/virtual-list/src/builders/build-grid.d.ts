@@ -177,9 +177,9 @@ declare const createGrid: ({ name, clearCache, getColumnPosition, getColumnStart
     onScroll?: ((...args: any[]) => any) | undefined;
     onItemRendered?: ((...args: any[]) => any) | undefined;
 }, {
-    readonly className: string;
-    readonly direction: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "ltr" | "rtl", never>;
     readonly data: any[];
+    readonly direction: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "ltr" | "rtl", never>;
+    readonly className: string;
     readonly scrollbarAlwaysOn: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly itemKey: import("../types").GridItemKeyGetter;
     readonly containerElement: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | Element) & {}) | (() => string | Element) | ((new (...args: any[]) => (string | Element) & {}) | (() => string | Element))[], unknown, unknown>;

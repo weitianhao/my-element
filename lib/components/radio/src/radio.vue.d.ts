@@ -24,8 +24,8 @@ declare const _default: import("vue").DefineComponent<{
         readonly disabled: BooleanConstructor;
         readonly label: import("../../../utils").EpPropFinalized<(NumberConstructor | BooleanConstructor | StringConstructor)[], unknown, unknown, string, boolean>;
     }>> & {
-        onChange?: ((val: string | number | boolean) => any) | undefined;
         "onUpdate:modelValue"?: ((val: string | number | boolean) => any) | undefined;
+        onChange?: ((val: string | number | boolean) => any) | undefined;
     }>>;
     emit: ((event: "update:modelValue", val: string | number | boolean) => void) & ((event: "change", val: string | number | boolean) => void);
     ns: {
@@ -69,13 +69,13 @@ declare const _default: import("vue").DefineComponent<{
     readonly disabled: BooleanConstructor;
     readonly label: import("../../../utils").EpPropFinalized<(NumberConstructor | BooleanConstructor | StringConstructor)[], unknown, unknown, string, boolean>;
 }>> & {
-    onChange?: ((val: string | number | boolean) => any) | undefined;
     "onUpdate:modelValue"?: ((val: string | number | boolean) => any) | undefined;
+    onChange?: ((val: string | number | boolean) => any) | undefined;
 }, {
-    readonly modelValue: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor], unknown, unknown>;
-    readonly label: import("../../../utils").EpPropMergeType<(NumberConstructor | BooleanConstructor | StringConstructor)[], unknown, unknown>;
-    readonly disabled: boolean;
     readonly name: string;
     readonly border: boolean;
+    readonly modelValue: import("../../../utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor], unknown, unknown>;
+    readonly disabled: boolean;
+    readonly label: import("../../../utils").EpPropMergeType<(NumberConstructor | BooleanConstructor | StringConstructor)[], unknown, unknown>;
 }>;
 export default _default;

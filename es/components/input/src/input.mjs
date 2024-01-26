@@ -2,7 +2,7 @@ import { defineComponent, inject, ref, useAttrs, useSlots, computed, shallowRef,
 import { useResizeObserver, isClient } from '@vueuse/core';
 import { isNil } from 'lodash-unified';
 import { ElIcon } from '../../icon/index.mjs';
-import { View, Hide, CircleClose } from '@element-plus/icons-vue';
+import { View, Hide, CloseBold } from '@element-plus/icons-vue';
 import '../../form/index.mjs';
 import '../../../utils/index.mjs';
 import '../../../hooks/index.mjs';
@@ -93,9 +93,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     const textareaCalcStyle = shallowRef(props.inputStyle);
     const _ref = computed(() => input.value || textarea.value);
     const nativeInputValue = computed(() => isNil(props.modelValue) ? "" : String(props.modelValue));
-    const isFull = computed(() => {
-      return !!nativeInputValue.value;
-    });
     const { wrapperRef, isFocused, handleFocus, handleBlur } = useFocusController(_ref, {
       afterBlur() {
         var _a;
@@ -103,7 +100,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
           (_a = elFormItem == null ? void 0 : elFormItem.validate) == null ? void 0 : _a.call(elFormItem, "blur").catch((err) => debugWarn(err));
         }
       },
-      isFull
+      propsValue: nativeInputValue
     });
     const needStatusIcon = computed(() => {
       var _a;
@@ -253,12 +250,17 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       emit("clear");
       emit("input", "");
     };
-    watch(() => props.modelValue, () => {
+    watch(() => props.modelValue, (val) => {
       var _a;
       nextTick(() => resizeTextarea());
       if (props.validateEvent) {
         (_a = elFormItem == null ? void 0 : elFormItem.validate) == null ? void 0 : _a.call(elFormItem, "change").catch((err) => debugWarn(err));
       }
+      if (isFloat && isFloat.value) {
+        setFloat(val, isFocused.value);
+      }
+    }, {
+      immediate: true
     });
     watch(nativeInputValue, () => setNativeInputValue());
     watch(() => props.type, async () => {
@@ -276,9 +278,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         if (inputId.value === labelFor.value) {
           setLabelSize(getChildPositionAndSize(parentRef.value, _ref.value));
         }
-      }
-      if (isFull.value && isFloat && isFloat.value && setFloat) {
-        setFloat(true);
       }
     });
     const placeholder = computed(() => {
@@ -391,12 +390,12 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                 ], 64)) : createCommentVNode("v-if", true),
                 unref(showClear) ? (openBlock(), createBlock(unref(ElIcon), {
                   key: 1,
-                  class: normalizeClass([unref(nsInput).e("icon"), unref(nsInput).e("clear")]),
+                  class: normalizeClass([unref(nsInput).e("icon"), unref(nsInput).e("clear"), "clear-icon"]),
                   onMousedown: withModifiers(unref(NOOP), ["prevent"]),
                   onClick: clear
                 }, {
                   default: withCtx(() => [
-                    createVNode(unref(CircleClose))
+                    createVNode(unref(CloseBold))
                   ]),
                   _: 1
                 }, 8, ["class", "onMousedown"])) : createCommentVNode("v-if", true),
