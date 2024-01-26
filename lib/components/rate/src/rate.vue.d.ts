@@ -243,14 +243,15 @@ declare const _default: import("vue").DefineComponent<{
     "onUpdate:modelValue"?: ((value: number) => any) | undefined;
     onChange?: ((value: number) => any) | undefined;
 }, {
+    readonly id: string;
     readonly modelValue: number;
     readonly disabled: boolean;
     readonly label: string;
-    readonly id: string;
     readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly max: number;
     readonly textColor: string;
     readonly colors: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => string[] | Record<number, string>) | (() => string[] | Record<number, string>) | ((new (...args: any[]) => string[] | Record<number, string>) | (() => string[] | Record<number, string>))[], unknown, unknown>;
+    readonly showText: boolean;
     readonly lowThreshold: number;
     readonly highThreshold: number;
     readonly voidColor: string;
@@ -261,7 +262,6 @@ declare const _default: import("vue").DefineComponent<{
     readonly texts: string[];
     readonly scoreTemplate: string;
     readonly allowHalf: boolean;
-    readonly showText: boolean;
     readonly showScore: boolean;
 }>;
 export default _default;

@@ -2781,11 +2781,11 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
                         readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                         readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                     }>> & {
-                        onClose?: (() => any) | undefined;
                         onBlur?: (() => any) | undefined;
                         onFocus?: (() => any) | undefined;
                         onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                         onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                        onClose?: (() => any) | undefined;
                     }>>;
                     focusStartRef: import("vue").Ref<HTMLElement | "first" | "container" | undefined>;
                     trapped: import("vue").Ref<boolean>;
@@ -3128,11 +3128,11 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
                     readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                 }>> & {
-                    onClose?: (() => any) | undefined;
                     onBlur?: (() => any) | undefined;
                     onFocus?: (() => any) | undefined;
                     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                    onClose?: (() => any) | undefined;
                 }, {
                     readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
                     readonly strategy: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
@@ -5734,11 +5734,11 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
                     readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                 }>> & {
-                    onClose?: (() => any) | undefined;
                     onBlur?: (() => any) | undefined;
                     onFocus?: (() => any) | undefined;
                     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                    onClose?: (() => any) | undefined;
                 }>>;
                 focusStartRef: import("vue").Ref<HTMLElement | "first" | "container" | undefined>;
                 trapped: import("vue").Ref<boolean>;
@@ -6081,11 +6081,11 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
                 readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                 readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
             }>> & {
-                onClose?: (() => any) | undefined;
                 onBlur?: (() => any) | undefined;
                 onFocus?: (() => any) | undefined;
                 onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                 onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                onClose?: (() => any) | undefined;
             }, {
                 readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
                 readonly strategy: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
@@ -6396,12 +6396,12 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
+            readonly id: string;
             readonly type: string;
             readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
             readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
             readonly disabled: boolean;
             readonly label: string;
-            readonly id: string;
             readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly autosize: import("..").InputAutoSize;
             readonly autocomplete: string;
@@ -6491,8 +6491,8 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
             readonly autofocus: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         }>> & {
             "onUpdate:modelValue"?: ((value: string) => any) | undefined;
-            onChange?: ((value: string) => any) | undefined;
             onClear?: (() => any) | undefined;
+            onChange?: ((value: string) => any) | undefined;
             onInput?: ((value: string) => any) | undefined;
             onBlur?: ((evt: FocusEvent) => any) | undefined;
             onFocus?: ((evt: FocusEvent) => any) | undefined;
@@ -6502,7 +6502,7 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
             onKeydown?: ((evt: Event | KeyboardEvent) => any) | undefined;
             onMouseenter?: ((evt: MouseEvent) => any) | undefined;
             onMouseleave?: ((evt: MouseEvent) => any) | undefined;
-        } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "type" | "tabindex" | "modelValue" | "disabled" | "label" | "id" | "clearable" | "autosize" | "autocomplete" | "readonly" | "showPassword" | "showWordLimit" | "containerRole" | "validateEvent" | "inputStyle" | "autofocus">;
+        } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "id" | "type" | "tabindex" | "modelValue" | "disabled" | "label" | "clearable" | "autosize" | "autocomplete" | "readonly" | "showPassword" | "showWordLimit" | "containerRole" | "validateEvent" | "inputStyle" | "autofocus">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -6595,8 +6595,8 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
             readonly autofocus: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         }>> & {
             "onUpdate:modelValue"?: ((value: string) => any) | undefined;
-            onChange?: ((value: string) => any) | undefined;
             onClear?: (() => any) | undefined;
+            onChange?: ((value: string) => any) | undefined;
             onInput?: ((value: string) => any) | undefined;
             onBlur?: ((evt: FocusEvent) => any) | undefined;
             onFocus?: ((evt: FocusEvent) => any) | undefined;
@@ -6679,7 +6679,7 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
             handleFocus: (event: FocusEvent) => void;
             handleBlur: (event: FocusEvent) => void;
             needStatusIcon: import("vue").ComputedRef<boolean>;
-            validateState: import("vue").ComputedRef<"" | "error" | "success" | "validating">;
+            validateState: import("vue").ComputedRef<"" | "error" | "validating" | "success">;
             validateIcon: import("vue").ComputedRef<any>;
             passwordIcon: import("vue").ComputedRef<any>;
             containerStyle: import("vue").ComputedRef<import("vue").StyleValue>;
@@ -6789,12 +6789,12 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
             compositionupdate: (evt: CompositionEvent) => boolean;
             compositionend: (evt: CompositionEvent) => boolean;
         }, string, {
+            readonly id: string;
             readonly type: string;
             readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
             readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
             readonly disabled: boolean;
             readonly label: string;
-            readonly id: string;
             readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly autosize: import("..").InputAutoSize;
             readonly autocomplete: string;
@@ -6904,8 +6904,8 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
         readonly autofocus: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }>> & {
         "onUpdate:modelValue"?: ((value: string) => any) | undefined;
-        onChange?: ((value: string) => any) | undefined;
         onClear?: (() => any) | undefined;
+        onChange?: ((value: string) => any) | undefined;
         onInput?: ((value: string) => any) | undefined;
         onBlur?: ((evt: FocusEvent) => any) | undefined;
         onFocus?: ((evt: FocusEvent) => any) | undefined;
@@ -6988,7 +6988,7 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
         handleFocus: (event: FocusEvent) => void;
         handleBlur: (event: FocusEvent) => void;
         needStatusIcon: import("vue").ComputedRef<boolean>;
-        validateState: import("vue").ComputedRef<"" | "error" | "success" | "validating">;
+        validateState: import("vue").ComputedRef<"" | "error" | "validating" | "success">;
         validateIcon: import("vue").ComputedRef<any>;
         passwordIcon: import("vue").ComputedRef<any>;
         containerStyle: import("vue").ComputedRef<import("vue").StyleValue>;
@@ -8986,7 +8986,7 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
         handleFocus: (event: FocusEvent) => void;
         handleBlur: (event: FocusEvent) => void;
         needStatusIcon: import("vue").ComputedRef<boolean>;
-        validateState: import("vue").ComputedRef<"" | "error" | "success" | "validating">;
+        validateState: import("vue").ComputedRef<"" | "error" | "validating" | "success">;
         validateIcon: import("vue").ComputedRef<any>;
         passwordIcon: import("vue").ComputedRef<any>;
         containerStyle: import("vue").ComputedRef<import("vue").StyleValue>;
@@ -9174,8 +9174,8 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
         readonly autofocus: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }>> & {
         "onUpdate:modelValue"?: ((value: string) => any) | undefined;
-        onChange?: ((value: string) => any) | undefined;
         onClear?: (() => any) | undefined;
+        onChange?: ((value: string) => any) | undefined;
         onInput?: ((value: string) => any) | undefined;
         onBlur?: ((evt: FocusEvent) => any) | undefined;
         onFocus?: ((evt: FocusEvent) => any) | undefined;
@@ -9186,12 +9186,12 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
         onMouseenter?: ((evt: MouseEvent) => any) | undefined;
         onMouseleave?: ((evt: MouseEvent) => any) | undefined;
     }, {
+        readonly id: string;
         readonly type: string;
         readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
         readonly disabled: boolean;
         readonly label: string;
-        readonly id: string;
         readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly autosize: import("..").InputAutoSize;
         readonly autocomplete: string;
@@ -11447,11 +11447,11 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
                     readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                 }>> & {
-                    onClose?: (() => any) | undefined;
                     onBlur?: (() => any) | undefined;
                     onFocus?: (() => any) | undefined;
                     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                    onClose?: (() => any) | undefined;
                 }>>;
                 focusStartRef: import("vue").Ref<HTMLElement | "first" | "container" | undefined>;
                 trapped: import("vue").Ref<boolean>;
@@ -11794,11 +11794,11 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
                 readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                 readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
             }>> & {
-                onClose?: (() => any) | undefined;
                 onBlur?: (() => any) | undefined;
                 onFocus?: (() => any) | undefined;
                 onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                 onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                onClose?: (() => any) | undefined;
             }, {
                 readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
                 readonly strategy: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
@@ -13021,7 +13021,7 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
         readonly hit: BooleanConstructor;
         readonly color: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
         readonly size: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "" | "default" | "small" | "large", unknown, "", boolean>;
-        readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "light" | "dark" | "plain", unknown, "light", boolean>;
+        readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain", unknown, "light", boolean>;
         readonly round: BooleanConstructor;
     }, {
         props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
@@ -13031,11 +13031,11 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
             readonly hit: BooleanConstructor;
             readonly color: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
             readonly size: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "" | "default" | "small" | "large", unknown, "", boolean>;
-            readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "light" | "dark" | "plain", unknown, "light", boolean>;
+            readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain", unknown, "light", boolean>;
             readonly round: BooleanConstructor;
         }>> & {
-            onClose?: ((evt: MouseEvent) => any) | undefined;
             onClick?: ((evt: MouseEvent) => any) | undefined;
+            onClose?: ((evt: MouseEvent) => any) | undefined;
         }>>;
         emit: ((event: "click", evt: MouseEvent) => void) & ((event: "close", evt: MouseEvent) => void);
         tagSize: import("vue").ComputedRef<"" | "default" | "small" | "large">;
@@ -13134,18 +13134,18 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
         readonly hit: BooleanConstructor;
         readonly color: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
         readonly size: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "" | "default" | "small" | "large", unknown, "", boolean>;
-        readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "light" | "dark" | "plain", unknown, "light", boolean>;
+        readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain", unknown, "light", boolean>;
         readonly round: BooleanConstructor;
     }>> & {
-        onClose?: ((evt: MouseEvent) => any) | undefined;
         onClick?: ((evt: MouseEvent) => any) | undefined;
+        onClose?: ((evt: MouseEvent) => any) | undefined;
     }, {
         readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "success" | "warning" | "info" | "danger", unknown>;
         readonly color: string;
-        readonly effect: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "light" | "dark" | "plain", unknown>;
+        readonly effect: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain", unknown>;
         readonly size: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "small" | "large", unknown>;
-        readonly closable: boolean;
         readonly round: boolean;
+        readonly closable: boolean;
         readonly disableTransitions: boolean;
         readonly hit: boolean;
     }>> & Record<string, any>;
@@ -13288,11 +13288,11 @@ declare const _Cascader: SFCWithInstall<import("vue").DefineComponent<{
 }, {
     options: import("..").CascaderOption[];
     disabled: boolean;
-    props: import("..").CascaderProps;
     debounce: number;
     popperClass: string;
     teleported: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     clearable: boolean;
+    props: import("..").CascaderProps;
     validateEvent: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     separator: string;
     filterable: boolean;
@@ -16087,11 +16087,11 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
                         readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                         readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                     }>> & {
-                        onClose?: (() => any) | undefined;
                         onBlur?: (() => any) | undefined;
                         onFocus?: (() => any) | undefined;
                         onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                         onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                        onClose?: (() => any) | undefined;
                     }>>;
                     focusStartRef: import("vue").Ref<HTMLElement | "first" | "container" | undefined>;
                     trapped: import("vue").Ref<boolean>;
@@ -16434,11 +16434,11 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
                     readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                 }>> & {
-                    onClose?: (() => any) | undefined;
                     onBlur?: (() => any) | undefined;
                     onFocus?: (() => any) | undefined;
                     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                    onClose?: (() => any) | undefined;
                 }, {
                     readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
                     readonly strategy: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
@@ -19040,11 +19040,11 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
                     readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                 }>> & {
-                    onClose?: (() => any) | undefined;
                     onBlur?: (() => any) | undefined;
                     onFocus?: (() => any) | undefined;
                     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                    onClose?: (() => any) | undefined;
                 }>>;
                 focusStartRef: import("vue").Ref<HTMLElement | "first" | "container" | undefined>;
                 trapped: import("vue").Ref<boolean>;
@@ -19387,11 +19387,11 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
                 readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                 readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
             }>> & {
-                onClose?: (() => any) | undefined;
                 onBlur?: (() => any) | undefined;
                 onFocus?: (() => any) | undefined;
                 onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                 onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                onClose?: (() => any) | undefined;
             }, {
                 readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
                 readonly strategy: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
@@ -19702,12 +19702,12 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
+            readonly id: string;
             readonly type: string;
             readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
             readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
             readonly disabled: boolean;
             readonly label: string;
-            readonly id: string;
             readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly autosize: import("..").InputAutoSize;
             readonly autocomplete: string;
@@ -19797,8 +19797,8 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
             readonly autofocus: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         }>> & {
             "onUpdate:modelValue"?: ((value: string) => any) | undefined;
-            onChange?: ((value: string) => any) | undefined;
             onClear?: (() => any) | undefined;
+            onChange?: ((value: string) => any) | undefined;
             onInput?: ((value: string) => any) | undefined;
             onBlur?: ((evt: FocusEvent) => any) | undefined;
             onFocus?: ((evt: FocusEvent) => any) | undefined;
@@ -19808,7 +19808,7 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
             onKeydown?: ((evt: Event | KeyboardEvent) => any) | undefined;
             onMouseenter?: ((evt: MouseEvent) => any) | undefined;
             onMouseleave?: ((evt: MouseEvent) => any) | undefined;
-        } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "type" | "tabindex" | "modelValue" | "disabled" | "label" | "id" | "clearable" | "autosize" | "autocomplete" | "readonly" | "showPassword" | "showWordLimit" | "containerRole" | "validateEvent" | "inputStyle" | "autofocus">;
+        } & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, "id" | "type" | "tabindex" | "modelValue" | "disabled" | "label" | "clearable" | "autosize" | "autocomplete" | "readonly" | "showPassword" | "showWordLimit" | "containerRole" | "validateEvent" | "inputStyle" | "autofocus">;
         $attrs: {
             [x: string]: unknown;
         };
@@ -19901,8 +19901,8 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
             readonly autofocus: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         }>> & {
             "onUpdate:modelValue"?: ((value: string) => any) | undefined;
-            onChange?: ((value: string) => any) | undefined;
             onClear?: (() => any) | undefined;
+            onChange?: ((value: string) => any) | undefined;
             onInput?: ((value: string) => any) | undefined;
             onBlur?: ((evt: FocusEvent) => any) | undefined;
             onFocus?: ((evt: FocusEvent) => any) | undefined;
@@ -19985,7 +19985,7 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
             handleFocus: (event: FocusEvent) => void;
             handleBlur: (event: FocusEvent) => void;
             needStatusIcon: import("vue").ComputedRef<boolean>;
-            validateState: import("vue").ComputedRef<"" | "error" | "success" | "validating">;
+            validateState: import("vue").ComputedRef<"" | "error" | "validating" | "success">;
             validateIcon: import("vue").ComputedRef<any>;
             passwordIcon: import("vue").ComputedRef<any>;
             containerStyle: import("vue").ComputedRef<import("vue").StyleValue>;
@@ -20095,12 +20095,12 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
             compositionupdate: (evt: CompositionEvent) => boolean;
             compositionend: (evt: CompositionEvent) => boolean;
         }, string, {
+            readonly id: string;
             readonly type: string;
             readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
             readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
             readonly disabled: boolean;
             readonly label: string;
-            readonly id: string;
             readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly autosize: import("..").InputAutoSize;
             readonly autocomplete: string;
@@ -20210,8 +20210,8 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
         readonly autofocus: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }>> & {
         "onUpdate:modelValue"?: ((value: string) => any) | undefined;
-        onChange?: ((value: string) => any) | undefined;
         onClear?: (() => any) | undefined;
+        onChange?: ((value: string) => any) | undefined;
         onInput?: ((value: string) => any) | undefined;
         onBlur?: ((evt: FocusEvent) => any) | undefined;
         onFocus?: ((evt: FocusEvent) => any) | undefined;
@@ -20294,7 +20294,7 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
         handleFocus: (event: FocusEvent) => void;
         handleBlur: (event: FocusEvent) => void;
         needStatusIcon: import("vue").ComputedRef<boolean>;
-        validateState: import("vue").ComputedRef<"" | "error" | "success" | "validating">;
+        validateState: import("vue").ComputedRef<"" | "error" | "validating" | "success">;
         validateIcon: import("vue").ComputedRef<any>;
         passwordIcon: import("vue").ComputedRef<any>;
         containerStyle: import("vue").ComputedRef<import("vue").StyleValue>;
@@ -22292,7 +22292,7 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
         handleFocus: (event: FocusEvent) => void;
         handleBlur: (event: FocusEvent) => void;
         needStatusIcon: import("vue").ComputedRef<boolean>;
-        validateState: import("vue").ComputedRef<"" | "error" | "success" | "validating">;
+        validateState: import("vue").ComputedRef<"" | "error" | "validating" | "success">;
         validateIcon: import("vue").ComputedRef<any>;
         passwordIcon: import("vue").ComputedRef<any>;
         containerStyle: import("vue").ComputedRef<import("vue").StyleValue>;
@@ -22480,8 +22480,8 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
         readonly autofocus: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }>> & {
         "onUpdate:modelValue"?: ((value: string) => any) | undefined;
-        onChange?: ((value: string) => any) | undefined;
         onClear?: (() => any) | undefined;
+        onChange?: ((value: string) => any) | undefined;
         onInput?: ((value: string) => any) | undefined;
         onBlur?: ((evt: FocusEvent) => any) | undefined;
         onFocus?: ((evt: FocusEvent) => any) | undefined;
@@ -22492,12 +22492,12 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
         onMouseenter?: ((evt: MouseEvent) => any) | undefined;
         onMouseleave?: ((evt: MouseEvent) => any) | undefined;
     }, {
+        readonly id: string;
         readonly type: string;
         readonly tabindex: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly modelValue: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined) | ((new (...args: any[]) => (string | number | null | undefined) & {}) | (() => string | number | null | undefined))[], unknown, unknown>;
         readonly disabled: boolean;
         readonly label: string;
-        readonly id: string;
         readonly clearable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly autosize: import("..").InputAutoSize;
         readonly autocomplete: string;
@@ -24753,11 +24753,11 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
                     readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                 }>> & {
-                    onClose?: (() => any) | undefined;
                     onBlur?: (() => any) | undefined;
                     onFocus?: (() => any) | undefined;
                     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                    onClose?: (() => any) | undefined;
                 }>>;
                 focusStartRef: import("vue").Ref<HTMLElement | "first" | "container" | undefined>;
                 trapped: import("vue").Ref<boolean>;
@@ -25100,11 +25100,11 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
                 readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                 readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
             }>> & {
-                onClose?: (() => any) | undefined;
                 onBlur?: (() => any) | undefined;
                 onFocus?: (() => any) | undefined;
                 onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                 onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                onClose?: (() => any) | undefined;
             }, {
                 readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
                 readonly strategy: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
@@ -26327,7 +26327,7 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
         readonly hit: BooleanConstructor;
         readonly color: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
         readonly size: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "" | "default" | "small" | "large", unknown, "", boolean>;
-        readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "light" | "dark" | "plain", unknown, "light", boolean>;
+        readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain", unknown, "light", boolean>;
         readonly round: BooleanConstructor;
     }, {
         props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
@@ -26337,11 +26337,11 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
             readonly hit: BooleanConstructor;
             readonly color: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
             readonly size: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "" | "default" | "small" | "large", unknown, "", boolean>;
-            readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "light" | "dark" | "plain", unknown, "light", boolean>;
+            readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain", unknown, "light", boolean>;
             readonly round: BooleanConstructor;
         }>> & {
-            onClose?: ((evt: MouseEvent) => any) | undefined;
             onClick?: ((evt: MouseEvent) => any) | undefined;
+            onClose?: ((evt: MouseEvent) => any) | undefined;
         }>>;
         emit: ((event: "click", evt: MouseEvent) => void) & ((event: "close", evt: MouseEvent) => void);
         tagSize: import("vue").ComputedRef<"" | "default" | "small" | "large">;
@@ -26440,18 +26440,18 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
         readonly hit: BooleanConstructor;
         readonly color: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
         readonly size: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "" | "default" | "small" | "large", unknown, "", boolean>;
-        readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "light" | "dark" | "plain", unknown, "light", boolean>;
+        readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain", unknown, "light", boolean>;
         readonly round: BooleanConstructor;
     }>> & {
-        onClose?: ((evt: MouseEvent) => any) | undefined;
         onClick?: ((evt: MouseEvent) => any) | undefined;
+        onClose?: ((evt: MouseEvent) => any) | undefined;
     }, {
         readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "success" | "warning" | "info" | "danger", unknown>;
         readonly color: string;
-        readonly effect: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "light" | "dark" | "plain", unknown>;
+        readonly effect: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain", unknown>;
         readonly size: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "small" | "large", unknown>;
-        readonly closable: boolean;
         readonly round: boolean;
+        readonly closable: boolean;
         readonly disableTransitions: boolean;
         readonly hit: boolean;
     }>> & Record<string, any>;
@@ -26594,11 +26594,11 @@ export declare const ElCascader: SFCWithInstall<import("vue").DefineComponent<{
 }, {
     options: import("..").CascaderOption[];
     disabled: boolean;
-    props: import("..").CascaderProps;
     debounce: number;
     popperClass: string;
     teleported: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     clearable: boolean;
+    props: import("..").CascaderProps;
     validateEvent: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     separator: string;
     filterable: boolean;

@@ -13293,6 +13293,7 @@
     "success"
   ];
   const formItemProps = buildProps({
+    disabled: Boolean,
     label: String,
     labelWidth: {
       type: [String, Number],
@@ -13424,7 +13425,6 @@
     setup(__props, { expose }) {
       const props = __props;
       const slots = vue.useSlots();
-      const defaultComponent = slots == null ? void 0 : slots.default()[0];
       const formContext = vue.inject(formContextKey, void 0);
       const parentFormItemContext = vue.inject(formItemContextKey, void 0);
       const _size = useFormSize(void 0, { formItem: false });
@@ -13466,7 +13466,7 @@
       });
       const formItemClasses = vue.computed(() => [
         addFloat.value && "is-float",
-        Object.prototype.hasOwnProperty.call(defaultComponent.props, "disabled") && "is-float-disabled",
+        isFloat.value && props.disabled && "is-float-disabled",
         ns.b(),
         ns.m(_size.value),
         ns.is("error", validateState.value === "error"),

@@ -2708,11 +2708,11 @@ declare const useSelect: (props: ISelectV2Props, emit: any) => {
                         readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                         readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                     }>> & {
-                        onClose?: (() => any) | undefined;
                         onBlur?: (() => any) | undefined;
                         onFocus?: (() => any) | undefined;
                         onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                         onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                        onClose?: (() => any) | undefined;
                     }>>;
                     focusStartRef: import("vue").Ref<HTMLElement | "first" | "container" | undefined>;
                     trapped: import("vue").Ref<boolean>;
@@ -3055,11 +3055,11 @@ declare const useSelect: (props: ISelectV2Props, emit: any) => {
                     readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                 }>> & {
-                    onClose?: (() => any) | undefined;
                     onBlur?: (() => any) | undefined;
                     onFocus?: (() => any) | undefined;
                     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                    onClose?: (() => any) | undefined;
                 }, {
                     readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
                     readonly strategy: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
@@ -5661,11 +5661,11 @@ declare const useSelect: (props: ISelectV2Props, emit: any) => {
                     readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                 }>> & {
-                    onClose?: (() => any) | undefined;
                     onBlur?: (() => any) | undefined;
                     onFocus?: (() => any) | undefined;
                     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                    onClose?: (() => any) | undefined;
                 }>>;
                 focusStartRef: import("vue").Ref<HTMLElement | "first" | "container" | undefined>;
                 trapped: import("vue").Ref<boolean>;
@@ -6008,11 +6008,11 @@ declare const useSelect: (props: ISelectV2Props, emit: any) => {
                 readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                 readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
             }>> & {
-                onClose?: (() => any) | undefined;
                 onBlur?: (() => any) | undefined;
                 onFocus?: (() => any) | undefined;
                 onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                 onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                onClose?: (() => any) | undefined;
             }, {
                 readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
                 readonly strategy: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
@@ -8936,11 +8936,11 @@ declare const useSelect: (props: ISelectV2Props, emit: any) => {
                         readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                         readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                     }>> & {
-                        onClose?: (() => any) | undefined;
                         onBlur?: (() => any) | undefined;
                         onFocus?: (() => any) | undefined;
                         onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                         onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                        onClose?: (() => any) | undefined;
                     }>>;
                     focusStartRef: import("vue").Ref<HTMLElement | "first" | "container" | undefined>;
                     trapped: import("vue").Ref<boolean>;
@@ -9283,11 +9283,11 @@ declare const useSelect: (props: ISelectV2Props, emit: any) => {
                     readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                 }>> & {
-                    onClose?: (() => any) | undefined;
                     onBlur?: (() => any) | undefined;
                     onFocus?: (() => any) | undefined;
                     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                    onClose?: (() => any) | undefined;
                 }, {
                     readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
                     readonly strategy: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
@@ -11889,11 +11889,11 @@ declare const useSelect: (props: ISelectV2Props, emit: any) => {
                     readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                 }>> & {
-                    onClose?: (() => any) | undefined;
                     onBlur?: (() => any) | undefined;
                     onFocus?: (() => any) | undefined;
                     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                    onClose?: (() => any) | undefined;
                 }>>;
                 focusStartRef: import("vue").Ref<HTMLElement | "first" | "container" | undefined>;
                 trapped: import("vue").Ref<boolean>;
@@ -12236,11 +12236,11 @@ declare const useSelect: (props: ISelectV2Props, emit: any) => {
                 readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                 readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
             }>> & {
-                onClose?: (() => any) | undefined;
                 onBlur?: (() => any) | undefined;
                 onFocus?: (() => any) | undefined;
                 onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                 onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                onClose?: (() => any) | undefined;
             }, {
                 readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
                 readonly strategy: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
@@ -12554,7 +12554,7 @@ declare const useSelect: (props: ISelectV2Props, emit: any) => {
     suffixRef: import("vue").Ref<HTMLElement>;
     collapseItemRef: import("vue").Ref<HTMLElement>;
     popperRef: import("vue").ComputedRef<HTMLElement | undefined>;
-    validateState: import("vue").ComputedRef<"" | "error" | "success" | "validating">;
+    validateState: import("vue").ComputedRef<"" | "error" | "validating" | "success">;
     validateIcon: import("vue").ComputedRef<any>;
     showTagList: import("vue").ComputedRef<{
         [x: string]: any;

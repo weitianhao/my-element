@@ -150,8 +150,8 @@ export declare const ElBacktop: import("element-plus/es/utils").SFCWithInstall<i
 }, {
     readonly right: number;
     readonly bottom: number;
-    readonly target: string;
     readonly visibilityHeight: number;
+    readonly target: string;
 }>> & Record<string, any>;
 export default ElBacktop;
 export * from './src/backtop';

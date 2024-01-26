@@ -3,14 +3,14 @@ export declare const ElBadge: import("element-plus/es/utils").SFCWithInstall<imp
     readonly max: import("element-plus/es/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 99, boolean>;
     readonly isDot: BooleanConstructor;
     readonly hidden: BooleanConstructor;
-    readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown, "danger", boolean>;
+    readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "primary" | "warning" | "info" | "danger", unknown, "danger", boolean>;
 }, {
     props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
         readonly value: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
         readonly max: import("element-plus/es/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 99, boolean>;
         readonly isDot: BooleanConstructor;
         readonly hidden: BooleanConstructor;
-        readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown, "danger", boolean>;
+        readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "primary" | "warning" | "info" | "danger", unknown, "danger", boolean>;
     }>> & {
         [x: string & `on${string}`]: ((...args: any[]) => any) | ((...args: unknown[]) => any) | undefined;
     }>>;
@@ -38,10 +38,10 @@ export declare const ElBadge: import("element-plus/es/utils").SFCWithInstall<imp
     readonly max: import("element-plus/es/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 99, boolean>;
     readonly isDot: BooleanConstructor;
     readonly hidden: BooleanConstructor;
-    readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown, "danger", boolean>;
+    readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "primary" | "warning" | "info" | "danger", unknown, "danger", boolean>;
 }>>, {
     readonly value: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-    readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown>;
+    readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "success" | "primary" | "warning" | "info" | "danger", unknown>;
     readonly hidden: boolean;
     readonly max: number;
     readonly isDot: boolean;

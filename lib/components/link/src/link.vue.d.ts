@@ -1,5 +1,5 @@
 declare const _default: import("vue").DefineComponent<{
-    readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "default" | "success" | "warning" | "info" | "primary" | "danger", unknown, "default", boolean>;
+    readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "default" | "success" | "primary" | "warning" | "info" | "danger", unknown, "default", boolean>;
     readonly underline: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     readonly disabled: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly href: import("../../../utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
@@ -12,7 +12,7 @@ declare const _default: import("vue").DefineComponent<{
     };
 }, {
     props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
-        readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "default" | "success" | "warning" | "info" | "primary" | "danger", unknown, "default", boolean>;
+        readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "default" | "success" | "primary" | "warning" | "info" | "danger", unknown, "default", boolean>;
         readonly underline: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
         readonly disabled: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         readonly href: import("../../../utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
@@ -113,7 +113,7 @@ declare const _default: import("vue").DefineComponent<{
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     click: (evt: MouseEvent) => boolean;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
-    readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "default" | "success" | "warning" | "info" | "primary" | "danger", unknown, "default", boolean>;
+    readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "default" | "success" | "primary" | "warning" | "info" | "danger", unknown, "default", boolean>;
     readonly underline: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     readonly disabled: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly href: import("../../../utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
@@ -127,10 +127,10 @@ declare const _default: import("vue").DefineComponent<{
 }>> & {
     onClick?: ((evt: MouseEvent) => any) | undefined;
 }, {
-    readonly type: import("../../../utils").EpPropMergeType<StringConstructor, "default" | "success" | "warning" | "info" | "primary" | "danger", unknown>;
+    readonly type: import("../../../utils").EpPropMergeType<StringConstructor, "default" | "success" | "primary" | "warning" | "info" | "danger", unknown>;
     readonly disabled: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly target: string;
     readonly underline: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly target: string;
     readonly href: string;
 }>;
 export default _default;

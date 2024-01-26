@@ -8,7 +8,7 @@ export declare const ElDropdown: import("element-plus/es/utils").SFCWithInstall<
         readonly __epPropKey: true;
     };
     readonly type: {
-        readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown> & {}) | (() => import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown>) | ((new (...args: any[]) => import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown> & {}) | (() => import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown>))[], unknown, unknown>>;
+        readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "primary" | "warning" | "info" | "danger", unknown> & {}) | (() => import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "primary" | "warning" | "info" | "danger", unknown>) | ((new (...args: any[]) => import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "primary" | "warning" | "info" | "danger", unknown> & {}) | (() => import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "primary" | "warning" | "info" | "danger", unknown>))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -2687,11 +2687,11 @@ export declare const ElDropdown: import("element-plus/es/utils").SFCWithInstall<
                         readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                         readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                     }>> & {
-                        onClose?: (() => any) | undefined;
                         onBlur?: (() => any) | undefined;
                         onFocus?: (() => any) | undefined;
                         onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                         onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                        onClose?: (() => any) | undefined;
                     }>>;
                     focusStartRef: import("vue").Ref<HTMLElement | "first" | "container" | undefined>;
                     trapped: import("vue").Ref<boolean>;
@@ -3034,11 +3034,11 @@ export declare const ElDropdown: import("element-plus/es/utils").SFCWithInstall<
                     readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                 }>> & {
-                    onClose?: (() => any) | undefined;
                     onBlur?: (() => any) | undefined;
                     onFocus?: (() => any) | undefined;
                     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                    onClose?: (() => any) | undefined;
                 }, {
                     readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
                     readonly strategy: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
@@ -5640,11 +5640,11 @@ export declare const ElDropdown: import("element-plus/es/utils").SFCWithInstall<
                     readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                 }>> & {
-                    onClose?: (() => any) | undefined;
                     onBlur?: (() => any) | undefined;
                     onFocus?: (() => any) | undefined;
                     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                    onClose?: (() => any) | undefined;
                 }>>;
                 focusStartRef: import("vue").Ref<HTMLElement | "first" | "container" | undefined>;
                 trapped: import("vue").Ref<boolean>;
@@ -5987,11 +5987,11 @@ export declare const ElDropdown: import("element-plus/es/utils").SFCWithInstall<
                 readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                 readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
             }>> & {
-                onClose?: (() => any) | undefined;
                 onBlur?: (() => any) | undefined;
                 onFocus?: (() => any) | undefined;
                 onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                 onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                onClose?: (() => any) | undefined;
             }, {
                 readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
                 readonly strategy: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
@@ -6311,7 +6311,7 @@ export declare const ElDropdown: import("element-plus/es/utils").SFCWithInstall<
         readonly __epPropKey: true;
     };
     readonly type: {
-        readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown> & {}) | (() => import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown>) | ((new (...args: any[]) => import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown> & {}) | (() => import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown>))[], unknown, unknown>>;
+        readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "primary" | "warning" | "info" | "danger", unknown> & {}) | (() => import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "primary" | "warning" | "info" | "danger", unknown>) | ((new (...args: any[]) => import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "primary" | "warning" | "info" | "danger", unknown> & {}) | (() => import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "default" | "text" | "success" | "primary" | "warning" | "info" | "danger", unknown>))[], unknown, unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;

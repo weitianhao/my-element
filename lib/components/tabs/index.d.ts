@@ -102,8 +102,8 @@ export declare const ElTabs: import("element-plus/es/utils").SFCWithInstall<impo
     onTabAdd?: (() => any) | undefined;
 }, {
     readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "card" | "border-card", unknown>;
-    readonly closable: boolean;
     readonly stretch: boolean;
+    readonly closable: boolean;
     readonly editable: boolean;
     readonly beforeLeave: (newName: import("./src/tabs").TabPaneName, oldName: import("./src/tabs").TabPaneName) => import("element-plus/es/utils").Awaitable<boolean | void>;
     readonly tabPosition: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "top" | "right" | "bottom" | "left", unknown>;

@@ -150,7 +150,7 @@ declare const _default: import("vue").DefineComponent<{
 }, {
     readonly right: number;
     readonly bottom: number;
-    readonly target: string;
     readonly visibilityHeight: number;
+    readonly target: string;
 }>;
 export default _default;

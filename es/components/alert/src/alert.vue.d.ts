@@ -6,7 +6,7 @@ declare const _default: import("vue").DefineComponent<{
     readonly closeText: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly showIcon: BooleanConstructor;
     readonly center: BooleanConstructor;
-    readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "light" | "dark", unknown, "light", boolean>;
+    readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "dark" | "light", unknown, "light", boolean>;
 }, {
     Close: any;
     props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
@@ -17,7 +17,7 @@ declare const _default: import("vue").DefineComponent<{
         readonly closeText: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
         readonly showIcon: BooleanConstructor;
         readonly center: BooleanConstructor;
-        readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "light" | "dark", unknown, "light", boolean>;
+        readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "dark" | "light", unknown, "light", boolean>;
     }>> & {
         onClose?: ((evt: MouseEvent) => any) | undefined;
     }>>;
@@ -125,17 +125,17 @@ declare const _default: import("vue").DefineComponent<{
     readonly closeText: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly showIcon: BooleanConstructor;
     readonly center: BooleanConstructor;
-    readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "light" | "dark", unknown, "light", boolean>;
+    readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "dark" | "light", unknown, "light", boolean>;
 }>> & {
     onClose?: ((evt: MouseEvent) => any) | undefined;
 }, {
     readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "error" | "success" | "warning" | "info", unknown>;
     readonly description: string;
     readonly title: string;
-    readonly effect: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "light" | "dark", unknown>;
+    readonly effect: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "dark" | "light", unknown>;
+    readonly center: boolean;
     readonly closable: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly closeText: string;
     readonly showIcon: boolean;
-    readonly center: boolean;
 }>;
 export default _default;

@@ -225,12 +225,12 @@ export declare const ElRadio: import("element-plus/es/utils").SFCWithInstall<imp
         "onUpdate:modelValue"?: ((val: string | number | boolean) => any) | undefined;
         onChange?: ((val: string | number | boolean) => any) | undefined;
     }, {
+        readonly id: string;
         readonly name: string;
         readonly fill: string;
         readonly modelValue: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor], unknown, unknown>;
         readonly disabled: boolean;
         readonly label: string;
-        readonly id: string;
         readonly validateEvent: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly textColor: string;
     }>;
@@ -319,12 +319,12 @@ export declare const ElRadioGroup: import("element-plus/es/utils").SFCWithInstal
     "onUpdate:modelValue"?: ((val: string | number | boolean) => any) | undefined;
     onChange?: ((val: string | number | boolean) => any) | undefined;
 }, {
+    readonly id: string;
     readonly name: string;
     readonly fill: string;
     readonly modelValue: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor, BooleanConstructor], unknown, unknown>;
     readonly disabled: boolean;
     readonly label: string;
-    readonly id: string;
     readonly validateEvent: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly textColor: string;
 }>>;

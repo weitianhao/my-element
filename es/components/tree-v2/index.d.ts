@@ -89,14 +89,14 @@ export declare const ElTreeV2: import("element-plus/es/utils").SFCWithInstall<im
         readonly perfMode: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     }>> & {
         "onCurrent-change"?: ((data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode) => any) | undefined;
-        onCheck?: ((data: import("../tree/src/tree.type").TreeNodeData, checkedInfo: import("./src/types").CheckedInfo) => any) | undefined;
-        "onNode-click"?: ((data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode, e: MouseEvent) => any) | undefined;
         "onNode-expand"?: ((data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode) => any) | undefined;
-        "onNode-collapse"?: ((data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode) => any) | undefined;
+        onCheck?: ((data: import("../tree/src/tree.type").TreeNodeData, checkedInfo: import("./src/types").CheckedInfo) => any) | undefined;
         "onCheck-change"?: ((data: import("../tree/src/tree.type").TreeNodeData, checked: boolean) => any) | undefined;
+        "onNode-click"?: ((data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode, e: MouseEvent) => any) | undefined;
         "onNode-contextmenu"?: ((event: Event, data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode) => any) | undefined;
+        "onNode-collapse"?: ((data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode) => any) | undefined;
     }>>;
-    emit: ((event: "current-change", data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode) => void) & ((event: "node-click", data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode, e: MouseEvent) => void) & ((event: "node-expand", data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode) => void) & ((event: "node-collapse", data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode) => void) & ((event: "check", data: import("../tree/src/tree.type").TreeNodeData, checkedInfo: import("./src/types").CheckedInfo) => void) & ((event: "check-change", data: import("../tree/src/tree.type").TreeNodeData, checked: boolean) => void) & ((event: "node-contextmenu", event: Event, data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode) => void);
+    emit: ((event: "current-change", data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode) => void) & ((event: "node-expand", data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode) => void) & ((event: "check-change", data: import("../tree/src/tree.type").TreeNodeData, checked: boolean) => void) & ((event: "node-click", data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode, e: MouseEvent) => void) & ((event: "node-contextmenu", event: Event, data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode) => void) & ((event: "node-collapse", data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode) => void) & ((event: "check", data: import("../tree/src/tree.type").TreeNodeData, checkedInfo: import("./src/types").CheckedInfo) => void);
     slots: Readonly<{
         [name: string]: import("vue").Slot | undefined;
     }>;
@@ -610,12 +610,12 @@ export declare const ElTreeV2: import("element-plus/es/utils").SFCWithInstall<im
             "onUpdate:modelValue"?: ((val: import("..").CheckboxValueType) => any) | undefined;
             onChange?: ((val: import("..").CheckboxValueType) => any) | undefined;
         }, {
+            id: string;
             name: string;
             border: boolean;
             modelValue: string | number | boolean;
             disabled: boolean;
             label: string | number | boolean | Record<string, any>;
-            id: string;
             validateEvent: boolean;
             indeterminate: boolean;
             checked: boolean;
@@ -800,12 +800,12 @@ export declare const ElTreeV2: import("element-plus/es/utils").SFCWithInstall<im
                 "onUpdate:modelValue"?: ((val: import("..").CheckboxValueType) => any) | undefined;
                 onChange?: ((val: import("..").CheckboxValueType) => any) | undefined;
             }, {
+                id: string;
                 name: string;
                 border: boolean;
                 modelValue: string | number | boolean;
                 disabled: boolean;
                 label: string | number | boolean | Record<string, any>;
-                id: string;
                 validateEvent: boolean;
                 indeterminate: boolean;
                 checked: boolean;
@@ -1009,12 +1009,12 @@ export declare const ElTreeV2: import("element-plus/es/utils").SFCWithInstall<im
     readonly perfMode: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
 }>> & {
     "onCurrent-change"?: ((data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode) => any) | undefined;
-    onCheck?: ((data: import("../tree/src/tree.type").TreeNodeData, checkedInfo: import("./src/types").CheckedInfo) => any) | undefined;
-    "onNode-click"?: ((data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode, e: MouseEvent) => any) | undefined;
     "onNode-expand"?: ((data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode) => any) | undefined;
-    "onNode-collapse"?: ((data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode) => any) | undefined;
+    onCheck?: ((data: import("../tree/src/tree.type").TreeNodeData, checkedInfo: import("./src/types").CheckedInfo) => any) | undefined;
     "onCheck-change"?: ((data: import("../tree/src/tree.type").TreeNodeData, checked: boolean) => any) | undefined;
+    "onNode-click"?: ((data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode, e: MouseEvent) => any) | undefined;
     "onNode-contextmenu"?: ((event: Event, data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode) => any) | undefined;
+    "onNode-collapse"?: ((data: import("../tree/src/tree.type").TreeNodeData, node: import("./src/types").TreeNode) => any) | undefined;
 }, {
     readonly height: number;
     readonly data: import("./src/types").TreeData;
@@ -1024,11 +1024,11 @@ export declare const ElTreeV2: import("element-plus/es/utils").SFCWithInstall<im
     readonly indent: number;
     readonly perfMode: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly itemSize: number;
-    readonly highlightCurrent: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly showCheckbox: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultCheckedKeys: import("./src/types").TreeKey[];
     readonly defaultExpandedKeys: import("./src/types").TreeKey[];
     readonly expandOnClickNode: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly checkOnClickNode: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly highlightCurrent: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
 }>> & Record<string, any>;
 export default ElTreeV2;

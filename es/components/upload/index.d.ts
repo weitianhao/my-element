@@ -1275,11 +1275,11 @@ export declare const ElUpload: import("element-plus/es/utils").SFCWithInstall<im
             readonly strokeWidth: number;
             readonly indeterminate: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly format: import("..").ProgressFn;
-            readonly showText: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly percentage: number;
             readonly status: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "success" | "warning" | "exception", unknown>;
             readonly duration: number;
             readonly textInside: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+            readonly showText: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
             readonly striped: boolean;
             readonly stripedFlow: boolean;
         }>> & Record<string, any>;

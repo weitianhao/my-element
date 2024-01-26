@@ -7,7 +7,7 @@ export declare const tagProps: {
     readonly hit: BooleanConstructor;
     readonly color: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly size: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "" | "default" | "small" | "large", unknown, "", boolean>;
-    readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "light" | "dark" | "plain", unknown, "light", boolean>;
+    readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain", unknown, "light", boolean>;
     readonly round: BooleanConstructor;
 };
 export declare type TagProps = ExtractPropTypes<typeof tagProps>;

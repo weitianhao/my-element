@@ -89,14 +89,14 @@ declare const _default: import("vue").DefineComponent<{
         readonly perfMode: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     }>> & {
         "onCurrent-change"?: ((data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode) => any) | undefined;
-        onCheck?: ((data: import("../../tree/src/tree.type").TreeNodeData, checkedInfo: import("./types").CheckedInfo) => any) | undefined;
-        "onNode-click"?: ((data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode, e: MouseEvent) => any) | undefined;
         "onNode-expand"?: ((data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode) => any) | undefined;
-        "onNode-collapse"?: ((data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode) => any) | undefined;
+        onCheck?: ((data: import("../../tree/src/tree.type").TreeNodeData, checkedInfo: import("./types").CheckedInfo) => any) | undefined;
         "onCheck-change"?: ((data: import("../../tree/src/tree.type").TreeNodeData, checked: boolean) => any) | undefined;
+        "onNode-click"?: ((data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode, e: MouseEvent) => any) | undefined;
         "onNode-contextmenu"?: ((event: Event, data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode) => any) | undefined;
+        "onNode-collapse"?: ((data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode) => any) | undefined;
     }>>;
-    emit: ((event: "current-change", data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode) => void) & ((event: "node-click", data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode, e: MouseEvent) => void) & ((event: "node-expand", data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode) => void) & ((event: "node-collapse", data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode) => void) & ((event: "check", data: import("../../tree/src/tree.type").TreeNodeData, checkedInfo: import("./types").CheckedInfo) => void) & ((event: "check-change", data: import("../../tree/src/tree.type").TreeNodeData, checked: boolean) => void) & ((event: "node-contextmenu", event: Event, data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode) => void);
+    emit: ((event: "current-change", data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode) => void) & ((event: "node-expand", data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode) => void) & ((event: "check-change", data: import("../../tree/src/tree.type").TreeNodeData, checked: boolean) => void) & ((event: "node-click", data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode, e: MouseEvent) => void) & ((event: "node-contextmenu", event: Event, data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode) => void) & ((event: "node-collapse", data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode) => void) & ((event: "check", data: import("../../tree/src/tree.type").TreeNodeData, checkedInfo: import("./types").CheckedInfo) => void);
     slots: Readonly<{
         [name: string]: import("vue").Slot | undefined;
     }>;
@@ -610,12 +610,12 @@ declare const _default: import("vue").DefineComponent<{
             "onUpdate:modelValue"?: ((val: import("../..").CheckboxValueType) => any) | undefined;
             onChange?: ((val: import("../..").CheckboxValueType) => any) | undefined;
         }, {
+            id: string;
             name: string;
             border: boolean;
             modelValue: string | number | boolean;
             disabled: boolean;
             label: string | number | boolean | Record<string, any>;
-            id: string;
             validateEvent: boolean;
             indeterminate: boolean;
             checked: boolean;
@@ -800,12 +800,12 @@ declare const _default: import("vue").DefineComponent<{
                 "onUpdate:modelValue"?: ((val: import("../..").CheckboxValueType) => any) | undefined;
                 onChange?: ((val: import("../..").CheckboxValueType) => any) | undefined;
             }, {
+                id: string;
                 name: string;
                 border: boolean;
                 modelValue: string | number | boolean;
                 disabled: boolean;
                 label: string | number | boolean | Record<string, any>;
-                id: string;
                 validateEvent: boolean;
                 indeterminate: boolean;
                 checked: boolean;
@@ -1009,12 +1009,12 @@ declare const _default: import("vue").DefineComponent<{
     readonly perfMode: import("../../../utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
 }>> & {
     "onCurrent-change"?: ((data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode) => any) | undefined;
-    onCheck?: ((data: import("../../tree/src/tree.type").TreeNodeData, checkedInfo: import("./types").CheckedInfo) => any) | undefined;
-    "onNode-click"?: ((data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode, e: MouseEvent) => any) | undefined;
     "onNode-expand"?: ((data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode) => any) | undefined;
-    "onNode-collapse"?: ((data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode) => any) | undefined;
+    onCheck?: ((data: import("../../tree/src/tree.type").TreeNodeData, checkedInfo: import("./types").CheckedInfo) => any) | undefined;
     "onCheck-change"?: ((data: import("../../tree/src/tree.type").TreeNodeData, checked: boolean) => any) | undefined;
+    "onNode-click"?: ((data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode, e: MouseEvent) => any) | undefined;
     "onNode-contextmenu"?: ((event: Event, data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode) => any) | undefined;
+    "onNode-collapse"?: ((data: import("../../tree/src/tree.type").TreeNodeData, node: import("./types").TreeNode) => any) | undefined;
 }, {
     readonly height: number;
     readonly data: import("./types").TreeData;
@@ -1024,11 +1024,11 @@ declare const _default: import("vue").DefineComponent<{
     readonly indent: number;
     readonly perfMode: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly itemSize: number;
-    readonly highlightCurrent: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly showCheckbox: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly defaultCheckedKeys: import("./types").TreeKey[];
     readonly defaultExpandedKeys: import("./types").TreeKey[];
     readonly expandOnClickNode: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly checkOnClickNode: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly highlightCurrent: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
 }>;
 export default _default;

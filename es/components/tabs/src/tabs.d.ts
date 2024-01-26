@@ -130,8 +130,8 @@ declare const Tabs: import("vue").DefineComponent<{
     onTabAdd?: (() => any) | undefined;
 }, {
     readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "card" | "border-card", unknown>;
-    readonly closable: boolean;
     readonly stretch: boolean;
+    readonly closable: boolean;
     readonly editable: boolean;
     readonly beforeLeave: (newName: TabPaneName, oldName: TabPaneName) => Awaitable<void | boolean>;
     readonly tabPosition: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "top" | "right" | "bottom" | "left", unknown>;

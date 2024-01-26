@@ -12,6 +12,6 @@ export declare const buttonGroupProps: {
     /**
      * @description control the type of buttons in this button-group
      */
-    readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "text" | "success" | "warning" | "info" | "primary" | "danger", unknown, "", boolean>;
+    readonly type: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "text" | "success" | "primary" | "warning" | "info" | "danger", unknown, "", boolean>;
 };
 export declare type ButtonGroupProps = ExtractPropTypes<typeof buttonGroupProps>;

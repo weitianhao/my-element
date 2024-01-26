@@ -1,5 +1,5 @@
 export declare const ElLink: import("element-plus/es/utils").SFCWithInstall<import("vue").DefineComponent<{
-    readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "default" | "success" | "warning" | "info" | "primary" | "danger", unknown, "default", boolean>;
+    readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "default" | "success" | "primary" | "warning" | "info" | "danger", unknown, "default", boolean>;
     readonly underline: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     readonly disabled: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly href: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
@@ -12,7 +12,7 @@ export declare const ElLink: import("element-plus/es/utils").SFCWithInstall<impo
     };
 }, {
     props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
-        readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "default" | "success" | "warning" | "info" | "primary" | "danger", unknown, "default", boolean>;
+        readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "default" | "success" | "primary" | "warning" | "info" | "danger", unknown, "default", boolean>;
         readonly underline: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
         readonly disabled: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         readonly href: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
@@ -113,7 +113,7 @@ export declare const ElLink: import("element-plus/es/utils").SFCWithInstall<impo
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     click: (evt: MouseEvent) => boolean;
 }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
-    readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "default" | "success" | "warning" | "info" | "primary" | "danger", unknown, "default", boolean>;
+    readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "default" | "success" | "primary" | "warning" | "info" | "danger", unknown, "default", boolean>;
     readonly underline: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, true, boolean>;
     readonly disabled: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly href: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
@@ -127,10 +127,10 @@ export declare const ElLink: import("element-plus/es/utils").SFCWithInstall<impo
 }>> & {
     onClick?: ((evt: MouseEvent) => any) | undefined;
 }, {
-    readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "default" | "success" | "warning" | "info" | "primary" | "danger", unknown>;
+    readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "default" | "success" | "primary" | "warning" | "info" | "danger", unknown>;
     readonly disabled: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly target: string;
     readonly underline: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly target: string;
     readonly href: string;
 }>> & Record<string, any>;
 export default ElLink;

@@ -105,7 +105,7 @@ declare const _default: import("vue").DefineComponent<{
     visible: import("vue").Ref<boolean>;
     height: import("vue").Ref<number>;
     stopTimer: undefined;
-    badgeType: import("vue").ComputedRef<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown>>;
+    badgeType: import("vue").ComputedRef<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "success" | "primary" | "warning" | "info" | "danger", unknown>>;
     typeClass: import("vue").ComputedRef<{
         [x: string]: any;
     }>;
@@ -123,14 +123,14 @@ declare const _default: import("vue").DefineComponent<{
         readonly max: import("element-plus/es/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 99, boolean>;
         readonly isDot: BooleanConstructor;
         readonly hidden: BooleanConstructor;
-        readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown, "danger", boolean>;
+        readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "primary" | "warning" | "info" | "danger", unknown, "danger", boolean>;
     }, {
         props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
             readonly value: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
             readonly max: import("element-plus/es/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 99, boolean>;
             readonly isDot: BooleanConstructor;
             readonly hidden: BooleanConstructor;
-            readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown, "danger", boolean>;
+            readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "primary" | "warning" | "info" | "danger", unknown, "danger", boolean>;
         }>> & {
             [x: string & `on${string}`]: ((...args: any[]) => any) | ((...args: unknown[]) => any) | undefined;
         }>>;
@@ -158,10 +158,10 @@ declare const _default: import("vue").DefineComponent<{
         readonly max: import("element-plus/es/utils").EpPropFinalized<NumberConstructor, unknown, unknown, 99, boolean>;
         readonly isDot: BooleanConstructor;
         readonly hidden: BooleanConstructor;
-        readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown, "danger", boolean>;
+        readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "primary" | "warning" | "info" | "danger", unknown, "danger", boolean>;
     }>>, {
         readonly value: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
-        readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown>;
+        readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "success" | "primary" | "warning" | "info" | "danger", unknown>;
         readonly hidden: boolean;
         readonly max: number;
         readonly isDot: boolean;
@@ -270,6 +270,7 @@ declare const _default: import("vue").DefineComponent<{
 }>> & {
     onDestroy?: (() => any) | undefined;
 }, {
+    readonly id: string;
     readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "error" | "success" | "warning" | "info", unknown>;
     readonly offset: number;
     readonly message: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
@@ -290,7 +291,6 @@ declare const _default: import("vue").DefineComponent<{
         [key: string]: any;
     }>)))[], unknown, unknown>;
     readonly zIndex: number;
-    readonly id: string;
     readonly center: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly icon: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) | ((new (...args: any[]) => (string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>) & {}) | (() => string | import("vue").Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions>))[], unknown, unknown>;
     readonly customClass: string;

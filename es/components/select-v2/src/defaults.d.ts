@@ -3,7 +3,7 @@ import type { Props } from './useProps';
 import type { Options, Placement } from 'element-plus/es/components/popper';
 export declare const SelectProps: {
     readonly allowCreate: BooleanConstructor;
-    readonly autocomplete: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => ("none" | "inline" | "both" | "list") & {}) | (() => "none" | "inline" | "both" | "list") | ((new (...args: any[]) => ("none" | "inline" | "both" | "list") & {}) | (() => "none" | "inline" | "both" | "list"))[], unknown, unknown, "none", boolean>;
+    readonly autocomplete: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => ("inline" | "none" | "both" | "list") & {}) | (() => "inline" | "none" | "both" | "list") | ((new (...args: any[]) => ("inline" | "none" | "both" | "list") & {}) | (() => "inline" | "none" | "both" | "list"))[], unknown, unknown, "none", boolean>;
     readonly automaticDropdown: BooleanConstructor;
     readonly clearable: BooleanConstructor;
     readonly clearIcon: {

@@ -78,7 +78,7 @@ declare const _default: import("vue").DefineComponent<{
     props: TreeOptionProps;
     node: Node;
     accordion: boolean;
-    showCheckbox: boolean;
     renderAfterExpand: boolean;
+    showCheckbox: boolean;
 }>;
 export default _default;

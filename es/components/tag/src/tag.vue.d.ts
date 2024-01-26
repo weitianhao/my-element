@@ -5,7 +5,7 @@ declare const _default: import("vue").DefineComponent<{
     readonly hit: BooleanConstructor;
     readonly color: import("../../../utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly size: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "small" | "large", unknown, "", boolean>;
-    readonly effect: import("../../../utils").EpPropFinalized<StringConstructor, "light" | "dark" | "plain", unknown, "light", boolean>;
+    readonly effect: import("../../../utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain", unknown, "light", boolean>;
     readonly round: BooleanConstructor;
 }, {
     props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
@@ -15,11 +15,11 @@ declare const _default: import("vue").DefineComponent<{
         readonly hit: BooleanConstructor;
         readonly color: import("../../../utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
         readonly size: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "small" | "large", unknown, "", boolean>;
-        readonly effect: import("../../../utils").EpPropFinalized<StringConstructor, "light" | "dark" | "plain", unknown, "light", boolean>;
+        readonly effect: import("../../../utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain", unknown, "light", boolean>;
         readonly round: BooleanConstructor;
     }>> & {
-        onClose?: ((evt: MouseEvent) => any) | undefined;
         onClick?: ((evt: MouseEvent) => any) | undefined;
+        onClose?: ((evt: MouseEvent) => any) | undefined;
     }>>;
     emit: ((event: "click", evt: MouseEvent) => void) & ((event: "close", evt: MouseEvent) => void);
     tagSize: import("vue").ComputedRef<"" | "default" | "small" | "large">;
@@ -118,18 +118,18 @@ declare const _default: import("vue").DefineComponent<{
     readonly hit: BooleanConstructor;
     readonly color: import("../../../utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly size: import("../../../utils").EpPropFinalized<StringConstructor, "" | "default" | "small" | "large", unknown, "", boolean>;
-    readonly effect: import("../../../utils").EpPropFinalized<StringConstructor, "light" | "dark" | "plain", unknown, "light", boolean>;
+    readonly effect: import("../../../utils").EpPropFinalized<StringConstructor, "dark" | "light" | "plain", unknown, "light", boolean>;
     readonly round: BooleanConstructor;
 }>> & {
-    onClose?: ((evt: MouseEvent) => any) | undefined;
     onClick?: ((evt: MouseEvent) => any) | undefined;
+    onClose?: ((evt: MouseEvent) => any) | undefined;
 }, {
     readonly type: import("../../../utils").EpPropMergeType<StringConstructor, "" | "success" | "warning" | "info" | "danger", unknown>;
     readonly color: string;
-    readonly effect: import("../../../utils").EpPropMergeType<StringConstructor, "light" | "dark" | "plain", unknown>;
+    readonly effect: import("../../../utils").EpPropMergeType<StringConstructor, "dark" | "light" | "plain", unknown>;
     readonly size: import("../../../utils").EpPropMergeType<StringConstructor, "" | "default" | "small" | "large", unknown>;
-    readonly closable: boolean;
     readonly round: boolean;
+    readonly closable: boolean;
     readonly disableTransitions: boolean;
     readonly hit: boolean;
 }>;

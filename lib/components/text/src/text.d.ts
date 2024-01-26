@@ -1,6 +1,6 @@
 import type { ExtractPropTypes } from 'vue';
 export declare const textProps: {
-    readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "" | "success" | "warning" | "info" | "primary" | "danger", unknown, "", boolean>;
+    readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "" | "success" | "primary" | "warning" | "info" | "danger", unknown, "", boolean>;
     readonly size: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "" | "default" | "small" | "large", unknown, "", boolean>;
     readonly truncated: {
         readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;

@@ -46,7 +46,7 @@ declare const _default: import("vue").DefineComponent<{
     }>>;
     color: import("vue").ComputedRef<string>;
     fontSize: import("vue").ComputedRef<string | number>;
-    fontWeight: import("vue").ComputedRef<number | "light" | "normal" | "weight">;
+    fontWeight: import("vue").ComputedRef<number | "normal" | "light" | "weight">;
     fontStyle: import("vue").ComputedRef<"none" | "normal" | "italic" | "oblique">;
     fontFamily: import("vue").ComputedRef<string>;
     textAlign: import("vue").ComputedRef<"right" | "left" | "start" | "end" | "center">;

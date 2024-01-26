@@ -1,7 +1,7 @@
 import type { SFCWithInstall } from 'element-plus/es/utils';
 declare const _Select: SFCWithInstall<import("vue").DefineComponent<{
     readonly allowCreate: BooleanConstructor;
-    readonly autocomplete: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => ("none" | "inline" | "both" | "list") & {}) | (() => "none" | "inline" | "both" | "list") | ((new (...args: any[]) => ("none" | "inline" | "both" | "list") & {}) | (() => "none" | "inline" | "both" | "list"))[], unknown, unknown, "none", boolean>;
+    readonly autocomplete: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => ("inline" | "none" | "both" | "list") & {}) | (() => "inline" | "none" | "both" | "list") | ((new (...args: any[]) => ("inline" | "none" | "both" | "list") & {}) | (() => "inline" | "none" | "both" | "list"))[], unknown, unknown, "none", boolean>;
     readonly automaticDropdown: BooleanConstructor;
     readonly clearable: BooleanConstructor;
     readonly clearIcon: {
@@ -2781,11 +2781,11 @@ declare const _Select: SFCWithInstall<import("vue").DefineComponent<{
                         readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                         readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                     }>> & {
-                        onClose?: (() => any) | undefined;
                         onBlur?: (() => any) | undefined;
                         onFocus?: (() => any) | undefined;
                         onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                         onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                        onClose?: (() => any) | undefined;
                     }>>;
                     focusStartRef: import("vue").Ref<HTMLElement | "first" | "container" | undefined>;
                     trapped: import("vue").Ref<boolean>;
@@ -3128,11 +3128,11 @@ declare const _Select: SFCWithInstall<import("vue").DefineComponent<{
                     readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                 }>> & {
-                    onClose?: (() => any) | undefined;
                     onBlur?: (() => any) | undefined;
                     onFocus?: (() => any) | undefined;
                     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                    onClose?: (() => any) | undefined;
                 }, {
                     readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
                     readonly strategy: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
@@ -5734,11 +5734,11 @@ declare const _Select: SFCWithInstall<import("vue").DefineComponent<{
                     readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                 }>> & {
-                    onClose?: (() => any) | undefined;
                     onBlur?: (() => any) | undefined;
                     onFocus?: (() => any) | undefined;
                     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                    onClose?: (() => any) | undefined;
                 }>>;
                 focusStartRef: import("vue").Ref<HTMLElement | "first" | "container" | undefined>;
                 trapped: import("vue").Ref<boolean>;
@@ -6081,11 +6081,11 @@ declare const _Select: SFCWithInstall<import("vue").DefineComponent<{
                 readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                 readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
             }>> & {
-                onClose?: (() => any) | undefined;
                 onBlur?: (() => any) | undefined;
                 onFocus?: (() => any) | undefined;
                 onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                 onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                onClose?: (() => any) | undefined;
             }, {
                 readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
                 readonly strategy: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
@@ -9009,11 +9009,11 @@ declare const _Select: SFCWithInstall<import("vue").DefineComponent<{
                         readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                         readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                     }>> & {
-                        onClose?: (() => any) | undefined;
                         onBlur?: (() => any) | undefined;
                         onFocus?: (() => any) | undefined;
                         onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                         onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                        onClose?: (() => any) | undefined;
                     }>>;
                     focusStartRef: import("vue").Ref<HTMLElement | "first" | "container" | undefined>;
                     trapped: import("vue").Ref<boolean>;
@@ -9356,11 +9356,11 @@ declare const _Select: SFCWithInstall<import("vue").DefineComponent<{
                     readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                 }>> & {
-                    onClose?: (() => any) | undefined;
                     onBlur?: (() => any) | undefined;
                     onFocus?: (() => any) | undefined;
                     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                    onClose?: (() => any) | undefined;
                 }, {
                     readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
                     readonly strategy: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
@@ -11962,11 +11962,11 @@ declare const _Select: SFCWithInstall<import("vue").DefineComponent<{
                     readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                 }>> & {
-                    onClose?: (() => any) | undefined;
                     onBlur?: (() => any) | undefined;
                     onFocus?: (() => any) | undefined;
                     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                    onClose?: (() => any) | undefined;
                 }>>;
                 focusStartRef: import("vue").Ref<HTMLElement | "first" | "container" | undefined>;
                 trapped: import("vue").Ref<boolean>;
@@ -12309,11 +12309,11 @@ declare const _Select: SFCWithInstall<import("vue").DefineComponent<{
                 readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                 readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
             }>> & {
-                onClose?: (() => any) | undefined;
                 onBlur?: (() => any) | undefined;
                 onFocus?: (() => any) | undefined;
                 onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                 onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                onClose?: (() => any) | undefined;
             }, {
                 readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
                 readonly strategy: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
@@ -12627,7 +12627,7 @@ declare const _Select: SFCWithInstall<import("vue").DefineComponent<{
     suffixRef: import("vue").Ref<HTMLElement>;
     collapseItemRef: import("vue").Ref<HTMLElement>;
     popperRef: import("vue").ComputedRef<HTMLElement | undefined>;
-    validateState: import("vue").ComputedRef<"" | "error" | "success" | "validating">;
+    validateState: import("vue").ComputedRef<"" | "error" | "validating" | "success">;
     validateIcon: import("vue").ComputedRef<any>;
     showTagList: import("vue").ComputedRef<{
         [x: string]: any;
@@ -12670,7 +12670,7 @@ declare const _Select: SFCWithInstall<import("vue").DefineComponent<{
     handleCompositionUpdate: (event: any) => void;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("update:modelValue" | "change" | "blur" | "focus" | "clear" | "visible-change" | "remove-tag")[], "update:modelValue" | "change" | "blur" | "focus" | "clear" | "visible-change" | "remove-tag", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly allowCreate: BooleanConstructor;
-    readonly autocomplete: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => ("none" | "inline" | "both" | "list") & {}) | (() => "none" | "inline" | "both" | "list") | ((new (...args: any[]) => ("none" | "inline" | "both" | "list") & {}) | (() => "none" | "inline" | "both" | "list"))[], unknown, unknown, "none", boolean>;
+    readonly autocomplete: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => ("inline" | "none" | "both" | "list") & {}) | (() => "inline" | "none" | "both" | "list") | ((new (...args: any[]) => ("inline" | "none" | "both" | "list") & {}) | (() => "inline" | "none" | "both" | "list"))[], unknown, unknown, "none", boolean>;
     readonly automaticDropdown: BooleanConstructor;
     readonly clearable: BooleanConstructor;
     readonly clearIcon: {
@@ -12744,8 +12744,8 @@ declare const _Select: SFCWithInstall<import("vue").DefineComponent<{
     readonly ariaLabel: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
 }>> & {
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
-    onChange?: ((...args: any[]) => any) | undefined;
     onClear?: ((...args: any[]) => any) | undefined;
+    onChange?: ((...args: any[]) => any) | undefined;
     onBlur?: ((...args: any[]) => any) | undefined;
     onFocus?: ((...args: any[]) => any) | undefined;
     "onVisible-change"?: ((...args: any[]) => any) | undefined;
@@ -12756,7 +12756,6 @@ declare const _Select: SFCWithInstall<import("vue").DefineComponent<{
     readonly loading: boolean;
     readonly disabled: boolean;
     readonly effect: string;
-    readonly props: import("./src/useProps").Props;
     readonly valueKey: string;
     readonly popperClass: string;
     readonly popperOptions: Partial<import("@popperjs/core").Options>;
@@ -12764,7 +12763,8 @@ declare const _Select: SFCWithInstall<import("vue").DefineComponent<{
     readonly teleported: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly persistent: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly clearable: boolean;
-    readonly autocomplete: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => ("none" | "inline" | "both" | "list") & {}) | (() => "none" | "inline" | "both" | "list") | ((new (...args: any[]) => ("none" | "inline" | "both" | "list") & {}) | (() => "none" | "inline" | "both" | "list"))[], unknown, unknown>;
+    readonly props: import("./src/useProps").Props;
+    readonly autocomplete: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => ("inline" | "none" | "both" | "list") & {}) | (() => "inline" | "none" | "both" | "list") | ((new (...args: any[]) => ("inline" | "none" | "both" | "list") & {}) | (() => "inline" | "none" | "both" | "list"))[], unknown, unknown>;
     readonly validateEvent: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly multiple: boolean;
     readonly filterable: boolean;
@@ -12785,7 +12785,7 @@ declare const _Select: SFCWithInstall<import("vue").DefineComponent<{
 export default _Select;
 export declare const ElSelectV2: SFCWithInstall<import("vue").DefineComponent<{
     readonly allowCreate: BooleanConstructor;
-    readonly autocomplete: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => ("none" | "inline" | "both" | "list") & {}) | (() => "none" | "inline" | "both" | "list") | ((new (...args: any[]) => ("none" | "inline" | "both" | "list") & {}) | (() => "none" | "inline" | "both" | "list"))[], unknown, unknown, "none", boolean>;
+    readonly autocomplete: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => ("inline" | "none" | "both" | "list") & {}) | (() => "inline" | "none" | "both" | "list") | ((new (...args: any[]) => ("inline" | "none" | "both" | "list") & {}) | (() => "inline" | "none" | "both" | "list"))[], unknown, unknown, "none", boolean>;
     readonly automaticDropdown: BooleanConstructor;
     readonly clearable: BooleanConstructor;
     readonly clearIcon: {
@@ -15565,11 +15565,11 @@ export declare const ElSelectV2: SFCWithInstall<import("vue").DefineComponent<{
                         readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                         readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                     }>> & {
-                        onClose?: (() => any) | undefined;
                         onBlur?: (() => any) | undefined;
                         onFocus?: (() => any) | undefined;
                         onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                         onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                        onClose?: (() => any) | undefined;
                     }>>;
                     focusStartRef: import("vue").Ref<HTMLElement | "first" | "container" | undefined>;
                     trapped: import("vue").Ref<boolean>;
@@ -15912,11 +15912,11 @@ export declare const ElSelectV2: SFCWithInstall<import("vue").DefineComponent<{
                     readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                 }>> & {
-                    onClose?: (() => any) | undefined;
                     onBlur?: (() => any) | undefined;
                     onFocus?: (() => any) | undefined;
                     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                    onClose?: (() => any) | undefined;
                 }, {
                     readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
                     readonly strategy: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
@@ -18518,11 +18518,11 @@ export declare const ElSelectV2: SFCWithInstall<import("vue").DefineComponent<{
                     readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                 }>> & {
-                    onClose?: (() => any) | undefined;
                     onBlur?: (() => any) | undefined;
                     onFocus?: (() => any) | undefined;
                     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                    onClose?: (() => any) | undefined;
                 }>>;
                 focusStartRef: import("vue").Ref<HTMLElement | "first" | "container" | undefined>;
                 trapped: import("vue").Ref<boolean>;
@@ -18865,11 +18865,11 @@ export declare const ElSelectV2: SFCWithInstall<import("vue").DefineComponent<{
                 readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                 readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
             }>> & {
-                onClose?: (() => any) | undefined;
                 onBlur?: (() => any) | undefined;
                 onFocus?: (() => any) | undefined;
                 onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                 onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                onClose?: (() => any) | undefined;
             }, {
                 readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
                 readonly strategy: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
@@ -21793,11 +21793,11 @@ export declare const ElSelectV2: SFCWithInstall<import("vue").DefineComponent<{
                         readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                         readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                     }>> & {
-                        onClose?: (() => any) | undefined;
                         onBlur?: (() => any) | undefined;
                         onFocus?: (() => any) | undefined;
                         onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                         onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                        onClose?: (() => any) | undefined;
                     }>>;
                     focusStartRef: import("vue").Ref<HTMLElement | "first" | "container" | undefined>;
                     trapped: import("vue").Ref<boolean>;
@@ -22140,11 +22140,11 @@ export declare const ElSelectV2: SFCWithInstall<import("vue").DefineComponent<{
                     readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                 }>> & {
-                    onClose?: (() => any) | undefined;
                     onBlur?: (() => any) | undefined;
                     onFocus?: (() => any) | undefined;
                     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                    onClose?: (() => any) | undefined;
                 }, {
                     readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
                     readonly strategy: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
@@ -24746,11 +24746,11 @@ export declare const ElSelectV2: SFCWithInstall<import("vue").DefineComponent<{
                     readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                     readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
                 }>> & {
-                    onClose?: (() => any) | undefined;
                     onBlur?: (() => any) | undefined;
                     onFocus?: (() => any) | undefined;
                     onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                     onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                    onClose?: (() => any) | undefined;
                 }>>;
                 focusStartRef: import("vue").Ref<HTMLElement | "first" | "container" | undefined>;
                 trapped: import("vue").Ref<boolean>;
@@ -25093,11 +25093,11 @@ export declare const ElSelectV2: SFCWithInstall<import("vue").DefineComponent<{
                 readonly popperOptions: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>) | ((new (...args: any[]) => Partial<import("@popperjs/core").Options>) | (() => Partial<import("@popperjs/core").Options>))[], unknown, unknown, () => {}, boolean>;
                 readonly strategy: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "absolute" | "fixed", unknown, "absolute", boolean>;
             }>> & {
-                onClose?: (() => any) | undefined;
                 onBlur?: (() => any) | undefined;
                 onFocus?: (() => any) | undefined;
                 onMouseenter?: ((evt: MouseEvent) => any) | undefined;
                 onMouseleave?: ((evt: MouseEvent) => any) | undefined;
+                onClose?: (() => any) | undefined;
             }, {
                 readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, import("@popperjs/core").Placement, unknown>;
                 readonly strategy: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "absolute" | "fixed", unknown>;
@@ -25411,7 +25411,7 @@ export declare const ElSelectV2: SFCWithInstall<import("vue").DefineComponent<{
     suffixRef: import("vue").Ref<HTMLElement>;
     collapseItemRef: import("vue").Ref<HTMLElement>;
     popperRef: import("vue").ComputedRef<HTMLElement | undefined>;
-    validateState: import("vue").ComputedRef<"" | "error" | "success" | "validating">;
+    validateState: import("vue").ComputedRef<"" | "error" | "validating" | "success">;
     validateIcon: import("vue").ComputedRef<any>;
     showTagList: import("vue").ComputedRef<{
         [x: string]: any;
@@ -25454,7 +25454,7 @@ export declare const ElSelectV2: SFCWithInstall<import("vue").DefineComponent<{
     handleCompositionUpdate: (event: any) => void;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("update:modelValue" | "change" | "blur" | "focus" | "clear" | "visible-change" | "remove-tag")[], "update:modelValue" | "change" | "blur" | "focus" | "clear" | "visible-change" | "remove-tag", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     readonly allowCreate: BooleanConstructor;
-    readonly autocomplete: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => ("none" | "inline" | "both" | "list") & {}) | (() => "none" | "inline" | "both" | "list") | ((new (...args: any[]) => ("none" | "inline" | "both" | "list") & {}) | (() => "none" | "inline" | "both" | "list"))[], unknown, unknown, "none", boolean>;
+    readonly autocomplete: import("element-plus/es/utils").EpPropFinalized<(new (...args: any[]) => ("inline" | "none" | "both" | "list") & {}) | (() => "inline" | "none" | "both" | "list") | ((new (...args: any[]) => ("inline" | "none" | "both" | "list") & {}) | (() => "inline" | "none" | "both" | "list"))[], unknown, unknown, "none", boolean>;
     readonly automaticDropdown: BooleanConstructor;
     readonly clearable: BooleanConstructor;
     readonly clearIcon: {
@@ -25528,8 +25528,8 @@ export declare const ElSelectV2: SFCWithInstall<import("vue").DefineComponent<{
     readonly ariaLabel: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, undefined, boolean>;
 }>> & {
     "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
-    onChange?: ((...args: any[]) => any) | undefined;
     onClear?: ((...args: any[]) => any) | undefined;
+    onChange?: ((...args: any[]) => any) | undefined;
     onBlur?: ((...args: any[]) => any) | undefined;
     onFocus?: ((...args: any[]) => any) | undefined;
     "onVisible-change"?: ((...args: any[]) => any) | undefined;
@@ -25540,7 +25540,6 @@ export declare const ElSelectV2: SFCWithInstall<import("vue").DefineComponent<{
     readonly loading: boolean;
     readonly disabled: boolean;
     readonly effect: string;
-    readonly props: import("./src/useProps").Props;
     readonly valueKey: string;
     readonly popperClass: string;
     readonly popperOptions: Partial<import("@popperjs/core").Options>;
@@ -25548,7 +25547,8 @@ export declare const ElSelectV2: SFCWithInstall<import("vue").DefineComponent<{
     readonly teleported: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly persistent: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly clearable: boolean;
-    readonly autocomplete: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => ("none" | "inline" | "both" | "list") & {}) | (() => "none" | "inline" | "both" | "list") | ((new (...args: any[]) => ("none" | "inline" | "both" | "list") & {}) | (() => "none" | "inline" | "both" | "list"))[], unknown, unknown>;
+    readonly props: import("./src/useProps").Props;
+    readonly autocomplete: import("element-plus/es/utils").EpPropMergeType<(new (...args: any[]) => ("inline" | "none" | "both" | "list") & {}) | (() => "inline" | "none" | "both" | "list") | ((new (...args: any[]) => ("inline" | "none" | "both" | "list") & {}) | (() => "inline" | "none" | "both" | "list"))[], unknown, unknown>;
     readonly validateEvent: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly multiple: boolean;
     readonly filterable: boolean;

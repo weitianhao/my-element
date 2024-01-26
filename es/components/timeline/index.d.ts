@@ -6,7 +6,7 @@ export declare const ElTimeline: import("element-plus/es/utils").SFCWithInstall<
         readonly hideTimestamp: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         readonly center: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         readonly placement: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "top" | "bottom", unknown, "bottom", boolean>;
-        readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown, "", boolean>;
+        readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "primary" | "warning" | "info" | "danger", unknown, "", boolean>;
         readonly color: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
         readonly size: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "large" | "normal", unknown, "normal", boolean>;
         readonly icon: {
@@ -22,7 +22,7 @@ export declare const ElTimeline: import("element-plus/es/utils").SFCWithInstall<
             readonly hideTimestamp: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
             readonly center: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
             readonly placement: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "top" | "bottom", unknown, "bottom", boolean>;
-            readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown, "", boolean>;
+            readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "primary" | "warning" | "info" | "danger", unknown, "", boolean>;
             readonly color: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
             readonly size: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "large" | "normal", unknown, "normal", boolean>;
             readonly icon: {
@@ -122,7 +122,7 @@ export declare const ElTimeline: import("element-plus/es/utils").SFCWithInstall<
         readonly hideTimestamp: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         readonly center: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         readonly placement: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "top" | "bottom", unknown, "bottom", boolean>;
-        readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown, "", boolean>;
+        readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "primary" | "warning" | "info" | "danger", unknown, "", boolean>;
         readonly color: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
         readonly size: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "large" | "normal", unknown, "normal", boolean>;
         readonly icon: {
@@ -133,7 +133,7 @@ export declare const ElTimeline: import("element-plus/es/utils").SFCWithInstall<
         };
         readonly hollow: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     }>>, {
-        readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown>;
+        readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "success" | "primary" | "warning" | "info" | "danger", unknown>;
         readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "top" | "bottom", unknown>;
         readonly color: string;
         readonly size: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "large" | "normal", unknown>;
@@ -149,7 +149,7 @@ export declare const ElTimelineItem: import("element-plus/es/utils").SFCWithInst
     readonly hideTimestamp: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly center: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly placement: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "top" | "bottom", unknown, "bottom", boolean>;
-    readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown, "", boolean>;
+    readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "primary" | "warning" | "info" | "danger", unknown, "", boolean>;
     readonly color: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly size: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "large" | "normal", unknown, "normal", boolean>;
     readonly icon: {
@@ -165,7 +165,7 @@ export declare const ElTimelineItem: import("element-plus/es/utils").SFCWithInst
         readonly hideTimestamp: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         readonly center: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
         readonly placement: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "top" | "bottom", unknown, "bottom", boolean>;
-        readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown, "", boolean>;
+        readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "primary" | "warning" | "info" | "danger", unknown, "", boolean>;
         readonly color: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
         readonly size: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "large" | "normal", unknown, "normal", boolean>;
         readonly icon: {
@@ -265,7 +265,7 @@ export declare const ElTimelineItem: import("element-plus/es/utils").SFCWithInst
     readonly hideTimestamp: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly center: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
     readonly placement: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "top" | "bottom", unknown, "bottom", boolean>;
-    readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown, "", boolean>;
+    readonly type: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "success" | "primary" | "warning" | "info" | "danger", unknown, "", boolean>;
     readonly color: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly size: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "large" | "normal", unknown, "normal", boolean>;
     readonly icon: {
@@ -276,7 +276,7 @@ export declare const ElTimelineItem: import("element-plus/es/utils").SFCWithInst
     };
     readonly hollow: import("element-plus/es/utils").EpPropFinalized<BooleanConstructor, unknown, unknown, false, boolean>;
 }>>, {
-    readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "success" | "warning" | "info" | "primary" | "danger", unknown>;
+    readonly type: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "success" | "primary" | "warning" | "info" | "danger", unknown>;
     readonly placement: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "top" | "bottom", unknown>;
     readonly color: string;
     readonly size: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "large" | "normal", unknown>;

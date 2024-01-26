@@ -193,11 +193,11 @@ declare const _Tree: SFCWithInstall<import("vue").DefineComponent<{
         initialize: () => void;
         filter: (value: any) => void;
         setData: (newVal: import("./src/tree.type").TreeData) => void;
-        getNode: (data: import("./src/tree.type").TreeNodeData | import("./src/model/node").default | import("./src/tree.type").TreeKey) => import("./src/model/node").default;
-        insertBefore: (data: import("./src/tree.type").TreeNodeData, refData: import("./src/tree.type").TreeNodeData | import("./src/model/node").default | import("./src/tree.type").TreeKey) => void;
-        insertAfter: (data: import("./src/tree.type").TreeNodeData, refData: import("./src/tree.type").TreeNodeData | import("./src/model/node").default | import("./src/tree.type").TreeKey) => void;
-        remove: (data: import("./src/tree.type").TreeNodeData | import("./src/model/node").default) => void;
-        append: (data: import("./src/tree.type").TreeNodeData, parentData: import("./src/tree.type").TreeNodeData | import("./src/model/node").default | import("./src/tree.type").TreeKey) => void;
+        getNode: (data: import("./src/model/node").default | import("./src/tree.type").TreeNodeData | import("./src/tree.type").TreeKey) => import("./src/model/node").default;
+        insertBefore: (data: import("./src/tree.type").TreeNodeData, refData: import("./src/model/node").default | import("./src/tree.type").TreeNodeData | import("./src/tree.type").TreeKey) => void;
+        insertAfter: (data: import("./src/tree.type").TreeNodeData, refData: import("./src/model/node").default | import("./src/tree.type").TreeNodeData | import("./src/tree.type").TreeKey) => void;
+        remove: (data: import("./src/model/node").default | import("./src/tree.type").TreeNodeData) => void;
+        append: (data: import("./src/tree.type").TreeNodeData, parentData: import("./src/model/node").default | import("./src/tree.type").TreeNodeData | import("./src/tree.type").TreeKey) => void;
         _initDefaultCheckedNodes: () => void;
         _initDefaultCheckedNode: (node: import("./src/model/node").default) => void;
         setDefaultCheckedKey: (newVal: import("./src/tree.type").TreeKey[]) => void;
@@ -331,13 +331,13 @@ declare const _Tree: SFCWithInstall<import("vue").DefineComponent<{
     setCurrentKey: (key?: import("./src/tree.type").TreeKey | undefined, shouldAutoExpandParent?: boolean) => void;
     t: import("../..").Translator;
     getNode: (data: import("./src/tree.type").TreeNodeData | import("./src/tree.type").TreeKey) => import("./src/model/node").default;
-    remove: (data: import("./src/tree.type").TreeNodeData | import("./src/model/node").default) => void;
-    append: (data: import("./src/tree.type").TreeNodeData, parentNode: import("./src/tree.type").TreeNodeData | import("./src/model/node").default | import("./src/tree.type").TreeKey) => void;
-    insertBefore: (data: import("./src/tree.type").TreeNodeData, refNode: import("./src/tree.type").TreeNodeData | import("./src/model/node").default | import("./src/tree.type").TreeKey) => void;
-    insertAfter: (data: import("./src/tree.type").TreeNodeData, refNode: import("./src/tree.type").TreeNodeData | import("./src/model/node").default | import("./src/tree.type").TreeKey) => void;
+    remove: (data: import("./src/model/node").default | import("./src/tree.type").TreeNodeData) => void;
+    append: (data: import("./src/tree.type").TreeNodeData, parentNode: import("./src/model/node").default | import("./src/tree.type").TreeNodeData | import("./src/tree.type").TreeKey) => void;
+    insertBefore: (data: import("./src/tree.type").TreeNodeData, refNode: import("./src/model/node").default | import("./src/tree.type").TreeNodeData | import("./src/tree.type").TreeKey) => void;
+    insertAfter: (data: import("./src/tree.type").TreeNodeData, refNode: import("./src/model/node").default | import("./src/tree.type").TreeNodeData | import("./src/tree.type").TreeKey) => void;
     handleNodeExpand: (nodeData: import("./src/tree.type").TreeNodeData, node: import("./src/model/node").default, instance: import("vue").ComponentInternalInstance) => void;
     updateKeyChildren: (key: import("./src/tree.type").TreeKey, data: import("./src/tree.type").TreeData) => void;
-}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("current-change" | "node-click" | "node-expand" | "node-collapse" | "check" | "check-change" | "node-contextmenu" | "node-drag-start" | "node-drag-end" | "node-drop" | "node-drag-leave" | "node-drag-enter" | "node-drag-over")[], "current-change" | "node-click" | "node-expand" | "node-collapse" | "check" | "check-change" | "node-contextmenu" | "node-drag-start" | "node-drag-end" | "node-drop" | "node-drag-leave" | "node-drag-enter" | "node-drag-over", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("current-change" | "node-expand" | "check-change" | "node-click" | "node-contextmenu" | "node-collapse" | "check" | "node-drag-start" | "node-drag-end" | "node-drop" | "node-drag-leave" | "node-drag-enter" | "node-drag-over")[], "current-change" | "node-expand" | "check-change" | "node-click" | "node-contextmenu" | "node-collapse" | "check" | "node-drag-start" | "node-drag-end" | "node-drop" | "node-drag-leave" | "node-drag-enter" | "node-drag-over", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     data: {
         type: ArrayConstructor;
         default: () => never[];
@@ -404,12 +404,12 @@ declare const _Tree: SFCWithInstall<import("vue").DefineComponent<{
     };
 }>> & {
     "onCurrent-change"?: ((...args: any[]) => any) | undefined;
-    onCheck?: ((...args: any[]) => any) | undefined;
-    "onNode-click"?: ((...args: any[]) => any) | undefined;
     "onNode-expand"?: ((...args: any[]) => any) | undefined;
-    "onNode-collapse"?: ((...args: any[]) => any) | undefined;
+    onCheck?: ((...args: any[]) => any) | undefined;
     "onCheck-change"?: ((...args: any[]) => any) | undefined;
+    "onNode-click"?: ((...args: any[]) => any) | undefined;
     "onNode-contextmenu"?: ((...args: any[]) => any) | undefined;
+    "onNode-collapse"?: ((...args: any[]) => any) | undefined;
     "onNode-drag-start"?: ((...args: any[]) => any) | undefined;
     "onNode-drag-end"?: ((...args: any[]) => any) | undefined;
     "onNode-drop"?: ((...args: any[]) => any) | undefined;
@@ -425,13 +425,13 @@ declare const _Tree: SFCWithInstall<import("vue").DefineComponent<{
     draggable: boolean;
     defaultExpandAll: boolean;
     indent: number;
-    highlightCurrent: boolean;
+    renderAfterExpand: boolean;
     showCheckbox: boolean;
     expandOnClickNode: boolean;
     checkOnClickNode: boolean;
-    renderAfterExpand: boolean;
     checkDescendants: boolean;
     autoExpandParent: boolean;
+    highlightCurrent: boolean;
 }>>;
 export default _Tree;
 export declare const ElTree: SFCWithInstall<import("vue").DefineComponent<{
@@ -628,11 +628,11 @@ export declare const ElTree: SFCWithInstall<import("vue").DefineComponent<{
         initialize: () => void;
         filter: (value: any) => void;
         setData: (newVal: import("./src/tree.type").TreeData) => void;
-        getNode: (data: import("./src/tree.type").TreeNodeData | import("./src/model/node").default | import("./src/tree.type").TreeKey) => import("./src/model/node").default;
-        insertBefore: (data: import("./src/tree.type").TreeNodeData, refData: import("./src/tree.type").TreeNodeData | import("./src/model/node").default | import("./src/tree.type").TreeKey) => void;
-        insertAfter: (data: import("./src/tree.type").TreeNodeData, refData: import("./src/tree.type").TreeNodeData | import("./src/model/node").default | import("./src/tree.type").TreeKey) => void;
-        remove: (data: import("./src/tree.type").TreeNodeData | import("./src/model/node").default) => void;
-        append: (data: import("./src/tree.type").TreeNodeData, parentData: import("./src/tree.type").TreeNodeData | import("./src/model/node").default | import("./src/tree.type").TreeKey) => void;
+        getNode: (data: import("./src/model/node").default | import("./src/tree.type").TreeNodeData | import("./src/tree.type").TreeKey) => import("./src/model/node").default;
+        insertBefore: (data: import("./src/tree.type").TreeNodeData, refData: import("./src/model/node").default | import("./src/tree.type").TreeNodeData | import("./src/tree.type").TreeKey) => void;
+        insertAfter: (data: import("./src/tree.type").TreeNodeData, refData: import("./src/model/node").default | import("./src/tree.type").TreeNodeData | import("./src/tree.type").TreeKey) => void;
+        remove: (data: import("./src/model/node").default | import("./src/tree.type").TreeNodeData) => void;
+        append: (data: import("./src/tree.type").TreeNodeData, parentData: import("./src/model/node").default | import("./src/tree.type").TreeNodeData | import("./src/tree.type").TreeKey) => void;
         _initDefaultCheckedNodes: () => void;
         _initDefaultCheckedNode: (node: import("./src/model/node").default) => void;
         setDefaultCheckedKey: (newVal: import("./src/tree.type").TreeKey[]) => void;
@@ -766,13 +766,13 @@ export declare const ElTree: SFCWithInstall<import("vue").DefineComponent<{
     setCurrentKey: (key?: import("./src/tree.type").TreeKey | undefined, shouldAutoExpandParent?: boolean) => void;
     t: import("../..").Translator;
     getNode: (data: import("./src/tree.type").TreeNodeData | import("./src/tree.type").TreeKey) => import("./src/model/node").default;
-    remove: (data: import("./src/tree.type").TreeNodeData | import("./src/model/node").default) => void;
-    append: (data: import("./src/tree.type").TreeNodeData, parentNode: import("./src/tree.type").TreeNodeData | import("./src/model/node").default | import("./src/tree.type").TreeKey) => void;
-    insertBefore: (data: import("./src/tree.type").TreeNodeData, refNode: import("./src/tree.type").TreeNodeData | import("./src/model/node").default | import("./src/tree.type").TreeKey) => void;
-    insertAfter: (data: import("./src/tree.type").TreeNodeData, refNode: import("./src/tree.type").TreeNodeData | import("./src/model/node").default | import("./src/tree.type").TreeKey) => void;
+    remove: (data: import("./src/model/node").default | import("./src/tree.type").TreeNodeData) => void;
+    append: (data: import("./src/tree.type").TreeNodeData, parentNode: import("./src/model/node").default | import("./src/tree.type").TreeNodeData | import("./src/tree.type").TreeKey) => void;
+    insertBefore: (data: import("./src/tree.type").TreeNodeData, refNode: import("./src/model/node").default | import("./src/tree.type").TreeNodeData | import("./src/tree.type").TreeKey) => void;
+    insertAfter: (data: import("./src/tree.type").TreeNodeData, refNode: import("./src/model/node").default | import("./src/tree.type").TreeNodeData | import("./src/tree.type").TreeKey) => void;
     handleNodeExpand: (nodeData: import("./src/tree.type").TreeNodeData, node: import("./src/model/node").default, instance: import("vue").ComponentInternalInstance) => void;
     updateKeyChildren: (key: import("./src/tree.type").TreeKey, data: import("./src/tree.type").TreeData) => void;
-}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("current-change" | "node-click" | "node-expand" | "node-collapse" | "check" | "check-change" | "node-contextmenu" | "node-drag-start" | "node-drag-end" | "node-drop" | "node-drag-leave" | "node-drag-enter" | "node-drag-over")[], "current-change" | "node-click" | "node-expand" | "node-collapse" | "check" | "check-change" | "node-contextmenu" | "node-drag-start" | "node-drag-end" | "node-drop" | "node-drag-leave" | "node-drag-enter" | "node-drag-over", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("current-change" | "node-expand" | "check-change" | "node-click" | "node-contextmenu" | "node-collapse" | "check" | "node-drag-start" | "node-drag-end" | "node-drop" | "node-drag-leave" | "node-drag-enter" | "node-drag-over")[], "current-change" | "node-expand" | "check-change" | "node-click" | "node-contextmenu" | "node-collapse" | "check" | "node-drag-start" | "node-drag-end" | "node-drop" | "node-drag-leave" | "node-drag-enter" | "node-drag-over", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     data: {
         type: ArrayConstructor;
         default: () => never[];
@@ -839,12 +839,12 @@ export declare const ElTree: SFCWithInstall<import("vue").DefineComponent<{
     };
 }>> & {
     "onCurrent-change"?: ((...args: any[]) => any) | undefined;
-    onCheck?: ((...args: any[]) => any) | undefined;
-    "onNode-click"?: ((...args: any[]) => any) | undefined;
     "onNode-expand"?: ((...args: any[]) => any) | undefined;
-    "onNode-collapse"?: ((...args: any[]) => any) | undefined;
+    onCheck?: ((...args: any[]) => any) | undefined;
     "onCheck-change"?: ((...args: any[]) => any) | undefined;
+    "onNode-click"?: ((...args: any[]) => any) | undefined;
     "onNode-contextmenu"?: ((...args: any[]) => any) | undefined;
+    "onNode-collapse"?: ((...args: any[]) => any) | undefined;
     "onNode-drag-start"?: ((...args: any[]) => any) | undefined;
     "onNode-drag-end"?: ((...args: any[]) => any) | undefined;
     "onNode-drop"?: ((...args: any[]) => any) | undefined;
@@ -860,12 +860,12 @@ export declare const ElTree: SFCWithInstall<import("vue").DefineComponent<{
     draggable: boolean;
     defaultExpandAll: boolean;
     indent: number;
-    highlightCurrent: boolean;
+    renderAfterExpand: boolean;
     showCheckbox: boolean;
     expandOnClickNode: boolean;
     checkOnClickNode: boolean;
-    renderAfterExpand: boolean;
     checkDescendants: boolean;
     autoExpandParent: boolean;
+    highlightCurrent: boolean;
 }>>;
 export type { TreeInstance } from './src/instance';

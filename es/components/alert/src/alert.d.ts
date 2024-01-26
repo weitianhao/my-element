@@ -8,7 +8,7 @@ export declare const alertProps: {
     readonly closeText: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly showIcon: BooleanConstructor;
     readonly center: BooleanConstructor;
-    readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "light" | "dark", unknown, "light", boolean>;
+    readonly effect: import("element-plus/es/utils").EpPropFinalized<StringConstructor, "dark" | "light", unknown, "light", boolean>;
 };
 export declare type AlertProps = ExtractPropTypes<typeof alertProps>;
 export declare const alertEmits: {

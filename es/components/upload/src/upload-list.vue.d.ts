@@ -336,11 +336,11 @@ declare const _default: import("vue").DefineComponent<{
         readonly strokeWidth: number;
         readonly indeterminate: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly format: import("element-plus/es/components/progress").ProgressFn;
-        readonly showText: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly percentage: number;
         readonly status: import("../../../utils").EpPropMergeType<StringConstructor, "" | "success" | "warning" | "exception", unknown>;
         readonly duration: number;
         readonly textInside: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly showText: import("../../../utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly striped: boolean;
         readonly stripedFlow: boolean;
     }>> & Record<string, any>;

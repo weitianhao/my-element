@@ -155,6 +155,7 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
     readonly scrollToError: boolean;
 }>> & {
     FormItem: import("vue").DefineComponent<{
+        readonly disabled: BooleanConstructor;
         readonly label: StringConstructor;
         readonly labelWidth: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
         readonly prop: {
@@ -172,7 +173,7 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
         };
         readonly error: StringConstructor;
         readonly validateStatus: {
-            readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "error" | "success" | "validating", unknown>>;
+            readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "error" | "validating" | "success", unknown>>;
             readonly required: false;
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
@@ -188,6 +189,7 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
         };
     }, {
         props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
+            readonly disabled: BooleanConstructor;
             readonly label: StringConstructor;
             readonly labelWidth: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
             readonly prop: {
@@ -205,7 +207,7 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
             };
             readonly error: StringConstructor;
             readonly validateStatus: {
-                readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "error" | "success" | "validating", unknown>>;
+                readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "error" | "validating" | "success", unknown>>;
                 readonly required: false;
                 readonly validator: ((val: unknown) => boolean) | undefined;
                 __epPropKey: true;
@@ -223,7 +225,6 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
             [x: string & `on${string}`]: ((...args: any[]) => any) | ((...args: unknown[]) => any) | undefined;
         }>>;
         slots: any;
-        defaultComponent: any;
         formContext: import("./src/types").FormContext | undefined;
         parentFormItemContext: import("./src/types").FormItemContext | undefined;
         _size: import("vue").ComputedRef<"" | "default" | "small" | "large">;
@@ -247,8 +248,8 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
         };
         labelId: string;
         inputIds: import("vue").Ref<string[]>;
-        validateState: import("vue").Ref<"" | "error" | "success" | "validating">;
-        validateStateDebounced: Readonly<import("vue").Ref<"" | "error" | "success" | "validating">>;
+        validateState: import("vue").Ref<"" | "error" | "validating" | "success">;
+        validateStateDebounced: Readonly<import("vue").Ref<"" | "error" | "validating" | "success">>;
         validateMessage: import("vue").Ref<string>;
         formItemRef: import("vue").Ref<HTMLDivElement | undefined>;
         initialValue: any;
@@ -277,7 +278,7 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
         isRequired: import("vue").ComputedRef<boolean>;
         shouldShowError: import("vue").ComputedRef<import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
         currentLabel: import("vue").ComputedRef<string>;
-        setValidationState: (state: "" | "error" | "success" | "validating") => void;
+        setValidationState: (state: "" | "error" | "validating" | "success") => void;
         onValidationFailed: (error: import("./src/types").FormValidateFailure) => void;
         onValidationSucceeded: () => void;
         doValidate: (rules: import("async-validator").RuleItem[]) => Promise<true>;
@@ -298,6 +299,7 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
             updateAll: boolean;
         }>;
     }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+        readonly disabled: BooleanConstructor;
         readonly label: StringConstructor;
         readonly labelWidth: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
         readonly prop: {
@@ -315,7 +317,7 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
         };
         readonly error: StringConstructor;
         readonly validateStatus: {
-            readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "error" | "success" | "validating", unknown>>;
+            readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "error" | "validating" | "success", unknown>>;
             readonly required: false;
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
@@ -331,6 +333,7 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
         };
     }>>, {
         readonly required: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+        readonly disabled: boolean;
         readonly labelWidth: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
         readonly showMessage: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
         readonly inlineMessage: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, BooleanConstructor], unknown, unknown>;
@@ -338,6 +341,7 @@ export declare const ElForm: import("element-plus/es/utils").SFCWithInstall<impo
 };
 export default ElForm;
 export declare const ElFormItem: import("element-plus/es/utils").SFCWithInstall<import("vue").DefineComponent<{
+    readonly disabled: BooleanConstructor;
     readonly label: StringConstructor;
     readonly labelWidth: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
     readonly prop: {
@@ -355,7 +359,7 @@ export declare const ElFormItem: import("element-plus/es/utils").SFCWithInstall<
     };
     readonly error: StringConstructor;
     readonly validateStatus: {
-        readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "error" | "success" | "validating", unknown>>;
+        readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "error" | "validating" | "success", unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -371,6 +375,7 @@ export declare const ElFormItem: import("element-plus/es/utils").SFCWithInstall<
     };
 }, {
     props: Readonly<import("@vue/shared").LooseRequired<Readonly<import("vue").ExtractPropTypes<{
+        readonly disabled: BooleanConstructor;
         readonly label: StringConstructor;
         readonly labelWidth: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
         readonly prop: {
@@ -388,7 +393,7 @@ export declare const ElFormItem: import("element-plus/es/utils").SFCWithInstall<
         };
         readonly error: StringConstructor;
         readonly validateStatus: {
-            readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "error" | "success" | "validating", unknown>>;
+            readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "error" | "validating" | "success", unknown>>;
             readonly required: false;
             readonly validator: ((val: unknown) => boolean) | undefined;
             __epPropKey: true;
@@ -406,7 +411,6 @@ export declare const ElFormItem: import("element-plus/es/utils").SFCWithInstall<
         [x: string & `on${string}`]: ((...args: any[]) => any) | ((...args: unknown[]) => any) | undefined;
     }>>;
     slots: any;
-    defaultComponent: any;
     formContext: import("./src/types").FormContext | undefined;
     parentFormItemContext: import("./src/types").FormItemContext | undefined;
     _size: import("vue").ComputedRef<"" | "default" | "small" | "large">;
@@ -430,8 +434,8 @@ export declare const ElFormItem: import("element-plus/es/utils").SFCWithInstall<
     };
     labelId: string;
     inputIds: import("vue").Ref<string[]>;
-    validateState: import("vue").Ref<"" | "error" | "success" | "validating">;
-    validateStateDebounced: Readonly<import("vue").Ref<"" | "error" | "success" | "validating">>;
+    validateState: import("vue").Ref<"" | "error" | "validating" | "success">;
+    validateStateDebounced: Readonly<import("vue").Ref<"" | "error" | "validating" | "success">>;
     validateMessage: import("vue").Ref<string>;
     formItemRef: import("vue").Ref<HTMLDivElement | undefined>;
     initialValue: any;
@@ -460,7 +464,7 @@ export declare const ElFormItem: import("element-plus/es/utils").SFCWithInstall<
     isRequired: import("vue").ComputedRef<boolean>;
     shouldShowError: import("vue").ComputedRef<import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>>;
     currentLabel: import("vue").ComputedRef<string>;
-    setValidationState: (state: "" | "error" | "success" | "validating") => void;
+    setValidationState: (state: "" | "error" | "validating" | "success") => void;
     onValidationFailed: (error: import("./src/types").FormValidateFailure) => void;
     onValidationSucceeded: () => void;
     doValidate: (rules: import("async-validator").RuleItem[]) => Promise<true>;
@@ -481,6 +485,7 @@ export declare const ElFormItem: import("element-plus/es/utils").SFCWithInstall<
         updateAll: boolean;
     }>;
 }, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, Record<string, any>, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+    readonly disabled: BooleanConstructor;
     readonly label: StringConstructor;
     readonly labelWidth: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
     readonly prop: {
@@ -498,7 +503,7 @@ export declare const ElFormItem: import("element-plus/es/utils").SFCWithInstall<
     };
     readonly error: StringConstructor;
     readonly validateStatus: {
-        readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "error" | "success" | "validating", unknown>>;
+        readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "error" | "validating" | "success", unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
@@ -514,6 +519,7 @@ export declare const ElFormItem: import("element-plus/es/utils").SFCWithInstall<
     };
 }>>, {
     readonly required: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
+    readonly disabled: boolean;
     readonly labelWidth: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
     readonly showMessage: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
     readonly inlineMessage: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, BooleanConstructor], unknown, unknown>;

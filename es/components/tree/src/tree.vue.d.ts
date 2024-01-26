@@ -196,11 +196,11 @@ declare const _default: import("vue").DefineComponent<{
         initialize: () => void;
         filter: (value: any) => void;
         setData: (newVal: TreeData) => void;
-        getNode: (data: TreeNodeData | Node | TreeKey) => Node;
-        insertBefore: (data: TreeNodeData, refData: TreeNodeData | Node | TreeKey) => void;
-        insertAfter: (data: TreeNodeData, refData: TreeNodeData | Node | TreeKey) => void;
-        remove: (data: TreeNodeData | Node) => void;
-        append: (data: TreeNodeData, parentData: TreeNodeData | Node | TreeKey) => void;
+        getNode: (data: Node | TreeNodeData | TreeKey) => Node;
+        insertBefore: (data: TreeNodeData, refData: Node | TreeNodeData | TreeKey) => void;
+        insertAfter: (data: TreeNodeData, refData: Node | TreeNodeData | TreeKey) => void;
+        remove: (data: Node | TreeNodeData) => void;
+        append: (data: TreeNodeData, parentData: Node | TreeNodeData | TreeKey) => void;
         _initDefaultCheckedNodes: () => void;
         _initDefaultCheckedNode: (node: Node) => void;
         setDefaultCheckedKey: (newVal: TreeKey[]) => void;
@@ -340,7 +340,7 @@ declare const _default: import("vue").DefineComponent<{
     insertAfter: (data: TreeNodeData, refNode: TreeKey | TreeNodeData | Node) => void;
     handleNodeExpand: (nodeData: TreeNodeData, node: Node, instance: ComponentInternalInstance) => void;
     updateKeyChildren: (key: TreeKey, data: TreeData) => void;
-}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("current-change" | "node-click" | "node-expand" | "node-collapse" | "check" | "check-change" | "node-contextmenu" | "node-drag-start" | "node-drag-end" | "node-drop" | "node-drag-leave" | "node-drag-enter" | "node-drag-over")[], "current-change" | "node-click" | "node-expand" | "node-collapse" | "check" | "check-change" | "node-contextmenu" | "node-drag-start" | "node-drag-end" | "node-drop" | "node-drag-leave" | "node-drag-enter" | "node-drag-over", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
+}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, ("current-change" | "node-expand" | "check-change" | "node-click" | "node-contextmenu" | "node-collapse" | "check" | "node-drag-start" | "node-drag-end" | "node-drop" | "node-drag-leave" | "node-drag-enter" | "node-drag-over")[], "current-change" | "node-expand" | "check-change" | "node-click" | "node-contextmenu" | "node-collapse" | "check" | "node-drag-start" | "node-drag-end" | "node-drop" | "node-drag-leave" | "node-drag-enter" | "node-drag-over", import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
     data: {
         type: ArrayConstructor;
         default: () => never[];
@@ -407,12 +407,12 @@ declare const _default: import("vue").DefineComponent<{
     };
 }>> & {
     "onCurrent-change"?: ((...args: any[]) => any) | undefined;
-    onCheck?: ((...args: any[]) => any) | undefined;
-    "onNode-click"?: ((...args: any[]) => any) | undefined;
     "onNode-expand"?: ((...args: any[]) => any) | undefined;
-    "onNode-collapse"?: ((...args: any[]) => any) | undefined;
+    onCheck?: ((...args: any[]) => any) | undefined;
     "onCheck-change"?: ((...args: any[]) => any) | undefined;
+    "onNode-click"?: ((...args: any[]) => any) | undefined;
     "onNode-contextmenu"?: ((...args: any[]) => any) | undefined;
+    "onNode-collapse"?: ((...args: any[]) => any) | undefined;
     "onNode-drag-start"?: ((...args: any[]) => any) | undefined;
     "onNode-drag-end"?: ((...args: any[]) => any) | undefined;
     "onNode-drop"?: ((...args: any[]) => any) | undefined;
@@ -428,12 +428,12 @@ declare const _default: import("vue").DefineComponent<{
     draggable: boolean;
     defaultExpandAll: boolean;
     indent: number;
-    highlightCurrent: boolean;
+    renderAfterExpand: boolean;
     showCheckbox: boolean;
     expandOnClickNode: boolean;
     checkOnClickNode: boolean;
-    renderAfterExpand: boolean;
     checkDescendants: boolean;
     autoExpandParent: boolean;
+    highlightCurrent: boolean;
 }>;
 export default _default;

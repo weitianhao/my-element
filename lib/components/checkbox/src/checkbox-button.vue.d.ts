@@ -176,12 +176,12 @@ declare const _default: import("vue").DefineComponent<{
     "onUpdate:modelValue"?: ((val: import("./checkbox").CheckboxValueType) => any) | undefined;
     onChange?: ((val: import("./checkbox").CheckboxValueType) => any) | undefined;
 }, {
+    id: string;
     name: string;
     border: boolean;
     modelValue: string | number | boolean;
     disabled: boolean;
     label: string | number | boolean | Record<string, any>;
-    id: string;
     validateEvent: boolean;
     indeterminate: boolean;
     checked: boolean;

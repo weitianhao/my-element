@@ -5,6 +5,7 @@ export declare const formItemValidateStates: readonly ["", "error", "validating"
 export declare type FormItemValidateState = typeof formItemValidateStates[number];
 export declare type FormItemProp = Arrayable<string>;
 export declare const formItemProps: {
+    readonly disabled: BooleanConstructor;
     readonly label: StringConstructor;
     readonly labelWidth: import("element-plus/es/utils").EpPropFinalized<readonly [StringConstructor, NumberConstructor], unknown, unknown, "", boolean>;
     readonly prop: {
@@ -22,7 +23,7 @@ export declare const formItemProps: {
     };
     readonly error: StringConstructor;
     readonly validateStatus: {
-        readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "error" | "success" | "validating", unknown>>;
+        readonly type: import("vue").PropType<import("element-plus/es/utils").EpPropMergeType<StringConstructor, "" | "error" | "validating" | "success", unknown>>;
         readonly required: false;
         readonly validator: ((val: unknown) => boolean) | undefined;
         __epPropKey: true;
