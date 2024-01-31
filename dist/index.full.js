@@ -13935,7 +13935,7 @@
   };
 
   const _hoisted_1$14 = ["role"];
-  const _hoisted_2$I = ["id", "minlength", "maxlength", "type", "disabled", "readonly", "autocomplete", "tabindex", "aria-label", "placeholder", "form", "autofocus"];
+  const _hoisted_2$H = ["id", "minlength", "maxlength", "type", "disabled", "readonly", "autocomplete", "tabindex", "aria-label", "placeholder", "form", "autofocus"];
   const _hoisted_3$i = ["id", "minlength", "maxlength", "tabindex", "disabled", "readonly", "autocomplete", "aria-label", "placeholder", "form", "autofocus"];
   const __default__$1D = vue.defineComponent({
     name: "ElInput",
@@ -14277,7 +14277,7 @@
                 onBlur: _cache[1] || (_cache[1] = (...args) => vue.unref(handleBlur) && vue.unref(handleBlur)(...args)),
                 onChange: handleChange,
                 onKeydown: handleKeydown
-              }), null, 16, _hoisted_2$I),
+              }), null, 16, _hoisted_2$H),
               vue.createCommentVNode(" suffix slot "),
               vue.unref(suffixVisible) ? (vue.openBlock(), vue.createElementBlock("span", {
                 key: 1,
@@ -16243,7 +16243,7 @@
   var ElTooltipContent = /* @__PURE__ */ _export_sfc(_sfc_main$28, [["__file", "content.vue"]]);
 
   const _hoisted_1$13 = ["innerHTML"];
-  const _hoisted_2$H = { key: 1 };
+  const _hoisted_2$G = { key: 1 };
   const __default__$1v = vue.defineComponent({
     name: "ElTooltip"
   });
@@ -16385,7 +16385,7 @@
                   _ctx.rawContent ? (vue.openBlock(), vue.createElementBlock("span", {
                     key: 0,
                     innerHTML: _ctx.content
-                  }, null, 8, _hoisted_1$13)) : (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$H, vue.toDisplayString(_ctx.content), 1))
+                  }, null, 8, _hoisted_1$13)) : (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$G, vue.toDisplayString(_ctx.content), 1))
                 ]),
                 _ctx.showArrow ? (vue.openBlock(), vue.createBlock(vue.unref(ElPopperArrow), {
                   key: 0,
@@ -16482,7 +16482,7 @@
   };
 
   const _hoisted_1$12 = ["aria-expanded", "aria-owns"];
-  const _hoisted_2$G = { key: 0 };
+  const _hoisted_2$F = { key: 0 };
   const _hoisted_3$h = ["id", "aria-selected", "onClick"];
   const COMPONENT_NAME$i = "ElAutocomplete";
   const __default__$1u = vue.defineComponent({
@@ -16728,7 +16728,7 @@
                 role: "listbox"
               }, {
                 default: vue.withCtx(() => [
-                  vue.unref(suggestionLoading) ? (vue.openBlock(), vue.createElementBlock("li", _hoisted_2$G, [
+                  vue.unref(suggestionLoading) ? (vue.openBlock(), vue.createElementBlock("li", _hoisted_2$F, [
                     vue.renderSlot(_ctx.$slots, "loading", {}, () => [
                       vue.createVNode(vue.unref(ElIcon), {
                         class: vue.normalizeClass(vue.unref(ns).is("loading"))
@@ -18890,7 +18890,7 @@
   });
 
   const _hoisted_1$$ = ["id", "name", "placeholder", "value", "disabled", "readonly"];
-  const _hoisted_2$F = ["id", "name", "placeholder", "value", "disabled", "readonly"];
+  const _hoisted_2$E = ["id", "name", "placeholder", "value", "disabled", "readonly"];
   const __default__$1m = vue.defineComponent({
     name: "Picker"
   });
@@ -19535,7 +19535,7 @@
                 onBlur: _cache[3] || (_cache[3] = (e) => handleBlurInput(e, true)),
                 onInput: handleEndInput,
                 onChange: handleEndChange
-              }, null, 42, _hoisted_2$F),
+              }, null, 42, _hoisted_2$E),
               vue.createCommentVNode(' v-if="clearIcon" '),
               vue.createVNode(vue.unref(ElIcon), {
                 class: vue.normalizeClass([vue.unref(clearIconKls), "clear-icon"]),
@@ -19883,7 +19883,7 @@
   });
 
   const _hoisted_1$_ = ["onClick"];
-  const _hoisted_2$E = ["onMouseenter"];
+  const _hoisted_2$D = ["onMouseenter"];
   const _sfc_main$1Z = /* @__PURE__ */ vue.defineComponent({
     __name: "basic-time-spinner",
     props: basicTimeSpinnerProps,
@@ -20164,7 +20164,7 @@
                   ], 2);
                 }), 128))
               ], 2)
-            ], 42, _hoisted_2$E);
+            ], 42, _hoisted_2$D);
           }), 128)) : vue.createCommentVNode("v-if", true)
         ], 2);
       };
@@ -20855,7 +20855,7 @@
   };
 
   const _hoisted_1$Y = { key: 0 };
-  const _hoisted_2$D = ["onClick"];
+  const _hoisted_2$C = ["onClick"];
   const __default__$1l = vue.defineComponent({
     name: "DateTable"
   });
@@ -20927,7 +20927,7 @@
                         vue.createElementVNode("span", null, vue.toDisplayString(cell.text), 1)
                       ])
                     ], 2)
-                  ], 10, _hoisted_2$D);
+                  ], 10, _hoisted_2$C);
                 }), 128))
               ], 2);
             }), 128))
@@ -21571,7 +21571,7 @@
   };
 
   const _hoisted_1$X = ["onMouseenter", "onClick"];
-  const _hoisted_2$C = { key: 0 };
+  const _hoisted_2$B = { key: 0 };
   const COMPONENT_NAME$f = "ElCarousel";
   const __default__$1i = vue.defineComponent({
     name: COMPONENT_NAME$f
@@ -21720,7 +21720,7 @@
                 vue.createElementVNode("button", {
                   class: vue.normalizeClass(vue.unref(ns).e("button"))
                 }, [
-                  vue.unref(hasLabel) ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$C, vue.toDisplayString(item.props.label), 1)) : vue.createCommentVNode("v-if", true)
+                  vue.unref(hasLabel) ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$B, vue.toDisplayString(item.props.label), 1)) : vue.createCommentVNode("v-if", true)
                 ], 2)
               ], 42, _hoisted_1$X)), [
                 [vue.vShow, vue.unref(isTwoLengthShow)(index)]
@@ -22156,7 +22156,7 @@
   };
 
   const _hoisted_1$W = ["id", "indeterminate", "name", "tabindex", "disabled", "true-value", "false-value"];
-  const _hoisted_2$B = ["id", "indeterminate", "disabled", "value", "name", "tabindex"];
+  const _hoisted_2$A = ["id", "indeterminate", "disabled", "value", "name", "tabindex"];
   const __default__$1g = vue.defineComponent({
     name: "ElCheckbox"
   });
@@ -22243,7 +22243,7 @@
                 onBlur: _cache[8] || (_cache[8] = ($event) => isFocused.value = false),
                 onClick: _cache[9] || (_cache[9] = vue.withModifiers(() => {
                 }, ["stop"]))
-              }, null, 42, _hoisted_2$B)), [
+              }, null, 42, _hoisted_2$A)), [
                 [vue.vModelCheckbox, vue.unref(model)]
               ]),
               vue.createElementVNode("span", {
@@ -22268,7 +22268,7 @@
   var Checkbox = /* @__PURE__ */ _export_sfc(_sfc_main$1R, [["__file", "checkbox.vue"]]);
 
   const _hoisted_1$V = ["name", "tabindex", "disabled", "true-value", "false-value"];
-  const _hoisted_2$A = ["name", "tabindex", "disabled", "value"];
+  const _hoisted_2$z = ["name", "tabindex", "disabled", "value"];
   const __default__$1f = vue.defineComponent({
     name: "ElCheckboxButton"
   });
@@ -22343,7 +22343,7 @@
             onBlur: _cache[8] || (_cache[8] = ($event) => isFocused.value = false),
             onClick: _cache[9] || (_cache[9] = vue.withModifiers(() => {
             }, ["stop"]))
-          }, null, 42, _hoisted_2$A)), [
+          }, null, 42, _hoisted_2$z)), [
             [vue.vModelCheckbox, vue.unref(model)]
           ]),
           _ctx.$slots.default || _ctx.label ? (vue.openBlock(), vue.createElementBlock("span", {
@@ -22894,7 +22894,7 @@
     }
   });
   const _hoisted_1$R = ["id", "aria-haspopup", "aria-owns", "aria-expanded", "tabindex"];
-  const _hoisted_2$z = /* @__PURE__ */ vue.createElementVNode("span", null, null, -1);
+  const _hoisted_2$y = /* @__PURE__ */ vue.createElementVNode("span", null, null, -1);
   function _sfc_render$t(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_el_checkbox = vue.resolveComponent("el-checkbox");
     const _component_el_radio = vue.resolveComponent("el-radio");
@@ -22942,7 +22942,7 @@
       }, {
         default: vue.withCtx(() => [
           vue.createCommentVNode("\n        Add an empty element to avoid render label,\n        do not use empty fragment here for https://github.com/vuejs/vue-next/pull/2485\n      "),
-          _hoisted_2$z
+          _hoisted_2$y
         ]),
         _: 1
       }, 8, ["model-value", "label", "disabled", "onUpdate:modelValue"])) : _ctx.isLeaf && _ctx.node.checked ? (vue.openBlock(), vue.createBlock(_component_el_icon, {
@@ -23794,7 +23794,7 @@
   };
 
   const _hoisted_1$Q = { key: 0 };
-  const _hoisted_2$y = ["placeholder", "onKeydown"];
+  const _hoisted_2$x = ["placeholder", "onKeydown"];
   const _hoisted_3$g = ["onClick"];
   const COMPONENT_NAME$e = "ElCascader";
   const __default__$19 = vue.defineComponent({
@@ -23856,7 +23856,7 @@
         const _placeholder = props.placeholder || t("el.cascader.placeholder");
         return _placeholder;
       });
-      const currentPlaceholder = vue.computed(() => searchInputValue.value || presentTags.value.length > 0 || isOnComposition.value ? "" : inputPlaceholder.value);
+      const currentPlaceholder = vue.computed(() => searchInputValue.value || presentTags.value.length > 0 || isOnComposition.value ? "" : isFocus.value ? inputPlaceholder.value : "");
       const realSize = useFormSize();
       const tagSize = vue.computed(() => ["small"].includes(realSize.value) ? "small" : "default");
       const multiple = vue.computed(() => !!props.props.multiple);
@@ -24176,15 +24176,17 @@
         inputInitialHeight = getInputInnerHeight(inputInner) || inputInitialHeight;
         updateStyle();
       });
+      vue.watchEffect(() => {
+        if (isFloat.value) {
+          setFloat(checkedValue.value, isFocus.value);
+        }
+      });
       vue.watch(presentText, syncPresentTextValue, { immediate: true });
       vue.onMounted(() => {
         const inputInner = input.value.input;
         const inputInnerHeight = getInputInnerHeight(inputInner);
         inputInitialHeight = inputInner.offsetHeight || inputInnerHeight;
         useResizeObserver(inputInner, updateStyle);
-        if (isFloat && isFloat.value) {
-          setFloat(props.modelValue, popperVisible.value);
-        }
       });
       expose({
         getCheckedNodes,
@@ -24343,7 +24345,7 @@
                   onCompositionend: handleComposition,
                   onFocus: handleFocus,
                   onBlur: handleBlur
-                }, null, 42, _hoisted_2$y)), [
+                }, null, 42, _hoisted_2$x)), [
                   [vue.vModelText, searchInputValue.value]
                 ]) : vue.createCommentVNode("v-if", true)
               ], 2)) : vue.createCommentVNode("v-if", true)
@@ -24892,7 +24894,7 @@
   };
 
   const _hoisted_1$P = ["id", "aria-expanded", "aria-controls", "aria-describedby", "tabindex"];
-  const _hoisted_2$x = ["id", "aria-hidden", "aria-labelledby"];
+  const _hoisted_2$w = ["id", "aria-hidden", "aria-labelledby"];
   const __default__$13 = vue.defineComponent({
     name: "ElCollapseItem"
   });
@@ -24964,7 +24966,7 @@
                 }, [
                   vue.renderSlot(_ctx.$slots, "default")
                 ], 2)
-              ], 10, _hoisted_2$x), [
+              ], 10, _hoisted_2$w), [
                 [vue.vShow, vue.unref(isActive)]
               ])
             ]),
@@ -25765,7 +25767,7 @@
     }
   });
   const _hoisted_1$N = /* @__PURE__ */ vue.createElementVNode("div", null, null, -1);
-  const _hoisted_2$w = [
+  const _hoisted_2$v = [
     _hoisted_1$N
   ];
   function _sfc_render$o(_ctx, _cache, $props, $setup, $data, $options) {
@@ -25787,13 +25789,13 @@
           top: _ctx.cursorTop + "px",
           left: _ctx.cursorLeft + "px"
         })
-      }, _hoisted_2$w, 6)
+      }, _hoisted_2$v, 6)
     ], 6);
   }
   var SvPanel = /* @__PURE__ */ _export_sfc(_sfc_main$1x, [["render", _sfc_render$o], ["__file", "sv-panel.vue"]]);
 
   const _hoisted_1$M = ["onKeydown"];
-  const _hoisted_2$v = ["id", "aria-label", "aria-labelledby", "aria-description", "aria-disabled", "tabindex"];
+  const _hoisted_2$u = ["id", "aria-label", "aria-labelledby", "aria-description", "aria-disabled", "tabindex"];
   const __default__$11 = vue.defineComponent({
     name: "ElColorPicker"
   });
@@ -26161,7 +26163,7 @@
                   ], 6)
                 ], 2)
               ], 2)
-            ], 42, _hoisted_2$v)
+            ], 42, _hoisted_2$u)
           ]),
           _: 1
         }, 8, ["visible", "popper-class", "transition"]);
@@ -26993,7 +26995,7 @@
   });
 
   const _hoisted_1$L = ["aria-label"];
-  const _hoisted_2$u = {
+  const _hoisted_2$t = {
     key: 0,
     scope: "col"
   };
@@ -27044,7 +27046,7 @@
             ref: tbodyRef
           }, [
             vue.createElementVNode("tr", null, [
-              _ctx.showWeekNumber ? (vue.openBlock(), vue.createElementBlock("th", _hoisted_2$u, vue.toDisplayString(vue.unref(weekLabel)), 1)) : vue.createCommentVNode("v-if", true),
+              _ctx.showWeekNumber ? (vue.openBlock(), vue.createElementBlock("th", _hoisted_2$t, vue.toDisplayString(vue.unref(weekLabel)), 1)) : vue.createCommentVNode("v-if", true),
               (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(vue.unref(WEEKS), (week, key) => {
                 return vue.openBlock(), vue.createElementBlock("th", {
                   key,
@@ -27087,7 +27089,7 @@
   });
 
   const _hoisted_1$K = ["aria-label"];
-  const _hoisted_2$t = ["aria-selected", "aria-label", "tabindex", "onKeydown"];
+  const _hoisted_2$s = ["aria-selected", "aria-label", "tabindex", "onKeydown"];
   const _hoisted_3$e = { class: "cell" };
   const _sfc_main$1p = /* @__PURE__ */ vue.defineComponent({
     __name: "basic-month-table",
@@ -27273,7 +27275,7 @@
                     vue.createElementVNode("div", null, [
                       vue.createElementVNode("span", _hoisted_3$e, vue.toDisplayString(vue.unref(t)("el.datepicker.months." + months.value[cell.text])), 1)
                     ])
-                  ], 42, _hoisted_2$t);
+                  ], 42, _hoisted_2$s);
                 }), 128))
               ]);
             }), 128))
@@ -27292,7 +27294,7 @@
   });
 
   const _hoisted_1$J = ["aria-label"];
-  const _hoisted_2$s = ["aria-selected", "tabindex", "onKeydown"];
+  const _hoisted_2$r = ["aria-selected", "tabindex", "onKeydown"];
   const _hoisted_3$d = { class: "cell" };
   const _hoisted_4$9 = { key: 1 };
   const _sfc_main$1o = /* @__PURE__ */ vue.defineComponent({
@@ -27379,7 +27381,7 @@
                       ]
                     }, [
                       vue.createElementVNode("span", _hoisted_3$d, vue.toDisplayString(vue.unref(startYear) + i * 4 + j), 1)
-                    ], 42, _hoisted_2$s)) : (vue.openBlock(), vue.createElementBlock("td", _hoisted_4$9))
+                    ], 42, _hoisted_2$r)) : (vue.openBlock(), vue.createElementBlock("td", _hoisted_4$9))
                   ], 64);
                 }), 64))
               ]);
@@ -27392,7 +27394,7 @@
   var YearTable = /* @__PURE__ */ _export_sfc(_sfc_main$1o, [["__file", "basic-year-table.vue"]]);
 
   const _hoisted_1$I = ["onClick"];
-  const _hoisted_2$r = ["aria-label"];
+  const _hoisted_2$q = ["aria-label"];
   const _hoisted_3$c = ["aria-label"];
   const _hoisted_4$8 = ["aria-label"];
   const _hoisted_5$6 = ["aria-label"];
@@ -27892,7 +27894,7 @@
                       ]),
                       _: 1
                     })
-                  ], 10, _hoisted_2$r),
+                  ], 10, _hoisted_2$q),
                   vue.withDirectives(vue.createElementVNode("button", {
                     type: "button",
                     "aria-label": vue.unref(t)(`el.datepicker.prevMonth`),
@@ -28145,7 +28147,7 @@
   };
 
   const _hoisted_1$H = ["onClick"];
-  const _hoisted_2$q = ["aria-label"];
+  const _hoisted_2$p = ["aria-label"];
   const _hoisted_3$b = ["aria-label"];
   const _hoisted_4$7 = ["disabled", "aria-label"];
   const _hoisted_5$5 = ["disabled", "aria-label"];
@@ -28618,7 +28620,7 @@
                       ]),
                       _: 1
                     })
-                  ], 10, _hoisted_2$q),
+                  ], 10, _hoisted_2$p),
                   vue.createElementVNode("button", {
                     type: "button",
                     class: vue.normalizeClass([vue.unref(ppNs).e("icon-btn"), "arrow-left"]),
@@ -28855,7 +28857,7 @@
   };
 
   const _hoisted_1$G = ["onClick"];
-  const _hoisted_2$p = ["disabled"];
+  const _hoisted_2$o = ["disabled"];
   const _hoisted_3$a = ["disabled"];
   const unit = "year";
   const __default__$X = vue.defineComponent({
@@ -29000,7 +29002,7 @@
                       ]),
                       _: 1
                     })
-                  ], 10, _hoisted_2$p)) : vue.createCommentVNode("v-if", true),
+                  ], 10, _hoisted_2$o)) : vue.createCommentVNode("v-if", true),
                   vue.createElementVNode("div", null, vue.toDisplayString(vue.unref(leftLabel)), 1)
                 ], 2),
                 vue.createVNode(MonthTable, {
@@ -29572,7 +29574,7 @@
   };
 
   const _hoisted_1$E = ["aria-level"];
-  const _hoisted_2$o = ["aria-label"];
+  const _hoisted_2$n = ["aria-label"];
   const _hoisted_3$9 = ["id"];
   const __default__$U = vue.defineComponent({ name: "ElDialogContent" });
   const _sfc_main$1i = /* @__PURE__ */ vue.defineComponent({
@@ -29630,7 +29632,7 @@
                 ]),
                 _: 1
               }, 8, ["class"])
-            ], 10, _hoisted_2$o)) : vue.createCommentVNode("v-if", true)
+            ], 10, _hoisted_2$n)) : vue.createCommentVNode("v-if", true)
           ], 2),
           vue.createElementVNode("div", {
             id: vue.unref(bodyId),
@@ -30123,7 +30125,7 @@
   const drawerEmits = dialogEmits;
 
   const _hoisted_1$C = ["aria-label", "aria-labelledby", "aria-describedby"];
-  const _hoisted_2$n = ["id", "aria-level"];
+  const _hoisted_2$m = ["id", "aria-level"];
   const _hoisted_3$8 = ["aria-label"];
   const _hoisted_4$6 = ["id"];
   const __default__$R = vue.defineComponent({
@@ -30239,7 +30241,7 @@
                               role: "heading",
                               "aria-level": _ctx.headerAriaLevel,
                               class: vue.normalizeClass(vue.unref(ns).e("title"))
-                            }, vue.toDisplayString(_ctx.title), 11, _hoisted_2$n)) : vue.createCommentVNode("v-if", true)
+                            }, vue.toDisplayString(_ctx.title), 11, _hoisted_2$m)) : vue.createCommentVNode("v-if", true)
                           ]) : vue.renderSlot(_ctx.$slots, "title", { key: 1 }, () => [
                             vue.createCommentVNode(" DEPRECATED SLOT ")
                           ]),
@@ -31332,7 +31334,7 @@
     xmlns: "http://www.w3.org/2000/svg",
     "xmlns:xlink": "http://www.w3.org/1999/xlink"
   };
-  const _hoisted_2$m = ["id"];
+  const _hoisted_2$l = ["id"];
   const _hoisted_3$7 = ["stop-color"];
   const _hoisted_4$5 = ["stop-color"];
   const _hoisted_5$4 = ["id"];
@@ -31398,7 +31400,7 @@
                 "stop-color": `var(${vue.unref(ns).cssVarBlockName("fill-color-4")})`,
                 offset: "100%"
               }, null, 8, _hoisted_4$5)
-            ], 8, _hoisted_2$m),
+            ], 8, _hoisted_2$l),
             vue.createElementVNode("linearGradient", {
               id: `linearGradient-2-${vue.unref(id)}`,
               x1: "0%",
@@ -31516,7 +31518,7 @@
   });
 
   const _hoisted_1$y = ["src"];
-  const _hoisted_2$l = { key: 1 };
+  const _hoisted_2$k = { key: 1 };
   const __default__$P = vue.defineComponent({
     name: "ElEmpty"
   });
@@ -31550,7 +31552,7 @@
           vue.createElementVNode("div", {
             class: vue.normalizeClass(vue.unref(ns).e("description"))
           }, [
-            _ctx.$slots.description ? vue.renderSlot(_ctx.$slots, "description", { key: 0 }) : (vue.openBlock(), vue.createElementBlock("p", _hoisted_2$l, vue.toDisplayString(vue.unref(emptyDescription)), 1))
+            _ctx.$slots.description ? vue.renderSlot(_ctx.$slots, "description", { key: 0 }) : (vue.openBlock(), vue.createElementBlock("p", _hoisted_2$k, vue.toDisplayString(vue.unref(emptyDescription)), 1))
           ], 2),
           _ctx.$slots.default ? (vue.openBlock(), vue.createElementBlock("div", {
             key: 0,
@@ -32062,7 +32064,7 @@
   };
 
   const _hoisted_1$w = ["src", "loading", "crossorigin"];
-  const _hoisted_2$k = { key: 0 };
+  const _hoisted_2$j = { key: 0 };
   const __default__$N = vue.defineComponent({
     name: "ElImage",
     inheritAttrs: false
@@ -32263,7 +32265,7 @@
               onSwitch: switchViewer
             }, {
               default: vue.withCtx(() => [
-                _ctx.$slots.viewer ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$k, [
+                _ctx.$slots.viewer ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$j, [
                   vue.renderSlot(_ctx.$slots, "viewer")
                 ])) : vue.createCommentVNode("v-if", true)
               ]),
@@ -32335,7 +32337,7 @@
   };
 
   const _hoisted_1$v = ["aria-label", "onKeydown"];
-  const _hoisted_2$j = ["aria-label", "onKeydown"];
+  const _hoisted_2$i = ["aria-label", "onKeydown"];
   const __default__$M = vue.defineComponent({
     name: "ElInputNumber"
   });
@@ -32602,7 +32604,7 @@
               ]),
               _: 1
             })
-          ], 42, _hoisted_2$j)), [
+          ], 42, _hoisted_2$i)), [
             [vue.unref(vRepeatClick), increase]
           ]) : vue.createCommentVNode("v-if", true),
           vue.createVNode(vue.unref(ElInput), {
@@ -33833,7 +33835,7 @@
   };
 
   const _hoisted_1$s = ["disabled", "aria-label", "aria-disabled"];
-  const _hoisted_2$i = { key: 0 };
+  const _hoisted_2$h = { key: 0 };
   const __default__$J = vue.defineComponent({
     name: "ElPaginationPrev"
   });
@@ -33854,7 +33856,7 @@
           "aria-disabled": vue.unref(internalDisabled),
           onClick: _cache[0] || (_cache[0] = ($event) => _ctx.$emit("click", $event))
         }, [
-          _ctx.prevText ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$i, vue.toDisplayString(_ctx.prevText), 1)) : (vue.openBlock(), vue.createBlock(vue.unref(ElIcon), { key: 1 }, {
+          _ctx.prevText ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$h, vue.toDisplayString(_ctx.prevText), 1)) : (vue.openBlock(), vue.createBlock(vue.unref(ElIcon), { key: 1 }, {
             default: vue.withCtx(() => [
               (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent(_ctx.prevIcon)))
             ]),
@@ -33885,7 +33887,7 @@
   });
 
   const _hoisted_1$r = ["disabled", "aria-label", "aria-disabled"];
-  const _hoisted_2$h = { key: 0 };
+  const _hoisted_2$g = { key: 0 };
   const __default__$I = vue.defineComponent({
     name: "ElPaginationNext"
   });
@@ -33906,7 +33908,7 @@
           "aria-disabled": vue.unref(internalDisabled),
           onClick: _cache[0] || (_cache[0] = ($event) => _ctx.$emit("click", $event))
         }, [
-          _ctx.nextText ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$h, vue.toDisplayString(_ctx.nextText), 1)) : (vue.openBlock(), vue.createBlock(vue.unref(ElIcon), { key: 1 }, {
+          _ctx.nextText ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$g, vue.toDisplayString(_ctx.nextText), 1)) : (vue.openBlock(), vue.createBlock(vue.unref(ElIcon), { key: 1 }, {
             default: vue.withCtx(() => [
               (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent(_ctx.nextIcon)))
             ]),
@@ -34314,9 +34316,9 @@
       const _placeholder = (_a = props.placeholder) != null ? _a : t("el.select.placeholder");
       const empty = props.multiple || !hasModelValue.value;
       if (isFloat && isFloat.value) {
-        return isFocused.value ? empty ? _placeholder : "" : "";
+        return empty ? isFocused.value ? _placeholder : "" : states.selectedLabel;
       } else {
-        return empty ? _placeholder : "";
+        return empty ? _placeholder : states.selectedLabel;
       }
     });
     vue.watch(() => props.modelValue, (val, oldVal) => {
@@ -35000,7 +35002,6 @@
     }
   });
   const _hoisted_1$p = ["id", "disabled", "autocomplete", "readonly", "aria-activedescendant", "aria-controls", "aria-expanded", "aria-label"];
-  const _hoisted_2$g = ["textContent"];
   function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_el_tag = vue.resolveComponent("el-tag");
     const _component_el_tooltip = vue.resolveComponent("el-tooltip");
@@ -35180,7 +35181,7 @@
                       _cache[4] || (_cache[4] = vue.withKeys(vue.withModifiers(($event) => _ctx.navigateOptions("prev"), ["stop", "prevent"]), ["up"])),
                       _cache[5] || (_cache[5] = vue.withKeys(vue.withModifiers((...args) => _ctx.handleEsc && _ctx.handleEsc(...args), ["stop", "prevent"]), ["esc"])),
                       _cache[6] || (_cache[6] = vue.withKeys(vue.withModifiers((...args) => _ctx.selectOption && _ctx.selectOption(...args), ["stop", "prevent"]), ["enter"])),
-                      _cache[7] || (_cache[7] = vue.withKeys(vue.withModifiers((...args) => _ctx.deletePrevTag && _ctx.deletePrevTag(...args), ["stop", "prevent"]), ["delete"]))
+                      _cache[7] || (_cache[7] = vue.withKeys(vue.withModifiers((...args) => _ctx.deletePrevTag && _ctx.deletePrevTag(...args), ["stop"]), ["delete"]))
                     ],
                     onCompositionstart: _cache[8] || (_cache[8] = (...args) => _ctx.handleCompositionStart && _ctx.handleCompositionStart(...args)),
                     onCompositionupdate: _cache[9] || (_cache[9] = (...args) => _ctx.handleCompositionUpdate && _ctx.handleCompositionUpdate(...args)),
@@ -35194,9 +35195,14 @@
                     key: 0,
                     ref: "calculatorRef",
                     "aria-hidden": "true",
-                    class: vue.normalizeClass(_ctx.nsSelect.e("input-calculator")),
-                    textContent: vue.toDisplayString(_ctx.states.inputValue)
-                  }, null, 10, _hoisted_2$g)) : vue.createCommentVNode("v-if", true)
+                    class: vue.normalizeClass(_ctx.nsSelect.e("input-calculator"))
+                  }, [
+                    vue.renderSlot(_ctx.$slots, "selection", {
+                      selected: _ctx.states.selected
+                    }, () => [
+                      vue.createTextVNode(vue.toDisplayString(_ctx.states.selectedLabel), 1)
+                    ])
+                  ], 2)) : vue.createCommentVNode("v-if", true)
                 ], 2)) : vue.createCommentVNode("v-if", true),
                 _ctx.shouldShowPlaceholder ? (vue.openBlock(), vue.createElementBlock("div", {
                   key: 2,
@@ -35208,7 +35214,7 @@
                 }, [
                   vue.createElementVNode("span", null, vue.toDisplayString(_ctx.currentPlaceholder), 1)
                 ], 2)) : vue.createCommentVNode("v-if", true),
-                _ctx.states.selectedLabel ? (vue.openBlock(), vue.createElementBlock("div", {
+                _ctx.states.selectedLabel && !_ctx.filterable ? (vue.openBlock(), vue.createElementBlock("div", {
                   key: 3,
                   class: vue.normalizeClass([_ctx.nsSelect.e("selected-item")])
                 }, [
@@ -40343,7 +40349,7 @@
                     _cache[8] || (_cache[8] = vue.withKeys(vue.withModifiers(($event) => _ctx.onKeyboardNavigate("forward"), ["stop", "prevent"]), ["down"])),
                     _cache[9] || (_cache[9] = vue.withKeys(vue.withModifiers((...args) => _ctx.onKeyboardSelect && _ctx.onKeyboardSelect(...args), ["stop", "prevent"]), ["enter"])),
                     _cache[10] || (_cache[10] = vue.withKeys(vue.withModifiers((...args) => _ctx.handleEsc && _ctx.handleEsc(...args), ["stop", "prevent"]), ["esc"])),
-                    _cache[11] || (_cache[11] = vue.withKeys(vue.withModifiers((...args) => _ctx.handleDel && _ctx.handleDel(...args), ["stop", "prevent"]), ["delete"]))
+                    _cache[11] || (_cache[11] = vue.withKeys(vue.withModifiers((...args) => _ctx.handleDel && _ctx.handleDel(...args), ["stop"]), ["delete"]))
                   ],
                   onClick: _cache[12] || (_cache[12] = vue.withModifiers((...args) => _ctx.toggleMenu && _ctx.toggleMenu(...args), ["stop"]))
                 }, null, 46, _hoisted_1$i), [

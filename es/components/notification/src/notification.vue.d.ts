@@ -242,8 +242,8 @@ declare const _default: import("vue").DefineComponent<{
     }>) & {}) | (() => string | import("vue").VNode<import("vue").RendererNode, import("vue").RendererElement, {
         [key: string]: any;
     }>))[], unknown, unknown>;
-    readonly position: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "top-right" | "top-left" | "bottom-right" | "bottom-left", unknown>;
     readonly title: string;
+    readonly position: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "top-right" | "top-left" | "bottom-right" | "bottom-left", unknown>;
     readonly id: string;
     readonly onClick: () => void;
     readonly customClass: string;

@@ -4,7 +4,7 @@ import { cloneDeep, isEqual } from 'lodash-unified';
 import '../../../hooks/index.mjs';
 import '../../../utils/index.mjs';
 import '../../form/index.mjs';
-import UploadDragger from './upload-dragger2.mjs';
+import UploadDragger from './upload-dragger.mjs';
 import { uploadContentProps } from './upload-content2.mjs';
 import { genFileId } from './upload2.mjs';
 import _export_sfc from '../../../_virtual/plugin-vue_export-helper.mjs';

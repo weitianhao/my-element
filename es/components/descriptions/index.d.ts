@@ -100,9 +100,9 @@ export declare const ElDescriptions: import("element-plus/es/utils").SFCWithInst
     readonly title: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
     readonly extra: import("element-plus/es/utils").EpPropFinalized<StringConstructor, unknown, unknown, "", boolean>;
 }>>, {
+    readonly title: string;
     readonly direction: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "horizontal" | "vertical", unknown>;
     readonly border: import("element-plus/es/utils").EpPropMergeType<BooleanConstructor, unknown, unknown>;
-    readonly title: string;
     readonly column: number;
     readonly extra: string;
 }>> & {

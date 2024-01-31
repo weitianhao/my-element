@@ -363,8 +363,8 @@ declare const _default: import("vue").DefineComponent<{
     onOpenAutoFocus?: (() => any) | undefined;
     onCloseAutoFocus?: (() => any) | undefined;
 }, {
-    readonly direction: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "ltr" | "rtl" | "ttb" | "btt", unknown>;
     readonly title: string;
+    readonly direction: import("element-plus/es/utils").EpPropMergeType<StringConstructor, "ltr" | "rtl" | "ttb" | "btt", unknown>;
     readonly modelValue: boolean;
     readonly size: import("element-plus/es/utils").EpPropMergeType<readonly [StringConstructor, NumberConstructor], unknown, unknown>;
     readonly center: boolean;
