@@ -1,6 +1,6 @@
 import '../../../utils/index.mjs';
 import '../../../hooks/index.mjs';
-import { radioEmits } from './radio.mjs';
+import { radioEmits } from './radio2.mjs';
 import { buildProps } from '../../../utils/vue/props/runtime.mjs';
 import { useSizeProp } from '../../../hooks/use-size/index.mjs';
 

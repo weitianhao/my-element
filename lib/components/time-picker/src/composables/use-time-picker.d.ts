@@ -56,7 +56,7 @@ export declare const useOldValue: (props: {
     startOf: (unit: import("dayjs").OpUnitType) => Dayjs;
     endOf: (unit: import("dayjs").OpUnitType) => Dayjs;
     format: (template?: string | undefined) => string;
-    diff: (date?: string | number | Date | Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+    diff: (date?: string | number | Date | Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "D" | "M" | "s" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
     valueOf: () => number;
     unix: () => number;
     daysInMonth: () => number;
@@ -126,7 +126,7 @@ export declare const useOldValue: (props: {
     startOf: (unit: import("dayjs").OpUnitType) => Dayjs;
     endOf: (unit: import("dayjs").OpUnitType) => Dayjs;
     format: (template?: string | undefined) => string;
-    diff: (date?: string | number | Date | Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "s" | "D" | "M" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
+    diff: (date?: string | number | Date | Dayjs | null | undefined, unit?: "year" | "month" | "date" | "dates" | "week" | "y" | "weeks" | "months" | "D" | "M" | "s" | "m" | "day" | "hour" | "minute" | "second" | "millisecond" | "hours" | "minutes" | "seconds" | "milliseconds" | "days" | "years" | "d" | "h" | "ms" | "w" | "quarter" | "quarters" | "Q" | undefined, float?: boolean | undefined) => number;
     valueOf: () => number;
     unix: () => number;
     daysInMonth: () => number;

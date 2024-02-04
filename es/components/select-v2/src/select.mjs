@@ -66,6 +66,7 @@ const _sfc_main = defineComponent({
 });
 const _hoisted_1 = ["id", "autocomplete", "aria-expanded", "aria-label", "disabled", "readonly", "name"];
 const _hoisted_2 = ["textContent"];
+const _hoisted_3 = { key: 1 };
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_el_tag = resolveComponent("el-tag");
   const _component_el_tooltip = resolveComponent("el-tooltip");
@@ -266,17 +267,12 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
                 _ctx.nsSelect.is("transparent", !_ctx.hasModelValue || _ctx.expanded && !_ctx.states.inputValue)
               ])
             }, [
-              createElementVNode("span", null, toDisplayString(_ctx.currentPlaceholder), 1)
-            ], 2)) : createCommentVNode("v-if", true),
-            _ctx.states.selectedLabel ? (openBlock(), createElementBlock("div", {
-              key: 3,
-              class: normalizeClass([_ctx.nsSelect.e("selected-item")])
-            }, [
-              renderSlot(_ctx.$slots, "selection", {
+              _ctx.$slots.selection && _ctx.states.selectedLabel ? renderSlot(_ctx.$slots, "selection", {
+                key: 0,
                 label: _ctx.states.selectedLabel
               }, () => [
-                createTextVNode(toDisplayString(_ctx.states.selectedLabel), 1)
-              ])
+                createTextVNode(toDisplayString(_ctx.currentPlaceholder), 1)
+              ]) : (openBlock(), createElementBlock("span", _hoisted_3, toDisplayString(_ctx.currentPlaceholder), 1))
             ], 2)) : createCommentVNode("v-if", true)
           ], 2),
           createElementVNode("div", {

@@ -13,7 +13,7 @@ import '../../../hooks/index.mjs';
 import { ElCollection, dropdownProps } from './dropdown.mjs';
 import { DROPDOWN_INJECTION_KEY } from './tokens.mjs';
 import _export_sfc from '../../../_virtual/plugin-vue_export-helper.mjs';
-import ElRovingFocusGroup from '../../roving-focus-group/src/roving-focus-group.mjs';
+import ElRovingFocusGroup from '../../roving-focus-group/src/roving-focus-group2.mjs';
 import { OnlyChild } from '../../slot/src/only-child.mjs';
 import { useNamespace } from '../../../hooks/use-namespace/index.mjs';
 import { useLocale } from '../../../hooks/use-locale/index.mjs';

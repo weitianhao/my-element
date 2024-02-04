@@ -13931,8 +13931,8 @@ const inputEmits = {
 };
 
 const _hoisted_1$14 = ["role"];
-const _hoisted_2$H = ["id", "minlength", "maxlength", "type", "disabled", "readonly", "autocomplete", "tabindex", "aria-label", "placeholder", "form", "autofocus"];
-const _hoisted_3$i = ["id", "minlength", "maxlength", "tabindex", "disabled", "readonly", "autocomplete", "aria-label", "placeholder", "form", "autofocus"];
+const _hoisted_2$I = ["id", "minlength", "maxlength", "type", "disabled", "readonly", "autocomplete", "tabindex", "aria-label", "placeholder", "form", "autofocus"];
+const _hoisted_3$j = ["id", "minlength", "maxlength", "tabindex", "disabled", "readonly", "autocomplete", "aria-label", "placeholder", "form", "autofocus"];
 const __default__$1D = defineComponent({
   name: "ElInput",
   inheritAttrs: false
@@ -14273,7 +14273,7 @@ const _sfc_main$2i = /* @__PURE__ */ defineComponent({
               onBlur: _cache[1] || (_cache[1] = (...args) => unref(handleBlur) && unref(handleBlur)(...args)),
               onChange: handleChange,
               onKeydown: handleKeydown
-            }), null, 16, _hoisted_2$H),
+            }), null, 16, _hoisted_2$I),
             createCommentVNode(" suffix slot "),
             unref(suffixVisible) ? (openBlock(), createElementBlock("span", {
               key: 1,
@@ -14373,7 +14373,7 @@ const _sfc_main$2i = /* @__PURE__ */ defineComponent({
             onBlur: _cache[3] || (_cache[3] = (...args) => unref(handleBlur) && unref(handleBlur)(...args)),
             onChange: handleChange,
             onKeydown: handleKeydown
-          }), null, 16, _hoisted_3$i),
+          }), null, 16, _hoisted_3$j),
           unref(isWordLimitVisible) ? (openBlock(), createElementBlock("span", {
             key: 0,
             style: normalizeStyle(countStyle.value),
@@ -16239,7 +16239,7 @@ const _sfc_main$28 = /* @__PURE__ */ defineComponent({
 var ElTooltipContent = /* @__PURE__ */ _export_sfc(_sfc_main$28, [["__file", "content.vue"]]);
 
 const _hoisted_1$13 = ["innerHTML"];
-const _hoisted_2$G = { key: 1 };
+const _hoisted_2$H = { key: 1 };
 const __default__$1v = defineComponent({
   name: "ElTooltip"
 });
@@ -16381,7 +16381,7 @@ const _sfc_main$27 = /* @__PURE__ */ defineComponent({
                 _ctx.rawContent ? (openBlock(), createElementBlock("span", {
                   key: 0,
                   innerHTML: _ctx.content
-                }, null, 8, _hoisted_1$13)) : (openBlock(), createElementBlock("span", _hoisted_2$G, toDisplayString(_ctx.content), 1))
+                }, null, 8, _hoisted_1$13)) : (openBlock(), createElementBlock("span", _hoisted_2$H, toDisplayString(_ctx.content), 1))
               ]),
               _ctx.showArrow ? (openBlock(), createBlock(unref(ElPopperArrow), {
                 key: 0,
@@ -16478,8 +16478,8 @@ const autocompleteEmits = {
 };
 
 const _hoisted_1$12 = ["aria-expanded", "aria-owns"];
-const _hoisted_2$F = { key: 0 };
-const _hoisted_3$h = ["id", "aria-selected", "onClick"];
+const _hoisted_2$G = { key: 0 };
+const _hoisted_3$i = ["id", "aria-selected", "onClick"];
 const COMPONENT_NAME$i = "ElAutocomplete";
 const __default__$1u = defineComponent({
   name: COMPONENT_NAME$i,
@@ -16724,7 +16724,7 @@ const _sfc_main$26 = /* @__PURE__ */ defineComponent({
               role: "listbox"
             }, {
               default: withCtx(() => [
-                unref(suggestionLoading) ? (openBlock(), createElementBlock("li", _hoisted_2$F, [
+                unref(suggestionLoading) ? (openBlock(), createElementBlock("li", _hoisted_2$G, [
                   renderSlot(_ctx.$slots, "loading", {}, () => [
                     createVNode(unref(ElIcon), {
                       class: normalizeClass(unref(ns).is("loading"))
@@ -16747,7 +16747,7 @@ const _sfc_main$26 = /* @__PURE__ */ defineComponent({
                     renderSlot(_ctx.$slots, "default", { item }, () => [
                       createTextVNode(toDisplayString(item[_ctx.valueKey]), 1)
                     ])
-                  ], 10, _hoisted_3$h);
+                  ], 10, _hoisted_3$i);
                 }), 128))
               ]),
               _: 3
@@ -18886,7 +18886,7 @@ const timePickerDefaultProps = buildProps({
 });
 
 const _hoisted_1$$ = ["id", "name", "placeholder", "value", "disabled", "readonly"];
-const _hoisted_2$E = ["id", "name", "placeholder", "value", "disabled", "readonly"];
+const _hoisted_2$F = ["id", "name", "placeholder", "value", "disabled", "readonly"];
 const __default__$1m = defineComponent({
   name: "Picker"
 });
@@ -19531,7 +19531,7 @@ const _sfc_main$1_ = /* @__PURE__ */ defineComponent({
               onBlur: _cache[3] || (_cache[3] = (e) => handleBlurInput(e, true)),
               onInput: handleEndInput,
               onChange: handleEndChange
-            }, null, 42, _hoisted_2$E),
+            }, null, 42, _hoisted_2$F),
             createCommentVNode(' v-if="clearIcon" '),
             createVNode(unref(ElIcon), {
               class: normalizeClass([unref(clearIconKls), "clear-icon"]),
@@ -19879,7 +19879,7 @@ const basicTimeSpinnerProps = buildProps({
 });
 
 const _hoisted_1$_ = ["onClick"];
-const _hoisted_2$D = ["onMouseenter"];
+const _hoisted_2$E = ["onMouseenter"];
 const _sfc_main$1Z = /* @__PURE__ */ defineComponent({
   __name: "basic-time-spinner",
   props: basicTimeSpinnerProps,
@@ -20160,7 +20160,7 @@ const _sfc_main$1Z = /* @__PURE__ */ defineComponent({
                 ], 2);
               }), 128))
             ], 2)
-          ], 42, _hoisted_2$D);
+          ], 42, _hoisted_2$E);
         }), 128)) : createCommentVNode("v-if", true)
       ], 2);
     };
@@ -20851,7 +20851,7 @@ const useDateTable = (props, emit) => {
 };
 
 const _hoisted_1$Y = { key: 0 };
-const _hoisted_2$C = ["onClick"];
+const _hoisted_2$D = ["onClick"];
 const __default__$1l = defineComponent({
   name: "DateTable"
 });
@@ -20923,7 +20923,7 @@ const _sfc_main$1W = /* @__PURE__ */ defineComponent({
                       createElementVNode("span", null, toDisplayString(cell.text), 1)
                     ])
                   ], 2)
-                ], 10, _hoisted_2$C);
+                ], 10, _hoisted_2$D);
               }), 128))
             ], 2);
           }), 128))
@@ -21567,7 +21567,7 @@ const useCarousel = (props, emit, componentName) => {
 };
 
 const _hoisted_1$X = ["onMouseenter", "onClick"];
-const _hoisted_2$B = { key: 0 };
+const _hoisted_2$C = { key: 0 };
 const COMPONENT_NAME$f = "ElCarousel";
 const __default__$1i = defineComponent({
   name: COMPONENT_NAME$f
@@ -21716,7 +21716,7 @@ const _sfc_main$1T = /* @__PURE__ */ defineComponent({
               createElementVNode("button", {
                 class: normalizeClass(unref(ns).e("button"))
               }, [
-                unref(hasLabel) ? (openBlock(), createElementBlock("span", _hoisted_2$B, toDisplayString(item.props.label), 1)) : createCommentVNode("v-if", true)
+                unref(hasLabel) ? (openBlock(), createElementBlock("span", _hoisted_2$C, toDisplayString(item.props.label), 1)) : createCommentVNode("v-if", true)
               ], 2)
             ], 42, _hoisted_1$X)), [
               [vShow, unref(isTwoLengthShow)(index)]
@@ -22152,7 +22152,7 @@ const useCheckbox = (props, slots) => {
 };
 
 const _hoisted_1$W = ["id", "indeterminate", "name", "tabindex", "disabled", "true-value", "false-value"];
-const _hoisted_2$A = ["id", "indeterminate", "disabled", "value", "name", "tabindex"];
+const _hoisted_2$B = ["id", "indeterminate", "disabled", "value", "name", "tabindex"];
 const __default__$1g = defineComponent({
   name: "ElCheckbox"
 });
@@ -22239,7 +22239,7 @@ const _sfc_main$1R = /* @__PURE__ */ defineComponent({
               onBlur: _cache[8] || (_cache[8] = ($event) => isFocused.value = false),
               onClick: _cache[9] || (_cache[9] = withModifiers(() => {
               }, ["stop"]))
-            }, null, 42, _hoisted_2$A)), [
+            }, null, 42, _hoisted_2$B)), [
               [vModelCheckbox, unref(model)]
             ]),
             createElementVNode("span", {
@@ -22264,7 +22264,7 @@ const _sfc_main$1R = /* @__PURE__ */ defineComponent({
 var Checkbox = /* @__PURE__ */ _export_sfc(_sfc_main$1R, [["__file", "checkbox.vue"]]);
 
 const _hoisted_1$V = ["name", "tabindex", "disabled", "true-value", "false-value"];
-const _hoisted_2$z = ["name", "tabindex", "disabled", "value"];
+const _hoisted_2$A = ["name", "tabindex", "disabled", "value"];
 const __default__$1f = defineComponent({
   name: "ElCheckboxButton"
 });
@@ -22339,7 +22339,7 @@ const _sfc_main$1Q = /* @__PURE__ */ defineComponent({
           onBlur: _cache[8] || (_cache[8] = ($event) => isFocused.value = false),
           onClick: _cache[9] || (_cache[9] = withModifiers(() => {
           }, ["stop"]))
-        }, null, 42, _hoisted_2$z)), [
+        }, null, 42, _hoisted_2$A)), [
           [vModelCheckbox, unref(model)]
         ]),
         _ctx.$slots.default || _ctx.label ? (openBlock(), createElementBlock("span", {
@@ -22890,7 +22890,7 @@ const _sfc_main$1L = defineComponent({
   }
 });
 const _hoisted_1$R = ["id", "aria-haspopup", "aria-owns", "aria-expanded", "tabindex"];
-const _hoisted_2$y = /* @__PURE__ */ createElementVNode("span", null, null, -1);
+const _hoisted_2$z = /* @__PURE__ */ createElementVNode("span", null, null, -1);
 function _sfc_render$t(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_el_checkbox = resolveComponent("el-checkbox");
   const _component_el_radio = resolveComponent("el-radio");
@@ -22938,7 +22938,7 @@ function _sfc_render$t(_ctx, _cache, $props, $setup, $data, $options) {
     }, {
       default: withCtx(() => [
         createCommentVNode("\n        Add an empty element to avoid render label,\n        do not use empty fragment here for https://github.com/vuejs/vue-next/pull/2485\n      "),
-        _hoisted_2$y
+        _hoisted_2$z
       ]),
       _: 1
     }, 8, ["model-value", "label", "disabled", "onUpdate:modelValue"])) : _ctx.isLeaf && _ctx.node.checked ? (openBlock(), createBlock(_component_el_icon, {
@@ -23790,8 +23790,8 @@ const cascaderEmits = {
 };
 
 const _hoisted_1$Q = { key: 0 };
-const _hoisted_2$x = ["placeholder", "onKeydown"];
-const _hoisted_3$g = ["onClick"];
+const _hoisted_2$y = ["placeholder", "onKeydown"];
+const _hoisted_3$h = ["onClick"];
 const COMPONENT_NAME$e = "ElCascader";
 const __default__$19 = defineComponent({
   name: COMPONENT_NAME$e
@@ -24341,7 +24341,7 @@ const _sfc_main$1H = /* @__PURE__ */ defineComponent({
                 onCompositionend: handleComposition,
                 onFocus: handleFocus,
                 onBlur: handleBlur
-              }, null, 42, _hoisted_2$x)), [
+              }, null, 42, _hoisted_2$y)), [
                 [vModelText, searchInputValue.value]
               ]) : createCommentVNode("v-if", true)
             ], 2)) : createCommentVNode("v-if", true)
@@ -24391,7 +24391,7 @@ const _sfc_main$1H = /* @__PURE__ */ defineComponent({
                     ]),
                     _: 1
                   })) : createCommentVNode("v-if", true)
-                ], 10, _hoisted_3$g);
+                ], 10, _hoisted_3$h);
               }), 128)) : renderSlot(_ctx.$slots, "empty", { key: 1 }, () => [
                 createElementVNode("li", {
                   class: normalizeClass(unref(nsCascader).e("empty-text"))
@@ -24890,7 +24890,7 @@ const useCollapseItemDOM = (props, { focusing, isActive, id }) => {
 };
 
 const _hoisted_1$P = ["id", "aria-expanded", "aria-controls", "aria-describedby", "tabindex"];
-const _hoisted_2$w = ["id", "aria-hidden", "aria-labelledby"];
+const _hoisted_2$x = ["id", "aria-hidden", "aria-labelledby"];
 const __default__$13 = defineComponent({
   name: "ElCollapseItem"
 });
@@ -24962,7 +24962,7 @@ const _sfc_main$1B = /* @__PURE__ */ defineComponent({
               }, [
                 renderSlot(_ctx.$slots, "default")
               ], 2)
-            ], 10, _hoisted_2$w), [
+            ], 10, _hoisted_2$x), [
               [vShow, unref(isActive)]
             ])
           ]),
@@ -25763,7 +25763,7 @@ const _sfc_main$1x = defineComponent({
   }
 });
 const _hoisted_1$N = /* @__PURE__ */ createElementVNode("div", null, null, -1);
-const _hoisted_2$v = [
+const _hoisted_2$w = [
   _hoisted_1$N
 ];
 function _sfc_render$o(_ctx, _cache, $props, $setup, $data, $options) {
@@ -25785,13 +25785,13 @@ function _sfc_render$o(_ctx, _cache, $props, $setup, $data, $options) {
         top: _ctx.cursorTop + "px",
         left: _ctx.cursorLeft + "px"
       })
-    }, _hoisted_2$v, 6)
+    }, _hoisted_2$w, 6)
   ], 6);
 }
 var SvPanel = /* @__PURE__ */ _export_sfc(_sfc_main$1x, [["render", _sfc_render$o], ["__file", "sv-panel.vue"]]);
 
 const _hoisted_1$M = ["onKeydown"];
-const _hoisted_2$u = ["id", "aria-label", "aria-labelledby", "aria-description", "aria-disabled", "tabindex"];
+const _hoisted_2$v = ["id", "aria-label", "aria-labelledby", "aria-description", "aria-disabled", "tabindex"];
 const __default__$11 = defineComponent({
   name: "ElColorPicker"
 });
@@ -26159,7 +26159,7 @@ const _sfc_main$1w = /* @__PURE__ */ defineComponent({
                 ], 6)
               ], 2)
             ], 2)
-          ], 42, _hoisted_2$u)
+          ], 42, _hoisted_2$v)
         ]),
         _: 1
       }, 8, ["visible", "popper-class", "transition"]);
@@ -26991,11 +26991,11 @@ var ElDatePickerCell = defineComponent({
 });
 
 const _hoisted_1$L = ["aria-label"];
-const _hoisted_2$t = {
+const _hoisted_2$u = {
   key: 0,
   scope: "col"
 };
-const _hoisted_3$f = ["aria-label"];
+const _hoisted_3$g = ["aria-label"];
 const _hoisted_4$a = ["aria-current", "aria-selected", "tabindex"];
 const _sfc_main$1q = /* @__PURE__ */ defineComponent({
   __name: "basic-date-table",
@@ -27042,13 +27042,13 @@ const _sfc_main$1q = /* @__PURE__ */ defineComponent({
           ref: tbodyRef
         }, [
           createElementVNode("tr", null, [
-            _ctx.showWeekNumber ? (openBlock(), createElementBlock("th", _hoisted_2$t, toDisplayString(unref(weekLabel)), 1)) : createCommentVNode("v-if", true),
+            _ctx.showWeekNumber ? (openBlock(), createElementBlock("th", _hoisted_2$u, toDisplayString(unref(weekLabel)), 1)) : createCommentVNode("v-if", true),
             (openBlock(true), createElementBlock(Fragment, null, renderList(unref(WEEKS), (week, key) => {
               return openBlock(), createElementBlock("th", {
                 key,
                 "aria-label": unref(t)("el.datepicker.weeksFull." + week),
                 scope: "col"
-              }, toDisplayString(unref(t)("el.datepicker.weeks." + week)), 9, _hoisted_3$f);
+              }, toDisplayString(unref(t)("el.datepicker.weeks." + week)), 9, _hoisted_3$g);
             }), 128))
           ]),
           (openBlock(true), createElementBlock(Fragment, null, renderList(unref(rows), (row, rowKey) => {
@@ -27085,8 +27085,8 @@ const basicMonthTableProps = buildProps({
 });
 
 const _hoisted_1$K = ["aria-label"];
-const _hoisted_2$s = ["aria-selected", "aria-label", "tabindex", "onKeydown"];
-const _hoisted_3$e = { class: "cell" };
+const _hoisted_2$t = ["aria-selected", "aria-label", "tabindex", "onKeydown"];
+const _hoisted_3$f = { class: "cell" };
 const _sfc_main$1p = /* @__PURE__ */ defineComponent({
   __name: "basic-month-table",
   props: basicMonthTableProps,
@@ -27269,9 +27269,9 @@ const _sfc_main$1p = /* @__PURE__ */ defineComponent({
                   ]
                 }, [
                   createElementVNode("div", null, [
-                    createElementVNode("span", _hoisted_3$e, toDisplayString(unref(t)("el.datepicker.months." + months.value[cell.text])), 1)
+                    createElementVNode("span", _hoisted_3$f, toDisplayString(unref(t)("el.datepicker.months." + months.value[cell.text])), 1)
                   ])
-                ], 42, _hoisted_2$s);
+                ], 42, _hoisted_2$t);
               }), 128))
             ]);
           }), 128))
@@ -27290,8 +27290,8 @@ const basicYearTableProps = buildProps({
 });
 
 const _hoisted_1$J = ["aria-label"];
-const _hoisted_2$r = ["aria-selected", "tabindex", "onKeydown"];
-const _hoisted_3$d = { class: "cell" };
+const _hoisted_2$s = ["aria-selected", "tabindex", "onKeydown"];
+const _hoisted_3$e = { class: "cell" };
 const _hoisted_4$9 = { key: 1 };
 const _sfc_main$1o = /* @__PURE__ */ defineComponent({
   __name: "basic-year-table",
@@ -27376,8 +27376,8 @@ const _sfc_main$1o = /* @__PURE__ */ defineComponent({
                       withKeys(withModifiers(handleYearTableClick, ["prevent", "stop"]), ["enter"])
                     ]
                   }, [
-                    createElementVNode("span", _hoisted_3$d, toDisplayString(unref(startYear) + i * 4 + j), 1)
-                  ], 42, _hoisted_2$r)) : (openBlock(), createElementBlock("td", _hoisted_4$9))
+                    createElementVNode("span", _hoisted_3$e, toDisplayString(unref(startYear) + i * 4 + j), 1)
+                  ], 42, _hoisted_2$s)) : (openBlock(), createElementBlock("td", _hoisted_4$9))
                 ], 64);
               }), 64))
             ]);
@@ -27390,8 +27390,8 @@ const _sfc_main$1o = /* @__PURE__ */ defineComponent({
 var YearTable = /* @__PURE__ */ _export_sfc(_sfc_main$1o, [["__file", "basic-year-table.vue"]]);
 
 const _hoisted_1$I = ["onClick"];
-const _hoisted_2$q = ["aria-label"];
-const _hoisted_3$c = ["aria-label"];
+const _hoisted_2$r = ["aria-label"];
+const _hoisted_3$d = ["aria-label"];
 const _hoisted_4$8 = ["aria-label"];
 const _hoisted_5$6 = ["aria-label"];
 const _sfc_main$1n = /* @__PURE__ */ defineComponent({
@@ -27890,7 +27890,7 @@ const _sfc_main$1n = /* @__PURE__ */ defineComponent({
                     ]),
                     _: 1
                   })
-                ], 10, _hoisted_2$q),
+                ], 10, _hoisted_2$r),
                 withDirectives(createElementVNode("button", {
                   type: "button",
                   "aria-label": unref(t)(`el.datepicker.prevMonth`),
@@ -27903,7 +27903,7 @@ const _sfc_main$1n = /* @__PURE__ */ defineComponent({
                     ]),
                     _: 1
                   })
-                ], 10, _hoisted_3$c), [
+                ], 10, _hoisted_3$d), [
                   [vShow, currentView.value === "date"]
                 ])
               ], 2),
@@ -28143,8 +28143,8 @@ const useRangePicker = (props, {
 };
 
 const _hoisted_1$H = ["onClick"];
-const _hoisted_2$p = ["aria-label"];
-const _hoisted_3$b = ["aria-label"];
+const _hoisted_2$q = ["aria-label"];
+const _hoisted_3$c = ["aria-label"];
 const _hoisted_4$7 = ["disabled", "aria-label"];
 const _hoisted_5$5 = ["disabled", "aria-label"];
 const _hoisted_6$3 = ["disabled", "aria-label"];
@@ -28616,7 +28616,7 @@ const _sfc_main$1m = /* @__PURE__ */ defineComponent({
                     ]),
                     _: 1
                   })
-                ], 10, _hoisted_2$p),
+                ], 10, _hoisted_2$q),
                 createElementVNode("button", {
                   type: "button",
                   class: normalizeClass([unref(ppNs).e("icon-btn"), "arrow-left"]),
@@ -28629,7 +28629,7 @@ const _sfc_main$1m = /* @__PURE__ */ defineComponent({
                     ]),
                     _: 1
                   })
-                ], 10, _hoisted_3$b),
+                ], 10, _hoisted_3$c),
                 _ctx.unlinkPanels ? (openBlock(), createElementBlock("button", {
                   key: 0,
                   type: "button",
@@ -28853,8 +28853,8 @@ const useMonthRangeHeader = ({
 };
 
 const _hoisted_1$G = ["onClick"];
-const _hoisted_2$o = ["disabled"];
-const _hoisted_3$a = ["disabled"];
+const _hoisted_2$p = ["disabled"];
+const _hoisted_3$b = ["disabled"];
 const unit = "year";
 const __default__$X = defineComponent({
   name: "DatePickerMonthRange"
@@ -28998,7 +28998,7 @@ const _sfc_main$1l = /* @__PURE__ */ defineComponent({
                     ]),
                     _: 1
                   })
-                ], 10, _hoisted_2$o)) : createCommentVNode("v-if", true),
+                ], 10, _hoisted_2$p)) : createCommentVNode("v-if", true),
                 createElementVNode("div", null, toDisplayString(unref(leftLabel)), 1)
               ], 2),
               createVNode(MonthTable, {
@@ -29032,7 +29032,7 @@ const _sfc_main$1l = /* @__PURE__ */ defineComponent({
                     ]),
                     _: 1
                   })
-                ], 10, _hoisted_3$a)) : createCommentVNode("v-if", true),
+                ], 10, _hoisted_3$b)) : createCommentVNode("v-if", true),
                 createElementVNode("button", {
                   type: "button",
                   class: normalizeClass([unref(ppNs).e("icon-btn"), "d-arrow-right"]),
@@ -29570,8 +29570,8 @@ const dialogContentEmits = {
 };
 
 const _hoisted_1$E = ["aria-level"];
-const _hoisted_2$n = ["aria-label"];
-const _hoisted_3$9 = ["id"];
+const _hoisted_2$o = ["aria-label"];
+const _hoisted_3$a = ["id"];
 const __default__$U = defineComponent({ name: "ElDialogContent" });
 const _sfc_main$1i = /* @__PURE__ */ defineComponent({
   ...__default__$U,
@@ -29628,14 +29628,14 @@ const _sfc_main$1i = /* @__PURE__ */ defineComponent({
               ]),
               _: 1
             }, 8, ["class"])
-          ], 10, _hoisted_2$n)) : createCommentVNode("v-if", true)
+          ], 10, _hoisted_2$o)) : createCommentVNode("v-if", true)
         ], 2),
         createElementVNode("div", {
           id: unref(bodyId),
           class: normalizeClass(unref(ns).e("body"))
         }, [
           renderSlot(_ctx.$slots, "default")
-        ], 10, _hoisted_3$9),
+        ], 10, _hoisted_3$a),
         _ctx.$slots.footer ? (openBlock(), createElementBlock("footer", {
           key: 0,
           class: normalizeClass(unref(ns).e("footer"))
@@ -30121,8 +30121,8 @@ const drawerProps = buildProps({
 const drawerEmits = dialogEmits;
 
 const _hoisted_1$C = ["aria-label", "aria-labelledby", "aria-describedby"];
-const _hoisted_2$m = ["id", "aria-level"];
-const _hoisted_3$8 = ["aria-label"];
+const _hoisted_2$n = ["id", "aria-level"];
+const _hoisted_3$9 = ["aria-label"];
 const _hoisted_4$6 = ["id"];
 const __default__$R = defineComponent({
   name: "ElDrawer",
@@ -30237,7 +30237,7 @@ const _sfc_main$1f = /* @__PURE__ */ defineComponent({
                             role: "heading",
                             "aria-level": _ctx.headerAriaLevel,
                             class: normalizeClass(unref(ns).e("title"))
-                          }, toDisplayString(_ctx.title), 11, _hoisted_2$m)) : createCommentVNode("v-if", true)
+                          }, toDisplayString(_ctx.title), 11, _hoisted_2$n)) : createCommentVNode("v-if", true)
                         ]) : renderSlot(_ctx.$slots, "title", { key: 1 }, () => [
                           createCommentVNode(" DEPRECATED SLOT ")
                         ]),
@@ -30256,7 +30256,7 @@ const _sfc_main$1f = /* @__PURE__ */ defineComponent({
                             ]),
                             _: 1
                           }, 8, ["class"])
-                        ], 10, _hoisted_3$8)) : createCommentVNode("v-if", true)
+                        ], 10, _hoisted_3$9)) : createCommentVNode("v-if", true)
                       ], 2)) : createCommentVNode("v-if", true),
                       unref(rendered) ? (openBlock(), createElementBlock("div", {
                         key: 1,
@@ -31330,8 +31330,8 @@ const _hoisted_1$z = {
   xmlns: "http://www.w3.org/2000/svg",
   "xmlns:xlink": "http://www.w3.org/1999/xlink"
 };
-const _hoisted_2$l = ["id"];
-const _hoisted_3$7 = ["stop-color"];
+const _hoisted_2$m = ["id"];
+const _hoisted_3$8 = ["stop-color"];
 const _hoisted_4$5 = ["stop-color"];
 const _hoisted_5$4 = ["id"];
 const _hoisted_6$2 = ["stop-color"];
@@ -31391,12 +31391,12 @@ const _sfc_main$15 = /* @__PURE__ */ defineComponent({
             createElementVNode("stop", {
               "stop-color": `var(${unref(ns).cssVarBlockName("fill-color-1")})`,
               offset: "0%"
-            }, null, 8, _hoisted_3$7),
+            }, null, 8, _hoisted_3$8),
             createElementVNode("stop", {
               "stop-color": `var(${unref(ns).cssVarBlockName("fill-color-4")})`,
               offset: "100%"
             }, null, 8, _hoisted_4$5)
-          ], 8, _hoisted_2$l),
+          ], 8, _hoisted_2$m),
           createElementVNode("linearGradient", {
             id: `linearGradient-2-${unref(id)}`,
             x1: "0%",
@@ -31514,7 +31514,7 @@ const emptyProps = buildProps({
 });
 
 const _hoisted_1$y = ["src"];
-const _hoisted_2$k = { key: 1 };
+const _hoisted_2$l = { key: 1 };
 const __default__$P = defineComponent({
   name: "ElEmpty"
 });
@@ -31548,7 +31548,7 @@ const _sfc_main$14 = /* @__PURE__ */ defineComponent({
         createElementVNode("div", {
           class: normalizeClass(unref(ns).e("description"))
         }, [
-          _ctx.$slots.description ? renderSlot(_ctx.$slots, "description", { key: 0 }) : (openBlock(), createElementBlock("p", _hoisted_2$k, toDisplayString(unref(emptyDescription)), 1))
+          _ctx.$slots.description ? renderSlot(_ctx.$slots, "description", { key: 0 }) : (openBlock(), createElementBlock("p", _hoisted_2$l, toDisplayString(unref(emptyDescription)), 1))
         ], 2),
         _ctx.$slots.default ? (openBlock(), createElementBlock("div", {
           key: 0,
@@ -32060,7 +32060,7 @@ const imageEmits = {
 };
 
 const _hoisted_1$w = ["src", "loading", "crossorigin"];
-const _hoisted_2$j = { key: 0 };
+const _hoisted_2$k = { key: 0 };
 const __default__$N = defineComponent({
   name: "ElImage",
   inheritAttrs: false
@@ -32261,7 +32261,7 @@ const _sfc_main$12 = /* @__PURE__ */ defineComponent({
             onSwitch: switchViewer
           }, {
             default: withCtx(() => [
-              _ctx.$slots.viewer ? (openBlock(), createElementBlock("div", _hoisted_2$j, [
+              _ctx.$slots.viewer ? (openBlock(), createElementBlock("div", _hoisted_2$k, [
                 renderSlot(_ctx.$slots, "viewer")
               ])) : createCommentVNode("v-if", true)
             ]),
@@ -32333,7 +32333,7 @@ const inputNumberEmits = {
 };
 
 const _hoisted_1$v = ["aria-label", "onKeydown"];
-const _hoisted_2$i = ["aria-label", "onKeydown"];
+const _hoisted_2$j = ["aria-label", "onKeydown"];
 const __default__$M = defineComponent({
   name: "ElInputNumber"
 });
@@ -32600,7 +32600,7 @@ const _sfc_main$11 = /* @__PURE__ */ defineComponent({
             ]),
             _: 1
           })
-        ], 42, _hoisted_2$i)), [
+        ], 42, _hoisted_2$j)), [
           [unref(vRepeatClick), increase]
         ]) : createCommentVNode("v-if", true),
         createVNode(unref(ElInput), {
@@ -33831,7 +33831,7 @@ const paginationPrevEmits = {
 };
 
 const _hoisted_1$s = ["disabled", "aria-label", "aria-disabled"];
-const _hoisted_2$h = { key: 0 };
+const _hoisted_2$i = { key: 0 };
 const __default__$J = defineComponent({
   name: "ElPaginationPrev"
 });
@@ -33852,7 +33852,7 @@ const _sfc_main$X = /* @__PURE__ */ defineComponent({
         "aria-disabled": unref(internalDisabled),
         onClick: _cache[0] || (_cache[0] = ($event) => _ctx.$emit("click", $event))
       }, [
-        _ctx.prevText ? (openBlock(), createElementBlock("span", _hoisted_2$h, toDisplayString(_ctx.prevText), 1)) : (openBlock(), createBlock(unref(ElIcon), { key: 1 }, {
+        _ctx.prevText ? (openBlock(), createElementBlock("span", _hoisted_2$i, toDisplayString(_ctx.prevText), 1)) : (openBlock(), createBlock(unref(ElIcon), { key: 1 }, {
           default: withCtx(() => [
             (openBlock(), createBlock(resolveDynamicComponent(_ctx.prevIcon)))
           ]),
@@ -33883,7 +33883,7 @@ const paginationNextProps = buildProps({
 });
 
 const _hoisted_1$r = ["disabled", "aria-label", "aria-disabled"];
-const _hoisted_2$g = { key: 0 };
+const _hoisted_2$h = { key: 0 };
 const __default__$I = defineComponent({
   name: "ElPaginationNext"
 });
@@ -33904,7 +33904,7 @@ const _sfc_main$W = /* @__PURE__ */ defineComponent({
         "aria-disabled": unref(internalDisabled),
         onClick: _cache[0] || (_cache[0] = ($event) => _ctx.$emit("click", $event))
       }, [
-        _ctx.nextText ? (openBlock(), createElementBlock("span", _hoisted_2$g, toDisplayString(_ctx.nextText), 1)) : (openBlock(), createBlock(unref(ElIcon), { key: 1 }, {
+        _ctx.nextText ? (openBlock(), createElementBlock("span", _hoisted_2$h, toDisplayString(_ctx.nextText), 1)) : (openBlock(), createBlock(unref(ElIcon), { key: 1 }, {
           default: withCtx(() => [
             (openBlock(), createBlock(resolveDynamicComponent(_ctx.nextIcon)))
           ]),
@@ -34998,6 +34998,7 @@ const _sfc_main$T = defineComponent({
   }
 });
 const _hoisted_1$p = ["id", "disabled", "autocomplete", "readonly", "aria-activedescendant", "aria-controls", "aria-expanded", "aria-label"];
+const _hoisted_2$g = { key: 1 };
 function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_el_tag = resolveComponent("el-tag");
   const _component_el_tooltip = resolveComponent("el-tooltip");
@@ -35208,17 +35209,12 @@ function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
                   _ctx.nsSelect.is("transparent", !_ctx.hasModelValue || _ctx.expanded && !_ctx.states.inputValue)
                 ])
               }, [
-                createElementVNode("span", null, toDisplayString(_ctx.currentPlaceholder), 1)
-              ], 2)) : createCommentVNode("v-if", true),
-              _ctx.states.selectedLabel && !_ctx.filterable ? (openBlock(), createElementBlock("div", {
-                key: 3,
-                class: normalizeClass([_ctx.nsSelect.e("selected-item")])
-              }, [
-                renderSlot(_ctx.$slots, "selection", {
+                _ctx.states.selectedLabel && !_ctx.filterable ? renderSlot(_ctx.$slots, "selection", {
+                  key: 0,
                   selected: _ctx.states.selected
                 }, () => [
-                  createTextVNode(toDisplayString(_ctx.states.selectedLabel), 1)
-                ])
+                  createElementVNode("span", null, toDisplayString(_ctx.currentPlaceholder), 1)
+                ]) : (openBlock(), createElementBlock("span", _hoisted_2$g, toDisplayString(_ctx.currentPlaceholder), 1))
               ], 2)) : createCommentVNode("v-if", true)
             ], 2),
             createElementVNode("div", {
@@ -35594,7 +35590,7 @@ const paginationPagerProps = buildProps({
 
 const _hoisted_1$m = ["onKeyup"];
 const _hoisted_2$f = ["aria-current", "aria-label", "tabindex"];
-const _hoisted_3$6 = ["tabindex", "aria-label"];
+const _hoisted_3$7 = ["tabindex", "aria-label"];
 const _hoisted_4$4 = ["aria-current", "aria-label", "tabindex"];
 const _hoisted_5$3 = ["tabindex", "aria-label"];
 const _hoisted_6$1 = ["aria-current", "aria-label", "tabindex"];
@@ -35761,7 +35757,7 @@ const _sfc_main$O = /* @__PURE__ */ defineComponent({
           onBlur: _cache[3] || (_cache[3] = ($event) => quickPrevFocus.value = false)
         }, [
           (quickPrevHover.value || quickPrevFocus.value) && !_ctx.disabled ? (openBlock(), createBlock(unref(d_arrow_left_default), { key: 0 })) : (openBlock(), createBlock(unref(more_filled_default), { key: 1 }))
-        ], 42, _hoisted_3$6)) : createCommentVNode("v-if", true),
+        ], 42, _hoisted_3$7)) : createCommentVNode("v-if", true),
         (openBlock(true), createElementBlock(Fragment, null, renderList(unref(pagers), (pager) => {
           return openBlock(), createElementBlock("li", {
             key: pager,
@@ -36464,7 +36460,7 @@ const progressProps = buildProps({
 
 const _hoisted_1$l = ["aria-valuenow"];
 const _hoisted_2$e = { viewBox: "0 0 100 100" };
-const _hoisted_3$5 = ["d", "stroke", "stroke-linecap", "stroke-width"];
+const _hoisted_3$6 = ["d", "stroke", "stroke-linecap", "stroke-width"];
 const _hoisted_4$3 = ["d", "stroke", "opacity", "stroke-linecap", "stroke-width"];
 const _hoisted_5$2 = { key: 0 };
 const __default__$B = defineComponent({
@@ -36628,7 +36624,7 @@ const _sfc_main$L = /* @__PURE__ */ defineComponent({
               "stroke-width": unref(relativeStrokeWidth),
               fill: "none",
               style: normalizeStyle(unref(trailPathStyle))
-            }, null, 14, _hoisted_3$5),
+            }, null, 14, _hoisted_3$6),
             createElementVNode("path", {
               class: normalizeClass(unref(ns).be("circle", "path")),
               d: unref(trackPath),
@@ -39592,9 +39588,9 @@ const useSelect$1 = (props, emit) => {
     const _placeholder = (_a = props.placeholder) != null ? _a : t("el.select.placeholder");
     const empty = props.multiple || !hasModelValue.value;
     if (isFloat && isFloat.value) {
-      return isFocused.value ? empty ? _placeholder : "" : "";
+      return empty ? isFocused.value ? _placeholder : "" : states.selectedLabel;
     } else {
-      return empty ? _placeholder : "";
+      return empty ? _placeholder : states.selectedLabel;
     }
   });
   const popperRef = computed$1(() => {
@@ -40167,6 +40163,7 @@ const _sfc_main$G = defineComponent({
 });
 const _hoisted_1$i = ["id", "autocomplete", "aria-expanded", "aria-label", "disabled", "readonly", "name"];
 const _hoisted_2$c = ["textContent"];
+const _hoisted_3$5 = { key: 1 };
 function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_el_tag = resolveComponent("el-tag");
   const _component_el_tooltip = resolveComponent("el-tooltip");
@@ -40367,17 +40364,12 @@ function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
                 _ctx.nsSelect.is("transparent", !_ctx.hasModelValue || _ctx.expanded && !_ctx.states.inputValue)
               ])
             }, [
-              createElementVNode("span", null, toDisplayString(_ctx.currentPlaceholder), 1)
-            ], 2)) : createCommentVNode("v-if", true),
-            _ctx.states.selectedLabel ? (openBlock(), createElementBlock("div", {
-              key: 3,
-              class: normalizeClass([_ctx.nsSelect.e("selected-item")])
-            }, [
-              renderSlot(_ctx.$slots, "selection", {
+              _ctx.$slots.selection && _ctx.states.selectedLabel ? renderSlot(_ctx.$slots, "selection", {
+                key: 0,
                 label: _ctx.states.selectedLabel
               }, () => [
-                createTextVNode(toDisplayString(_ctx.states.selectedLabel), 1)
-              ])
+                createTextVNode(toDisplayString(_ctx.currentPlaceholder), 1)
+              ]) : (openBlock(), createElementBlock("span", _hoisted_3$5, toDisplayString(_ctx.currentPlaceholder), 1))
             ], 2)) : createCommentVNode("v-if", true)
           ], 2),
           createElementVNode("div", {

@@ -9,7 +9,7 @@ import { dropdownItemProps, DROPDOWN_COLLECTION_ITEM_INJECTION_KEY as COLLECTION
 import { DROPDOWN_INJECTION_KEY } from './tokens.mjs';
 import _export_sfc from '../../../_virtual/plugin-vue_export-helper.mjs';
 import { useNamespace } from '../../../hooks/use-namespace/index.mjs';
-import { ROVING_FOCUS_ITEM_COLLECTION_INJECTION_KEY as COLLECTION_ITEM_INJECTION_KEY$1 } from '../../roving-focus-group/src/roving-focus-group2.mjs';
+import { ROVING_FOCUS_ITEM_COLLECTION_INJECTION_KEY as COLLECTION_ITEM_INJECTION_KEY$1 } from '../../roving-focus-group/src/roving-focus-group.mjs';
 import { ROVING_FOCUS_GROUP_ITEM_INJECTION_KEY } from '../../roving-focus-group/src/tokens.mjs';
 import { composeRefs } from '../../../utils/vue/refs.mjs';
 import { composeEventHandlers } from '../../../utils/dom/event.mjs';
